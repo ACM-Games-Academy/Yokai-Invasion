@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
         movementInput = input.ReadValue<Vector2>();
 
         // Correct angle for camera rotation
+        // If this breaks, change rotationDegree to the negative of the main camera's y rotation
 
         movementInput = Quaternion.Euler(0, 0, rotationDegree) * movementInput;
 

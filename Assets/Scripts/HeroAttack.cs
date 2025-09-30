@@ -5,9 +5,9 @@ public class HeroAttack : MonoBehaviour
 {
     private List<Collider> yokaiInRange = new List<Collider>();
     private List<Collider> yokaiToRemove = new List<Collider>();
-    [SerializeField] private int attackDelay = 2; 
-    private int attackDamage = 1;
+    [SerializeField] private float attackDelay = 2; 
     private float lastAttackTime;
+    private int attackDamage = 1;
 
     private void OnTriggerEnter(Collider other)
     {
