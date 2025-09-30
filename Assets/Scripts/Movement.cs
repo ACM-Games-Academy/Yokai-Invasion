@@ -7,8 +7,6 @@ public class Movement : MonoBehaviour
     [SerializeField] private Vector2 movementInput = Vector2.zero;
     [SerializeField] float movement;
 
-    private bool moving = false;
-
     private void Update()
     {
         Vector3 newMovementInput = new Vector3(movementInput.x, 0, movementInput.y);
