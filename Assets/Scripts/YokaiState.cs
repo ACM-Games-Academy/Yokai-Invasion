@@ -26,7 +26,7 @@ public class YokaiState : MonoBehaviour
         }
         else
         {
-            // Morale check here
+            // Add morale check here
             currentState = YokaiStates.Fleeing;
             // Handle fleeing logic here
             Debug.Log("Yokai is fleeing.");
