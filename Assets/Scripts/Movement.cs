@@ -16,5 +16,10 @@ public class Movement : MonoBehaviour
     public void SyncMovementInput(InputAction.CallbackContext input) 
     { 
         movementInput = input.ReadValue<Vector2>();
+
+        // Correct angle for camera rotation
+
+        movementInput = Quaternion.Euler(0, 0, 135) * movementInput;
+
     }
 }
