@@ -4,8 +4,9 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private Vector2 movementInput = Vector2.zero;
-    [SerializeField] float movement;
+    private Vector2 movementInput = Vector2.zero;
+    [SerializeField] private float movement;
+    private int rotationDegree = 135;
 
     private void Update()
     {
@@ -19,7 +20,7 @@ public class Movement : MonoBehaviour
 
         // Correct angle for camera rotation
 
-        movementInput = Quaternion.Euler(0, 0, 135) * movementInput;
+        movementInput = Quaternion.Euler(0, 0, rotationDegree) * movementInput;
 
     }
 }
