@@ -1202,7 +1202,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192519128507213627, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.354556
+      value: 3.38
       objectReference: {fileID: 0}
     - target: {fileID: 1192519128507213627, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1210,7 +1210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1192519128507213627, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.7580404
+      value: 8.54
       objectReference: {fileID: 0}
     - target: {fileID: 1192519128507213627, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1685,18 +1685,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_ActionId
       value: de731f4a-935c-497b-8d6c-406f38e7b873
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 6374afc9-dd60-44a8-acd7-a1b2c621e64e
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_ActionName
       value: 'Gameplay/Select[/Mouse/leftButton]'
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: 'Gameplay/ModifySelect[/Keyboard/shift]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
@@ -1704,7 +1716,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1355537297}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1355537297}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
@@ -1712,15 +1732,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HandleSelectionInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleModify
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SelectionInput, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SelectionInput, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7099097256019335559, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
