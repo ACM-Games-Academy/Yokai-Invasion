@@ -8,7 +8,7 @@ public class SelectionInput : MonoBehaviour
     [SerializeField] private RectTransform selectionBox;
     private Vector2 initialMousePosition;
 
-    private float dragDelay = 0.1f;
+    private float dragDelay = 0.25f;
     private float dragStartTime;
 
     private enum ClickState
@@ -23,8 +23,7 @@ public class SelectionInput : MonoBehaviour
 
     private void Update()
     {
-        if ((currentClickState == ClickState.Click_Holding || currentClickState == ClickState.Click_Started)
-             && dragStartTime + dragDelay <= Time.time)
+        if (currentClickState == ClickState.Click_Started && dragStartTime + dragDelay <= Time.time)
         {
             currentClickState = ClickState.Click_Holding;
         }
@@ -46,7 +45,7 @@ public class SelectionInput : MonoBehaviour
 
             case ClickState.Click_Ending_From_Click:
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out RaycastHit hitInfo) &&
-                hitInfo.collider.TryGetComponent<SelectableUnit>(out SelectableUnit Unit))
+                    hitInfo.collider.TryGetComponent<SelectableUnit>(out SelectableUnit Unit))
                 {
                     if (isModifying && SelectionManager.Instance.IsSelected(Unit))
                     {
@@ -106,29 +105,40 @@ public class SelectionInput : MonoBehaviour
     {
         if (context.started)
         {
-            Debug.Log("Modify key pressed");
             isModifying = true;
         }
         else if (context.canceled)
         {
-            Debug.Log("Modify key released");
             isModifying = false;
         }
     }
 
     private void changeSelectionArea()
     {
-        float width = Mouse.current.position.x.ReadValue() - initialMousePosition.x;
-        float height = Mouse.current.position.y.ReadValue() - initialMousePosition.y;
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        float width = mousePos.x - initialMousePosition.x;
+        float height = mousePos.y - initialMousePosition.y;
 
         selectionBox.anchoredPosition = initialMousePosition + new Vector2(width / 2, height / 2);
         selectionBox.sizeDelta = new Vector2(Mathf.Abs(width), Mathf.Abs(height));
 
-        Bounds bounds = new Bounds(selectionBox.anchoredPosition, selectionBox.sizeDelta);
+        Rect rect = new Rect(
+            Mathf.Min(initialMousePosition.x, mousePos.x),
+            Mathf.Min(initialMousePosition.y, mousePos.y),
+            Mathf.Abs(width),
+            Mathf.Abs(height)
+        );
+
+        if (!isModifying)
+        {
+            SelectionManager.Instance.ClearSelection();
+        }
 
         foreach (var Unit in SelectionManager.Instance.AvailableUnits)
         {
-            if (bounds.Contains(Camera.main.WorldToScreenPoint(Unit.transform.position)))
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(Unit.transform.position);
+
+            if (rect.Contains(screenPos))
             {
                 if (!SelectionManager.Instance.IsSelected(Unit))
                 {
@@ -136,14 +146,12 @@ public class SelectionInput : MonoBehaviour
                     SelectionManager.Instance.Select(Unit);
                 }
             }
-            else
+            else if (isModifying && SelectionManager.Instance.IsSelected(Unit))
             {
-                if (SelectionManager.Instance.IsSelected(Unit))
-                {
-                    Debug.Log($"Deselecting {Unit.name} via box");
-                    SelectionManager.Instance.Deselect(Unit);
-                }
+                Debug.Log($"Deselecting {Unit.name} via box");
+                SelectionManager.Instance.Deselect(Unit);
             }
         }
     }
+
 }
