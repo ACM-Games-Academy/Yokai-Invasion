@@ -13,5 +13,10 @@ public class SelectionInput : MonoBehaviour
             Debug.Log($"Clicked on {Unit.name}");
             SelectionManager.Instance.Select(Unit);
         }
+        else
+        {
+            Debug.Log("Clicked on empty space, clearing selection");
+            SelectionManager.Instance.ClearSelection();
+        }
     }
 }
