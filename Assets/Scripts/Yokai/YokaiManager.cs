@@ -9,6 +9,11 @@ public class YokaiManager : MonoBehaviour
     [SerializeField]
     private GameObject yokaiPrefab;
     [SerializeField]
+    private int numberOfYokaiToSpawn;
+    [SerializeField]
+    private float spawnMinVal = -50f;
+    [SerializeField]
+    private float spawnMaxVal = 50f;
     private Vector3[] yokaiSpawnPoints;
     private GameObject[] yokaiGameObjects = new GameObject[0];
     private Transform[] yokaiTransforms = new Transform[0];
@@ -33,6 +38,20 @@ public class YokaiManager : MonoBehaviour
 
     private void Start()
     {
-        SpawnYokai(yokaiSpawnPoints, yokaiPrefab, yokaiSpawnPoints.Length);
+        SpawnYokai(GenerateRandomSpawnPoints(numberOfYokaiToSpawn, spawnMinVal, spawnMaxVal), yokaiPrefab, numberOfYokaiToSpawn);
+    }
+
+    private Vector3[] GenerateRandomSpawnPoints(int numberOfPoints, float minVal, float maxVal)
+    {
+        Vector3[] spawnPoints = new Vector3[numberOfPoints];
+        for (int i = 0; i < numberOfPoints; i++)
+        {
+            float x = Random.Range(minVal, maxVal);
+            float z = Random.Range(minVal, maxVal);
+            spawnPoints[i] = new Vector3(x, 0.66f, z);
+            Debug.Log($"SpawnPoint {i}: {spawnPoints[i]}");
+        }
+        Debug.Log($"Total Spawn Points Generated: {spawnPoints.Length}");
+        return spawnPoints;
     }
 }
