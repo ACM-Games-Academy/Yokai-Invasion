@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7611342037151086449}
   - component: {fileID: 5391088435504815997}
   - component: {fileID: 67284614325484691}
+  - component: {fileID: 3554377297696786449}
   m_Layer: 0
   m_Name: TempYokai
   m_TagString: Yokai
@@ -124,3 +125,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35e5ed41c347df4eb6dbf8e015e4e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YokaiState
+--- !u!114 &3554377297696786449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999250472620126497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375b43f511982db4b828b678c10535a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YokaiPathing

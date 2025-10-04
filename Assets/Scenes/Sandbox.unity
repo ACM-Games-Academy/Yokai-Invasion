@@ -360,24 +360,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ede47862ad78e0479aa4fb7f2454836, type: 3}
---- !u!1 &396060770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 636861941881141299, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-  m_PrefabInstance: {fileID: 5457862902503509228}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &396060777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396060770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1b6c9a434b94b34886e832372c6cd4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraMove
-  offset: {x: 10, y: 8, z: 10}
 --- !u!1001 &505140359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1959,42 +1941,6 @@ PrefabInstance:
       value: TempHero
       objectReference: {fileID: 0}
     - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
-      value: de731f4a-935c-497b-8d6c-406f38e7b873
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
-      value: 6374afc9-dd60-44a8-acd7-a1b2c621e64e
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
-      value: 'Gameplay/Select[/Mouse/leftButton]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
-      value: 'Gameplay/ModifySelect[/Keyboard/shift]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1355537297}
@@ -2002,38 +1948,6 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1355537297}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HandleSelectionInput
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleModify
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SelectionInput, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SelectionInput, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491289990689055720, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7099097256019335559, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.35355
@@ -2077,10 +1991,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 636861941881141299, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 396060777}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
 --- !u!1001 &9112946032174594431
 PrefabInstance:

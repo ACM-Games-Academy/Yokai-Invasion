@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Yokai
+  - Hero
   layers:
   - Default
   - TransparentFX
