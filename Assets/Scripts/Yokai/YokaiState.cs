@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class YokaiState : MonoBehaviour
 {
-    private enum YokaiStates
+    public enum YokaiStates
     {
         Idle,
         Attacking,
@@ -43,5 +43,10 @@ public class YokaiState : MonoBehaviour
         // Handle death logic here
         Debug.Log("Yokai has died.");
         Destroy(gameObject);
+    }
+
+    public YokaiStates GetCurrentState()
+    {
+        return currentState;
     }
 }

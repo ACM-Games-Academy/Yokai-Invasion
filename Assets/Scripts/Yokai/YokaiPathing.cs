@@ -9,6 +9,8 @@ public class YokaiPathing : MonoBehaviour
     [SerializeField]
     private Transform templeLocation;
 
+    private Transform heroTransform;
+
     [SerializeField]
     private float detectionRadius = 5f;
 
@@ -23,11 +25,33 @@ public class YokaiPathing : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        heroTransform = GameObject.FindGameObjectWithTag("Hero").transform;
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + (BoidsPath() + (templeLocation.position - transform.position).normalized).normalized * speed * Time.fixedDeltaTime);
+        YokaiState.YokaiStates currentYokaiState = GetComponent<YokaiState>().GetCurrentState();
+
+        switch (currentYokaiState)
+        {
+            case YokaiState.YokaiStates.Idle:
+                rb.MovePosition(rb.position + (BoidsPath() + (templeLocation.position - transform.position).normalized).normalized * speed * Time.fixedDeltaTime);
+                break;
+            case YokaiState.YokaiStates.Pursuing:
+                // Implement pursuing behavior here
+                break;
+            case YokaiState.YokaiStates.Attacking:
+                // Stop movement when attacking
+                break;
+            case YokaiState.YokaiStates.Fleeing:
+                rb.MovePosition(rb.position + (BoidsPath() + (heroTransform.position + transform.position).normalized).normalized * speed * Time.fixedDeltaTime);
+                break;
+            case YokaiState.YokaiStates.Dead:
+                // Stop all movement when dead
+                break;
+            default:
+                break;
+        }
         if (transform.position.y >= floorHeight)
         {
             rb.MovePosition(new Vector3(rb.position.x, floorHeight, rb.position.z));
@@ -63,7 +87,7 @@ public class YokaiPathing : MonoBehaviour
                 Vector3 toObj = transform.position - obj.transform.position;
                 if (toObj.magnitude > 0)
                 {
-                    separation += toObj.normalized / toObj.magnitude; // Weight by distance
+                    separation += toObj.normalized / toObj.magnitude;
                 }
             }
 

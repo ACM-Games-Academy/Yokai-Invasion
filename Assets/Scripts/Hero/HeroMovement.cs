@@ -2,7 +2,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Movement : MonoBehaviour
+public class HeroMovement : MonoBehaviour
 {
     private Vector2 movementInput = Vector2.zero;
     [SerializeField] private float movement;
@@ -23,5 +23,10 @@ public class Movement : MonoBehaviour
 
         movementInput = Quaternion.Euler(0, 0, rotationDegree) * movementInput;
 
+    }
+
+    public Vector3 GetHeroPosition()
+    {
+        return transform.position;
     }
 }
