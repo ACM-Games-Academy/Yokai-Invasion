@@ -15,12 +15,13 @@ public class YokaiPathing : MonoBehaviour
     private float detectionRadius = 5f;
 
     [SerializeField]
-    private float fieldOfView = 120f;
-
-    [SerializeField]
     private float speed = 5f;
 
-    private float floorHeight = 0.66f; 
+    private float floorHeight = 0.66f;
+
+    private float alignmentWeight;
+    private float cohesionWeight;
+    private float separationWeight;
 
     private void Awake()
     {
@@ -60,7 +61,7 @@ public class YokaiPathing : MonoBehaviour
 
     private Vector3 BoidsPath()
     {
-        Collider[] nearbyObjects = GetNearby(detectionRadius, fieldOfView);
+        Collider[] nearbyObjects = GetNearby(detectionRadius);
 
         if (nearbyObjects.Length > 0)
         {
@@ -94,9 +95,14 @@ public class YokaiPathing : MonoBehaviour
             alignment /= nearbyYokaiCount;
             cohesion = (cohesion / nearbyYokaiCount - transform.position).normalized;
             separation /= nearbyObjects.Length;
+
+            alignment *= alignmentWeight;
+            cohesion *= cohesionWeight;
+            separation *= separationWeight;
+
             // Combine the three behaviors with weights
-            Vector3 boidDirection = (alignment.normalized + cohesion + separation).normalized;
-            return boidDirection;
+            Vector3 boidDirection = alignment + cohesion + separation;
+            return boidDirection.normalized;
         }
 
         return Vector3.zero;
@@ -107,7 +113,14 @@ public class YokaiPathing : MonoBehaviour
         templeLocation = position;
     }
 
-    public Collider[] GetNearby(float detectionRadius, float fieldOfView)
+    public void SetBoidWeights(Vector3 weights)
+    {
+        alignmentWeight = weights.x;
+        cohesionWeight = weights.y;
+        separationWeight = weights.z;
+    }
+
+    public Collider[] GetNearby(float detectionRadius)
     {
         int mask = ~LayerMask.GetMask("Floor"); // all layers EXCEPT floor
         Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius, mask);
@@ -119,10 +132,7 @@ public class YokaiPathing : MonoBehaviour
             // Skip self
             if (hit.transform == transform) continue;
 
-            if (Vector3.Angle(transform.forward, (hit.transform.position - transform.position).normalized) <= fieldOfView / 2f)
-            {
-                nearby.Add(hit);
-            }
+            nearby.Add(hit);
         }
         return nearby.ToArray();
     }

@@ -18,7 +18,10 @@ public class YokaiManager : MonoBehaviour
     private GameObject[] yokaiGameObjects = new GameObject[0];
     private Transform[] yokaiTransforms = new Transform[0];
 
-    public void SpawnYokai(Vector3[] spawnPoints, GameObject yokaiPrefab, int numberToSpawn)
+    [SerializeField]
+    private Vector3 boidWeights; // x = alignment, y = cohesion, z = separation
+
+    public void SpawnYokai(Vector3[] spawnPoints, GameObject yokaiPrefab, int numberToSpawn, Vector3 boidWeights)
     {
         List<Transform> newYokaiTransforms = new List<Transform>();
         List<GameObject> newYokaiGameObjects = new List<GameObject>();
@@ -26,7 +29,10 @@ public class YokaiManager : MonoBehaviour
         for (int i = 0; i < numberToSpawn; i++)
         {
             GameObject newYokai = Instantiate(yokaiPrefab, spawnPoints[i], Quaternion.LookRotation(Vector3.up, Vector3.up));
-            newYokai.GetComponent<YokaiPathing>().SetTempleLocation(templePosition);
+            var newYokaiScript = newYokai.GetComponent<YokaiPathing>();
+
+            newYokaiScript.SetTempleLocation(templePosition);
+            newYokaiScript.SetBoidWeights(boidWeights);
 
             newYokaiTransforms.Add(newYokai.transform);
             newYokaiGameObjects.Add(newYokai);
@@ -38,7 +44,7 @@ public class YokaiManager : MonoBehaviour
 
     private void Start()
     {
-        SpawnYokai(GenerateRandomSpawnPoints(numberOfYokaiToSpawn, spawnMinVal, spawnMaxVal), yokaiPrefab, numberOfYokaiToSpawn);
+        SpawnYokai(GenerateRandomSpawnPoints(numberOfYokaiToSpawn, spawnMinVal, spawnMaxVal), yokaiPrefab, numberOfYokaiToSpawn, boidWeights);
     }
 
     private Vector3[] GenerateRandomSpawnPoints(int numberOfPoints, float minVal, float maxVal)

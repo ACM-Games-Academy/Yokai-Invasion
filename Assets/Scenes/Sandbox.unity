@@ -153,6 +153,7 @@ MonoBehaviour:
   numberOfYokaiToSpawn: 50
   spawnMinVal: -50
   spawnMaxVal: 50
+  boidWeights: {x: 5, y: 1, z: 2}
 --- !u!4 &123078736
 Transform:
   m_ObjectHideFlags: 0

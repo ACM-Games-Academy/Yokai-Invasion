@@ -42,7 +42,7 @@ public class YokaiState : MonoBehaviour
     {
         // Handle death logic here
         Debug.Log("Yokai has died.");
-        Destroy(gameObject);
+        Destroy(gameObject); // Temporary: destroy the game object
     }
 
     public YokaiStates GetCurrentState()
