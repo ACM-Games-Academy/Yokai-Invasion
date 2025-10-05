@@ -9,6 +9,10 @@ public class YokaiManager : MonoBehaviour
     [SerializeField]
     private GameObject yokaiPrefab;
     [SerializeField]
+    private Boids boidScript;
+    [SerializeField]
+    private AStar aStarScript;
+    [SerializeField]
     private int numberOfYokaiToSpawn;
     [SerializeField]
     private float spawnMinVal = -50f;
@@ -33,6 +37,8 @@ public class YokaiManager : MonoBehaviour
 
             newYokaiScript.SetTempleLocation(templePosition);
             newYokaiScript.SetBoidWeights(boidWeights);
+            newYokaiScript.SetBoidScript(boidScript);
+            newYokaiScript.SetAStarScript(aStarScript);
 
             newYokaiTransforms.Add(newYokai.transform);
             newYokaiGameObjects.Add(newYokai);
