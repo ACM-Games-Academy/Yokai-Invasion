@@ -21,6 +21,7 @@ public class YokaiPathing : MonoBehaviour
     private float cohesionWeight;
     private float separationWeight;
 
+    [Range(0, 1)]
     [SerializeField]
     private float reliance = 0.5f; // 0 = only boids, 1 = only A*
 
@@ -60,7 +61,7 @@ public class YokaiPathing : MonoBehaviour
                     currentPath = aStarScript.AStarPath(transform.position, templeLocation.position);
                     currentWaypointIndex = 0;
                 }
-                Move(boidDir + pathDir);
+                Move((boidDir * (1 - reliance)) + (pathDir * reliance));
                 break;
             case YokaiState.YokaiStates.Pursuing:
                 if (currentPath == null || ReachedEnd())
@@ -68,7 +69,7 @@ public class YokaiPathing : MonoBehaviour
                     currentPath = aStarScript.AStarPath(transform.position, heroTransform.position);
                     currentWaypointIndex = 0;
                 }
-                Move(boidDir + pathDir);
+                Move((boidDir * (1 - reliance)) + (pathDir * reliance));
                 break;
             case YokaiState.YokaiStates.Attacking:
                 // Stop movement when attacking?
@@ -80,7 +81,7 @@ public class YokaiPathing : MonoBehaviour
                     currentPath = aStarScript.AStarPath(transform.position, fleeTarget);
                     currentWaypointIndex = 0;
                 }
-                Move(boidDir + pathDir);
+                Move((boidDir * (1 - reliance)) + (pathDir * reliance));
                 break;
             case YokaiState.YokaiStates.Dead:
                 // Stop all movement when dead

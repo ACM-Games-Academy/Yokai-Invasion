@@ -5,21 +5,44 @@ using UnityEngine;
 
 public class AStar : MonoBehaviour
 {
+    public class PathNode
+    {
+        public Vector2Int gridPos;
+        public PathNode parent;
+        public float G; // cost from start
+        public float H; // heuristic to target
+        public float F => G + H;
+
+        public PathNode(Vector2Int gridPos, PathNode parent, float g, float h)
+        {
+            this.gridPos = gridPos;
+            this.parent = parent;
+            G = g;
+            H = h;
+        }
+    }
+
+    [SerializeField] 
+    private float cellSize = 1.0f;
+
     [SerializeField]
     private float stopDistance = 0.5f;
 
-    private int maxIterations = 100;
+    private int maxIterations = 1000;
 
     public Vector3[] AStarPath(Vector3 start, Vector3 end)
     {
+        Vector2Int startGrid = WorldToGrid(start);
+        Vector2Int endGrid = WorldToGrid(end);
+
         List<PathNode> openList = new List<PathNode>();
-        List<PathNode> closedList = new List<PathNode>();
+        HashSet<Vector2Int> closedSet = new HashSet<Vector2Int>();
 
         // Start node
-        PathNode startNode = new PathNode(start, null, 0, Vector3.Distance(start, end));
+        PathNode startNode = new PathNode(startGrid, null, 0, Vector2Int.Distance(startGrid, endGrid));
         openList.Add(startNode);
 
-        while (openList.Count > 0 && closedList.Count < maxIterations)
+        while (openList.Count > 0 && closedSet.Count < maxIterations)
         {
             // 1. Get node with lowest F cost
             PathNode current = openList[0];
@@ -31,30 +54,30 @@ public class AStar : MonoBehaviour
 
             // 2. Move current from open to closed
             openList.Remove(current);
-            closedList.Add(current);
+            closedSet.Add(current.gridPos);
 
             // 3. If reached end, reconstruct path
-            if (Vector3.Distance(current.Position, end) < stopDistance)
+            // 3. Check if we reached the end
+            if (current.gridPos == endGrid || Vector2Int.Distance(current.gridPos, endGrid) < stopDistance)
             {
                 return ReconstructPath(current);
             }
 
             // 4. Get neighbors
-            foreach (Vector3 neighborPos in GetNeighbors(current.Position))
+            foreach (Vector2Int neighborPos in GetNeighbors(current.gridPos))
             {
-                if (closedList.Exists(n => n.Position == neighborPos))
-                    continue;
+                if (closedSet.Contains(neighborPos)) continue;
 
-                float tentativeG = current.G + Vector3.Distance(current.Position, neighborPos);
+                float tentativeG = current.G + Vector2Int.Distance(current.gridPos, neighborPos);
 
-                PathNode neighbor = openList.Find(n => Vector3.Distance(n.Position, neighborPos) < 0.5);
+                PathNode neighbor = openList.Find(n => n.gridPos == neighborPos);
                 if (neighbor == null)
                 {
                     neighbor = new PathNode(
                         neighborPos,
                         current,
                         tentativeG,
-                        Vector3.Distance(neighborPos, end)
+                        Vector2Int.Distance(neighborPos, endGrid)
                     );
                     openList.Add(neighbor);
                 }
@@ -62,7 +85,7 @@ public class AStar : MonoBehaviour
                 {
                     // Found a better path
                     neighbor.G = tentativeG;
-                    neighbor.Parent = current;
+                    neighbor.parent = current;
                 }
             }
         }
@@ -70,26 +93,35 @@ public class AStar : MonoBehaviour
         return new Vector3[] { start, end };
     }
 
-    private IEnumerable<Vector3> GetNeighbors(Vector3 position)
+    private IEnumerable<Vector2Int> GetNeighbors(Vector2Int position)
     {
-        // Placeholder: Replace with actual neighbor retrieval logic
-        float step = 1.0f;
-        List<Vector3> possibleNeighbours = new List<Vector3>
+        Vector2Int[] directions = new Vector2Int[]
         {
-            position + new Vector3(step, 0, 0),
-            position + new Vector3(-step, 0, 0),
-            position + new Vector3(0, 0, step),
-            position + new Vector3(0, 0, -step),
-            position + new Vector3(step, 0, step),
-            position + new Vector3(step, 0, -step),
-            position + new Vector3(-step, 0, step),
-            position + new Vector3(-step, 0, -step)
+            new Vector2Int( 1,  0),
+            new Vector2Int(-1,  0),
+            new Vector2Int( 0,  1),
+            new Vector2Int( 0, -1),
+            new Vector2Int( 1,  1),
+            new Vector2Int( 1, -1),
+            new Vector2Int(-1,  1),
+            new Vector2Int(-1, -1),
         };
 
-        foreach (var neighbor in possibleNeighbours)
+        foreach (var direction in directions)
         {
-            if (Physics.CheckSphere(neighbor, 0.4f, LayerMask.GetMask("Obstacle")))
+            Vector2Int neighbor = position + direction;
+            Vector3 worldPosition = GridToWorld(neighbor);
+
+            float checkHeight = 5f; // max obstacle height
+            Vector3 halfExtents = new Vector3(cellSize * 0.45f, checkHeight * 0.5f, cellSize * 0.45f);
+            Vector3 center = worldPosition + new Vector3(0f, halfExtents.y, 0f);
+
+            if (Physics.CheckBox(center, halfExtents, Quaternion.identity, LayerMask.GetMask("Obstacle")))
+            {
+                Debug.Log($"Obstacle at {neighbor}");
                 continue;
+            }
+
 
             yield return neighbor;
         }
@@ -101,10 +133,28 @@ public class AStar : MonoBehaviour
         PathNode current = endNode;
         while (current != null)
         {
-            path.Add(current.Position);
-            current = current.Parent;
+            path.Add(GridToWorld(current.gridPos));
+            current = current.parent;
         }
         path.Reverse();
         return path.ToArray();
+    }
+
+
+    private Vector2Int WorldToGrid(Vector3 worldPos)
+    {
+        return new Vector2Int(
+            Mathf.RoundToInt(worldPos.x / cellSize),
+            Mathf.RoundToInt(worldPos.z / cellSize)
+        );
+    }
+
+    private Vector3 GridToWorld(Vector2Int gridPos)
+    {
+        return new Vector3(
+            gridPos.x * cellSize,
+            0.66f,
+            gridPos.y * cellSize
+        );
     }
 }

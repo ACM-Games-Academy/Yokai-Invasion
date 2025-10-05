@@ -61,9 +61,7 @@ public class YokaiManager : MonoBehaviour
             float x = Random.Range(minVal, maxVal);
             float z = Random.Range(minVal, maxVal);
             spawnPoints[i] = new Vector3(x, 0.66f, z);
-            Debug.Log($"SpawnPoint {i}: {spawnPoints[i]}");
         }
-        Debug.Log($"Total Spawn Points Generated: {spawnPoints.Length}");
         return spawnPoints;
     }
 }
