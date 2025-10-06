@@ -1017,7 +1017,7 @@
     "m_Title": "Border Left",
     "m_Position": {
         "x": -1255.0,
-        "y": -111.0
+        "y": -110.99998474121094
     }
 }
 
@@ -1414,11 +1414,11 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 0.009999999776482582,
+    "m_Value": 0.00009999999747378752,
     "m_FloatType": 1,
     "m_RangeValues": {
-        "x": 0.0010000000474974514,
-        "y": 1.0
+        "x": 0.00009999999747378752,
+        "y": 0.009999999776482582
     },
     "m_SliderType": 0,
     "m_SliderPower": 3.0,
@@ -2583,8 +2583,8 @@
     "m_ObjectId": "6d160e89c48a45e09084a3085c15fe25",
     "m_Title": "Border Up",
     "m_Position": {
-        "x": -1256.9998779296875,
-        "y": 844.0
+        "x": -1257.0,
+        "y": 843.9998779296875
     }
 }
 
@@ -4217,11 +4217,11 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 0.0005000000237487257,
+    "m_Value": 0.00019999999494757503,
     "m_FloatType": 1,
     "m_RangeValues": {
-        "x": 0.00009999999747378752,
-        "y": 0.0005000000237487257
+        "x": 0.000009999999747378752,
+        "y": 0.00019999999494757503
     },
     "m_SliderType": 0,
     "m_SliderPower": 3.0,
