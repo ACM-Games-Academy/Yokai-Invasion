@@ -9,6 +9,10 @@ public class YokaiManager : MonoBehaviour
     [SerializeField]
     private GameObject yokaiPrefab;
     [SerializeField]
+    private Boids boidScript;
+    [SerializeField]
+    private AStar aStarScript;
+    [SerializeField]
     private int numberOfYokaiToSpawn;
     [SerializeField]
     private float spawnMinVal = -50f;
@@ -33,6 +37,8 @@ public class YokaiManager : MonoBehaviour
 
             newYokaiScript.SetTempleLocation(templePosition);
             newYokaiScript.SetBoidWeights(boidWeights);
+            newYokaiScript.SetBoidScript(boidScript);
+            newYokaiScript.SetAStarScript(aStarScript);
 
             newYokaiTransforms.Add(newYokai.transform);
             newYokaiGameObjects.Add(newYokai);
@@ -55,9 +61,7 @@ public class YokaiManager : MonoBehaviour
             float x = Random.Range(minVal, maxVal);
             float z = Random.Range(minVal, maxVal);
             spawnPoints[i] = new Vector3(x, 0.66f, z);
-            Debug.Log($"SpawnPoint {i}: {spawnPoints[i]}");
         }
-        Debug.Log($"Total Spawn Points Generated: {spawnPoints.Length}");
         return spawnPoints;
     }
 }
