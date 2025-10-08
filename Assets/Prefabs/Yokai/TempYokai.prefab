@@ -142,7 +142,11 @@ MonoBehaviour:
   detectionRadius: 5
   speed: 10
   waypointTolerance: 0.3
+<<<<<<< Updated upstream
   reliance: 0.25
+=======
+  reliance: 0.5
+>>>>>>> Stashed changes
 --- !u!54 &5393894268602648587
 Rigidbody:
   m_ObjectHideFlags: 0

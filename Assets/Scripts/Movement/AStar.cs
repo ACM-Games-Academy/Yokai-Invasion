@@ -122,7 +122,6 @@ public class AStar : MonoBehaviour
                 continue;
             }
 
-
             yield return neighbor;
         }
     }
