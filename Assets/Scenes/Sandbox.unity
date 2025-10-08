@@ -157,7 +157,7 @@ MonoBehaviour:
   numberOfYokaiToSpawn: 50
   spawnMinVal: -50
   spawnMaxVal: 50
-  boidWeights: {x: 5, y: 1, z: 2}
+  boidWeights: {x: 1, y: 1, z: 1}
 --- !u!4 &123078736
 Transform:
   m_ObjectHideFlags: 0
@@ -1058,7 +1058,11 @@ GameObject:
   - component: {fileID: 1209070211}
   - component: {fileID: 1209070210}
   - component: {fileID: 1209070209}
+<<<<<<< Updated upstream
   m_Layer: 7
+=======
+  m_Layer: 0
+>>>>>>> Stashed changes
   m_Name: Temple
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -51,7 +51,7 @@ public class YokaiPathing : MonoBehaviour
         }
 
         // Boid steering vector
-        Vector3 boidDir = boidScript.BoidsPath(alignmentWeight, cohesionWeight, separationWeight, detectionRadius);
+        Vector3 boidDir = boidScript.BoidsPath(alignmentWeight, cohesionWeight, separationWeight, detectionRadius, transform.position);
 
         switch (currentYokaiState)
         {
@@ -61,7 +61,8 @@ public class YokaiPathing : MonoBehaviour
                     currentPath = aStarScript.AStarPath(transform.position, templeLocation.position);
                     currentWaypointIndex = 0;
                 }
-                Move((boidDir * (1 - reliance)) + (pathDir * reliance));
+
+                Move((boidDir * reliance) + (pathDir * (1 - reliance)));
                 break;
             case YokaiState.YokaiStates.Pursuing:
                 if (currentPath == null || ReachedEnd())
@@ -69,7 +70,7 @@ public class YokaiPathing : MonoBehaviour
                     currentPath = aStarScript.AStarPath(transform.position, heroTransform.position);
                     currentWaypointIndex = 0;
                 }
-                Move((boidDir * (1 - reliance)) + (pathDir * reliance));
+                Move((boidDir * reliance) + (pathDir * (1 - reliance)));
                 break;
             case YokaiState.YokaiStates.Attacking:
                 // Stop movement when attacking?
@@ -81,7 +82,7 @@ public class YokaiPathing : MonoBehaviour
                     currentPath = aStarScript.AStarPath(transform.position, fleeTarget);
                     currentWaypointIndex = 0;
                 }
-                Move((boidDir * (1 - reliance)) + (pathDir * reliance));
+                Move((boidDir * reliance) + (pathDir * (1 - reliance)));
                 break;
             case YokaiState.YokaiStates.Dead:
                 // Stop all movement when dead

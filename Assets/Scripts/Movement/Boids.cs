@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Boids : MonoBehaviour
 {
-    public Vector3 BoidsPath(float alignmentWeight, float cohesionWeight, float separationWeight, float detectionRadius)
+    public Vector3 BoidsPath(float alignmentWeight, float cohesionWeight, float separationWeight, float detectionRadius, Vector3 yokaiPosition)
     {
-        Collider[] nearbyObjects = GetNearby(detectionRadius);
+        Collider[] nearbyObjects = GetNearby(detectionRadius, yokaiPosition);
 
         if (nearbyObjects.Length > 0)
         {
@@ -52,12 +52,15 @@ public class Boids : MonoBehaviour
         return Vector3.zero;
     }
 
-    public Collider[] GetNearby(float detectionRadius)
+    public Collider[] GetNearby(float detectionRadius, Vector3 yokaiPosition)
     {
         int mask = ~LayerMask.GetMask("Floor"); // all layers EXCEPT floor
-        Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius, mask);
+
+        Collider[] hits = Physics.OverlapSphere(yokaiPosition, detectionRadius, mask);
 
         List<Collider> nearby = new List<Collider>();
+
+        Debug.Log("hits.Length: " + hits.Length);
 
         foreach (Collider hit in hits)
         {

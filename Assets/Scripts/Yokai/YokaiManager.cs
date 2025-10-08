@@ -35,6 +35,8 @@ public class YokaiManager : MonoBehaviour
             GameObject newYokai = Instantiate(yokaiPrefab, spawnPoints[i], Quaternion.LookRotation(Vector3.up, Vector3.up));
             var newYokaiScript = newYokai.GetComponent<YokaiPathing>();
 
+            newYokai.transform.parent = this.transform;
+
             newYokaiScript.SetTempleLocation(templePosition);
             newYokaiScript.SetBoidWeights(boidWeights);
             newYokaiScript.SetBoidScript(boidScript);
