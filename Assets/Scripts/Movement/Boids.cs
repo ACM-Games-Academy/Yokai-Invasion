@@ -60,8 +60,6 @@ public class Boids : MonoBehaviour
 
         List<Collider> nearby = new List<Collider>();
 
-        Debug.Log("hits.Length: " + hits.Length);
-
         foreach (Collider hit in hits)
         {
             // Skip self

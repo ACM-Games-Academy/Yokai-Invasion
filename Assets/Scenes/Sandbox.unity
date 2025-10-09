@@ -129,6 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 123078736}
   - component: {fileID: 123078735}
+  - component: {fileID: 123078738}
+  - component: {fileID: 123078737}
   m_Layer: 0
   m_Name: YokaiManager
   m_TagString: Untagged
@@ -150,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YokaiManager
   templePosition: {fileID: 1209070212}
   yokaiPrefab: {fileID: 4999250472620126497, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
+  boidScript: {fileID: 123078738}
+  aStarScript: {fileID: 123078737}
   numberOfYokaiToSpawn: 50
   spawnMinVal: -50
   spawnMaxVal: 50
@@ -169,6 +173,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &123078737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123078734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4a7c7875dbf074ba8bf82481871592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AStar
+  cellSize: 1
+  stopDistance: 0.5
+--- !u!114 &123078738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123078734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0b816999f03643b556d413f079a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boids
 --- !u!1 &138495068
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +1029,7 @@ GameObject:
   - component: {fileID: 1209070210}
   - component: {fileID: 1209070209}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Temple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
