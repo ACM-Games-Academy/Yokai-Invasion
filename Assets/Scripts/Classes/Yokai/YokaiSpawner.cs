@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 public class YokaiSpawner : MonoBehaviour
 {
-    [SerializeField] private ObjectPooler objectPooler;
     [SerializeField] private GameObject[] yokaiPrefabs;
 
     [SerializeField] private Transform templePosition;
@@ -18,7 +17,7 @@ public class YokaiSpawner : MonoBehaviour
     {
         foreach (var yokai in yokaiPrefabs)
         {
-            objectPooler.InitializePool(yokai, 256);
+            ObjectPooler.Instance.InitializePool(yokai, 256);
         }
     }
 
@@ -29,6 +28,17 @@ public class YokaiSpawner : MonoBehaviour
         var spawnedYokai = new List<GameObject>();
         var optionsToRemove = new List<yokaiSpawnOption>();
 
+<<<<<<< Updated upstream
+=======
+        foreach (var option in yokaiOptions)
+        {
+            if (ObjectPooler.Instance.PoolExists(option.yokaiPrefab.name) == false)
+            {
+                ObjectPooler.Instance.InitializePool(option.yokaiPrefab, 256);
+            }
+        }
+
+>>>>>>> Stashed changes
         while (points > 0)
         {
             float roll = Random.Range(0f, 100f);
@@ -81,7 +91,7 @@ public class YokaiSpawner : MonoBehaviour
 
     private GameObject SpawnYokai(string yokai, Vector3 position, Quaternion rotation)
     {
-        var spawnedYokai = objectPooler.GetPooledObject(yokai, position, rotation);
+        var spawnedYokai = ObjectPooler.Instance.GetPooledObject(yokai, position, rotation);
         var yokaiPathing = spawnedYokai.GetComponent<YokaiPathing>();
 
         yokaiPathing.SetTempleLocation(templePosition);

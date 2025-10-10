@@ -59,21 +59,12 @@ public class Boids : MonoBehaviour
         return Vector3.zero;
     }
 
-    public Collider[] GetNearby(float detectionRadius, Vector3 yokaiPosition)
+    private Collider[] GetNearby(float detectionRadius, Vector3 position)
     {
         int mask = ~LayerMask.GetMask("Floor"); // all layers EXCEPT floor
 
-        Collider[] hits = Physics.OverlapSphere(yokaiPosition, detectionRadius, mask);
+        Collider[] hits = Physics.OverlapSphere(position, detectionRadius, mask);
 
-        List<Collider> nearby = new List<Collider>();
-
-        foreach (Collider hit in hits)
-        {
-            // Skip self
-            if (hit.transform == transform) continue;
-
-            nearby.Add(hit);
-        }
-        return nearby.ToArray();
+        return hits;
     }
 }

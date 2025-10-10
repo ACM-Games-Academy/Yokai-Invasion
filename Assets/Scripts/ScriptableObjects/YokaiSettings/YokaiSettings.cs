@@ -10,7 +10,7 @@ public class YokaiSettings : ScriptableObject
     private string yokaiName;
 
     [Tooltip("The speed at which the Yokai moves.")]
-    [Range(0f, 5f)]
+    [Range(0f, 25f)]
     [SerializeField]
     private float moveSpeed;
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b44434912d9324a9484ab80170ee8c, type: 3}
   m_Name: Night1
   m_EditorClassIdentifier: Assembly-CSharp::HordeSettings
-  pointValue: 7
+  pointValue: 25
   yokaiOptions:
   - yokaiPrefab: {fileID: 4999250472620126497, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
     spawnProbability: 100

@@ -3,57 +3,41 @@ using UnityEngine;
 
 public class HeroAttack : MonoBehaviour
 {
-    private List<Collider> yokaiInRange = new List<Collider>();
-    private List<Collider> yokaiToRemove = new List<Collider>();
-    [SerializeField] private float attackDelay = 2; 
+    private Collider[] yokaiInRange;
     private float lastAttackTime;
-    private int attackDamage = 1;
 
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] private HeroSettings heroSettings;
+
+    private void Update()
     {
-        if (other.CompareTag("Yokai") && !yokaiInRange.Contains(other))
+        yokaiInRange = GetNearby(heroSettings.AttackRange, transform.position);
+
+        if (yokaiInRange.Length > 0 && Time.time >= lastAttackTime + heroSettings.AttackDelay)
         {
-            yokaiInRange.Add(other);
+            Attack();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private Collider[] GetNearby(float range, Vector3 position)
     {
-        if (other.CompareTag("Yokai"))
-        {
-            yokaiInRange.Remove(other);
-        }
+        int mask = ~LayerMask.GetMask("Floor"); // all layers EXCEPT floor
+
+        Collider[] hits = Physics.OverlapSphere(position, range, mask);
+
+        return hits;
     }
 
     public void Attack()
     {
         foreach (var yokaiCollider in yokaiInRange)
         {
-            var yokai = yokaiCollider.gameObject.GetComponent<YokaiState>();
+            var yokai = yokaiCollider.gameObject.GetComponent<IYokai>();
 
             if (yokai == null) continue;
 
-            yokai.TakeDamage(attackDamage);
-            Debug.Log("Attacked a Yokai! They now have " + yokai.GetHealth() + "health left!");
-
-            if (yokai.GetHealth() <= 0)
-            {
-                yokaiToRemove.Add(yokaiCollider);
-            }
+            yokai.TakeDamage(heroSettings.AttackPower);
+            Debug.Log("Attacked a Yokai! They lost " + heroSettings.AttackPower + "health!");
         }
-        foreach (var yokaiCollider in yokaiToRemove)
-        {
-            yokaiInRange.Remove(yokaiCollider);
-        }
-        yokaiToRemove.Clear();
         lastAttackTime = Time.time;
-    }
-
-    private void Update()
-    {
-        if (yokaiInRange.Count > 0 && Time.time >= lastAttackTime + attackDelay)
-        {
-            Attack();
-        }
     }
 }

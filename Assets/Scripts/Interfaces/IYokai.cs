@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public interface IYokai
+public interface IYokai : IDamageable
 {
     YokaiSettings yokaiSettings { get; }
 
-    public void TakeDamage(int damageAmount);
     public void DealDamage(int damageAmount);
     public void DetermineTarget();
-    public void MoveTowardsTarget();
 }
