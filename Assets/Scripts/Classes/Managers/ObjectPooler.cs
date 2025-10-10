@@ -72,4 +72,9 @@ public class ObjectPooler : MonoBehaviour
         obj.SetActive(false);
         poolDictionary[key].Enqueue(obj);
     }
+
+    public bool PoolExists(string key)
+    {
+        return poolDictionary.ContainsKey(key);
+    }
 }

@@ -14,7 +14,7 @@ public class YokaiSpawner : MonoBehaviour
     [SerializeField] private Vector2 spawnAreaSize;
     [SerializeField] private float spawnHeight;
 
-    private void Awake()
+    private void Start()
     {
         foreach (var yokai in yokaiPrefabs)
         {
@@ -28,6 +28,14 @@ public class YokaiSpawner : MonoBehaviour
         yokaiSpawnOption[] yokaiOptions = hordeSettings.YokaiOptions;
         var spawnedYokai = new List<GameObject>();
         var optionsToRemove = new List<yokaiSpawnOption>();
+
+        foreach (var option in yokaiOptions)
+        {
+            if (objectPooler.PoolExists(option.yokaiPrefab.name) == false)
+            {
+                objectPooler.InitializePool(option.yokaiPrefab, 256);
+            }
+        }
 
         while (points > 0)
         {
