@@ -11,18 +11,13 @@ public class YokaiPathing : MonoBehaviour
     [SerializeField] private Transform templeLocation;
     private Transform heroTransform;
 
-    [SerializeField] private float detectionRadius = 5f;
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float waypointTolerance = 0.3f;
-
     private float floorHeight = 0.66f;
-
-    [Range(0, 1)]
-    [SerializeField]
-    private float reliance; // 0 = only boids, 1 = only A*
 
     private Vector3[] currentPath;
     private int currentWaypointIndex;
+
+    [SerializeField]
+    private YokaiSettings settings;
 
     private void Awake()
     {
@@ -42,12 +37,12 @@ public class YokaiPathing : MonoBehaviour
             pathDir = (waypoint - transform.position).normalized;
 
             // Advance waypoint if close
-            if (Vector3.Distance(transform.position, waypoint) < waypointTolerance)
+            if (Vector3.Distance(transform.position, waypoint) < settings.WaypointTolerance)
                 currentWaypointIndex++;
         }
 
         // Boid steering vector
-        Vector3 boidDir = boidScript.BoidsPath(detectionRadius, transform.position);
+        Vector3 boidDir = boidScript.BoidsPath(settings.DetectionRadius, transform.position);
 
         switch (currentYokaiState)
         {
@@ -58,7 +53,7 @@ public class YokaiPathing : MonoBehaviour
                     currentWaypointIndex = 0;
                 }
 
-                Move((boidDir * reliance) + (pathDir * (1 - reliance)));
+                Move((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
                 break;
 
             case YokaiState.YokaiStates.Pursuing:
@@ -67,7 +62,7 @@ public class YokaiPathing : MonoBehaviour
                     currentPath = aStarScript.AStarPath(transform.position, heroTransform.position);
                     currentWaypointIndex = 0;
                 }
-                Move((boidDir * reliance) + (pathDir * (1 - reliance)));
+                Move((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
                 break;
 
             case YokaiState.YokaiStates.Attacking:
@@ -81,7 +76,7 @@ public class YokaiPathing : MonoBehaviour
                     currentPath = aStarScript.AStarPath(transform.position, fleeTarget);
                     currentWaypointIndex = 0;
                 }
-                Move((boidDir * reliance) + (pathDir * (1 - reliance)));
+                Move((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
                 break;
 
             case YokaiState.YokaiStates.Dead:
@@ -103,7 +98,7 @@ public class YokaiPathing : MonoBehaviour
         rb.MovePosition(
             rb.position 
             + dir.normalized 
-            * speed 
+            * settings.MoveSpeed
             * Time.fixedDeltaTime);
     }
 

@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 67284614325484691}
   - component: {fileID: 3554377297696786449}
   - component: {fileID: 5393894268602648587}
+  - component: {fileID: 1208155249907026771}
   m_Layer: 0
-  m_Name: TempYokai
+  m_Name: Grunt
   m_TagString: Yokai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,3 +171,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &1208155249907026771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999250472620126497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cf7f96bf321684e9c1c215cf2df098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YokaiGrunt
+  yokaiSettings: {fileID: 11400000, guid: 0eb873eb1e770574cb3f2370d97c2a91, type: 2}
+  currentHealth: 0

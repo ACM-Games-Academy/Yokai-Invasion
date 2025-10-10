@@ -164,6 +164,8 @@ GameObject:
   - component: {fileID: 123078735}
   - component: {fileID: 123078738}
   - component: {fileID: 123078737}
+  - component: {fileID: 123078739}
+  - component: {fileID: 123078740}
   m_Layer: 0
   m_Name: YokaiManager
   m_TagString: Untagged
@@ -183,13 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13bd9020231989146a771639f8b56248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YokaiManager
-  templePosition: {fileID: 1209070212}
-  yokaiPrefab: {fileID: 4999250472620126497, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
-  boidScript: {fileID: 123078738}
-  aStarScript: {fileID: 123078737}
-  numberOfYokaiToSpawn: 50
-  spawnMinVal: -50
-  spawnMaxVal: 50
+  yokaiSpawner: {fileID: 123078739}
+  hordeSettings:
+  - {fileID: 11400000, guid: adeef27d98273aa46a2841cde78e0ee9, type: 2}
 --- !u!4 &123078736
 Transform:
   m_ObjectHideFlags: 0
@@ -234,6 +232,39 @@ MonoBehaviour:
   alignmentWeight: 1
   cohesionWeight: 1
   separationWeight: 1
+--- !u!114 &123078739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123078734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86930fbe971ac2245b3e0540e86446f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YokaiSpawner
+  objectPooler: {fileID: 123078740}
+  yokaiPrefabs:
+  - {fileID: 4999250472620126497, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
+  templePosition: {fileID: 1209070212}
+  boidScript: {fileID: 123078738}
+  aStarScript: {fileID: 123078737}
+  spawnAreaCenter: {x: -65, y: -65}
+  spawnAreaSize: {x: 20, y: 20}
+  spawnHeight: 0.66
+--- !u!114 &123078740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123078734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa71d24bd830ae44a2fd90db4cac75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPooler
 --- !u!1 &138495068
 GameObject:
   m_ObjectHideFlags: 0
