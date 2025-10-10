@@ -112,13 +112,9 @@ public class AStar : MonoBehaviour
             Vector2Int neighbor = position + direction;
             Vector3 worldPosition = GridToWorld(neighbor);
 
-            float checkHeight = 5f; // max obstacle height
-            Vector3 halfExtents = new Vector3(cellSize * 0.45f, checkHeight * 0.5f, cellSize * 0.45f);
-            Vector3 center = worldPosition + new Vector3(0f, halfExtents.y, 0f);
-
-            if (Physics.CheckBox(center, halfExtents, Quaternion.identity, LayerMask.GetMask("Obstacle")))
+            if (Physics.CheckSphere(worldPosition, cellSize, LayerMask.GetMask("Obstacle")));
             {
-                Debug.Log($"Obstacle at {neighbor}");
+                Debug.Log($"Obstacle at {worldPosition}");
                 continue;
             }
 

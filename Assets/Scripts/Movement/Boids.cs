@@ -3,7 +3,14 @@ using UnityEngine;
 
 public class Boids : MonoBehaviour
 {
-    public Vector3 BoidsPath(float alignmentWeight, float cohesionWeight, float separationWeight, float detectionRadius, Vector3 yokaiPosition)
+    [SerializeField]
+    private float alignmentWeight = 1f;
+    [SerializeField]
+    private float cohesionWeight = 1f;
+    [SerializeField]
+    private float separationWeight = 1f;
+
+    public Vector3 BoidsPath(float detectionRadius, Vector3 yokaiPosition)
     {
         Collider[] nearbyObjects = GetNearby(detectionRadius, yokaiPosition);
 

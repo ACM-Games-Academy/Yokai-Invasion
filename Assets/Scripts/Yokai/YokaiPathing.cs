@@ -17,13 +17,9 @@ public class YokaiPathing : MonoBehaviour
 
     private float floorHeight = 0.66f;
 
-    private float alignmentWeight;
-    private float cohesionWeight;
-    private float separationWeight;
-
     [Range(0, 1)]
     [SerializeField]
-    private float reliance = 0.5f; // 0 = only boids, 1 = only A*
+    private float reliance; // 0 = only boids, 1 = only A*
 
     private Vector3[] currentPath;
     private int currentWaypointIndex;
@@ -51,7 +47,7 @@ public class YokaiPathing : MonoBehaviour
         }
 
         // Boid steering vector
-        Vector3 boidDir = boidScript.BoidsPath(alignmentWeight, cohesionWeight, separationWeight, detectionRadius, transform.position);
+        Vector3 boidDir = boidScript.BoidsPath(detectionRadius, transform.position);
 
         switch (currentYokaiState)
         {
@@ -64,6 +60,7 @@ public class YokaiPathing : MonoBehaviour
 
                 Move((boidDir * reliance) + (pathDir * (1 - reliance)));
                 break;
+
             case YokaiState.YokaiStates.Pursuing:
                 if (currentPath == null || ReachedEnd())
                 {
@@ -72,9 +69,11 @@ public class YokaiPathing : MonoBehaviour
                 }
                 Move((boidDir * reliance) + (pathDir * (1 - reliance)));
                 break;
+
             case YokaiState.YokaiStates.Attacking:
                 // Stop movement when attacking?
                 break;
+
             case YokaiState.YokaiStates.Fleeing:
                 if (currentPath == null || ReachedEnd())
                 {
@@ -84,9 +83,11 @@ public class YokaiPathing : MonoBehaviour
                 }
                 Move((boidDir * reliance) + (pathDir * (1 - reliance)));
                 break;
+
             case YokaiState.YokaiStates.Dead:
                 // Stop all movement when dead
                 break;
+
             default:
                 break;
         }
@@ -113,7 +114,6 @@ public class YokaiPathing : MonoBehaviour
 
     // --- Setup methods ---
     public void SetTempleLocation(Transform position) => templeLocation = position;
-    public void SetBoidWeights(Vector3 weights) => (alignmentWeight, cohesionWeight, separationWeight) = (weights.x, weights.y, weights.z);
     public void SetBoidScript(Boids boids) => boidScript = boids;
     public void SetAStarScript(AStar aStar) => aStarScript = aStar;
 }

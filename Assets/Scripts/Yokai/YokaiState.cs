@@ -10,6 +10,7 @@ public class YokaiState : MonoBehaviour
         Fleeing,
         Dead
     }
+
     private YokaiStates currentState = YokaiStates.Idle;
 
     private int health = 2;
