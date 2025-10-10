@@ -21,7 +21,11 @@ public class YokaiGrunt : MonoBehaviour, IYokai
     public void TakeDamage(int damageAmount)
     {
         Debug.Log($"{yokaiSettings.YokaiName} took {damageAmount} damage.");
-        // Implement health reduction logic here
+        currentHealth -= damageAmount;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
     public void DealDamage(int damageAmount)
@@ -36,9 +40,10 @@ public class YokaiGrunt : MonoBehaviour, IYokai
         // Implement target determination logic here
     }
 
-    public void MoveTowardsTarget()
+    private void Die()
     {
-        Debug.Log($"{yokaiSettings.YokaiName} is moving towards its target.");
-        // Implement movement logic here
+        Debug.Log($"{yokaiSettings.YokaiName} has died.");
+        // Implement death logic here (e.g., play animation, drop loot)
+        ObjectPooler.Instance.ReturnPooledObject(gameObject);
     }
 }

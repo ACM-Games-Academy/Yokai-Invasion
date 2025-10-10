@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 public class YokaiSpawner : MonoBehaviour
 {
-    [SerializeField] private ObjectPooler objectPooler;
     [SerializeField] private GameObject[] yokaiPrefabs;
 
     [SerializeField] private Transform templePosition;
@@ -18,7 +17,7 @@ public class YokaiSpawner : MonoBehaviour
     {
         foreach (var yokai in yokaiPrefabs)
         {
-            objectPooler.InitializePool(yokai, 256);
+            ObjectPooler.Instance.InitializePool(yokai, 256);
         }
     }
 
@@ -89,7 +88,7 @@ public class YokaiSpawner : MonoBehaviour
 
     private GameObject SpawnYokai(string yokai, Vector3 position, Quaternion rotation)
     {
-        var spawnedYokai = objectPooler.GetPooledObject(yokai, position, rotation);
+        var spawnedYokai = ObjectPooler.Instance.GetPooledObject(yokai, position, rotation);
         var yokaiPathing = spawnedYokai.GetComponent<YokaiPathing>();
 
         yokaiPathing.SetTempleLocation(templePosition);

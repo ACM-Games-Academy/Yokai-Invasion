@@ -112,7 +112,7 @@ public class AStar : MonoBehaviour
             Vector2Int neighbor = position + direction;
             Vector3 worldPosition = GridToWorld(neighbor);
 
-            if (Physics.CheckSphere(worldPosition, cellSize, LayerMask.GetMask("Obstacle")));
+            if (Physics.CheckSphere(worldPosition, cellSize, LayerMask.GetMask("Obstacle")))
             {
                 Debug.Log($"Obstacle at {worldPosition}");
                 continue;
