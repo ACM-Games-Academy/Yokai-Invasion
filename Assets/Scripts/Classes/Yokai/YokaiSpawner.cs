@@ -13,7 +13,7 @@ public class YokaiSpawner : MonoBehaviour
     [SerializeField] private Vector2 spawnAreaSize;
     [SerializeField] private float spawnHeight;
 
-    private void Awake()
+    private void Start()
     {
         foreach (var yokai in yokaiPrefabs)
         {
@@ -28,17 +28,6 @@ public class YokaiSpawner : MonoBehaviour
         var spawnedYokai = new List<GameObject>();
         var optionsToRemove = new List<yokaiSpawnOption>();
 
-<<<<<<< Updated upstream
-=======
-        foreach (var option in yokaiOptions)
-        {
-            if (ObjectPooler.Instance.PoolExists(option.yokaiPrefab.name) == false)
-            {
-                ObjectPooler.Instance.InitializePool(option.yokaiPrefab, 256);
-            }
-        }
-
->>>>>>> Stashed changes
         while (points > 0)
         {
             float roll = Random.Range(0f, 100f);
