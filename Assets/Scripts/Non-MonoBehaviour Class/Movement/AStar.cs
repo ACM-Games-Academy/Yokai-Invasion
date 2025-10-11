@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class AStar
+public static class AStar
 {
     public class PathNode
     {
@@ -22,14 +22,18 @@ public class AStar
         }
     }
 
-    private float cellSize = 1.0f;
+    private static float worldHeight;
 
-    private float stopDistance = 0.5f;
+    private static float cellSize = 1.0f;
 
-    private int maxIterations = 1000;
+    private static float stopDistance = 0.5f;
 
-    public Vector3[] AStarPath(Vector3 start, Vector3 end)
+    private static int maxIterations = 1000;
+
+    public static Vector3[] AStarPath(Vector3 start, Vector3 end)
     {
+        worldHeight = start.y;
+
         Vector2Int startGrid = WorldToGrid(start);
         Vector2Int endGrid = WorldToGrid(end);
 
@@ -91,7 +95,7 @@ public class AStar
         return new Vector3[] { start, end };
     }
 
-    private IEnumerable<Vector2Int> GetNeighbors(Vector2Int position)
+    private static IEnumerable<Vector2Int> GetNeighbors(Vector2Int position)
     {
         Vector2Int[] directions = new Vector2Int[]
         {
@@ -120,7 +124,7 @@ public class AStar
         }
     }
 
-    private Vector3[] ReconstructPath(PathNode endNode)
+    private static Vector3[] ReconstructPath(PathNode endNode)
     {
         List<Vector3> path = new List<Vector3>();
         PathNode current = endNode;
@@ -134,7 +138,7 @@ public class AStar
     }
 
 
-    private Vector2Int WorldToGrid(Vector3 worldPos)
+    private static Vector2Int WorldToGrid(Vector3 worldPos)
     {
         return new Vector2Int(
             Mathf.RoundToInt(worldPos.x / cellSize),
@@ -142,11 +146,11 @@ public class AStar
         );
     }
 
-    private Vector3 GridToWorld(Vector2Int gridPos)
+    private static Vector3 GridToWorld(Vector2Int gridPos)
     {
         return new Vector3(
             gridPos.x * cellSize,
-            0.66f,
+            worldHeight,
             gridPos.y * cellSize
         );
     }

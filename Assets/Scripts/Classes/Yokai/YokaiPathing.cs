@@ -9,9 +9,6 @@ public class YokaiPathing : MonoBehaviour
     private Vector3 templeLocation = new Vector3(7, 3, -7);
     private Transform heroTransform;
 
-    private Boids boids;
-    private AStar aStar;
-
     private float floorHeight = 0.66f;
 
     private Vector3[] currentPath;
@@ -24,9 +21,6 @@ public class YokaiPathing : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         heroTransform = GameObject.FindGameObjectWithTag("Hero").transform;
-
-        boids = new Boids();
-        aStar = new AStar();
     }
 
     private void FixedUpdate()
@@ -89,7 +83,7 @@ public class YokaiPathing : MonoBehaviour
     {
         if (currentPath == null)
         {
-            currentPath = aStar.AStarPath(transform.position, templeLocation);
+            currentPath = AStar.AStarPath(transform.position, templeLocation);
             currentWaypointIndex = 0;
         }
 
@@ -100,7 +94,7 @@ public class YokaiPathing : MonoBehaviour
     {
         if (currentPath == null || ReachedEnd())
         {
-            currentPath = aStar.AStarPath(transform.position, heroTransform.position);
+            currentPath = AStar.AStarPath(transform.position, heroTransform.position);
             currentWaypointIndex = 0;
         }
         return (boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance));
@@ -111,7 +105,7 @@ public class YokaiPathing : MonoBehaviour
         if (currentPath == null || ReachedEnd())
         {
             Vector3 fleeTarget = transform.position + (transform.position - heroTransform.position).normalized * 10f;
-            currentPath = aStar.AStarPath(transform.position, fleeTarget);
+            currentPath = AStar.AStarPath(transform.position, fleeTarget);
             currentWaypointIndex = 0;
         }
         return (boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance));
@@ -137,7 +131,7 @@ public class YokaiPathing : MonoBehaviour
             }
         }
 
-        return boids.BoidsPath(
+        return Boids.BoidsPath(
             transform.position,
             rb.linearVelocity,
             nearbyPositions,

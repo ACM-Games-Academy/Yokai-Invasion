@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boids
+public static class Boids
 {
-    private float alignmentWeight = 1f;
-    private float cohesionWeight = 1f;
-    private float separationWeight = 1f;
+    private static float alignmentWeight = 1f;
+    private static float cohesionWeight = 1f;
+    private static float separationWeight = 1f;
 
     /// <summary>
     /// Calculates the boid steering vector for a single yokai.
@@ -16,7 +16,7 @@ public class Boids
     /// <param name="nearbyYokaiVelocities">Velocities of nearby yokai.</param>
     /// <param name="nearbyObstacles">Positions of nearby obstacles for separation.</param>
     /// <returns>Normalized boid direction vector.</returns>
-    public Vector3 BoidsPath(
+    public static Vector3 BoidsPath(
         Vector3 yokaiPosition,
         Vector3 yokaiVelocity,
         List<Vector3> nearbyYokaiPositions,

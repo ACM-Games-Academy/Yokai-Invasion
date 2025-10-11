@@ -9,7 +9,11 @@ public class OverseerSettings : ScriptableObject
     [SerializeField]
     private SpawnerSettings spawnerSettings;
 
+    [Header("Prefabs")]
+    [SerializeField]
+    private GameObject selectionCanvas;
 
     public HordeSettings[] HordeSettings => hordeSettings;
     public SpawnerSettings SpawnerSettings => spawnerSettings;
+    public GameObject SelectionCanvas => selectionCanvas;
 }
