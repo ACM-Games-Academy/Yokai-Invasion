@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public interface IYokai : IDamageable
+public interface Yokai : Damageable, AutoAttacker
 {
     YokaiSettings yokaiSettings { get; }
-
-    public void DealDamage(int damageAmount);
     public void DetermineTarget();
 }

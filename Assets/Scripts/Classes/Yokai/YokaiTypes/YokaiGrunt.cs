@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class YokaiGrunt : MonoBehaviour, IYokai
+public class YokaiGrunt : MonoBehaviour, Yokai
 {
     [Header("Yokai Settings")]
     [Tooltip("Settings for the Yokai Grunt")]
     [SerializeField]
     private YokaiSettings yokaiSettings;
-    YokaiSettings IYokai.yokaiSettings => yokaiSettings;
+    YokaiSettings Yokai.yokaiSettings => yokaiSettings;
 
     [Header("Grunt Stats")]
     [Tooltip("The current health of the Yokai Grunt")]
@@ -28,9 +28,9 @@ public class YokaiGrunt : MonoBehaviour, IYokai
         }
     }
 
-    public void DealDamage(int damageAmount)
+    public void AutoAttack()
     {
-        Debug.Log($"{yokaiSettings.YokaiName} dealt {damageAmount} damage.");
+        Debug.Log($"{yokaiSettings.YokaiName} dealt {yokaiSettings.AttackPower} damage.");
         // Implement damage dealing logic here
     }
 
@@ -44,6 +44,6 @@ public class YokaiGrunt : MonoBehaviour, IYokai
     {
         Debug.Log($"{yokaiSettings.YokaiName} has died.");
         // Implement death logic here (e.g., play animation, drop loot)
-        ObjectPooler.Instance.ReturnPooledObject(gameObject);
+        Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
     }
 }

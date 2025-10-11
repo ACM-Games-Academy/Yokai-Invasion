@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class AStar : MonoBehaviour
+public class AStar
 {
     public class PathNode
     {
@@ -22,10 +22,8 @@ public class AStar : MonoBehaviour
         }
     }
 
-    [SerializeField] 
     private float cellSize = 1.0f;
 
-    [SerializeField]
     private float stopDistance = 0.5f;
 
     private int maxIterations = 1000;

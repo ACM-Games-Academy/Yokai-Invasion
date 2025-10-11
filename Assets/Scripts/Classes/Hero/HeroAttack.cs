@@ -31,7 +31,7 @@ public class HeroAttack : MonoBehaviour
     {
         foreach (var yokaiCollider in yokaiInRange)
         {
-            var yokai = yokaiCollider.gameObject.GetComponent<IYokai>();
+            var yokai = yokaiCollider.gameObject.GetComponent<Yokai>();
 
             if (yokai == null) continue;
 
