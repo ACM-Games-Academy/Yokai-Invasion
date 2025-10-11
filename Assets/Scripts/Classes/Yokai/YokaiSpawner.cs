@@ -22,9 +22,9 @@ public class YokaiSpawner : MonoBehaviour
 
         foreach (var option in yokaiOptions)
         {
-            if (objectPooler.PoolExists(option.yokaiPrefab.name) == false)
+            if (Overseer.Instance.GetManager<ObjectPooler>().PoolExists(option.yokaiPrefab.name) == false)
             {
-                objectPooler.InitializePool(option.yokaiPrefab, 256);
+                Overseer.Instance.GetManager<ObjectPooler>().InitializePool(option.yokaiPrefab, 256);
             }
         }
 
