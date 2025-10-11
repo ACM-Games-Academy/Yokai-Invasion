@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1195487930941004535}
   - component: {fileID: 8864290702200615972}
   - component: {fileID: 1370996596064117846}
-  - component: {fileID: 2786053867091440392}
   - component: {fileID: 276683117260303945}
+  - component: {fileID: 8512359031757158399}
   m_Layer: 0
   m_Name: Farmer
   m_TagString: Untagged
@@ -116,18 +116,6 @@ CapsuleCollider:
   m_Height: 2.3
   m_Direction: 1
   m_Center: {x: 0, y: 0.85, z: 0}
---- !u!114 &2786053867091440392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7792955464928960019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a042ec448077534e87511a4631deaaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableUnit
 --- !u!54 &276683117260303945
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,11 +138,24 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &8512359031757158399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792955464928960019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9b631b8900ac9479907b6085b62f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Farmer
+  settings: {fileID: 11400000, guid: 5a6059ec35a61d14099052f014d14c36, type: 2}
 --- !u!1001 &2397568435955787183
 PrefabInstance:
   m_ObjectHideFlags: 0

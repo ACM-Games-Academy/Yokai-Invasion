@@ -3,19 +3,34 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-    public static SelectionManager Instance { get; private set; }
-
     public HashSet<SelectableUnit> SelectedUnits = new HashSet<SelectableUnit>(); // HashSet to avoid duplicates
     public List<SelectableUnit> AvailableUnits = new List<SelectableUnit>();
 
+    private CommandManager commandManager;
+    private SelectionInput selectionInput;
+
+    private GameObject selectionGameObject;
+
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
+        var commandManagerType = typeof(CommandManager);
+
+        GameObject commandManagerObject = new GameObject(commandManagerType.Name);
+        commandManagerObject.transform.SetParent(transform);
+
+        commandManager = commandManagerObject.AddComponent<CommandManager>();
+
+        var selectionInputType = typeof(SelectionInput);
+
+        GameObject selectionInputObject = new GameObject(selectionInputType.Name);
+        selectionInputObject.transform.SetParent(transform);
+
+        selectionInput = selectionInputObject.AddComponent<SelectionInput>();
+    }
+
+    private void Start()
+    {
+        selectionInput.SetSelectionBoxPrefab(selectionGameObject);
     }
 
     public void Select(SelectableUnit Unit)
@@ -43,5 +58,10 @@ public class SelectionManager : MonoBehaviour
             Unit.OnDeselect();
         }
         SelectedUnits.Clear();
+    }
+
+    public void SetSelectionCanvas(GameObject canvas)
+    {
+        selectionGameObject = canvas;
     }
 }

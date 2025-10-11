@@ -1,11 +1,10 @@
-using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class HeroMovement : MonoBehaviour
 {
-    private Vector2 movementInput = Vector2.zero;
-    private int rotationDegree = 135;
+    private static Vector2 movementInput = Vector2.zero;
+    private static int rotationDegree = 135;
 
     [SerializeField] private HeroSettings heroSettings;
 
@@ -15,11 +14,8 @@ public class HeroMovement : MonoBehaviour
         transform.position += newMovementInput * Time.deltaTime * heroSettings.MovementSpeed;
     }
 
-    public void SyncMovementInput(InputAction.CallbackContext input) 
+    public static void SyncMovementInput(InputAction.CallbackContext input) 
     { 
-        movementInput = input.ReadValue<Vector2>();
-
-        movementInput = Quaternion.Euler(0, 0, rotationDegree) * movementInput;
-
+        movementInput = Quaternion.Euler(0, 0, rotationDegree) * input.ReadValue<Vector2>();
     }
 }

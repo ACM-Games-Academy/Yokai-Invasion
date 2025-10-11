@@ -10,21 +10,12 @@ public class HeroAttack : MonoBehaviour
 
     private void Update()
     {
-        yokaiInRange = GetNearby(heroSettings.AttackRange, transform.position);
+        yokaiInRange = Boids.GetNearby(transform.position, heroSettings.AttackRange, ~LayerMask.GetMask("Floor")).ToArray();
 
         if (yokaiInRange.Length > 0 && Time.time >= lastAttackTime + heroSettings.AttackDelay)
         {
             Attack();
         }
-    }
-
-    private Collider[] GetNearby(float range, Vector3 position)
-    {
-        int mask = ~LayerMask.GetMask("Floor"); // all layers EXCEPT floor
-
-        Collider[] hits = Physics.OverlapSphere(position, range, mask);
-
-        return hits;
     }
 
     public void Attack()

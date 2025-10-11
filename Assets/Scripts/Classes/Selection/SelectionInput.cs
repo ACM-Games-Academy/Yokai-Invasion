@@ -4,12 +4,21 @@ using UnityEngine.InputSystem;
 
 public class SelectionInput : MonoBehaviour
 {
-    private bool isModifying = false;
-    [SerializeField] private RectTransform selectionBox;
-    private Vector2 initialMousePosition;
+    private static bool isModifying = false;
+    private static Vector2 initialMousePosition;
 
-    private float dragDelay = 0.25f;
-    private float dragStartTime;
+    private static float dragDelay = 0.25f;
+    private static float dragStartTime;
+
+    private GameObject selectionBoxPrefab;
+    private static RectTransform selectionBox;
+
+    private void Start()
+    {
+        GameObject canvasInstance = Instantiate(selectionBoxPrefab, transform);
+
+        selectionBox = canvasInstance.transform.Find("SelectionBox").GetComponent<RectTransform>();
+    }
 
     private enum ClickState
     {
@@ -19,7 +28,7 @@ public class SelectionInput : MonoBehaviour
         Click_Ending_From_Hold,
         Click_Ending_From_Click
     }
-    private ClickState currentClickState = ClickState.None;
+    private static ClickState currentClickState = ClickState.None;
 
     private void Update()
     {
@@ -47,36 +56,36 @@ public class SelectionInput : MonoBehaviour
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out RaycastHit hitInfo) &&
                     hitInfo.collider.TryGetComponent<SelectableUnit>(out SelectableUnit Unit))
                 {
-                    if (isModifying && SelectionManager.Instance.IsSelected(Unit))
+                    if (isModifying && Overseer.Instance.GetManager<SelectionManager>().IsSelected(Unit))
                     {
                         Debug.Log($"Deselecting {Unit.name}");
-                        SelectionManager.Instance.Deselect(Unit);
+                        Overseer.Instance.GetManager<SelectionManager>().Deselect(Unit);
                     }
-                    else if (isModifying && !SelectionManager.Instance.IsSelected(Unit))
+                    else if (isModifying && !Overseer.Instance.GetManager<SelectionManager>().IsSelected(Unit))
                     {
                         Debug.Log($"Adding {Unit.name} to selection");
-                        SelectionManager.Instance.Select(Unit);
+                        Overseer.Instance.GetManager<SelectionManager>().Select(Unit);
                     }
                     else
                     {
                         Debug.Log($"Clicked on {Unit.name}");
-                        SelectionManager.Instance.ClearSelection();
-                        SelectionManager.Instance.Select(Unit);
+                        Overseer.Instance.GetManager<SelectionManager>().ClearSelection();
+                        Overseer.Instance.GetManager<SelectionManager>().Select(Unit);
                     }
                 }
                 else
                 {
                     Debug.Log("Clicked on empty space, clearing selection");
-                    SelectionManager.Instance.ClearSelection();
+                    Overseer.Instance.GetManager<SelectionManager>().ClearSelection();
                 }
                 currentClickState = ClickState.None;
                 break;
         }
     }
 
-    public void HandleSelectionInput(InputAction.CallbackContext context)
+    public static void HandleSelectionInput(InputAction.CallbackContext input)
     {
-        if (context.started)
+        if (input.started)
         {
             initialMousePosition = Mouse.current.position.ReadValue();
             selectionBox.anchoredPosition = initialMousePosition;
@@ -84,7 +93,7 @@ public class SelectionInput : MonoBehaviour
             dragStartTime = Time.time;
             currentClickState = ClickState.Click_Started;
         }
-        else if (context.canceled)
+        else if (input.canceled)
         {
             if (currentClickState == ClickState.Click_Holding)
             {
@@ -101,7 +110,7 @@ public class SelectionInput : MonoBehaviour
         }
     }
 
-    public void ToggleModify(InputAction.CallbackContext context)
+    public static void ToggleModify(InputAction.CallbackContext context)
     {
         if (context.started)
         {
@@ -131,27 +140,31 @@ public class SelectionInput : MonoBehaviour
 
         if (!isModifying)
         {
-            SelectionManager.Instance.ClearSelection();
+            Overseer.Instance.GetManager<SelectionManager>().ClearSelection();
         }
 
-        foreach (var Unit in SelectionManager.Instance.AvailableUnits)
+        foreach (var Unit in Overseer.Instance.GetManager<SelectionManager>().AvailableUnits)
         {
             Vector3 screenPos = Camera.main.WorldToScreenPoint(Unit.transform.position);
 
             if (rect.Contains(screenPos))
             {
-                if (!SelectionManager.Instance.IsSelected(Unit))
+                if (!Overseer.Instance.GetManager<SelectionManager>().IsSelected(Unit))
                 {
                     Debug.Log($"Selecting {Unit.name} via box");
-                    SelectionManager.Instance.Select(Unit);
+                    Overseer.Instance.GetManager<SelectionManager>().Select(Unit);
                 }
             }
-            else if (isModifying && SelectionManager.Instance.IsSelected(Unit))
+            else if (isModifying && Overseer.Instance.GetManager<SelectionManager>().IsSelected(Unit))
             {
                 Debug.Log($"Deselecting {Unit.name} via box");
-                SelectionManager.Instance.Deselect(Unit);
+                Overseer.Instance.GetManager<SelectionManager>().Deselect(Unit);
             }
         }
     }
 
+    public void SetSelectionBoxPrefab(GameObject selectionBoxCanvas) 
+    {
+        selectionBoxPrefab = selectionBoxCanvas;
+    }
 }

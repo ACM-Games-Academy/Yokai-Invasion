@@ -36,6 +36,7 @@ public class Overseer : MonoBehaviour
         // DontDestroyOnLoad(gameObject);
         InitializeManagers();
         SetUpYokaiManager();
+        SetUpSelectionManager();
     }
 
     private void InitializeManagers()
@@ -74,5 +75,12 @@ public class Overseer : MonoBehaviour
 
         yokaiManager.SetHordeSettings(settings.HordeSettings);
         yokaiManager.SetSpawnerSettings(settings.SpawnerSettings);
+    }
+
+    private void SetUpSelectionManager()
+    {
+        SelectionManager selectionManager = GetManager<SelectionManager>();
+
+        selectionManager.SetSelectionCanvas(settings.SelectionCanvas);
     }
 }
