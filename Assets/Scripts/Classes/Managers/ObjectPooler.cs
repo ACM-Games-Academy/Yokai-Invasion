@@ -6,23 +6,11 @@ public class ObjectPooler : MonoBehaviour
     private Dictionary<string, Queue<GameObject>> poolDictionary;
     private Transform poolParent;
 
-    public static ObjectPooler Instance { get; private set; }
-
     private void Awake()
     {
         poolParent = new GameObject("Object Pools").transform;
         poolParent.SetParent(transform);
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
-
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     public void InitializePool(GameObject prefab, int poolSize)

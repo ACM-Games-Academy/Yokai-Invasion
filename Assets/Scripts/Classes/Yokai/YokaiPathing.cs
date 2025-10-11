@@ -5,11 +5,12 @@ using static UnityEditor.Searcher.SearcherWindow;
 public class YokaiPathing : MonoBehaviour
 {
     private Rigidbody rb;
-    private Boids boidScript;
-    private AStar aStarScript;
 
-    [SerializeField] private Transform templeLocation;
+    private Vector3 templeLocation = new Vector3(7, 3, -7);
     private Transform heroTransform;
+
+    private Boids boids;
+    private AStar aStar;
 
     private float floorHeight = 0.66f;
 
@@ -23,46 +24,27 @@ public class YokaiPathing : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         heroTransform = GameObject.FindGameObjectWithTag("Hero").transform;
+
+        boids = new Boids();
+        aStar = new AStar();
     }
 
     private void FixedUpdate()
     {
         YokaiState.YokaiStates currentYokaiState = GetComponent<YokaiState>().GetCurrentState();
 
-        Vector3 pathDir = Vector3.zero;
+        Vector3 pathDir = InitializeAStar();
+        Vector3 boidDir = InitializeBoids();
 
-        if (currentPath != null && currentWaypointIndex < currentPath.Length)
-        {
-            Vector3 waypoint = currentPath[currentWaypointIndex];
-            pathDir = (waypoint - transform.position).normalized;
-
-            // Advance waypoint if close
-            if (Vector3.Distance(transform.position, waypoint) < settings.WaypointTolerance)
-                currentWaypointIndex++;
-        }
-
-        // Boid steering vector
-        Vector3 boidDir = boidScript.BoidsPath(settings.DetectionRadius, transform.position);
-
+        // State machine for pathing
         switch (currentYokaiState)
         {
             case YokaiState.YokaiStates.Idle:
-                if (currentPath == null)
-                {
-                    currentPath = aStarScript.AStarPath(transform.position, templeLocation.position);
-                    currentWaypointIndex = 0;
-                }
-
-                Move((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
+                Move(CalaculatePath_Idle(boidDir, pathDir));
                 break;
 
             case YokaiState.YokaiStates.Pursuing:
-                if (currentPath == null || ReachedEnd())
-                {
-                    currentPath = aStarScript.AStarPath(transform.position, heroTransform.position);
-                    currentWaypointIndex = 0;
-                }
-                Move((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
+                Move(CalculatePath_Pursuing(boidDir, pathDir));
                 break;
 
             case YokaiState.YokaiStates.Attacking:
@@ -70,13 +52,7 @@ public class YokaiPathing : MonoBehaviour
                 break;
 
             case YokaiState.YokaiStates.Fleeing:
-                if (currentPath == null || ReachedEnd())
-                {
-                    Vector3 fleeTarget = transform.position + (transform.position - heroTransform.position).normalized * 10f;
-                    currentPath = aStarScript.AStarPath(transform.position, fleeTarget);
-                    currentWaypointIndex = 0;
-                }
-                Move((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
+                Move(CalculatePath_Fleeing(boidDir, pathDir));
                 break;
 
             case YokaiState.YokaiStates.Dead:
@@ -107,8 +83,81 @@ public class YokaiPathing : MonoBehaviour
         return currentPath != null && currentWaypointIndex >= currentPath.Length;
     }
 
-    // --- Setup methods ---
-    public void SetTempleLocation(Transform position) => templeLocation = position;
-    public void SetBoidScript(Boids boids) => boidScript = boids;
-    public void SetAStarScript(AStar aStar) => aStarScript = aStar;
+
+
+    private Vector3 CalaculatePath_Idle(Vector3 boidDir, Vector3 pathDir)
+    {
+        if (currentPath == null)
+        {
+            currentPath = aStar.AStarPath(transform.position, templeLocation);
+            currentWaypointIndex = 0;
+        }
+
+        return ((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
+    }
+
+    private Vector3 CalculatePath_Pursuing(Vector3 boidDir, Vector3 pathDir)
+    {
+        if (currentPath == null || ReachedEnd())
+        {
+            currentPath = aStar.AStarPath(transform.position, heroTransform.position);
+            currentWaypointIndex = 0;
+        }
+        return (boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance));
+    }
+
+    private Vector3 CalculatePath_Fleeing(Vector3 boidDir, Vector3 pathDir)
+    {
+        if (currentPath == null || ReachedEnd())
+        {
+            Vector3 fleeTarget = transform.position + (transform.position - heroTransform.position).normalized * 10f;
+            currentPath = aStar.AStarPath(transform.position, fleeTarget);
+            currentWaypointIndex = 0;
+        }
+        return (boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance));
+    }
+
+    private Vector3 InitializeBoids()
+    {
+        var nearbyColliders = Boids.GetNearby(transform.position, settings.DetectionRadius, ~LayerMask.GetMask("Floor"));
+        var nearbyPositions = new List<Vector3>();
+        var nearbyVelocities = new List<Vector3>();
+        var nearbyObstacles = new List<Vector3>();
+
+        foreach (var collider in nearbyColliders)
+        {
+            if (collider.CompareTag("Yokai"))
+            {
+                nearbyPositions.Add(collider.transform.position);
+                nearbyVelocities.Add(collider.attachedRigidbody != null ? collider.attachedRigidbody.linearVelocity : Vector3.zero);
+            }
+            else
+            {
+                nearbyObstacles.Add(collider.transform.position);
+            }
+        }
+
+        return boids.BoidsPath(
+            transform.position,
+            rb.linearVelocity,
+            nearbyPositions,
+            nearbyVelocities,
+            nearbyObstacles
+        );
+    }
+
+    private Vector3 InitializeAStar()
+    {
+        var pathDir = Vector3.zero;
+        if (currentPath != null && currentWaypointIndex < currentPath.Length)
+        {
+            Vector3 waypoint = currentPath[currentWaypointIndex];
+            pathDir = (waypoint - transform.position).normalized;
+
+            // Advance waypoint if close
+            if (Vector3.Distance(transform.position, waypoint) < settings.WaypointTolerance)
+                currentWaypointIndex++;
+        }
+        return pathDir;
+    }
 }
