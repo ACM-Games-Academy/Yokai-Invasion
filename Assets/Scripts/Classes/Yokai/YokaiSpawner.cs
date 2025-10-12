@@ -5,6 +5,11 @@ public class YokaiSpawner : MonoBehaviour
 {
     private SpawnerSettings settings;
 
+    private void Awake()
+    {
+        settings = Overseer.Instance.Settings.SpawnerSettings;
+    }
+
     private void Start()
     {
         foreach (var yokai in settings.YokaiPrefabs)
@@ -82,10 +87,5 @@ public class YokaiSpawner : MonoBehaviour
         float x = Random.Range(settings.SpawnAreaCenter.x - settings.SpawnAreaSize.x / 2, settings.SpawnAreaCenter.x + settings.SpawnAreaSize.x / 2);
         float z = Random.Range(settings.SpawnAreaCenter.y - settings.SpawnAreaSize.y / 2, settings.SpawnAreaCenter.y + settings.SpawnAreaSize.y / 2);
         return new Vector3(x, settings.SpawnHeight, z);
-    }
-
-    public void SetSettings(SpawnerSettings newSettings)
-    {
-        settings = newSettings;
     }
 }

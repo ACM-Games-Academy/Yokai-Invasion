@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YokaiSettings
   yokaiName: Grunt
   moveSpeed: 10
-  maxHealth: 1
+  maxHealth: 2
   attackPower: 1
   allyReliance: 0.25
   waypointTolerance: 0.3

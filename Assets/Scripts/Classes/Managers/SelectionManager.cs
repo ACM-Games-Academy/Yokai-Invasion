@@ -28,11 +28,6 @@ public class SelectionManager : MonoBehaviour
         selectionInput = selectionInputObject.AddComponent<SelectionInput>();
     }
 
-    private void Start()
-    {
-        selectionInput.SetSelectionBoxPrefab(selectionGameObject);
-    }
-
     public void Select(SelectableUnit Unit)
     {
         Unit.OnSelect();

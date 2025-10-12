@@ -11,6 +11,7 @@ using UnityEngine;
 public class Overseer : MonoBehaviour
 {
     [SerializeField] private OverseerSettings settings;
+    public OverseerSettings Settings { get { return settings; } }
 
     public static Overseer Instance { get; private set; }
 
@@ -35,8 +36,6 @@ public class Overseer : MonoBehaviour
 
         // DontDestroyOnLoad(gameObject);
         InitializeManagers();
-        SetUpYokaiManager();
-        SetUpSelectionManager();
     }
 
     private void InitializeManagers()
@@ -67,20 +66,5 @@ public class Overseer : MonoBehaviour
 
         Debug.LogError($"Manager of type {type.Name} not found.");
         return null;
-    }
-
-    private void SetUpYokaiManager()
-    {
-        YokaiManager yokaiManager = GetManager<YokaiManager>();
-
-        yokaiManager.SetHordeSettings(settings.HordeSettings);
-        yokaiManager.SetSpawnerSettings(settings.SpawnerSettings);
-    }
-
-    private void SetUpSelectionManager()
-    {
-        SelectionManager selectionManager = GetManager<SelectionManager>();
-
-        selectionManager.SetSelectionCanvas(settings.SelectionCanvas);
     }
 }
