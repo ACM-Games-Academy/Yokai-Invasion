@@ -7,7 +7,7 @@ public class YokaiPathing : MonoBehaviour
     private Rigidbody rb;
     private Yokai yokai;
 
-    private Vector3 templeLocation = new Vector3(1, 1, -7);
+    private Vector3 templeLocation = new Vector3(7, 1, 0);
     private Transform heroTransform;
 
     private float floorHeight = 0.66f;
