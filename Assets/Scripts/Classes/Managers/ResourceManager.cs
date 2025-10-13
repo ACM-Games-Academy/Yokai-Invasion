@@ -11,9 +11,21 @@ public class ResourceManager : MonoBehaviour
     public int CurrentWood() => wood;
     public int CurrentGold() => gold;
 
-    public void IncreaseFood(int amount) => food += amount;
-    public void IncreaseWood(int amount) => wood += amount;
-    public void IncreaseGold(int amount) => gold += amount;
+    public void IncreaseFood(int amount)
+    {
+        food += amount;
+        Debug.Log($"Current food is {food}");
+    }
+    public void IncreaseWood(int amount)
+    {
+        wood += amount;
+        Debug.Log($"Current wood is {wood}");
+    }
+    public void IncreaseGold(int amount)
+    {
+        gold += amount;
+        Debug.Log($"Current gold is {gold}");
+    }
 
     public void DecreaseFood(int amount)
     {
