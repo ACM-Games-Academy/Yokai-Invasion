@@ -21,7 +21,8 @@ public class Overseer : MonoBehaviour
     {
         typeof(YokaiManager),
         typeof(ObjectPooler),
-        typeof(SelectionManager)
+        typeof(SelectionManager),
+        typeof(ResourceManager)
     };
 
     private void Awake()
