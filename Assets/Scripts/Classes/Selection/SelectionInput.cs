@@ -10,12 +10,11 @@ public class SelectionInput : MonoBehaviour
     private static float dragDelay = 0.25f;
     private static float dragStartTime;
 
-    private GameObject selectionBoxPrefab;
     private static RectTransform selectionBox;
 
     private void Start()
     {
-        GameObject canvasInstance = Instantiate(selectionBoxPrefab, transform);
+        GameObject canvasInstance = Instantiate(Overseer.Instance.Settings.SelectionCanvas, transform);
 
         selectionBox = canvasInstance.transform.Find("SelectionBox").GetComponent<RectTransform>();
     }
@@ -161,10 +160,5 @@ public class SelectionInput : MonoBehaviour
                 Overseer.Instance.GetManager<SelectionManager>().Deselect(Unit);
             }
         }
-    }
-
-    public void SetSelectionBoxPrefab(GameObject selectionBoxCanvas) 
-    {
-        selectionBoxPrefab = selectionBoxCanvas;
     }
 }

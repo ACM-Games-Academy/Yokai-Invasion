@@ -1,7 +1,5 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
-
 
 public static class AStar
 {
@@ -9,8 +7,8 @@ public static class AStar
     {
         public Vector2Int gridPos;
         public PathNode parent;
-        public float G; // cost from start
-        public float H; // heuristic to target
+        public float G;
+        public float H;
         public float F => G + H;
 
         public PathNode(Vector2Int gridPos, PathNode parent, float g, float h)
@@ -23,15 +21,31 @@ public static class AStar
     }
 
     private static float worldHeight;
-
     private static float cellSize = 1.0f;
-
     private static float stopDistance = 0.5f;
+    private static int maxIterations = 2500;
 
-    private static int maxIterations = 1000;
+    // --- GIZMO DEBUGGING DATA ---
+    public struct SphereCheck
+    {
+        public Vector3 pos;
+        public bool hit;
+    }
+
+    public static readonly List<SphereCheck> gizmoChecks = new();
+    public static readonly List<Vector3> gizmoPath = new();
+
+    public static void ClearGizmoData()
+    {
+        gizmoChecks.Clear();
+        gizmoPath.Clear();
+    }
+
+    // -----------------------------
 
     public static Vector3[] AStarPath(Vector3 start, Vector3 end)
     {
+        ClearGizmoData(); // clear gizmo data each run
         worldHeight = start.y;
 
         Vector2Int startGrid = WorldToGrid(start);
@@ -40,13 +54,11 @@ public static class AStar
         List<PathNode> openList = new List<PathNode>();
         HashSet<Vector2Int> closedSet = new HashSet<Vector2Int>();
 
-        // Start node
         PathNode startNode = new PathNode(startGrid, null, 0, Vector2Int.Distance(startGrid, endGrid));
         openList.Add(startNode);
 
         while (openList.Count > 0 && closedSet.Count < maxIterations)
         {
-            // 1. Get node with lowest F cost
             PathNode current = openList[0];
             foreach (var node in openList)
             {
@@ -54,18 +66,16 @@ public static class AStar
                     current = node;
             }
 
-            // 2. Move current from open to closed
             openList.Remove(current);
             closedSet.Add(current.gridPos);
 
-            // 3. If reached end, reconstruct path
-            // 3. Check if we reached the end
             if (current.gridPos == endGrid || Vector2Int.Distance(current.gridPos, endGrid) < stopDistance)
             {
-                return ReconstructPath(current);
+                var path = ReconstructPath(current);
+                gizmoPath.AddRange(path); // store green path positions
+                return path;
             }
 
-            // 4. Get neighbors
             foreach (Vector2Int neighborPos in GetNeighbors(current.gridPos))
             {
                 if (closedSet.Contains(neighborPos)) continue;
@@ -85,13 +95,12 @@ public static class AStar
                 }
                 else if (tentativeG < neighbor.G)
                 {
-                    // Found a better path
                     neighbor.G = tentativeG;
                     neighbor.parent = current;
                 }
             }
         }
-        // No path found
+
         return new Vector3[] { start, end };
     }
 
@@ -114,11 +123,11 @@ public static class AStar
             Vector2Int neighbor = position + direction;
             Vector3 worldPosition = GridToWorld(neighbor);
 
-            if (Physics.CheckSphere(worldPosition, cellSize, LayerMask.GetMask("Obstacle")))
-            {
-                Debug.Log($"Obstacle at {worldPosition}");
+            bool hit = Physics.CheckSphere(worldPosition, cellSize, LayerMask.GetMask("Obstacle"));
+            gizmoChecks.Add(new SphereCheck { pos = worldPosition, hit = hit });
+
+            if (hit)
                 continue;
-            }
 
             yield return neighbor;
         }
@@ -136,7 +145,6 @@ public static class AStar
         path.Reverse();
         return path.ToArray();
     }
-
 
     private static Vector2Int WorldToGrid(Vector3 worldPos)
     {

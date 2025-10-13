@@ -13,6 +13,8 @@ public class YokaiGrunt : MonoBehaviour, Yokai
     [SerializeField]
     private int currentHealth;
 
+    private Yokai.States currentState = Yokai.States.Idle;     // Exposing this to editor means it may fail to update
+
     private void Awake()
     {
         currentHealth = yokaiSettings.MaxHealth;
@@ -26,7 +28,14 @@ public class YokaiGrunt : MonoBehaviour, Yokai
         {
             Die();
         }
+        else
+        {
+            currentState = Yokai.States.Fleeing;
+        }
     }
+
+    public Yokai.States GetCurrentState() => currentState;
+    public void SetState(Yokai.States newState) => currentState = newState;
 
     public void AutoAttack()
     {

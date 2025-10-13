@@ -6,6 +6,16 @@ public abstract class SelectableUnit : MonoBehaviour
     protected Vector3[] currentPath;
     protected int currentWaypointIndex;
 
+    [SerializeField]
+    protected UnitSettings settings;
+
+    protected Rigidbody rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     private void Start()
     {
         Overseer.Instance.GetManager<SelectionManager>().AvailableUnits.Add(this);
@@ -37,12 +47,26 @@ public abstract class SelectableUnit : MonoBehaviour
             Debug.LogWarning("Farmer: No valid path found!");
             return;
         }
-
-        Debug.Log($"New path with {currentPath.Length} waypoints:");
-        for (int i = 0; i < currentPath.Length; i++)
-        {
-            Debug.Log($"Waypoint {i}: {currentPath[i]}");
-        }
     }
 
+    private void FixedUpdate()
+    {
+        var pathDir = Vector3.zero;
+        if (currentPath != null && currentWaypointIndex < currentPath.Length)
+        {
+            Vector3 waypoint = currentPath[currentWaypointIndex];
+            pathDir = (waypoint - transform.position).normalized;
+
+            // Advance waypoint if close
+            if (Vector3.Distance(transform.position, waypoint) < settings.WaypointTolerance)
+                currentWaypointIndex++;
+
+        }
+
+        rb.MovePosition(
+            rb.position
+            + pathDir.normalized
+            * settings.MoveSpeed
+            * Time.fixedDeltaTime);
+    }
 }

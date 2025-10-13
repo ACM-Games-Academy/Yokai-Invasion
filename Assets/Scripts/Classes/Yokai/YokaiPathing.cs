@@ -5,8 +5,9 @@ using static UnityEditor.Searcher.SearcherWindow;
 public class YokaiPathing : MonoBehaviour
 {
     private Rigidbody rb;
+    private Yokai yokai;
 
-    private Vector3 templeLocation = new Vector3(7, 3, -7);
+    private Vector3 templeLocation = new Vector3(1, 1, -7);
     private Transform heroTransform;
 
     private float floorHeight = 0.66f;
@@ -20,12 +21,13 @@ public class YokaiPathing : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        yokai = GetComponent<Yokai>();
         heroTransform = GameObject.FindGameObjectWithTag("Hero").transform;
     }
 
     private void FixedUpdate()
     {
-        YokaiState.YokaiStates currentYokaiState = GetComponent<YokaiState>().GetCurrentState();
+        Yokai.States currentYokaiState = yokai.GetCurrentState();
 
         Vector3 pathDir = InitializeAStar();
         Vector3 boidDir = InitializeBoids();
@@ -33,23 +35,23 @@ public class YokaiPathing : MonoBehaviour
         // State machine for pathing
         switch (currentYokaiState)
         {
-            case YokaiState.YokaiStates.Idle:
+            case Yokai.States.Idle:
                 Move(CalaculatePath_Idle(boidDir, pathDir));
                 break;
 
-            case YokaiState.YokaiStates.Pursuing:
+            case Yokai.States.Pursuing:
                 Move(CalculatePath_Pursuing(boidDir, pathDir));
                 break;
 
-            case YokaiState.YokaiStates.Attacking:
+            case Yokai.States.Attacking:
                 // Stop movement when attacking?
                 break;
 
-            case YokaiState.YokaiStates.Fleeing:
+            case Yokai.States.Fleeing:
                 Move(CalculatePath_Fleeing(boidDir, pathDir));
                 break;
 
-            case YokaiState.YokaiStates.Dead:
+            case Yokai.States.Dead:
                 // Stop all movement when dead
                 break;
 
@@ -81,13 +83,13 @@ public class YokaiPathing : MonoBehaviour
 
     private Vector3 CalaculatePath_Idle(Vector3 boidDir, Vector3 pathDir)
     {
-        if (currentPath == null)
+        if (currentPath == null || ReachedEnd())
         {
             currentPath = AStar.AStarPath(transform.position, templeLocation);
             currentWaypointIndex = 0;
         }
 
-        return ((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
+            return ((boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance)));
     }
 
     private Vector3 CalculatePath_Pursuing(Vector3 boidDir, Vector3 pathDir)
@@ -102,11 +104,19 @@ public class YokaiPathing : MonoBehaviour
 
     private Vector3 CalculatePath_Fleeing(Vector3 boidDir, Vector3 pathDir)
     {
-        if (currentPath == null || ReachedEnd())
+
+        // -------------------------FIX ME-----------------------------
+        // The following does not properly flee from the player until they have already reached the end of their current path, attempts to fix have thus far caused immense lag
+
+        if (currentPath == null)
         {
-            Vector3 fleeTarget = transform.position + (transform.position - heroTransform.position).normalized * 10f;
+            Vector3 fleeTarget = transform.position + (transform.position - heroTransform.position).normalized * 50f;
             currentPath = AStar.AStarPath(transform.position, fleeTarget);
             currentWaypointIndex = 0;
+        }
+        else if (ReachedEnd())
+        {
+            yokai.SetState(Yokai.States.Idle);
         }
         return (boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance));
     }

@@ -10,7 +10,6 @@ public class CommandManager : MonoBehaviour
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out RaycastHit hitInfo))
         {
             var destination = hitInfo.point;
-            Debug.Log("Destination is " + destination.ToString());
 
             foreach (var unit in Overseer.Instance.GetManager<SelectionManager>().SelectedUnits)
             {
