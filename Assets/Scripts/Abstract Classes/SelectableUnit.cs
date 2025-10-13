@@ -41,12 +41,6 @@ public abstract class SelectableUnit : MonoBehaviour
     {
         currentPath = AStar.AStarPath(transform.position, destination);
         currentWaypointIndex = 0;
-
-        if (currentPath == null || currentPath.Length == 0)
-        {
-            Debug.LogWarning("Farmer: No valid path found!");
-            return;
-        }
     }
 
     private void FixedUpdate()
