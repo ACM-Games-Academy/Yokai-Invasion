@@ -5,6 +5,8 @@ public class YokaiSpawner : MonoBehaviour
 {
     private SpawnerSettings settings;
 
+    private List<GameObject> spawnedYokai;
+
     private void Awake()
     {
         settings = Overseer.Instance.Settings.SpawnerSettings;
@@ -20,65 +22,17 @@ public class YokaiSpawner : MonoBehaviour
 
     public GameObject[] SummonHorde(HordeSettings hordeSettings)
     {
+        spawnedYokai = new List<GameObject>();
         int points = hordeSettings.PointValue;
         yokaiSpawnOption[] yokaiOptions = hordeSettings.YokaiOptions;
-        var spawnedYokai = new List<GameObject>();
-        var optionsToRemove = new List<yokaiSpawnOption>();
 
-        foreach (var option in yokaiOptions)
-        {
-            if (Overseer.Instance.GetManager<ObjectPooler>().PoolExists(option.yokaiPrefab.name) == false)
-            {
-                Overseer.Instance.GetManager<ObjectPooler>().InitializePool(option.yokaiPrefab, 256);
-            }
-        }
+        InitializePoolIfNone(yokaiOptions);
 
         while (points > 0)
         {
-            float roll = Random.Range(0f, 100f);
-
-            foreach (var option in yokaiOptions)
-            {
-                var optionSettings = option.yokaiPrefab.GetComponent<Yokai>().yokaiSettings;
-
-                if (optionSettings.PointValue > points)
-                {
-                    optionsToRemove.Add(option);
-                }
-            }
-            foreach (var option in optionsToRemove)
-            {
-                float probabilityToDistribute = option.spawnProbability;
-                var newOptions = new List<yokaiSpawnOption>(yokaiOptions);
-                newOptions.Remove(option);
-                var probabilityPerOption = probabilityToDistribute / newOptions.Count;
-
-                for (int i = 0; i < newOptions.Count; i++)
-                {
-                    var newOption = newOptions[i];
-                    newOption.spawnProbability += probabilityPerOption;
-                }
-
-                yokaiOptions = newOptions.ToArray();
-            }
-            optionsToRemove.Clear();
-
-            for (int i = 0; i < yokaiOptions.Length; i++)
-            {
-                var option = yokaiOptions[i];
-                if (roll <= option.spawnProbability)
-                {
-                    var optionSettings = option.yokaiPrefab.GetComponent<Yokai>().yokaiSettings;
-                    var newYokai = SpawnYokai(option.yokaiPrefab.name, RandomSpawnLocation(), Quaternion.identity);
-                    spawnedYokai.Add(newYokai);
-                    points -= optionSettings.PointValue;
-                    break;
-                }
-                else
-                {
-                    roll -= option.spawnProbability;
-                }
-            }
+            yokaiSpawnOption[] optionsToRemove = MarkTooExpensiveYokaiToRemove(yokaiOptions, points);
+            yokaiOptions = RemoveTooExpensiveYokaiAndRedistributeProbabilities(yokaiOptions, optionsToRemove);
+            points = SpawnYokaiFromProbabilities(yokaiOptions, points);
         }
         return spawnedYokai.ToArray();
     }
@@ -95,5 +49,74 @@ public class YokaiSpawner : MonoBehaviour
         float x = Random.Range(settings.SpawnAreaCenter.x - settings.SpawnAreaSize.x / 2, settings.SpawnAreaCenter.x + settings.SpawnAreaSize.x / 2);
         float z = Random.Range(settings.SpawnAreaCenter.y - settings.SpawnAreaSize.y / 2, settings.SpawnAreaCenter.y + settings.SpawnAreaSize.y / 2);
         return new Vector3(x, settings.SpawnHeight, z);
+    }
+
+    private void InitializePoolIfNone(yokaiSpawnOption[] yokaiOptions)
+    {
+        foreach (var option in yokaiOptions)
+        {
+            if (Overseer.Instance.GetManager<ObjectPooler>().PoolExists(option.yokaiPrefab.name) == false)
+            {
+                Overseer.Instance.GetManager<ObjectPooler>().InitializePool(option.yokaiPrefab, 256);
+            }
+        }
+    }
+
+    private yokaiSpawnOption[] MarkTooExpensiveYokaiToRemove(yokaiSpawnOption[] yokaiOptions, int remainingPoints)
+    {
+        List<yokaiSpawnOption> optionsToRemove = new List<yokaiSpawnOption>();
+        foreach (var option in yokaiOptions)
+        {
+            var optionSettings = option.yokaiPrefab.GetComponent<Yokai>().yokaiSettings;
+
+            if (optionSettings.PointValue > remainingPoints)
+            {
+                optionsToRemove.Add(option);
+            }
+        }
+
+        return optionsToRemove.ToArray();
+    }
+
+    private yokaiSpawnOption[] RemoveTooExpensiveYokaiAndRedistributeProbabilities(yokaiSpawnOption[] yokaiOptions, yokaiSpawnOption[] optionsToRemove)
+    {
+        foreach (var option in optionsToRemove)
+        {
+            float probabilityToDistribute = option.spawnProbability;
+            var newOptions = new List<yokaiSpawnOption>(yokaiOptions);
+            newOptions.Remove(option);
+            var probabilityPerOption = probabilityToDistribute / newOptions.Count;
+
+            for (int i = 0; i < newOptions.Count; i++)
+            {
+                var newOption = newOptions[i];
+                newOption.spawnProbability += probabilityPerOption;
+            }
+
+            yokaiOptions = newOptions.ToArray();
+        }
+        return yokaiOptions;
+    }
+
+    private int SpawnYokaiFromProbabilities(yokaiSpawnOption[] yokaiOptions, int points)
+    {
+        float roll = Random.Range(0f, 100f);
+        for (int i = 0; i < yokaiOptions.Length; i++)
+        {
+            var option = yokaiOptions[i];
+            if (roll <= option.spawnProbability)
+            {
+                var optionSettings = option.yokaiPrefab.GetComponent<Yokai>().yokaiSettings;
+                var newYokai = SpawnYokai(option.yokaiPrefab.name, RandomSpawnLocation(), Quaternion.identity);
+                spawnedYokai.Add(newYokai);
+                points -= optionSettings.PointValue;
+                break;
+            }
+            else
+            {
+                roll -= option.spawnProbability;
+            }
+        }
+        return points;
     }
 }
