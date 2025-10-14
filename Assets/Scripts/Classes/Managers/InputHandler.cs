@@ -22,4 +22,9 @@ public class InputHandler : MonoBehaviour
     {
         SelectionInput.ToggleModify(input);
     }
+
+    public void RecievePauseInput(InputAction.CallbackContext input) 
+    {
+        PauseMenu.TogglePause(input);
+    }
 }

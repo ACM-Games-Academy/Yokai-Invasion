@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool Paused = false;
+    public static bool paused = false;
     public GameObject PauseMenuCanvas;
 
     // Drag your camera/player controller script here in the inspector
@@ -11,37 +12,28 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         PauseMenuCanvas.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
 // Use input manager
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (paused)
         {
-            if (Paused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            Resume();
+        }
+        else
+        {
+            Pause();
         }
     }
 
     public void Pause()
     {
         PauseMenuCanvas.SetActive(true);
-        Time.timeScale = 0f;
-        Paused = true;
-
-        // Show cursor
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        // Time.timeScale = 0f;
+        paused = true;
 
         // Stop camera/player movement
         if (cameraController != null)
@@ -51,8 +43,8 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         PauseMenuCanvas.SetActive(false);
-        Time.timeScale = 1f;
-        Paused = false;
+        // Time.timeScale = 1f;
+        paused = false;
 
         // Resume camera/player movement
         if (cameraController != null)
@@ -62,5 +54,12 @@ public class PauseMenu : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public static void TogglePause(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+
+        paused = !paused;
     }
 }
