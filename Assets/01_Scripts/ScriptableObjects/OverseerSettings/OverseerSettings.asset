@@ -15,4 +15,5 @@ MonoBehaviour:
   hordeSettings:
   - {fileID: 11400000, guid: adeef27d98273aa46a2841cde78e0ee9, type: 2}
   spawnerSettings: {fileID: 11400000, guid: 6897aece8da2f9043a0ad441f68085c5, type: 2}
+  buildingSettings: {fileID: 11400000, guid: 9b443f5c191834d4fa459c885e51fd47, type: 2}
   selectionCanvas: {fileID: 8162237859337339402, guid: 945556b5b0e81cd4fb94ecf1fd35f65e, type: 3}

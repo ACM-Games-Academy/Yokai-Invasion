@@ -8,6 +8,8 @@ public class OverseerSettings : ScriptableObject
     private HordeSettings[] hordeSettings;
     [SerializeField]
     private SpawnerSettings spawnerSettings;
+    [SerializeField]
+    private BuildingSettings buildingSettings;
 
     [Header("Prefabs")]
     [SerializeField]
@@ -15,5 +17,6 @@ public class OverseerSettings : ScriptableObject
 
     public HordeSettings[] HordeSettings => hordeSettings;
     public SpawnerSettings SpawnerSettings => spawnerSettings;
+    public BuildingSettings BuildingSettings => buildingSettings;
     public GameObject SelectionCanvas => selectionCanvas;
 }
