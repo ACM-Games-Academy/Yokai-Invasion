@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eda249aa78aaff44aa7da9c70b84ef5, type: 3}
   m_Name: BuildingSettings
   m_EditorClassIdentifier: Assembly-CSharp::BuildingSettings
-  towerPrefabs:
-  - {fileID: 173902483733970498, guid: 27163277ab4c347428054453be26383f, type: 3}
   poolSize: 3
+  spawnHeight: 0
+  buildingOptions:
+  - buildingPrefab: {fileID: 173902483733970498, guid: 27163277ab4c347428054453be26383f, type: 3}
+    woodCost: 0
+    goldCost: 0

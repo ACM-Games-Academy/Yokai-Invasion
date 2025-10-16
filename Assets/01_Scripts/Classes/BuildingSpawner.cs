@@ -7,9 +7,10 @@ public class BuildingSpawner : MonoBehaviour
 {
     private BuildingSettings settings;
 
-    private List<GameObject> spawnedTowers;
+    private List<GameObject> spawnedBuildings;
 
     private Vector3 spawnLocation;
+
 
     private void Awake()
     {
@@ -18,39 +19,36 @@ public class BuildingSpawner : MonoBehaviour
 
     private void Start()
     {
-        //on Start make object pool of Towers
-        foreach (var tower in settings.TowerPrefabs)
+        //on Start make object pool of buildings
+        foreach (var building in settings.BuildingOptions)
         {
-            Overseer.Instance.GetManager<ObjectPooler>().InitializePool(tower, settings.PoolSize);
+            Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.buildingPrefab, settings.PoolSize);
         }
+
     }
 
-    private void Update()
+
+    //Get building from object pool
+    private GameObject SpawnBuilding(string key, Vector3 position, Quaternion rotation)
     {
+        var spawnedBuilding = Overseer.Instance.GetManager<ObjectPooler>().GetPooledObject(key, position, rotation);
 
+        return spawnedBuilding;
     }
 
-    //Get tower from object pool
-    private GameObject SpawnTowers(string tower, Vector3 position, Quaternion rotation)
-    {
-        var spawnedTowers = Overseer.Instance.GetManager<ObjectPooler>().GetPooledObject(tower, position, rotation);
-
-        return spawnedTowers; //what does it return tho?
-    }
-
-    private void SpawnTowerOnClick()
-    {
-        //var newTower = SpawnTowers(keygoesheregofindthat, spawnLocation, Quaternion.identity);
-        //spawnedTowers.Add(newTower);
-    }
-
-    //set Spawn Location of Tower
-    public void SetSpawnLocation() //public so UI can reference
+    //set Spawn Location of Building
+    private Vector3 SetSpawnLocation()
     {
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out RaycastHit hitInfo))
         {
             spawnLocation = hitInfo.point;
             Debug.Log("Spawn Tower at " + spawnLocation);
         }
+        return spawnLocation;
+    }
+
+    public void SpawnAtIndex(int index)
+    {
+        SpawnBuilding(settings.BuildingOptions[index].buildingPrefab.name, SetSpawnLocation(), Quaternion.identity);
     }
 }

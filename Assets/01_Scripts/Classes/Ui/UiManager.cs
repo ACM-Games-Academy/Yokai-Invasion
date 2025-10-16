@@ -13,6 +13,8 @@ public class UiManager : MonoBehaviour
     private int food;
     private int gold;
 
+    private const int TOWER_INDEX = 0;
+
 
 
     void Update()
@@ -38,9 +40,8 @@ public class UiManager : MonoBehaviour
         goldCounterUI.text = gold.ToString();
     }
 
-    public void BuildTower() //public so button can reference
+    public void SpawnTower()
     {
-        Overseer.Instance.GetManager<BuildingSpawner>().SetSpawnLocation();
+        Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(TOWER_INDEX);
     }
-
 }

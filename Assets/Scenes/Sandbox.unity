@@ -4486,7 +4486,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 506043793}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: BuildTower
+        m_MethodName: SpawnTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
