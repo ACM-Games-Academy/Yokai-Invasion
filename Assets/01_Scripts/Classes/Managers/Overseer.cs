@@ -23,7 +23,8 @@ public class Overseer : MonoBehaviour
         typeof(ObjectPooler),
         typeof(SelectionManager),
         typeof(ResourceManager),
-        typeof(BuildingSpawner)
+        typeof(BuildingSpawner),
+        typeof(BuildModeInput)
     };
 
     private void Awake()

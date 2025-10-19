@@ -15,7 +15,16 @@ public class InputHandler : MonoBehaviour
 
     public void RecieveRMBInput(InputAction.CallbackContext input)
     {
-        CommandManager.HandleMoveInput(input);
+        if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeActive == false)
+        {
+            CommandManager.HandleMoveInput(input);
+            Debug.Log("CommandManager is receiving RMB input");
+        }
+        else if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeActive == true)
+        {
+            BuildModeInput.TogglePlaceBuilding(input);
+            Debug.Log("BuildModeInput is receiving RMB input");
+        }
     }
 
     public void RecieveModifyInput(InputAction.CallbackContext input)
@@ -26,5 +35,10 @@ public class InputHandler : MonoBehaviour
     public void RecievePauseInput(InputAction.CallbackContext input) 
     {
         PauseMenu.TogglePause(input);
+    }
+
+    public void ReceiveBuildModeInput(InputAction.CallbackContext input)
+    {
+        BuildModeInput.ToggleBuildingsList(input);
     }
 }

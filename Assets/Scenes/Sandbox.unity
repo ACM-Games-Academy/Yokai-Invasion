@@ -160,9 +160,9 @@ RectTransform:
   - {fileID: 1348551450}
   m_Father: {fileID: 548448313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 472.02502, y: -81.5}
   m_SizeDelta: {x: 231.35, y: 148.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62325639
@@ -1101,7 +1101,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.00012207031, y: 81.500015}
-  m_SizeDelta: {x: 0, y: 163}
+  m_SizeDelta: {x: 1260.4, y: 163}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &548448314
 MonoBehaviour:
@@ -2141,7 +2141,7 @@ GameObject:
   - component: {fileID: 1209070211}
   - component: {fileID: 1209070210}
   - component: {fileID: 1209070209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Temple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3044,9 +3044,9 @@ RectTransform:
   - {fileID: 1102074690}
   m_Father: {fileID: 548448313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1104.7251, y: -81.5}
   m_SizeDelta: {x: 231.35, y: 148.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661685692
@@ -3227,7 +3227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1700615416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3559,6 +3559,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a6794eae-4366-4492-b4b1-bc860ba47caf
     m_ActionName: 'Gameplay/MoveCommand[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093c9972-d220-4ada-b4d2-cd16a3abf627
+    m_ActionName: 'Gameplay/Pause[/Keyboard/p]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1797815060}
+        m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
+        m_MethodName: ReceiveBuildModeInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 26614d1f-1658-45b1-82ac-311b25528f3c
+    m_ActionName: 'Gameplay/BuildModeMenu[/Keyboard/b]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -4175,9 +4195,9 @@ RectTransform:
   - {fileID: 1079927530}
   m_Father: {fileID: 548448313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 788.375, y: -81.5}
   m_SizeDelta: {x: 231.35, y: 148.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031190985
@@ -4346,9 +4366,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7418617606662576500, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6160627492126741824, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1760714182489039777, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1acc55184f212b24b898581913a1df75, type: 3}
       propertyPath: m_Name
       value: Temple (Beta)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078210541694900024, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550463727306718371, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594243245622329198, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4435,9 +4483,9 @@ RectTransform:
   - {fileID: 2144663176}
   m_Father: {fileID: 548448313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 155.675, y: -81.5}
   m_SizeDelta: {x: 231.35, y: 148.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2118133247

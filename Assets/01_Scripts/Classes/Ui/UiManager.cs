@@ -42,6 +42,9 @@ public class UiManager : MonoBehaviour
 
     public void SpawnTower()
     {
-        Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(TOWER_INDEX);
+        if (Overseer.Instance.GetManager<BuildingSpawner>().buildingHasBeenSpawned == false)
+        {
+            Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(TOWER_INDEX);
+        }
     }
 }
