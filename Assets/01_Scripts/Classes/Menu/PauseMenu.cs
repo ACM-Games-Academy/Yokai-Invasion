@@ -16,7 +16,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuCanvas.SetActive(false);
     }
 
-// Use input manager
+    // Use input manager
     void Update()
     {
         if (paused)
@@ -61,5 +61,10 @@ public class PauseMenu : MonoBehaviour
         if (!context.started) return;
 
         paused = !paused;
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 }
