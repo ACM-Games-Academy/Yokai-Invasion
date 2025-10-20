@@ -3,8 +3,6 @@ using UnityEngine.InputSystem;
 
 public class BuildModeInput : MonoBehaviour
 {
-    private static bool buildMenuIsOpen = false;
-
     private GameObject UiCanvas;
 
     private void Start()
@@ -17,8 +15,7 @@ public class BuildModeInput : MonoBehaviour
     }
     private void ActivateBuildingsList()
     {
-        
-        if (buildMenuIsOpen == true && Overseer.Instance.GetManager<BuildingSpawner>().buildingHasBeenSpawned == false)
+        if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState == BuildingSpawner.BuildMode.active)
         {
             UiCanvas.transform.GetChild(1).gameObject.SetActive(true);
         }
@@ -31,22 +28,26 @@ public class BuildModeInput : MonoBehaviour
     //These functions check for inputs from Input Handler
     public static void ToggleBuildingsList(InputAction.CallbackContext input)
     {
-        if (input.started)
+        if (!input.started) return;
+
+        switch (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState)
         {
-            buildMenuIsOpen = !buildMenuIsOpen;
+            case BuildingSpawner.BuildMode.active:
+                Overseer.Instance.GetManager<BuildingSpawner>().buildModeState = BuildingSpawner.BuildMode.inactive;
+                break;
+            case BuildingSpawner.BuildMode.inactive:
+                Overseer.Instance.GetManager<BuildingSpawner>().buildModeState = BuildingSpawner.BuildMode.active;
+                break;
         }
     }
 
     public static void TogglePlaceBuilding(InputAction.CallbackContext input)
     {
-        if (input.started)
+        if (!input.started) return;
+
+        if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState == BuildingSpawner.BuildMode.buildingSpawned && Overseer.Instance.GetManager<BuildingSpawner>().isPlaceable())
         {
-            if (Overseer.Instance.GetManager<BuildingSpawner>().buildingHasBeenSpawned == true && Overseer.Instance.GetManager<BuildingSpawner>().buildingCanBePlaced == true)
-            {
-                Debug.Log("has been triggered");
-                Overseer.Instance.GetManager<BuildingSpawner>().buildingHasBeenPlaced = true;
-                Debug.Log(Overseer.Instance.GetManager<BuildingSpawner>().buildingHasBeenPlaced);
-            }
+            Overseer.Instance.GetManager<BuildingSpawner>().PlaceBuilding();
         }
     }
 
