@@ -1143,10 +1143,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1697182397}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 506043798}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1273,6 +1273,7 @@ GameObject:
   - component: {fileID: 506043795}
   - component: {fileID: 506043794}
   - component: {fileID: 506043793}
+  - component: {fileID: 506043798}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -1380,6 +1381,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &506043798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506043792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8037216cbba30a42b47d5f2e92894fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  PauseMenuCanvas: {fileID: 1697182397}
+  cameraController: {fileID: 981019649}
 --- !u!1001 &509493073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2009,7 +2024,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1697182397}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -2305,31 +2320,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8943816982700071033, guid: 6ede47862ad78e0479aa4fb7f2454836, type: 3}
   m_PrefabInstance: {fileID: 505140359}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &981019642 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8229045202189894453, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-  m_PrefabInstance: {fileID: 5457862902503509228}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &981019647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981019642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8037216cbba30a42b47d5f2e92894fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
-  PauseMenuCanvas: {fileID: 0}
-  cameraController: {fileID: 981019649}
 --- !u!114 &981019649 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8308717394001406147, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
   m_PrefabInstance: {fileID: 5457862902503509228}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981019642}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
@@ -2589,7 +2585,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 981019647}
+      - m_Target: {fileID: 506043798}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -4536,7 +4532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1697182398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5142,6 +5138,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a6794eae-4366-4492-b4b1-bc860ba47caf
     m_ActionName: 'Gameplay/MoveCommand[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1797815060}
+        m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
+        m_MethodName: RecievePauseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 093c9972-d220-4ada-b4d2-cd16a3abf627
+    m_ActionName: 'Gameplay/Pause[/Keyboard/p]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -6838,9 +6850,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 636861941881141299, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2080866073}
-    - targetCorrespondingSourceObject: {fileID: 8229045202189894453, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 981019647}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca75ec8c5de6ae4da866e5c7185c5cf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
