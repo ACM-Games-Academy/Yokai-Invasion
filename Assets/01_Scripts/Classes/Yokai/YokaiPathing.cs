@@ -27,7 +27,7 @@ public class YokaiPathing : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Yokai.States currentYokaiState = yokai.GetCurrentState();
+        Yokai.States currentYokaiState = yokai.state;
 
         Vector3 pathDir = InitializeAStar();
         Vector3 boidDir = InitializeBoids();

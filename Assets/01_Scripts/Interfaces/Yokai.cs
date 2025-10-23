@@ -5,6 +5,7 @@ public interface Yokai : Damageable, AutoAttacker
     YokaiSettings yokaiSettings { get; }
     public void DetermineTarget();
 
+    public States state { get; }
     public enum States
     {
         Idle,
@@ -14,6 +15,5 @@ public interface Yokai : Damageable, AutoAttacker
         Dead
     }
 
-    public States GetCurrentState();
     public void SetState(States state);
 }
