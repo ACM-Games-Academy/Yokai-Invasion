@@ -98,6 +98,7 @@ public class YokaiSpawner : MonoBehaviour
         return yokaiOptions;
     }
 
+    //yokaiSpawnOptions is an array of structs (set in HordeSettings), option is a single struct from the array
     private int SpawnYokaiFromProbabilities(yokaiSpawnOption[] yokaiOptions, int points)
     {
         float roll = Random.Range(0f, 100f);
