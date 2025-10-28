@@ -41,4 +41,9 @@ public class InputHandler : MonoBehaviour
     {
         BuildModeInput.ToggleBuildingsList(input);
     }
+
+    public void ToggleCameraFollow(InputAction.CallbackContext input)
+    {
+        CameraMove.ToggleFollowPlayer(input);
+    }
 }
