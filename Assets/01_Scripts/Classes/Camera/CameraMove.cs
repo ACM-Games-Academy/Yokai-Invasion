@@ -51,6 +51,7 @@ public class CameraMove : MonoBehaviour
                 break;
         }
 
+        newPosition = new Vector3(newPosition.x, 0, newPosition.z);
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, newPosition + offset, Time.deltaTime);
     }
 
@@ -61,8 +62,8 @@ public class CameraMove : MonoBehaviour
 
     private void FreeMove()
     {
-        MoveToEdge(mousePos.x, Screen.width, -transform.right);
-        MoveToEdge(mousePos.y, Screen.height, transform.up);
+        MoveToEdge(mousePos.x, Screen.width, Quaternion.Euler(0, 0, rotationDegree) * new Vector3(1, 0, 0));
+        MoveToEdge(mousePos.y, Screen.height, Quaternion.Euler(rotationDegree, 0, 0) * new Vector3(0, 0, 1));
     }
 
     private void MoveToEdge(float axis, int screenDimension, Vector3 direction)
