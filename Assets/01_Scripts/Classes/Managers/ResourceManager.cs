@@ -1,8 +1,14 @@
 using NUnit.Framework;
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
 {
+    public Action UpdateWood;
+    public Action UpdateFood;
+    public Action UpdateGold;
+    
     private int food = 0;
     private int wood = 0;
     private int gold = 0;
@@ -14,37 +20,34 @@ public class ResourceManager : MonoBehaviour
     public void IncreaseFood(int amount)
     {
         food += amount;
-        Debug.Log($"Current food is {food}");
+        UpdateFood?.Invoke();
     }
     public void IncreaseWood(int amount)
     {
         wood += amount;
-        Debug.Log($"Current wood is {wood}");
+        UpdateWood?.Invoke();
     }
     public void IncreaseGold(int amount)
     {
         gold += amount;
-        Debug.Log($"Current gold is {gold}");
+        UpdateGold?.Invoke();
     }
 
     public void DecreaseFood(int amount)
     {
-        Debug.Assert(food >= amount);
-
         food -= amount;
+        UpdateFood?.Invoke();
     }
 
     public void DecreaseWood(int amount)
     {
-        Debug.Assert(wood >= amount);
-
         wood -= amount;
+        UpdateWood?.Invoke();
     }
 
     public void DecreaseGold(int amount)
     {
-        Debug.Assert(gold >= amount);
-
         gold -= amount;
+        UpdateGold?.Invoke();
     }
 }

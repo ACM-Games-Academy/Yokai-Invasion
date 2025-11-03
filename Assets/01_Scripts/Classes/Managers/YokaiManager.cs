@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 
 public class YokaiManager : MonoBehaviour
 {
-    private GameObject[] yokaiGameObjects = new GameObject[0];
-
     private YokaiSpawner yokaiSpawner;
 
     private void Start()

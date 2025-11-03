@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,15 +15,12 @@ public class UiManager : MonoBehaviour
     private int food;
     private int gold;
 
-    private const int TOWER_INDEX = 0;
-
-
-
-    void Update()
+    private void Start()
     {
-        DisplayWoodCount();
-        DisplayFoodCount();
-        DisplayGoldCount();
+        //subscribing to events from resource manager
+        Overseer.Instance.GetManager<ResourceManager>().UpdateWood += DisplayWoodCount;
+        Overseer.Instance.GetManager<ResourceManager>().UpdateFood += DisplayFoodCount;
+        Overseer.Instance.GetManager<ResourceManager>().UpdateGold += DisplayGoldCount;
     }
 
     private void DisplayWoodCount()
@@ -42,6 +41,9 @@ public class UiManager : MonoBehaviour
 
     public void SpawnTower()
     {
-        Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(TOWER_INDEX);
+        if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState == BuildingSpawner.BuildMode.active)
+        {
+            Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(Overseer.Instance.GetManager<BuildingSpawner>().indexDictionary["Tower"]);
+        }
     }
 }

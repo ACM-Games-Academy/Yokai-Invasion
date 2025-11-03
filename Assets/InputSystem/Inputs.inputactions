@@ -50,6 +50,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "BuildModeMenu",
+                    "type": "Button",
+                    "id": "26614d1f-1658-45b1-82ac-311b25528f3c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CameraFollowPlayer",
+                    "type": "Button",
+                    "id": "a3fa1927-5af9-4af5-8a71-c9157913a6a3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -144,11 +162,33 @@
                 {
                     "name": "",
                     "id": "56126f7b-ef05-4275-9d69-91ef6fb5bdef",
-                    "path": "<Keyboard>/p",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e190ec63-37fe-4cd2-89c5-0b6654b028b7",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BuildModeMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e49c1d53-bccd-4539-bc11-3445707f913e",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraFollowPlayer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

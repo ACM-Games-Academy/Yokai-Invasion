@@ -13,7 +13,8 @@ public class YokaiGrunt : MonoBehaviour, Yokai
     [SerializeField]
     private int currentHealth;
 
-    private Yokai.States currentState = Yokai.States.Idle;     // Exposing this to editor means it may fail to update
+    private Yokai.States state = Yokai.States.Idle;     // Exposing this to editor means it may fail to update
+    Yokai.States Yokai.state => state;
 
     private void Awake()
     {
@@ -30,12 +31,11 @@ public class YokaiGrunt : MonoBehaviour, Yokai
         }
         else
         {
-            currentState = Yokai.States.Fleeing;
+            state = Yokai.States.Fleeing;
         }
     }
 
-    public Yokai.States GetCurrentState() => currentState;
-    public void SetState(Yokai.States newState) => currentState = newState;
+    public void SetState(Yokai.States newState) => state = newState;
 
     public void AutoAttack()
     {

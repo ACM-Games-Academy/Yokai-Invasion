@@ -1,54 +1,76 @@
+using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool paused = false;
     public GameObject PauseMenuCanvas;
 
     // Drag your camera/player controller script here in the inspector
     public MonoBehaviour cameraController;
 
-    void Start()
+    public enum PauseState
     {
-        // Time.timeScale = 1f;
-        PauseMenuCanvas.SetActive(false);
+        UNPAUSED,
+        PAUSED,
+        BECOMING_PAUSED,
+        BECOMING_UNPAUSED,
     }
 
-// Use input manager
-    void Update()
+    public static PauseState currentPauseState;
+
+    private void Update()
     {
-        if (paused)
+        switch (currentPauseState)
         {
-            Resume();
-        }
-        else
-        {
-            Pause();
+            case PauseState.BECOMING_PAUSED:
+                Pause();
+                break;
+            case PauseState.BECOMING_UNPAUSED:
+                Resume();
+                break;
         }
     }
 
     public void Pause()
     {
+        Debug.Log("Game Paused");
         PauseMenuCanvas.SetActive(true);
-        // Time.timeScale = 0f;
-        paused = true;
+        Time.timeScale = 0f;
+        cameraController.enabled = false;
 
-        // Stop camera/player movement
-        if (cameraController != null)
-            cameraController.enabled = false;
+        currentPauseState = PauseState.PAUSED;
     }
 
     public void Resume()
     {
+        Debug.Log("Game Resumed");
         PauseMenuCanvas.SetActive(false);
-        // Time.timeScale = 1f;
-        paused = false;
+        Time.timeScale = 1f;
+        cameraController.enabled = true;
 
-        // Resume camera/player movement
-        if (cameraController != null)
-            cameraController.enabled = true;
+        currentPauseState = PauseState.UNPAUSED;
+    }
+
+
+    public static void TogglePause(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+
+        switch (currentPauseState)
+        {
+            case PauseState.UNPAUSED:
+                currentPauseState = PauseState.BECOMING_PAUSED;
+                break;
+            case PauseState.PAUSED:
+                currentPauseState = PauseState.BECOMING_UNPAUSED;
+                break;
+            default:
+                // Do nothing if we're already in the process of pausing/unpausing
+                return;
+        }
     }
 
     public void MainMenuButton()
@@ -56,10 +78,9 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
-    public static void TogglePause(InputAction.CallbackContext context)
+    public void QuitGame()
     {
-        if (!context.started) return;
-
-        paused = !paused;
+        Time.timeScale = 1f;
+        SceneManager.LoadSceneAsync(0);
     }
 }
