@@ -3,17 +3,17 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
-    public void RecieveMovementInput(InputAction.CallbackContext input)
+    public void ReceiveMovementInput(InputAction.CallbackContext input)
     {
         HeroMovement.SyncMovementInput(input);
     }
 
-    public void RecieveLMBInput(InputAction.CallbackContext input)
+    public void ReceiveLMBInput(InputAction.CallbackContext input)
     {
         SelectionInput.HandleSelectionInput(input);
     }
 
-    public void RecieveRMBInput(InputAction.CallbackContext input)
+    public void ReceiveRMBInput(InputAction.CallbackContext input)
     {
         if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState == BuildingSpawner.BuildMode.inactive)
         {
@@ -27,12 +27,12 @@ public class InputHandler : MonoBehaviour
         }
     }
 
-    public void RecieveModifyInput(InputAction.CallbackContext input)
+    public void ReceiveModifyInput(InputAction.CallbackContext input)
     {
         SelectionInput.ToggleModify(input);
     }
 
-    public void RecievePauseInput(InputAction.CallbackContext input) 
+    public void ReceivePauseInput(InputAction.CallbackContext input) 
     {
         PauseMenu.TogglePause(input);
     }
