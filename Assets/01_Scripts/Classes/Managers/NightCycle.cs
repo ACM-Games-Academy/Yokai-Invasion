@@ -1,49 +1,67 @@
+using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NightCycle : MonoBehaviour
 {
-    //    private uint currentCycle = 0;
+    private uint currentCycle = 0;
 
-    //    public enum TimeOfDay
-    //    {
-    //        Dawn,
-    //        Day,
-    //        Twilight,
-    //        Night
-    //    }
-    //    public TimeOfDay currentTimeOfDay = TimeOfDay.Day;
+    private NightCycleSettings settings;
+    public Action NightStarted;
+    public Action NightEnded;
 
-    //    void Start()
-    //    {
-    //        StartDawn(currentCycle);
-    //    }
+    public enum TimeOfDay
+    {
+        Dawn,
+        Day,
+        Dusk,
+        Night
+    }
+    public TimeOfDay currentTimeOfDay = TimeOfDay.Day;
 
-    //    private IEnumerator StartDawn(uint cycle)
-    //    {   
-    //        currentTimeOfDay = TimeOfDay.Dawn;
-    //        yield return new WaitForSeconds(dawnLengthSeconds);
-    //        StartCoroutine(StartDay(cycle));
-    //    }
+    void Start()
+    {
+        settings = Overseer.Instance.Settings.NightCycleSettings;
+        StartCoroutine(StartDawn());
+    }
 
-    //    private IEnumerator StartDay(uint cycle)
-    //    {
-    //        currentTimeOfDay = TimeOfDay.Day;
-    //        yield return new WaitForSeconds(dayLengthSeconds);
-    //        StartCoroutine(StartTwilight(cycle));
-    //    }
+    private IEnumerator StartDawn()
+    {
+        Debug.Log($"It is Dawn {currentCycle}");
 
-    //    private IEnumerator StartTwilight(uint cycle)
-    //    {
-    //        currentTimeOfDay = TimeOfDay.Twilight;
-    //        yield return new WaitForSeconds(twilightLengthSeconds);
-    //        StartCoroutine(StartNight(cycle));
-    //    }
+        currentTimeOfDay = TimeOfDay.Dawn;
+        yield return new WaitForSeconds(settings.DawnLengthSeconds);
+        StartCoroutine(StartDay());
+    }
 
-    //    private IEnumerator StartNight(uint cycle)
-    //    {
-    //        currentTimeOfDay = TimeOfDay.Night;
-    //        yield return new WaitForSeconds(nightLengthSeconds);
-    //        StartCoroutine(StartDawn(cycle++));
-    //    }
+    private IEnumerator StartDay()
+    {
+        Debug.Log($"It is Day {currentCycle}");
+
+        currentTimeOfDay = TimeOfDay.Day;
+        yield return new WaitForSeconds(settings.DayLengthSeconds);
+        StartCoroutine(StartDusk());
+    }
+
+    private IEnumerator StartDusk()
+    {
+        Debug.Log($"It is Dusk {currentCycle}");
+
+        currentTimeOfDay = TimeOfDay.Dusk;
+        yield return new WaitForSeconds(settings.DuskLengthSeconds);
+        StartCoroutine(StartNight());
+    }
+
+    private IEnumerator StartNight()
+    {
+        Debug.Log($"It is Night {currentCycle}");
+
+        currentTimeOfDay = TimeOfDay.Night;
+        NightStarted?.Invoke();
+        yield return new WaitForSeconds(settings.NightLengthSeconds);
+        NightEnded?.Invoke();
+        currentCycle++;
+        StartCoroutine(StartDawn());
+    }
 }

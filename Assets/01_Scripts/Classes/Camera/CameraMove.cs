@@ -18,8 +18,6 @@ public class CameraMove : MonoBehaviour
 
     private Vector2 mousePos;
 
-    private int rotationDegree = 135;
-
     private enum CameraState : byte
     {
         followHero,
@@ -51,6 +49,7 @@ public class CameraMove : MonoBehaviour
                 break;
         }
 
+        newPosition = new Vector3(newPosition.x, 0, newPosition.z);
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, newPosition + offset, Time.deltaTime);
     }
 
@@ -61,20 +60,28 @@ public class CameraMove : MonoBehaviour
 
     private void FreeMove()
     {
-        MoveToEdge(mousePos.x, Screen.width, -transform.right);
-        MoveToEdge(mousePos.y, Screen.height, transform.up);
-    }
+        Vector3 forward = Camera.main.transform.forward;
+        Vector3 right = Camera.main.transform.right;
 
-    private void MoveToEdge(float axis, int screenDimension, Vector3 direction)
-    {
-        if (axis > screenDimension - edgeSize)
-        {
-            newPosition += (direction * freeMoveSpeed * Time.deltaTime);
-        }
-        else if (axis < edgeSize)
-        {
-            newPosition += (direction * -freeMoveSpeed * Time.deltaTime);
-        }
+        // Flatten to XZ plane (ignore camera pitch)
+        forward.y = 0;
+        right.y = 0;
+        forward.Normalize();
+        right.Normalize();
+
+        Vector3 moveDir = Vector3.zero;
+
+        if (mousePos.x > Screen.width - edgeSize)
+            moveDir += right;
+        else if (mousePos.x < edgeSize)
+            moveDir -= right;
+
+        if (mousePos.y > Screen.height - edgeSize)
+            moveDir += forward;
+        else if (mousePos.y < edgeSize)
+            moveDir -= forward;
+
+        newPosition += moveDir * freeMoveSpeed * Time.deltaTime;
     }
 
     private void EnterFreeMoveCheck()

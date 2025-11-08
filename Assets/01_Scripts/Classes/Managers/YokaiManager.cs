@@ -7,22 +7,24 @@ using UnityEngine.InputSystem;
 public class YokaiManager : MonoBehaviour
 {
     private YokaiSpawner yokaiSpawner;
+    private HordeSettings[] hordes;
 
     private void Start()
     {
+        hordes = Overseer.Instance.Settings.HordeSettings;
+
+        Overseer.Instance.GetManager<NightCycle>().NightStarted += BeginNight;
+
         var yokaiSpawnerType = typeof(YokaiSpawner);
 
         GameObject yokaiSpawnerObject = new GameObject(yokaiSpawnerType.Name);
         yokaiSpawnerObject.transform.SetParent(transform);
 
         yokaiSpawner = yokaiSpawnerObject.AddComponent<YokaiSpawner>();
-
-        StartCoroutine(DelayedHordeSummon(Overseer.Instance.Settings.HordeSettings[0], 1f));
     }
 
-    private IEnumerator DelayedHordeSummon(HordeSettings hordeSettings, float delay)
+    private void BeginNight()
     {
-        yield return new WaitForSeconds(delay);
-        yokaiSpawner.SummonHorde(hordeSettings);
+        yokaiSpawner.SummonHorde(hordes[0]);
     }
 }

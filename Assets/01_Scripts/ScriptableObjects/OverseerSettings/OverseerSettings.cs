@@ -10,6 +10,8 @@ public class OverseerSettings : ScriptableObject
     private SpawnerSettings spawnerSettings;
     [SerializeField]
     private BuildingSettings buildingSettings;
+    [SerializeField]
+    private NightCycleSettings nightCycleSettings;
 
     [Header("Prefabs")]
     [SerializeField]
@@ -19,4 +21,5 @@ public class OverseerSettings : ScriptableObject
     public SpawnerSettings SpawnerSettings => spawnerSettings;
     public BuildingSettings BuildingSettings => buildingSettings;
     public GameObject SelectionCanvas => selectionCanvas;
+    public NightCycleSettings NightCycleSettings => nightCycleSettings;
 }
