@@ -10,6 +10,7 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI woodCounterUI;
     public TextMeshProUGUI foodCounterUI;
     public TextMeshProUGUI goldCounterUI;
+    public TextMeshProUGUI timeUI;
 
     private int wood;
     private int food;
@@ -21,7 +22,13 @@ public class UiManager : MonoBehaviour
         Overseer.Instance.GetManager<ResourceManager>().UpdateWood += DisplayWoodCount;
         Overseer.Instance.GetManager<ResourceManager>().UpdateFood += DisplayFoodCount;
         Overseer.Instance.GetManager<ResourceManager>().UpdateGold += DisplayGoldCount;
+        Overseer.Instance.GetManager<NightCycle>().DawnStarted += DisplayTimeDawn;
+        Overseer.Instance.GetManager<NightCycle>().DayStarted += DisplayTimeDay;
+        Overseer.Instance.GetManager<NightCycle>().DuskStarted += DisplayTimeDusk;
+        Overseer.Instance.GetManager<NightCycle>().NightStarted += DisplayTimeNight;
     }
+
+    //Resource Counters UI
 
     private void DisplayWoodCount()
     {
@@ -38,6 +45,27 @@ public class UiManager : MonoBehaviour
         gold = Overseer.Instance.GetManager<ResourceManager>().CurrentGold();
         goldCounterUI.text = gold.ToString();
     }
+
+    //Time UI
+
+    private void DisplayTimeDawn()
+    {
+        timeUI.text = "Dawn";
+    }
+    private void DisplayTimeDay()
+    {
+        timeUI.text = "Day";
+    }
+    private void DisplayTimeDusk()
+    {
+        timeUI.text = "Dusk";
+    }
+    private void DisplayTimeNight()
+    {
+        timeUI.text = "Night";
+    }
+
+    //Build Menu UI
 
     public void SpawnTower()
     {

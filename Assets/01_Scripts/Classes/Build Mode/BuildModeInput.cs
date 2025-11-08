@@ -13,15 +13,16 @@ public class BuildModeInput : MonoBehaviour
     {
         ActivateBuildingsList();
     }
-    private void ActivateBuildingsList()
+    private void ActivateBuildingsList() //MAGIC NUMBER BS HAPPENING HERE - check here if UI is bugging
     {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState == BuildingSpawner.BuildMode.active)
+        //The children under the UI canvas must be in a specific order for this to work properly, so make sure u dont move them around
+        if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState == BuildingSpawner.BuildMode.active) //1st child under UI Canvas
         {
-            UiCanvas.transform.GetChild(1).gameObject.SetActive(true);
+            UiCanvas.transform.GetChild(0).gameObject.SetActive(true); 
         }
         else
         {
-            UiCanvas.transform.GetChild(1).gameObject.SetActive(false);
+            UiCanvas.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 

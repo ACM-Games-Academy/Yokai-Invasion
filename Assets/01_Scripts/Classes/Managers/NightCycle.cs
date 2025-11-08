@@ -11,6 +11,10 @@ public class NightCycle : MonoBehaviour
     public Action NightStarted;
     public Action NightEnded;
 
+    public Action DayStarted;
+    public Action DawnStarted;
+    public Action DuskStarted;
+
     public enum TimeOfDay
     {
         Dawn,
@@ -31,6 +35,7 @@ public class NightCycle : MonoBehaviour
         Debug.Log($"It is Dawn {currentCycle}");
 
         currentTimeOfDay = TimeOfDay.Dawn;
+        DawnStarted?.Invoke();
         yield return new WaitForSeconds(settings.DawnLengthSeconds);
         StartCoroutine(StartDay());
     }
@@ -40,6 +45,7 @@ public class NightCycle : MonoBehaviour
         Debug.Log($"It is Day {currentCycle}");
 
         currentTimeOfDay = TimeOfDay.Day;
+        DayStarted?.Invoke();
         yield return new WaitForSeconds(settings.DayLengthSeconds);
         StartCoroutine(StartDusk());
     }
@@ -49,6 +55,7 @@ public class NightCycle : MonoBehaviour
         Debug.Log($"It is Dusk {currentCycle}");
 
         currentTimeOfDay = TimeOfDay.Dusk;
+        DuskStarted?.Invoke();
         yield return new WaitForSeconds(settings.DuskLengthSeconds);
         StartCoroutine(StartNight());
     }

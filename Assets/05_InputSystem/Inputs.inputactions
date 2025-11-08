@@ -34,7 +34,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MoveCommand",
+                    "name": "Alt Select",
                     "type": "Button",
                     "id": "a6794eae-4366-4492-b4b1-bc860ba47caf",
                     "expectedControlType": "",
@@ -155,7 +155,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveCommand",
+                    "action": "Alt Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
