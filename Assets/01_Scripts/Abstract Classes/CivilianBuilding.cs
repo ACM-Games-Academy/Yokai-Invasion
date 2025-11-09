@@ -1,10 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class CivilianBuilding : Building, Employer
+public abstract class CivilianBuilding : Building, Employer, ResourceGenerator
 {
     public int MaxEmployees { get; } = 3;
     public EmployableUnit[] Employees { get; set; }
+
+    public float GenerationCooldown { get; protected set; } = 5f;
+    public float EmploymentRadius { get; protected set; } = 5f;
 
     private void Start()
     {
@@ -32,5 +35,15 @@ public class CivilianBuilding : Building, Employer
             if (employee != null) count++;
         }
         return count;
+    }
+
+    public virtual int GetProduction()
+    {
+        return 0;
+    }
+
+    public virtual void GenerateResource(int amount)
+    {
+        // Default implementation does nothing
     }
 }
