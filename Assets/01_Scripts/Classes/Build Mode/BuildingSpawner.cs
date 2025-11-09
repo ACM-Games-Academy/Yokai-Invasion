@@ -10,7 +10,7 @@ public class BuildingSpawner : MonoBehaviour
 {
     private BuildingSettings settings;
 
-    public List<GameObject> spawnedBuildings = new List<GameObject>();
+    public List<GameObject> SpawnedBuildings = new List<GameObject>();
 
     private Vector3 spawnLocation;
     private Vector3 buildingCurrentPosition;
@@ -19,11 +19,11 @@ public class BuildingSpawner : MonoBehaviour
     private bool hit;
     private GameObject currentBuilding;
 
-    public Dictionary<string, int> indexDictionary;
+    public Dictionary<string, int> IndexDictionary;
 
-    public bool isPlaceable() => !hit;
+    public bool IsPlaceable() => !hit;
 
-    public BuildMode buildModeState;
+    public BuildMode BuildModeState;
     public enum BuildMode : byte
     {
         inactive,
@@ -31,17 +31,16 @@ public class BuildingSpawner : MonoBehaviour
         buildingSpawned
     }
 
-
     private void Awake()
     {
-        settings = Overseer.Instance.Settings.BuildingSettings;  
-        
-        indexDictionary = new Dictionary<string, int>();
+        settings = Overseer.Instance.Settings.BuildingSettings;
+
+        IndexDictionary = new Dictionary<string, int>();
         var prefabs = settings.BuildingOptions;
         for (int i = 0; i < prefabs.Length; i++)
         {
-            if (indexDictionary.ContainsKey(prefabs[i].buildingPrefab.name)) continue;
-            indexDictionary[prefabs[i].buildingPrefab.name] = i;
+            if (IndexDictionary.ContainsKey(prefabs[i].BuildingPrefab.name)) continue;
+            IndexDictionary[prefabs[i].BuildingPrefab.name] = i;
         }
     }
 
@@ -50,13 +49,13 @@ public class BuildingSpawner : MonoBehaviour
         //on Start make object pool of buildings
         foreach (var building in settings.BuildingOptions)
         {
-            Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.buildingPrefab, settings.PoolSize);
+            Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.BuildingPrefab, settings.PoolSize);
         }
     }
 
     private void FixedUpdate()
     {
-        if (buildModeState == BuildMode.buildingSpawned)
+        if (BuildModeState == BuildMode.buildingSpawned)
         {
             MoveBuildingToCursor();
             BuildingCollisionChecks();
@@ -86,9 +85,9 @@ public class BuildingSpawner : MonoBehaviour
     {
         // Resource check - how expenesive is it , do u have the rsources
 
-        var spawnedBuilding = SpawnBuilding(settings.BuildingOptions[index].buildingPrefab.name, SetSpawnLocation(), Quaternion.identity);
-        spawnedBuildings.Add(spawnedBuilding);
-        buildModeState = BuildMode.buildingSpawned;
+        var spawnedBuilding = SpawnBuilding(settings.BuildingOptions[index].BuildingPrefab.name, SetSpawnLocation(), Quaternion.identity);
+        SpawnedBuildings.Add(spawnedBuilding);
+        BuildModeState = BuildMode.buildingSpawned;
     }
 
     private void MoveBuildingToCursor()
@@ -96,7 +95,7 @@ public class BuildingSpawner : MonoBehaviour
         Vector3 mousePosition = SetSpawnLocation();
         Vector3 buildingMovePostion = new Vector3 (mousePosition.x, 0f, mousePosition.z);
         
-        currentBuilding = spawnedBuildings[^1];
+        currentBuilding = SpawnedBuildings[^1];
         buildingCurrentPosition = currentBuilding.transform.position;
 
         float moveSpeed = 1f;
@@ -113,8 +112,8 @@ public class BuildingSpawner : MonoBehaviour
     public void PlaceBuilding()
     { 
         currentBuilding.GetComponent<BoxCollider>().enabled = true;
-        buildModeState = BuildMode.inactive;
-        SpawnAtIndex(indexDictionary[currentBuilding.name]);
+        BuildModeState = BuildMode.inactive;
+        SpawnAtIndex(IndexDictionary[currentBuilding.name]);
 
         //pull rsource cost here
 
@@ -122,7 +121,7 @@ public class BuildingSpawner : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (buildModeState == BuildMode.buildingSpawned)
+        if (BuildModeState == BuildMode.buildingSpawned)
         {
             Gizmos.color = hit ? Color.red : Color.yellow;
             Gizmos.DrawWireCube(buildingCurrentPosition + currentBuilding.GetComponent<BoxCollider>().center, boxSize);

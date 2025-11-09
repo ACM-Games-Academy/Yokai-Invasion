@@ -39,7 +39,7 @@ public abstract class SelectableUnit : MonoBehaviour
 
     public void SetDestination(Vector3 destination)
     {
-        currentPath = AStar.AStarPath(transform.position, destination);
+        currentPath = AStar.Path(transform.position, destination);
         currentWaypointIndex = 0;
     }
 

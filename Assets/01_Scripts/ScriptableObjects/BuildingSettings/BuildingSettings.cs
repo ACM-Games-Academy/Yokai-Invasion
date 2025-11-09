@@ -24,12 +24,12 @@ public class BuildingSettings : ScriptableObject
     public struct buildingSpawnOption
     {
         [Tooltip("The Building prefab to spawn.")]
-        public GameObject buildingPrefab;
+        public GameObject BuildingPrefab;
         [Tooltip("The wood cost of the building, from 0 to 100.")]
         [Range(0, 100)]
-        public int woodCost;
+        public int WoodCost;
         [Tooltip("The gold cost of the building, from 0 to 100.")]
         [Range(0, 100)]
-        public int goldCost;
+        public int GoldCost;
     }
 }

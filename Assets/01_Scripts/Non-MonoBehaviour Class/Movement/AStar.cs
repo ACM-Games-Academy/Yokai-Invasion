@@ -5,16 +5,16 @@ public static class AStar
 {
     public class PathNode
     {
-        public Vector2Int gridPos;
-        public PathNode parent;
+        public Vector2Int GridPos;
+        public PathNode Parent;
         public float G;
         public float H;
         public float F => G + H;
 
         public PathNode(Vector2Int gridPos, PathNode parent, float g, float h)
         {
-            this.gridPos = gridPos;
-            this.parent = parent;
+            this.GridPos = gridPos;
+            this.Parent = parent;
             G = g;
             H = h;
         }
@@ -28,8 +28,8 @@ public static class AStar
     // --- GIZMO DEBUGGING DATA ---
     public struct SphereCheck
     {
-        public Vector3 pos;
-        public bool hit;
+        public Vector3 Pos;
+        public bool Hit;
     }
 
     public static readonly List<SphereCheck> gizmoChecks = new();
@@ -43,7 +43,7 @@ public static class AStar
 
     // -----------------------------
 
-    public static Vector3[] AStarPath(Vector3 start, Vector3 end)
+    public static Vector3[] Path(Vector3 start, Vector3 end)
     {
         ClearGizmoData(); // clear gizmo data each run
         worldHeight = start.y;
@@ -67,22 +67,22 @@ public static class AStar
             }
 
             openList.Remove(current);
-            closedSet.Add(current.gridPos);
+            closedSet.Add(current.GridPos);
 
-            if (current.gridPos == endGrid || Vector2Int.Distance(current.gridPos, endGrid) < stopDistance)
+            if (current.GridPos == endGrid || Vector2Int.Distance(current.GridPos, endGrid) < stopDistance)
             {
                 var path = ReconstructPath(current);
                 gizmoPath.AddRange(path); // store green path positions
                 return path;
             }
 
-            foreach (Vector2Int neighborPos in GetNeighbors(current.gridPos))
+            foreach (Vector2Int neighborPos in GetNeighbors(current.GridPos))
             {
                 if (closedSet.Contains(neighborPos)) continue;
 
-                float tentativeG = current.G + Vector2Int.Distance(current.gridPos, neighborPos);
+                float tentativeG = current.G + Vector2Int.Distance(current.GridPos, neighborPos);
 
-                PathNode neighbor = openList.Find(n => n.gridPos == neighborPos);
+                PathNode neighbor = openList.Find(n => n.GridPos == neighborPos);
                 if (neighbor == null)
                 {
                     neighbor = new PathNode(
@@ -96,7 +96,7 @@ public static class AStar
                 else if (tentativeG < neighbor.G)
                 {
                     neighbor.G = tentativeG;
-                    neighbor.parent = current;
+                    neighbor.Parent = current;
                 }
             }
         }
@@ -124,7 +124,7 @@ public static class AStar
             Vector3 worldPosition = GridToWorld(neighbor);
 
             bool hit = Physics.CheckSphere(worldPosition, cellSize, LayerMask.GetMask("Obstacle"));
-            gizmoChecks.Add(new SphereCheck { pos = worldPosition, hit = hit });
+            gizmoChecks.Add(new SphereCheck { Pos = worldPosition, Hit = hit });
 
             if (hit)
                 continue;
@@ -139,8 +139,8 @@ public static class AStar
         PathNode current = endNode;
         while (current != null)
         {
-            path.Add(GridToWorld(current.gridPos));
-            current = current.parent;
+            path.Add(GridToWorld(current.GridPos));
+            current = current.Parent;
         }
         path.Reverse();
         return path.ToArray();

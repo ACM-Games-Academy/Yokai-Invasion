@@ -7,8 +7,8 @@ public class AStarGizmos : MonoBehaviour
         // --- Draw checked spheres ---
         foreach (var check in AStar.gizmoChecks)
         {
-            Gizmos.color = check.hit ? Color.red : Color.yellow;
-            Gizmos.DrawWireSphere(check.pos, 0.5f);
+            Gizmos.color = check.Hit ? Color.red : Color.yellow;
+            Gizmos.DrawWireSphere(check.Pos, 0.5f);
         }
 
         // --- Draw reconstructed path ---

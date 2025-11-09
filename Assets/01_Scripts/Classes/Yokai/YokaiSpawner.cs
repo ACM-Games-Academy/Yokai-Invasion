@@ -55,9 +55,9 @@ public class YokaiSpawner : MonoBehaviour
     {
         foreach (var option in yokaiOptions)
         {
-            if (Overseer.Instance.GetManager<ObjectPooler>().PoolExists(option.yokaiPrefab.name) == false)
+            if (Overseer.Instance.GetManager<ObjectPooler>().PoolExists(option.YokaiPrefab.name) == false)
             {
-                Overseer.Instance.GetManager<ObjectPooler>().InitializePool(option.yokaiPrefab, 256);
+                Overseer.Instance.GetManager<ObjectPooler>().InitializePool(option.YokaiPrefab, 256);
             }
         }
     }
@@ -67,7 +67,7 @@ public class YokaiSpawner : MonoBehaviour
         List<yokaiSpawnOption> optionsToRemove = new List<yokaiSpawnOption>();
         foreach (var option in yokaiOptions)
         {
-            var optionSettings = option.yokaiPrefab.GetComponent<Yokai>().yokaiSettings;
+            var optionSettings = option.YokaiPrefab.GetComponent<Yokai>().yokaiSettings;
 
             if (optionSettings.PointValue > remainingPoints)
             {
@@ -82,7 +82,7 @@ public class YokaiSpawner : MonoBehaviour
     {
         foreach (var option in optionsToRemove)
         {
-            float probabilityToDistribute = option.spawnProbability;
+            float probabilityToDistribute = option.SpawnProbability;
             var newOptions = new List<yokaiSpawnOption>(yokaiOptions);
             newOptions.Remove(option);
             var probabilityPerOption = probabilityToDistribute / newOptions.Count;
@@ -90,7 +90,7 @@ public class YokaiSpawner : MonoBehaviour
             for (int i = 0; i < newOptions.Count; i++)
             {
                 var newOption = newOptions[i];
-                newOption.spawnProbability += probabilityPerOption;
+                newOption.SpawnProbability += probabilityPerOption;
             }
 
             yokaiOptions = newOptions.ToArray();
@@ -105,17 +105,17 @@ public class YokaiSpawner : MonoBehaviour
         for (int i = 0; i < yokaiOptions.Length; i++)
         {
             var option = yokaiOptions[i];
-            if (roll <= option.spawnProbability)
+            if (roll <= option.SpawnProbability)
             {
-                var optionSettings = option.yokaiPrefab.GetComponent<Yokai>().yokaiSettings;
-                var newYokai = SpawnYokai(option.yokaiPrefab.name, RandomSpawnLocation(), Quaternion.identity);
+                var optionSettings = option.YokaiPrefab.GetComponent<Yokai>().yokaiSettings;
+                var newYokai = SpawnYokai(option.YokaiPrefab.name, RandomSpawnLocation(), Quaternion.identity);
                 spawnedYokai.Add(newYokai);
                 points -= optionSettings.PointValue;
                 break;
             }
             else
             {
-                roll -= option.spawnProbability;
+                roll -= option.SpawnProbability;
             }
         }
         return points;

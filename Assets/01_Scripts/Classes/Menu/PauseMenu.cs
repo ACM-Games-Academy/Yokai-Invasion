@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuCanvas;
 
     // Drag your camera/player controller script here in the inspector
-    public MonoBehaviour cameraController;
+    public MonoBehaviour CameraController;
 
     public enum PauseState
     {
@@ -19,11 +19,11 @@ public class PauseMenu : MonoBehaviour
         BECOMING_UNPAUSED,
     }
 
-    public static PauseState currentPauseState;
+    public static PauseState CurrentPauseState;
 
     private void Update()
     {
-        switch (currentPauseState)
+        switch (CurrentPauseState)
         {
             case PauseState.BECOMING_PAUSED:
                 Pause();
@@ -39,9 +39,9 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Game Paused");
         PauseMenuCanvas.SetActive(true);
         Time.timeScale = 0f;
-        cameraController.enabled = false;
+        CameraController.enabled = false;
 
-        currentPauseState = PauseState.PAUSED;
+        CurrentPauseState = PauseState.PAUSED;
     }
 
     public void Resume()
@@ -49,9 +49,9 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Game Resumed");
         PauseMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
-        cameraController.enabled = true;
+        CameraController.enabled = true;
 
-        currentPauseState = PauseState.UNPAUSED;
+        CurrentPauseState = PauseState.UNPAUSED;
     }
 
 
@@ -59,13 +59,13 @@ public class PauseMenu : MonoBehaviour
     {
         if (!context.started) return;
 
-        switch (currentPauseState)
+        switch (CurrentPauseState)
         {
             case PauseState.UNPAUSED:
-                currentPauseState = PauseState.BECOMING_PAUSED;
+                CurrentPauseState = PauseState.BECOMING_PAUSED;
                 break;
             case PauseState.PAUSED:
-                currentPauseState = PauseState.BECOMING_UNPAUSED;
+                CurrentPauseState = PauseState.BECOMING_UNPAUSED;
                 break;
             default:
                 // Do nothing if we're already in the process of pausing/unpausing

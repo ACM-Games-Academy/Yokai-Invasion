@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Farm : MonoBehaviour, ResourceGenerator
+public class Farm : CivilianBuilding, ResourceGenerator
 {
     private int production = 5;
     public int GetProduction() => production;

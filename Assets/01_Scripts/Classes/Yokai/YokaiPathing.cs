@@ -85,7 +85,7 @@ public class YokaiPathing : MonoBehaviour
     {
         if (currentPath == null || ReachedEnd())
         {
-            currentPath = AStar.AStarPath(transform.position, templeLocation);
+            currentPath = AStar.Path(transform.position, templeLocation);
             currentWaypointIndex = 0;
         }
 
@@ -96,7 +96,7 @@ public class YokaiPathing : MonoBehaviour
     {
         if (currentPath == null || ReachedEnd())
         {
-            currentPath = AStar.AStarPath(transform.position, heroTransform.position);
+            currentPath = AStar.Path(transform.position, heroTransform.position);
             currentWaypointIndex = 0;
         }
         return (boidDir * settings.AllyReliance) + (pathDir * (1 - settings.AllyReliance));
@@ -111,7 +111,7 @@ public class YokaiPathing : MonoBehaviour
         if (currentPath == null)
         {
             Vector3 fleeTarget = transform.position + (transform.position - heroTransform.position).normalized * 50f;
-            currentPath = AStar.AStarPath(transform.position, fleeTarget);
+            currentPath = AStar.Path(transform.position, fleeTarget);
             currentWaypointIndex = 0;
         }
         else if (ReachedEnd())

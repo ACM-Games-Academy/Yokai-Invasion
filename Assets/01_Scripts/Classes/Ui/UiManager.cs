@@ -69,9 +69,9 @@ public class UiManager : MonoBehaviour
 
     public void SpawnTower()
     {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState == BuildingSpawner.BuildMode.active)
+        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
         {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(Overseer.Instance.GetManager<BuildingSpawner>().indexDictionary["Tower"]);
+            Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Tower"]);
         }
     }
 }

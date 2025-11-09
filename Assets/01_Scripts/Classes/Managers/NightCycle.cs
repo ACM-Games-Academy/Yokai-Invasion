@@ -22,7 +22,7 @@ public class NightCycle : MonoBehaviour
         Dusk,
         Night
     }
-    public TimeOfDay currentTimeOfDay = TimeOfDay.Day;
+    public TimeOfDay CurrentTimeOfDay = TimeOfDay.Day;
 
     void Start()
     {
@@ -34,7 +34,7 @@ public class NightCycle : MonoBehaviour
     {
         Debug.Log($"It is Dawn {currentCycle}");
 
-        currentTimeOfDay = TimeOfDay.Dawn;
+        CurrentTimeOfDay = TimeOfDay.Dawn;
         DawnStarted?.Invoke();
         yield return new WaitForSeconds(settings.DawnLengthSeconds);
         StartCoroutine(StartDay());
@@ -44,7 +44,7 @@ public class NightCycle : MonoBehaviour
     {
         Debug.Log($"It is Day {currentCycle}");
 
-        currentTimeOfDay = TimeOfDay.Day;
+        CurrentTimeOfDay = TimeOfDay.Day;
         DayStarted?.Invoke();
         yield return new WaitForSeconds(settings.DayLengthSeconds);
         StartCoroutine(StartDusk());
@@ -54,7 +54,7 @@ public class NightCycle : MonoBehaviour
     {
         Debug.Log($"It is Dusk {currentCycle}");
 
-        currentTimeOfDay = TimeOfDay.Dusk;
+        CurrentTimeOfDay = TimeOfDay.Dusk;
         DuskStarted?.Invoke();
         yield return new WaitForSeconds(settings.DuskLengthSeconds);
         StartCoroutine(StartNight());
@@ -64,7 +64,7 @@ public class NightCycle : MonoBehaviour
     {
         Debug.Log($"It is Night {currentCycle}");
 
-        currentTimeOfDay = TimeOfDay.Night;
+        CurrentTimeOfDay = TimeOfDay.Night;
         NightStarted?.Invoke();
         yield return new WaitForSeconds(settings.NightLengthSeconds);
         NightEnded?.Invoke();

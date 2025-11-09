@@ -20,7 +20,7 @@ public class HordeSettings : ScriptableObject
 
     private void OnValidate()
     {
-        float total = yokaiOptions.Sum(opt => opt.spawnProbability);
+        float total = yokaiOptions.Sum(opt => opt.SpawnProbability);
 
         if (Math.Abs(total - 100f) > 0.01f)
         {
@@ -33,8 +33,8 @@ public class HordeSettings : ScriptableObject
 public struct yokaiSpawnOption
 {
     [Tooltip("The Yokai prefab to spawn.")]
-    public GameObject yokaiPrefab;
+    public GameObject YokaiPrefab;
     [Tooltip("The probability of this Yokai spawning, from 0 to 100.")]
     [Range(0f, 100f)]
-    public float spawnProbability;
+    public float SpawnProbability;
 }

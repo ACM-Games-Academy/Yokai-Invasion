@@ -15,7 +15,7 @@ public class InputHandler : MonoBehaviour
 
     public void ReceiveRMBInput(InputAction.CallbackContext input)
     {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().buildModeState == BuildingSpawner.BuildMode.inactive)
+        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.inactive)
         {
             CommandManager.HandleMoveInput(input);
             Debug.Log("CommandManager is receiving RMB input");

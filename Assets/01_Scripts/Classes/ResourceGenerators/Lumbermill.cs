@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Lumbermill : MonoBehaviour, ResourceGenerator
+public class Lumbermill : CivilianBuilding, ResourceGenerator
 {
     private int production = 5;
     public int GetProduction() => production;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Market : MonoBehaviour, ResourceGenerator
+public class Market : CivilianBuilding, ResourceGenerator
 {
     private int production = 5;
     public int GetProduction() => production;

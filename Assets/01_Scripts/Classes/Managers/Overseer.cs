@@ -22,6 +22,7 @@ public class Overseer : MonoBehaviour
         typeof(YokaiManager),
         typeof(ObjectPooler),
         typeof(SelectionManager),
+        typeof(EmploymentManager),
         typeof(ResourceManager),
         typeof(BuildingSpawner),
         typeof(BuildModeInput),
@@ -39,7 +40,6 @@ public class Overseer : MonoBehaviour
 
         Instance = this;
 
-        // DontDestroyOnLoad(gameObject);
         InitializeManagers();
     }
 

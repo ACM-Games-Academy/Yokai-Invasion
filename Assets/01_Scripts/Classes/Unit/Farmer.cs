@@ -1,5 +1,5 @@
 using UnityEngine;
 
-public class Farmer : SelectableUnit
+public class Farmer : EmployableUnit
 {
 }
