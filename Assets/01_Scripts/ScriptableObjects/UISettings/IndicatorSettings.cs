@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class IndicatorSettings : MonoBehaviour
+[CreateAssetMenu(fileName = "IndicatorSettings", menuName = "ScriptableObjects/IndicatorSettings")]
+public class IndicatorSettings : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private GameObject[] indicatorPrefabs;
+    [SerializeField] private int poolSize;
+    public GameObject[] IndicatorPrefabs => indicatorPrefabs;
+    public int PoolSize => poolSize;
 }

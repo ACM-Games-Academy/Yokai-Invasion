@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class IndicatorSpawner : MonoBehaviour
 {
-
+    private IndicatorSettings settings;
     void Start()
     {
-        foreach (var building in settings.BuildingOptions)
-        {
-            Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.buildingPrefab, settings.PoolSize);
-        }
+        settings = Overseer.Instance.Settings.IndicatorSettings;
 
-        foreach (var building in settings.BuildingOptions)
+        foreach (var indicator in settings.IndicatorPrefabs)
         {
-            Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.buildingPrefab, settings.PoolSize);
+            Debug.Log(indicator);
+            Debug.Log("im literally foing anythigna");
+            Overseer.Instance.GetManager<ObjectPooler>().InitializePool(indicator, settings.PoolSize);
         }
     }
 }

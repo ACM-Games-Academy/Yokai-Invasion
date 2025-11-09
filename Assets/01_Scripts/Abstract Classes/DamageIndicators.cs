@@ -6,9 +6,9 @@ public static class DamageIndicators
 {
 
 
-    private void DamageIndication (float damage)
-    {
+    //private void DamageIndication (float damage)
+    //{
 
-    }
+    //}
 
 }

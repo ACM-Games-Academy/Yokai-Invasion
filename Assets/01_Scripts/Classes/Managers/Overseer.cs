@@ -25,7 +25,8 @@ public class Overseer : MonoBehaviour
         typeof(ResourceManager),
         typeof(BuildingSpawner),
         typeof(BuildModeInput),
-        typeof(NightCycle)
+        typeof(NightCycle),
+        typeof(IndicatorSpawner)
     };
 
     private void Awake()
