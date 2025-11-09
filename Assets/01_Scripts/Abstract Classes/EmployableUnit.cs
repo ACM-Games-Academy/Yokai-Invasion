@@ -2,7 +2,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 
-public abstract class EmployableUnit : MonoBehaviour
+public abstract class EmployableUnit : Unit
 {
 #nullable enable
     public CivilianBuilding? CurrentEmployer;
@@ -19,20 +19,13 @@ public abstract class EmployableUnit : MonoBehaviour
     {
         Debug.Log($"{name} has been employed at {employer.name}.");
         CurrentEmployer = employer;
-        GoToWork();
+        SetDestination(employer.transform.position);
     }
 
     public void OnFire()
     {
         Debug.Log($"{name} has been fired from {CurrentEmployer?.name}.");
         CurrentEmployer = null;
-    }
-
-    protected void GoToWork()
-    {
-        if (CurrentEmployer == null) return;
-        
-        AStar.Path(transform.position, CurrentEmployer.transform.position);
     }
 
     protected void FindEmployer()
