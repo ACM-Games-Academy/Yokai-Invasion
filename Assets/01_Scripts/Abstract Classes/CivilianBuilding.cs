@@ -11,8 +11,11 @@ public abstract class CivilianBuilding : Building, Employer, ResourceGenerator
 
     private void Start()
     {
+        Debug.Log("Start is being called here");
         Employees = new EmployableUnit[MaxEmployees];
         Overseer.Instance.GetManager<EmploymentManager>().NewEmployer(this);
+
+        //Building.BuildingStartUp(); //fix this
     }
 
     public void NewEmployee(EmployableUnit unit)

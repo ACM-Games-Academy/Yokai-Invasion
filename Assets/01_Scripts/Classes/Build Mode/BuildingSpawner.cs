@@ -1,8 +1,10 @@
 using Mono.Cecil;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Xml;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +17,9 @@ public class BuildingSpawner : MonoBehaviour
     private Vector3 spawnLocation;
     private Vector3 buildingCurrentPosition;
     private Vector3 boxSize;
+
+    private int goldCost;
+    private int woodCost;
 
     private bool hit;
     private GameObject currentBuilding;
@@ -57,8 +62,12 @@ public class BuildingSpawner : MonoBehaviour
     {
         if (BuildModeState == BuildMode.buildingSpawned)
         {
-            MoveBuildingToCursor();
-            BuildingCollisionChecks();
+            currentBuilding = SpawnedBuildings[^1];
+            if (currentBuilding != null)
+            {
+                MoveBuildingToCursor();
+                BuildingCollisionChecks();
+            }
         }
     }
 
@@ -83,11 +92,12 @@ public class BuildingSpawner : MonoBehaviour
     //Spawn the type of building based on index (called in ui manager)
     public void SpawnAtIndex(int index)
     {
-        // Resource check - how expenesive is it , do u have the rsources
+            var spawnedBuilding = SpawnBuilding(settings.BuildingOptions[index].BuildingPrefab.name, SetSpawnLocation(), Quaternion.identity);
+            SpawnedBuildings.Add(spawnedBuilding);
+            BuildModeState = BuildMode.buildingSpawned;
 
-        var spawnedBuilding = SpawnBuilding(settings.BuildingOptions[index].BuildingPrefab.name, SetSpawnLocation(), Quaternion.identity);
-        SpawnedBuildings.Add(spawnedBuilding);
-        BuildModeState = BuildMode.buildingSpawned;
+            goldCost = settings.BuildingOptions[index].GoldCost;
+            woodCost = settings.BuildingOptions[index].WoodCost;
     }
 
     private void MoveBuildingToCursor()
@@ -95,11 +105,11 @@ public class BuildingSpawner : MonoBehaviour
         Vector3 mousePosition = SetSpawnLocation();
         Vector3 buildingMovePostion = new Vector3 (mousePosition.x, 0f, mousePosition.z);
         
-        currentBuilding = SpawnedBuildings[^1];
+
         buildingCurrentPosition = currentBuilding.transform.position;
 
         float moveSpeed = 1f;
-        currentBuilding.transform.position = Vector3.Lerp(buildingCurrentPosition, buildingMovePostion , moveSpeed);
+        currentBuilding.transform.position = Vector3.Lerp(buildingCurrentPosition, buildingMovePostion, moveSpeed);
     }
 
     private void BuildingCollisionChecks()
@@ -111,19 +121,50 @@ public class BuildingSpawner : MonoBehaviour
 
     public void PlaceBuilding()
     { 
-        currentBuilding.GetComponent<BoxCollider>().enabled = true;
-        BuildModeState = BuildMode.inactive;
-        SpawnAtIndex(IndexDictionary[currentBuilding.name]);
+        if (currentBuilding != null)
+        {
+            currentBuilding.GetComponent<BoxCollider>().enabled = true;
+            BuildModeState = BuildMode.inactive;
+            
+            PayResources(goldCost,woodCost);
 
-        //pull rsource cost here
+            SpawnAtIndex(IndexDictionary[currentBuilding.name]);
+        }
+        else { BuildModeState = BuildMode.inactive;}
 
+        //Debug.Log($"Build Mode State from PLACE BUILDING is: '{BuildModeState}'");
+    }
+
+    public void CallPlacementPopup() //this cant be in BuildModeInput bc the static TogglePlaceBuilding doesnt like that
+    {
+        Debug.LogWarning("Cannot place this building here! There is something in the way.");
+        StartCoroutine(Overseer.Instance.GetManager<BuildModeInput>().CannotPlaceHerePopup());
+    }
+
+    public void ResourceCheck()
+    { 
+        if (Overseer.Instance.GetManager<ResourceManager>().CurrentGold() >= goldCost && Overseer.Instance.GetManager<ResourceManager>().CurrentWood() >= woodCost)
+        {
+            PlaceBuilding();
+        }   
+        else
+        {
+            Debug.LogWarning("Not enough resources to place this building!");
+            StartCoroutine(Overseer.Instance.GetManager<BuildModeInput>().NotEnoughResourcesPopup());
+        }
+    }
+
+    private void PayResources(int gold, int wood)
+    {
+        Overseer.Instance.GetManager<ResourceManager>().DecreaseGold(gold);
+        Overseer.Instance.GetManager<ResourceManager>().DecreaseWood(wood);
     }
 
     private void OnDrawGizmos()
     {
-        if (BuildModeState == BuildMode.buildingSpawned)
+        if (BuildModeState == BuildMode.buildingSpawned && currentBuilding != null)
         {
-            Gizmos.color = hit ? Color.red : Color.yellow;
+            Gizmos.color = hit ? Color.red : Color.green;
             Gizmos.DrawWireCube(buildingCurrentPosition + currentBuilding.GetComponent<BoxCollider>().center, boxSize);
         }
     }

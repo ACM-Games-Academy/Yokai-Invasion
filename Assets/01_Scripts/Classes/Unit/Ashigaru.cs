@@ -28,7 +28,7 @@ public class Ashigaru : SelectableUnit, AutoAttacker
             if (target == null) continue;
 
             target.TakeDamage(attackPower);
-            Debug.Log("An Ashigaru attacked a Yokai! They lost " + attackPower + "health!");
+            //Debug.Log("An Ashigaru attacked a Yokai! They lost " + attackPower + "health!");
         }
         lastAttackTime = Time.time;
     }

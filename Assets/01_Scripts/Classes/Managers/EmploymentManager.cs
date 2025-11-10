@@ -9,7 +9,7 @@ public class EmploymentManager : MonoBehaviour
     public void NewEmployer(CivilianBuilding employer)
     {
         EmployedUnits[employer] = new EmployableUnit[employer.MaxEmployees];
-        Debug.Log($"New employer added: {employer.name}. Total employers: {EmployedUnits.Count}");
+        //Debug.Log($"New employer added: {employer.name}. Total employers: {EmployedUnits.Count}");
 
         foreach (var unit in UnemployedUnits.ToArray())
         {
@@ -20,7 +20,7 @@ public class EmploymentManager : MonoBehaviour
     public void NewEmployableUnit(EmployableUnit unit)
     {
         UnemployedUnits.Add(unit);
-        Debug.Log($"New employable unit added: {unit.name}. Total unemployed units: {UnemployedUnits.Count}");
+        //Debug.Log($"New employable unit added: {unit.name}. Total unemployed units: {UnemployedUnits.Count}");
         FindEmployerForUnit(unit);
     }
 
@@ -34,7 +34,7 @@ public class EmploymentManager : MonoBehaviour
                 return;
             }
         }
-        Debug.Log($"{unit.name} could not find an employer and remains unemployed.");
+        //Debug.Log($"{unit.name} could not find an employer and remains unemployed.");
     }
 
     public void Employ(CivilianBuilding employer, EmployableUnit unit)
@@ -50,7 +50,7 @@ public class EmploymentManager : MonoBehaviour
         employer.NewEmployee(unit);
         unit.OnEmploy(employer);
 
-        Debug.Log($"Employed {unit.name}. {employer} now has {employer.CurrentEmployeeCount()} employees!");
+        //Debug.Log($"Employed {unit.name}. {employer} now has {employer.CurrentEmployeeCount()} employees!");
     }
 
     public void Fire(CivilianBuilding employer, EmployableUnit unit)
@@ -68,7 +68,7 @@ public class EmploymentManager : MonoBehaviour
         }
         UnemployedUnits.Add(unit);
         unit.OnFire();
-        Debug.Log($"Fired {unit.name}. {employer} now has {employer.CurrentEmployeeCount()} employees!");
+        //Debug.Log($"Fired {unit.name}. {employer} now has {employer.CurrentEmployeeCount()} employees!");
     }
 
     public bool IsEmployed(EmployableUnit unit)

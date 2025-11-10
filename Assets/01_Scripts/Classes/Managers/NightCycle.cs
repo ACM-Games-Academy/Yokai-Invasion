@@ -32,7 +32,7 @@ public class NightCycle : MonoBehaviour
 
     private IEnumerator StartDawn()
     {
-        Debug.Log($"It is Dawn {currentCycle}");
+        //Debug.Log($"It is Dawn {currentCycle + 1}");
 
         CurrentTimeOfDay = TimeOfDay.Dawn;
         DawnStarted?.Invoke();
@@ -42,7 +42,7 @@ public class NightCycle : MonoBehaviour
 
     private IEnumerator StartDay()
     {
-        Debug.Log($"It is Day {currentCycle}");
+        //Debug.Log($"It is Day {currentCycle + 1}");
 
         CurrentTimeOfDay = TimeOfDay.Day;
         DayStarted?.Invoke();
@@ -52,7 +52,7 @@ public class NightCycle : MonoBehaviour
 
     private IEnumerator StartDusk()
     {
-        Debug.Log($"It is Dusk {currentCycle}");
+        //Debug.Log($"It is Dusk {currentCycle + 1}");
 
         CurrentTimeOfDay = TimeOfDay.Dusk;
         DuskStarted?.Invoke();
@@ -62,7 +62,7 @@ public class NightCycle : MonoBehaviour
 
     private IEnumerator StartNight()
     {
-        Debug.Log($"It is Night {currentCycle}");
+        //Debug.Log($"It is Night {currentCycle + 1}");
 
         CurrentTimeOfDay = TimeOfDay.Night;
         NightStarted?.Invoke();

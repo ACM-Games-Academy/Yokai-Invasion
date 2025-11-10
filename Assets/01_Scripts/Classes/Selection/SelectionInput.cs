@@ -57,24 +57,24 @@ public class SelectionInput : MonoBehaviour
                 {
                     if (isModifying && Overseer.Instance.GetManager<SelectionManager>().IsSelected(Unit))
                     {
-                        Debug.Log($"Deselecting {Unit.name}");
+                        //Debug.Log($"Deselecting {Unit.name}");
                         Overseer.Instance.GetManager<SelectionManager>().Deselect(Unit);
                     }
                     else if (isModifying && !Overseer.Instance.GetManager<SelectionManager>().IsSelected(Unit))
                     {
-                        Debug.Log($"Adding {Unit.name} to selection");
+                        //Debug.Log($"Adding {Unit.name} to selection");
                         Overseer.Instance.GetManager<SelectionManager>().Select(Unit);
                     }
                     else
                     {
-                        Debug.Log($"Clicked on {Unit.name}");
+                        //Debug.Log($"Clicked on {Unit.name}");
                         Overseer.Instance.GetManager<SelectionManager>().ClearSelection();
                         Overseer.Instance.GetManager<SelectionManager>().Select(Unit);
                     }
                 }
                 else
                 {
-                    Debug.Log("Clicked on empty space, clearing selection");
+                    //Debug.Log("Clicked on empty space, clearing selection");
                     Overseer.Instance.GetManager<SelectionManager>().ClearSelection();
                 }
                 currentClickState = ClickState.None;
@@ -150,13 +150,13 @@ public class SelectionInput : MonoBehaviour
             {
                 if (!Overseer.Instance.GetManager<SelectionManager>().IsSelected(Unit))
                 {
-                    Debug.Log($"Selecting {Unit.name} via box");
+                    //Debug.Log($"Selecting {Unit.name} via box");
                     Overseer.Instance.GetManager<SelectionManager>().Select(Unit);
                 }
             }
             else if (isModifying && Overseer.Instance.GetManager<SelectionManager>().IsSelected(Unit))
             {
-                Debug.Log($"Deselecting {Unit.name} via box");
+                //Debug.Log($"Deselecting {Unit.name} via box");
                 Overseer.Instance.GetManager<SelectionManager>().Deselect(Unit);
             }
         }

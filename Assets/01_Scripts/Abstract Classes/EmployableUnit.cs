@@ -19,14 +19,14 @@ public abstract class EmployableUnit : Unit
 
     public void OnEmploy(CivilianBuilding employer)
     {
-        Debug.Log($"{name} has been employed at {employer.name}.");
+        //Debug.Log($"{name} has been employed at {employer.name}.");
         CurrentEmployer = employer;
         SetDestination(employer.transform.position);
     }
 
     public void OnFire()
     {
-        Debug.Log($"{name} has been fired from {CurrentEmployer?.name}.");
+        //Debug.Log($"{name} has been fired from {CurrentEmployer?.name}.");
         CurrentEmployer = null;
     }
 
@@ -49,7 +49,7 @@ public abstract class EmployableUnit : Unit
         }
 
         CurrentEmployer.GenerateResource(CurrentEmployer.GetProduction());
-        Debug.Log($"{name} generated {CurrentEmployer.GetProduction()} resources at {CurrentEmployer?.name}.");
+        //Debug.Log($"{name} generated {CurrentEmployer.GetProduction()} resources at {CurrentEmployer?.name}.");
 
         currentGenerationCooldown = CurrentEmployer.GenerationCooldown;
 

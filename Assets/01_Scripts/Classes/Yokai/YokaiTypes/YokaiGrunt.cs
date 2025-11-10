@@ -23,7 +23,7 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
     public void TakeDamage(int damageAmount)
     {
-        Debug.Log($"{yokaiSettings.YokaiName} took {damageAmount} damage.");
+        //Debug.Log($"{yokaiSettings.YokaiName} took {damageAmount} damage.");
         currentHealth -= damageAmount;
         if (currentHealth <= 0)
         {
@@ -39,19 +39,19 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
     public void AutoAttack()
     {
-        Debug.Log($"{yokaiSettings.YokaiName} dealt {yokaiSettings.AttackPower} damage.");
+        //Debug.Log($"{yokaiSettings.YokaiName} dealt {yokaiSettings.AttackPower} damage.");
         // Implement damage dealing logic here
     }
 
     public void DetermineTarget()
     {
-        Debug.Log($"{yokaiSettings.YokaiName} is determining its target.");
+        //Debug.Log($"{yokaiSettings.YokaiName} is determining its target.");
         // Implement target determination logic here
     }
 
     private void Die()
     {
-        Debug.Log($"{yokaiSettings.YokaiName} has died.");
+        //Debug.Log($"{yokaiSettings.YokaiName} has died.");
         // Implement death logic here (e.g., play animation, drop loot)
         Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
     }

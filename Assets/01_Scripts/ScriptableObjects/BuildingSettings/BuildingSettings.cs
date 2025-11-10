@@ -31,5 +31,8 @@ public class BuildingSettings : ScriptableObject
         [Tooltip("The gold cost of the building, from 0 to 100.")]
         [Range(0, 100)]
         public int GoldCost;
+        [Tooltip("The total health of this building type.")]
+        [Range(0, 1000)]
+        public int BuildingHealth;
     }
 }

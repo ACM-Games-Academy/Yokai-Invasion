@@ -16,5 +16,14 @@ MonoBehaviour:
   spawnHeight: 0
   buildingOptions:
   - BuildingPrefab: {fileID: 173902483733970498, guid: 27163277ab4c347428054453be26383f, type: 3}
-    WoodCost: 5
+    WoodCost: 50
+    GoldCost: 30
+    BuildingHealth: 300
+  - BuildingPrefab: {fileID: 5714601427503410668, guid: 7bdb21784dba8754dbbf4cee1c35a40a, type: 3}
+    WoodCost: 10
     GoldCost: 0
+    BuildingHealth: 100
+  - BuildingPrefab: {fileID: 5714601427503410668, guid: 223022ca455615642ab505f8385ca568, type: 3}
+    WoodCost: 25
+    GoldCost: 15
+    BuildingHealth: 100

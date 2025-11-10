@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class BuildModeInput : MonoBehaviour
 {
     private GameObject UiCanvas;
+
+    private float popupWaitTime = 2.5f;
 
     private void Start()
     {
@@ -24,9 +27,23 @@ public class BuildModeInput : MonoBehaviour
         {
             UiCanvas.transform.GetChild(0).gameObject.SetActive(false);
         }
+    } 
+
+    public IEnumerator NotEnoughResourcesPopup() //this really shouldnt be here but i couldnt be bothered to move it
+    {
+        UiCanvas.transform.GetChild(1).gameObject.SetActive(true);
+        yield return new WaitForSeconds(popupWaitTime);
+        UiCanvas.transform.GetChild(1).gameObject.SetActive(false);
+    }
+    public IEnumerator CannotPlaceHerePopup() //this too
+    {
+        UiCanvas.transform.GetChild(2).gameObject.SetActive(true);
+        yield return new WaitForSeconds(popupWaitTime);
+        UiCanvas.transform.GetChild(2).gameObject.SetActive(false);
     }
 
-    //These functions check for inputs from Input Handler
+    //The following functions check for inputs from Input Handler ------------------------------
+
     public static void ToggleBuildingsList(InputAction.CallbackContext input)
     {
         if (!input.started) return;
@@ -48,8 +65,14 @@ public class BuildModeInput : MonoBehaviour
 
         if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.buildingSpawned && Overseer.Instance.GetManager<BuildingSpawner>().IsPlaceable())
         {
-            Overseer.Instance.GetManager<BuildingSpawner>().PlaceBuilding();
+            Overseer.Instance.GetManager<BuildingSpawner>().ResourceCheck();
+        }
+        else if (!Overseer.Instance.GetManager<BuildingSpawner>().IsPlaceable())
+        {
+            Overseer.Instance.GetManager<BuildingSpawner>().CallPlacementPopup();
         }
     }
+
+
 
 }

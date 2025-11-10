@@ -18,12 +18,12 @@ public class InputHandler : MonoBehaviour
         if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.inactive)
         {
             CommandManager.HandleMoveInput(input);
-            Debug.Log("CommandManager is receiving RMB input");
+            //Debug.Log("CommandManager is receiving RMB input");
         }
         else 
         {
             BuildModeInput.TogglePlaceBuilding(input);
-            Debug.Log("BuildModeInput is receiving RMB input");
+            //Debug.Log("BuildModeInput is receiving RMB input");
         }
     }
 
