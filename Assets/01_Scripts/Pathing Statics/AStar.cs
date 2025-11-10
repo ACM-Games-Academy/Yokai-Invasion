@@ -27,8 +27,8 @@ public static class AStar
                 return new Vector3[] { start, end };
             }
 
-            int2 startGrid = pathingManager.WorldToGrid(start);
-            int2 endGrid = pathingManager.WorldToGrid(end);
+            int2 startGridCoord = pathingManager.WorldToGrid(start);
+            int2 endGridCoord = pathingManager.WorldToGrid(end);
 
             int gridSize = pathingManager.GetNodeMapSize();
             var nodeMap = pathingManager.GetNodeMap();
@@ -48,15 +48,12 @@ public static class AStar
                 gScore = gScore,
                 openSet = openSet,
                 pathResult = pathResult,
-                startPos = startGrid,
-                endPos = endGrid,
+                startPos = startGridCoord,
+                endPos = endGridCoord,
                 gridSize = gridSize
             };
 
-            JobHandle handle = job.Schedule();
-
-
-            handle.Complete();
+            job.Run();
 
             // Convert the result to world positions
             List<Vector3> worldPath = new();

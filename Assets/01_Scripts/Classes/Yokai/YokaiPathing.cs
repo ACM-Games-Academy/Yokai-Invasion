@@ -6,7 +6,7 @@ public class YokaiPathing : MonoBehaviour
     private Rigidbody rb;
     private Yokai yokai;
 
-    private Vector3 templeLocation = new Vector3(7, 1, 0);
+    private Vector3 templeLocation = new Vector3(7, 0.66f, -7);
     private Transform heroTransform;
 
     private float floorHeight = 0.66f;
@@ -69,6 +69,8 @@ public class YokaiPathing : MonoBehaviour
                 // Stop all movement when dead
                 break;
         }
+
+        Debug.DrawRay(transform.position, (boidDir * settings.AllyReliance) + (pathDir * (1f - settings.AllyReliance)) * 7.5f, Color.yellow);
 
         // Clamp to floor
         if (transform.position.y >= floorHeight)
@@ -137,6 +139,8 @@ public class YokaiPathing : MonoBehaviour
 
     private Vector3 CalculatePath_Fleeing(Vector3 boidDir, Vector3 pathDir)
     {
+        Debug.DrawRay(transform.position, heroTransform.position - transform.position, Color.red);
+
         if (currentPath == null)
         {
             Vector3 fleeTarget = transform.position + (transform.position - heroTransform.position).normalized * 50f;
@@ -224,5 +228,4 @@ public class YokaiPathing : MonoBehaviour
 
         return dir;
     }
-
 }

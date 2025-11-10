@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694417c857b9d13408c5af735e02b1ec, type: 3}
   m_Name: NightCycleSettings
   m_EditorClassIdentifier: Assembly-CSharp::NightCycleSettings
-  dawnLengthSeconds: 5
-  dayLengthSeconds: 10
-  duskLengthSeconds: 5
+  dawnLengthSeconds: 1
+  dayLengthSeconds: 1
+  duskLengthSeconds: 1
   nightLengthSeconds: 10
