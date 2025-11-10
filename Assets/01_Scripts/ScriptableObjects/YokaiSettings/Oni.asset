@@ -16,7 +16,7 @@ MonoBehaviour:
   moveSpeed: 3
   maxHealth: 5
   attackPower: 3
-  allyReliance: 0.1
+  allyReliance: 0.4
   waypointTolerance: 0.3
   detectionRadius: 5
   cohesionWeight: 1

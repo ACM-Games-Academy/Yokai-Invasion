@@ -7,7 +7,7 @@ public class HordeSettings : ScriptableObject
 {
     [Header("Horde Settings")]
     [Tooltip("The number of points used to buy Yokai for this horde.")]
-    [Range(0, 100)]
+    [Range(0, 256)]
     [SerializeField]
     private int pointValue;
 

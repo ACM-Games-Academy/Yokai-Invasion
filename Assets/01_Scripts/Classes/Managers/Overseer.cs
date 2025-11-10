@@ -24,6 +24,7 @@ public class Overseer : MonoBehaviour
         typeof(SelectionManager),
         typeof(EmploymentManager),
         typeof(ResourceManager),
+        typeof(PathingManager),
         typeof(BuildingSpawner),
         typeof(BuildModeInput),
         typeof(NightCycle),
