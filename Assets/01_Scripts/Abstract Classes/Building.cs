@@ -19,7 +19,7 @@ public abstract class Building : MonoBehaviour, Damageable
     private int currentHealth;
 
     //physics.overlapcheckbox 
-    //make a list of all selectable units in space 
+    //make a list of al l selectable units in space 
     //use SetDestination to walk outside of collision area
     //wait until unites leave
     //turn collider from trigger to collider
@@ -28,15 +28,14 @@ public abstract class Building : MonoBehaviour, Damageable
 
 
 
-    public void BuildingStartUp()
+    public void Start()
     {
-        Debug.Log("fuck you");
         settings = Overseer.Instance.Settings.BuildingSettings;
 
-        string key = this.GetPrefabDefinition().name;
+        string key = this.name;
         int index = Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary[key];
         currentHealth = settings.BuildingOptions[index].BuildingHealth;
-        Debug.Log($"PREFAB: {this.GetPrefabDefinition().name}  Current Health = {currentHealth}");
+        Debug.Log($"PREFAB: {key}  Current Health = {currentHealth}");
 
     }
 

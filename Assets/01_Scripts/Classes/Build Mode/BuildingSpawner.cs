@@ -7,26 +7,25 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class BuildingSpawner : MonoBehaviour
 {
     private BuildingSettings settings;
 
+    public Dictionary<string, int> IndexDictionary;
     public List<GameObject> SpawnedBuildings = new List<GameObject>();
 
-    private Vector3 spawnLocation;
+    private Vector3 mousePos;
     private Vector3 buildingCurrentPosition;
     private Vector3 boxSize;
+
+    private GameObject currentBuilding;
 
     private int goldCost;
     private int woodCost;
 
-    private bool hit;
-    private GameObject currentBuilding;
-
-    public Dictionary<string, int> IndexDictionary;
-
-    public bool IsPlaceable() => !hit;
+    private const int BUILDING_MOVE_SPEED = 1;
 
     public BuildMode BuildModeState;
     public enum BuildMode : byte
@@ -35,6 +34,8 @@ public class BuildingSpawner : MonoBehaviour
         active,
         buildingSpawned
     }
+
+
 
     private void Awake()
     {
@@ -51,107 +52,104 @@ public class BuildingSpawner : MonoBehaviour
 
     private void Start()
     {
-        //on Start make object pool of buildings
         foreach (var building in settings.BuildingOptions)
         {
             Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.BuildingPrefab, settings.PoolSize);
         }
     }
 
-    private void FixedUpdate()
+    public void SpawnByIndex(int index)
     {
-        if (BuildModeState == BuildMode.buildingSpawned)
-        {
-            currentBuilding = SpawnedBuildings[^1];
-            if (currentBuilding != null)
-            {
-                MoveBuildingToCursor();
-                BuildingCollisionChecks();
-            }
-        }
+        var spawnedBuilding = Overseer.Instance.GetManager<ObjectPooler>().GetPooledObject(
+                                                                    settings.BuildingOptions[index].BuildingPrefab.name,
+                                                                    GetMousePosition(),
+                                                                    Quaternion.identity);
+        currentBuilding = spawnedBuilding;
+        SpawnedBuildings.Add(currentBuilding);
+
+        BuildModeState = BuildMode.buildingSpawned;
+
+        goldCost = settings.BuildingOptions[index].GoldCost;
+        woodCost = settings.BuildingOptions[index].WoodCost;
     }
 
-
-    //Get building from object pool
-    private GameObject SpawnBuilding(string key, Vector3 position, Quaternion rotation)
-    {
-        var spawnedBuilding = Overseer.Instance.GetManager<ObjectPooler>().GetPooledObject(key, position, rotation);
-
-        return spawnedBuilding;
-    }
-
-    private Vector3 SetSpawnLocation()
+    private Vector3 GetMousePosition()
     {
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out RaycastHit hitInfo))
         {
-            spawnLocation = hitInfo.point;
+            mousePos = hitInfo.point;
         }
-        return spawnLocation;
+        return mousePos;
     }
 
-    //Spawn the type of building based on index (called in ui manager)
-    public void SpawnAtIndex(int index)
+    private void FixedUpdate()
     {
-            var spawnedBuilding = SpawnBuilding(settings.BuildingOptions[index].BuildingPrefab.name, SetSpawnLocation(), Quaternion.identity);
-            SpawnedBuildings.Add(spawnedBuilding);
-            BuildModeState = BuildMode.buildingSpawned;
+        if (BuildModeState != BuildMode.buildingSpawned) return;
+        if (currentBuilding == null) return;
 
-            goldCost = settings.BuildingOptions[index].GoldCost;
-            woodCost = settings.BuildingOptions[index].WoodCost;
+        MoveBuildingToCursor();
     }
 
     private void MoveBuildingToCursor()
     {
-        Vector3 mousePosition = SetSpawnLocation();
-        Vector3 buildingMovePostion = new Vector3 (mousePosition.x, 0f, mousePosition.z);
-        
+        Vector3 mousePosition = GetMousePosition();
+        Vector3 buildingMovePostion = new Vector3(mousePosition.x, settings.SpawnHeight, mousePosition.z);
 
         buildingCurrentPosition = currentBuilding.transform.position;
 
-        float moveSpeed = 1f;
-        currentBuilding.transform.position = Vector3.Lerp(buildingCurrentPosition, buildingMovePostion, moveSpeed);
+        currentBuilding.transform.position = Vector3.Lerp(buildingCurrentPosition, buildingMovePostion, BUILDING_MOVE_SPEED);
     }
 
-    private void BuildingCollisionChecks()
+    /// <summary>
+    /// Checks for whether the building is overlapping somethings collision
+    /// </summary>
+    /// <returns>
+    /// true if something is colliding,
+    /// false otherwise
+    /// </returns>
+    public bool BuildingCollisionChecks()
     {
         boxSize = currentBuilding.GetComponent<BoxCollider>().size;
-        hit = Physics.CheckBox(buildingCurrentPosition + currentBuilding.GetComponent<BoxCollider>().center, boxSize, currentBuilding.transform.rotation, LayerMask.GetMask("Obstacle")); //mkae custom layermask, buildings, obstacles, player, do not include floor or units
-        //using Box Collider center to add offset equal to box collider position
+        bool hit = Physics.CheckBox(
+                            buildingCurrentPosition + currentBuilding.GetComponent<BoxCollider>().center, 
+                            boxSize, 
+                            currentBuilding.transform.rotation, 
+                            LayerMask.GetMask("Obstacle")); //make custom layermask, buildings, obstacles, player, do not include floor or units
+        return hit;
+        
     }
 
-    public void PlaceBuilding()
-    { 
-        if (currentBuilding != null)
-        {
-            currentBuilding.GetComponent<BoxCollider>().enabled = true;
-            BuildModeState = BuildMode.inactive;
-            
-            PayResources(goldCost,woodCost);
-
-            SpawnAtIndex(IndexDictionary[currentBuilding.name]);
-        }
-        else { BuildModeState = BuildMode.inactive;}
-
-        //Debug.Log($"Build Mode State from PLACE BUILDING is: '{BuildModeState}'");
-    }
-
-    public void CallPlacementPopup() //this cant be in BuildModeInput bc the static TogglePlaceBuilding doesnt like that
+    public void AttemptToPlaceBuilding()
     {
-        Debug.LogWarning("Cannot place this building here! There is something in the way.");
-        StartCoroutine(Overseer.Instance.GetManager<BuildModeInput>().CannotPlaceHerePopup());
-    }
-
-    public void ResourceCheck()
-    { 
-        if (Overseer.Instance.GetManager<ResourceManager>().CurrentGold() >= goldCost && Overseer.Instance.GetManager<ResourceManager>().CurrentWood() >= woodCost)
-        {
-            PlaceBuilding();
-        }   
-        else
+        if (!ResourceCheck())
         {
             Debug.LogWarning("Not enough resources to place this building!");
-            StartCoroutine(Overseer.Instance.GetManager<BuildModeInput>().NotEnoughResourcesPopup());
+            StartCoroutine(Overseer.Instance.GetManager<BuildModeInput>().TriggerResourcesWarning());
         }
+
+        if (BuildingCollisionChecks())
+        {
+            Debug.LogWarning("Cannot place this building here! There is something in the way.");
+            StartCoroutine(Overseer.Instance.GetManager<BuildModeInput>().TriggerPlacementWarning());
+        }
+
+        if (currentBuilding == null) return;
+
+        PayResources(goldCost, woodCost);
+        SetToConstructing();
+
+        if (IsSpaceLeftInPool(currentBuilding))
+        {
+            SpawnByIndex(IndexDictionary[currentBuilding.name]);
+        }
+
+        Debug.Log($"Build Mode State from ATTEMPT TO PLACE BUILDING is: '{BuildModeState}'");
+    }
+
+    private bool ResourceCheck()
+    {
+        return (Overseer.Instance.GetManager<ResourceManager>().CurrentGold() >= goldCost &&
+            Overseer.Instance.GetManager<ResourceManager>().CurrentWood() >= woodCost);
     }
 
     private void PayResources(int gold, int wood)
@@ -160,11 +158,37 @@ public class BuildingSpawner : MonoBehaviour
         Overseer.Instance.GetManager<ResourceManager>().DecreaseWood(wood);
     }
 
+    private void SetToConstructing()
+    {
+        currentBuilding.GetComponent<BoxCollider>().enabled = true;
+        BuildModeState = BuildMode.inactive;
+    }
+
+
+    private bool IsSpaceLeftInPool(GameObject prefabToCheck)
+    {
+        var numberInPool = settings.PoolSize;
+        int spawnedTracker = 0;
+
+        foreach (GameObject building in SpawnedBuildings)
+        {
+            if (building.name == prefabToCheck.name) spawnedTracker++;
+        }
+
+        return spawnedTracker < numberInPool;
+    }
+
+    public void CancelBuildingPlacement()
+    {
+        Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(currentBuilding);
+        BuildModeState = BuildMode.inactive;
+    }
+
     private void OnDrawGizmos()
     {
         if (BuildModeState == BuildMode.buildingSpawned && currentBuilding != null)
         {
-            Gizmos.color = hit ? Color.red : Color.green;
+            Gizmos.color = !BuildingCollisionChecks() ? Color.red : Color.green;
             Gizmos.DrawWireCube(buildingCurrentPosition + currentBuilding.GetComponent<BoxCollider>().center, boxSize);
         }
     }

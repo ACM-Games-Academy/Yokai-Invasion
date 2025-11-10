@@ -91,21 +91,21 @@ public class UiManager : MonoBehaviour
     {
         if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
         {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Tower"]);
+            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Tower"]);
         }
     }
     public void SpawnLumbermill()
     {
         if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
         {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Lumbermill"]);
+            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Lumbermill"]);
         }
     }
     public void SpawnFarm()
     {
         if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
         {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnAtIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Farm"]);
+            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Farm"]);
         }
     }
 }

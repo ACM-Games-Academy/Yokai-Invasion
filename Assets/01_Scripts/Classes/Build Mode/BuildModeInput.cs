@@ -4,75 +4,61 @@ using System.Collections;
 
 public class BuildModeInput : MonoBehaviour
 {
-    private GameObject UiCanvas;
+    private static BuildingSpawner buildingSpawner;
+    private static GameObject resourcesWarningPopup;
+    private static GameObject placementWarningPopup;
 
-    private float popupWaitTime = 2.5f;
+    [SerializeField]
+    private static GameObject buildMenu;
+
+    private float warningWaitTime = 2.5f;
 
     private void Start()
     {
-        UiCanvas = GameObject.Find("UI Canvas"); //this isnt efficient so i should change this later
+        buildingSpawner = Overseer.Instance.GetManager<BuildingSpawner>();
     }
-    private void Update()
-    {
-        ActivateBuildingsList();
-    }
-    private void ActivateBuildingsList() //MAGIC NUMBER BS HAPPENING HERE - check here if UI is bugging
-    {
-        //The children under the UI canvas must be in a specific order for this to work properly, so make sure u dont move them around
-        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active) //1st child under UI Canvas
-        {
-            UiCanvas.transform.GetChild(0).gameObject.SetActive(true); 
-        }
-        else
-        {
-            UiCanvas.transform.GetChild(0).gameObject.SetActive(false);
-        }
-    } 
 
-    public IEnumerator NotEnoughResourcesPopup() //this really shouldnt be here but i couldnt be bothered to move it
+    public IEnumerator TriggerResourcesWarning() //this really shouldnt be here but i couldnt be bothered to move it
     {
-        UiCanvas.transform.GetChild(1).gameObject.SetActive(true);
-        yield return new WaitForSeconds(popupWaitTime);
-        UiCanvas.transform.GetChild(1).gameObject.SetActive(false);
+        resourcesWarningPopup.SetActive(true);
+        yield return new WaitForSeconds(warningWaitTime);
+        resourcesWarningPopup.SetActive(false);
     }
-    public IEnumerator CannotPlaceHerePopup() //this too
+    public IEnumerator TriggerPlacementWarning() //this too
     {
-        UiCanvas.transform.GetChild(2).gameObject.SetActive(true);
-        yield return new WaitForSeconds(popupWaitTime);
-        UiCanvas.transform.GetChild(2).gameObject.SetActive(false);
+        placementWarningPopup.SetActive(true);
+        yield return new WaitForSeconds(warningWaitTime);
+        placementWarningPopup.SetActive(false);
     }
+
 
     //The following functions check for inputs from Input Handler ------------------------------
 
-    public static void ToggleBuildingsList(InputAction.CallbackContext input)
+    public static void ToggleBuildMenu(InputAction.CallbackContext input)
     {
         if (!input.started) return;
 
-        switch (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState)
+        switch (buildingSpawner.BuildModeState)
         {
             case BuildingSpawner.BuildMode.active:
-                Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState = BuildingSpawner.BuildMode.inactive;
+                buildMenu.SetActive(!buildMenu.activeSelf);
+                buildingSpawner.BuildModeState = BuildingSpawner.BuildMode.inactive;
                 break;
             case BuildingSpawner.BuildMode.inactive:
-                Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState = BuildingSpawner.BuildMode.active;
+                buildMenu.SetActive(!buildMenu.activeSelf);
+                buildingSpawner.BuildModeState = BuildingSpawner.BuildMode.active;
+                break;
+            case BuildingSpawner.BuildMode.buildingSpawned:
+                buildingSpawner.CancelBuildingPlacement();
+                buildMenu.SetActive(false);
                 break;
         }
     }
 
-    public static void TogglePlaceBuilding(InputAction.CallbackContext input)
+    public static void PlaceBuilding(InputAction.CallbackContext input)
     {
         if (!input.started) return;
 
-        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.buildingSpawned && Overseer.Instance.GetManager<BuildingSpawner>().IsPlaceable())
-        {
-            Overseer.Instance.GetManager<BuildingSpawner>().ResourceCheck();
-        }
-        else if (!Overseer.Instance.GetManager<BuildingSpawner>().IsPlaceable())
-        {
-            Overseer.Instance.GetManager<BuildingSpawner>().CallPlacementPopup();
-        }
+        buildingSpawner.AttemptToPlaceBuilding();
     }
-
-
-
 }

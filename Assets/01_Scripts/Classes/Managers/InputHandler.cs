@@ -20,9 +20,9 @@ public class InputHandler : MonoBehaviour
             CommandManager.HandleMoveInput(input);
             //Debug.Log("CommandManager is receiving RMB input");
         }
-        else 
+        else if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.buildingSpawned)
         {
-            BuildModeInput.TogglePlaceBuilding(input);
+            BuildModeInput.PlaceBuilding(input);
             //Debug.Log("BuildModeInput is receiving RMB input");
         }
     }
@@ -39,7 +39,7 @@ public class InputHandler : MonoBehaviour
 
     public void ReceiveBuildModeInput(InputAction.CallbackContext input)
     {
-        BuildModeInput.ToggleBuildingsList(input);
+        BuildModeInput.ToggleBuildMenu(input);
     }
 
     public void ToggleCameraFollow(InputAction.CallbackContext input)
