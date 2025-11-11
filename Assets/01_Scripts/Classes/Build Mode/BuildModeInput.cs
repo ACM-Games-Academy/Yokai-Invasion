@@ -8,14 +8,17 @@ public class BuildModeInput : MonoBehaviour
     private static GameObject resourcesWarningPopup;
     private static GameObject placementWarningPopup;
 
-    [SerializeField]
     private static GameObject buildMenu;
 
     private float warningWaitTime = 2.5f;
 
+    private const int BUILDMENU_SPAWN_HEIGHT = 140;
+
     private void Start()
     {
         buildingSpawner = Overseer.Instance.GetManager<BuildingSpawner>();
+        buildMenu = Instantiate(Overseer.Instance.Settings.BuildMenu, new Vector3 (Screen.width/2, BUILDMENU_SPAWN_HEIGHT, 0), Quaternion.identity, this.transform);
+        buildMenu.SetActive(false);
     }
 
     public IEnumerator TriggerResourcesWarning() //this really shouldnt be here but i couldnt be bothered to move it

@@ -143,7 +143,7 @@ public class BuildingSpawner : MonoBehaviour
             SpawnByIndex(IndexDictionary[currentBuilding.name]);
         }
 
-        Debug.Log($"Build Mode State from ATTEMPT TO PLACE BUILDING is: '{BuildModeState}'");
+        //Debug.Log($"Build Mode State from ATTEMPT TO PLACE BUILDING is: '{BuildModeState}'");
     }
 
     private bool ResourceCheck()
@@ -160,7 +160,7 @@ public class BuildingSpawner : MonoBehaviour
 
     private void SetToConstructing()
     {
-        currentBuilding.GetComponent<BoxCollider>().enabled = true;
+        currentBuilding.GetComponent<Building>().AlterState(Building.BuildingState.constructing);
         BuildModeState = BuildMode.inactive;
     }
 

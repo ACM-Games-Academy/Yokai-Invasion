@@ -48,7 +48,8 @@ public class UiManager : MonoBehaviour
         farmWoodCost.text = $"{settings.BuildingOptions[2].WoodCost.ToString()} Wood";
     }
 
-    //Resource Counters UI
+
+    //Resource Counters UI ---------------------
 
     private void DisplayWoodCount()
     {
@@ -66,8 +67,8 @@ public class UiManager : MonoBehaviour
         goldCounterUI.text = gold.ToString();
     }
 
-    //Time UI
 
+    //Time UI ---------------------------
     private void DisplayTimeDawn()
     {
         timeUI.text = "Dawn";
@@ -83,29 +84,5 @@ public class UiManager : MonoBehaviour
     private void DisplayTimeNight()
     {
         timeUI.text = "Night";
-    }
-
-    //Build Menu UI
-
-    public void SpawnTower()
-    {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
-        {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Tower"]);
-        }
-    }
-    public void SpawnLumbermill()
-    {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
-        {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Lumbermill"]);
-        }
-    }
-    public void SpawnFarm()
-    {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
-        {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Farm"]);
-        }
     }
 }
