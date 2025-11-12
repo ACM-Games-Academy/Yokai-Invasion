@@ -48,7 +48,6 @@ public class UiManager : MonoBehaviour
         farmWoodCost.text = $"{settings.BuildingOptions[2].WoodCost.ToString()} Wood";
     }
 
-
     //Resource Counters UI ---------------------
 
     private void DisplayWoodCount()

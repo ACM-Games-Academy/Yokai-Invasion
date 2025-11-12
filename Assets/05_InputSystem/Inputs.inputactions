@@ -52,7 +52,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "BuildModeMenu",
+                    "name": "BuildMenu",
                     "type": "Button",
                     "id": "26614d1f-1658-45b1-82ac-311b25528f3c",
                     "expectedControlType": "",
@@ -177,7 +177,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "BuildModeMenu",
+                    "action": "BuildMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

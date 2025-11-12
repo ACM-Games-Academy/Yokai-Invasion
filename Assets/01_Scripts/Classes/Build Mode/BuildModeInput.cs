@@ -4,11 +4,13 @@ using System.Collections;
 
 public class BuildModeInput : MonoBehaviour
 {
+    [Header("UI Children")]
+    //[SerializeField]
+    public static GameObject buildMenu;
+
     private static BuildingSpawner buildingSpawner;
     private static GameObject resourcesWarningPopup;
     private static GameObject placementWarningPopup;
-
-    private static GameObject buildMenu;
 
     private float warningWaitTime = 2.5f;
 
@@ -17,7 +19,7 @@ public class BuildModeInput : MonoBehaviour
     private void Start()
     {
         buildingSpawner = Overseer.Instance.GetManager<BuildingSpawner>();
-        buildMenu = Instantiate(Overseer.Instance.Settings.BuildMenu, new Vector3 (Screen.width/2, BUILDMENU_SPAWN_HEIGHT, 0), Quaternion.identity, this.transform);
+        buildMenu = GameObject.Find("Build Menu");
         buildMenu.SetActive(false);
     }
 
