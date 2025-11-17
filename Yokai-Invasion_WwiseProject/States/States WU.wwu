@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{EFE9C875-E935-4445-B600-87AA1A7E6267}" SchemaVersion="123">
 	<States>
-		<WorkUnit Name="States WU" ID="{EFE9C875-E935-4445-B600-87AA1A7E6267}" PersistMode="Standalone"/>
+		<WorkUnit Name="States WU" ID="{EFE9C875-E935-4445-B600-87AA1A7E6267}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GruntsActive" ID="{FF5398B3-3E1C-4892-8F1E-A53531A97AD5}">
+					<ChildrenList>
+						<State Name="None" ID="{E2A96201-FC52-417B-986F-B6A0E42D4B06}"/>
+						<State Name="Active" ID="{B2965D6F-E584-4A4A-A4C1-2143D268D482}"/>
+						<State Name="Inactive" ID="{99465244-1B5E-4803-8EF8-5DABD0B53EB9}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="OnisActive" ID="{34336FB5-FE44-41D4-A22A-3BC525032A2D}">
+					<ChildrenList>
+						<State Name="None" ID="{0C8C4426-6115-41FD-A44A-5DF3F02E251D}"/>
+						<State Name="Active" ID="{2A59CBE6-0421-48A7-B0C0-A6851E9704B2}"/>
+						<State Name="Inactive" ID="{B1F4AEE9-57F2-48FE-B214-4D0682436851}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

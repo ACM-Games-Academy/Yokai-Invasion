@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A05D8814-1A45-45A0-ADF3-257BBCC68971}" SchemaVersion="123">
+	<SoundcasterSessions>
+		<WorkUnit Name="Soundcaster Sessions WU" ID="{A05D8814-1A45-45A0-ADF3-257BBCC68971}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Soundcaster Testing" ID="{4013DEC7-28BC-4F43-9DC2-6B6D92898E90}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Armour NPC Rand" ID="{46EEA7FA-D298-4A58-BD0A-5C3F2B11CE64}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC" ID="{238A8AE0-27F1-4D57-A834-828BB812BA25}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Footstep NPC Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Footstep_NPC" ID="{B3F939F4-8D78-4E1E-AE39-58754647B0BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>
