@@ -24,6 +24,11 @@ public class YokaiSettings : ScriptableObject
     [SerializeField]
     private int attackPower;
 
+    [Tooltip("The amount of gold dropped by the Yokai.")]
+    [Range(0, 10)]
+    [SerializeField]
+    private int dropAmount;
+
     [Header("Pathfinding Settings")]
 
     [Tooltip("How reliant the Yokai is on allies, low values emphasize A* pathfinding while high values emphasize boids.")]
@@ -79,4 +84,6 @@ public class YokaiSettings : ScriptableObject
     public float AlignmentWeight => alignmentWeight;
 
     public int PointValue => pointValue;
+
+    public int DropAmount => dropAmount;
 }

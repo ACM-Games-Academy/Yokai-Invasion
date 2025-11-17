@@ -16,6 +16,7 @@ public class YokaiGrunt : MonoBehaviour, Yokai
     private Yokai.States state = Yokai.States.Idle;     // Exposing this to editor means it may fail to update
     Yokai.States Yokai.state => state;
 
+
     private void Awake()
     {
         currentHealth = yokaiSettings.MaxHealth;
@@ -51,8 +52,10 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
     private void Die()
     {
-        //Debug.Log($"{yokaiSettings.YokaiName} has died.");
+        // Debug.Log($"{yokaiSettings.YokaiName} has died.");
         // Implement death logic here (e.g., play animation, drop loot)
+
+        Overseer.Instance.GetManager<ResourceManager>().IncreaseGold(yokaiSettings.DropAmount);
         Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
     }
 }
