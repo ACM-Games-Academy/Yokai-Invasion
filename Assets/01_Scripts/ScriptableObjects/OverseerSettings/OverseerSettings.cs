@@ -18,6 +18,8 @@ public class OverseerSettings : ScriptableObject
     [Header("Prefabs")]
     [SerializeField]
     private GameObject selectionCanvas;
+    [SerializeField]
+    private GameObject uiCanvas;
 
     public HordeSettings[] HordeSettings => hordeSettings;
     public SpawnerSettings SpawnerSettings => spawnerSettings;
@@ -25,4 +27,5 @@ public class OverseerSettings : ScriptableObject
     public GameObject SelectionCanvas => selectionCanvas;
     public NightCycleSettings NightCycleSettings => nightCycleSettings;
     public IndicatorSettings IndicatorSettings => indicatorSettings;
+    public GameObject UiCanvas => uiCanvas;
 }

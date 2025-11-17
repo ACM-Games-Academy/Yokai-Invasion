@@ -37,7 +37,7 @@ public class InputHandler : MonoBehaviour
         PauseMenu.TogglePause(input);
     }
 
-    public void ReceiveBuildModeInput(InputAction.CallbackContext input)
+    public void ReceiveBuildMenuInput(InputAction.CallbackContext input)
     {
         BuildModeInput.ToggleBuildMenu(input);
     }
