@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed83678014c0504f812d0770c9b9f4f, type: 3}
+  m_Name: UnitSettings
+  m_EditorClassIdentifier: Assembly-CSharp::UnitSettings
+  waypointTolerance: 0
+  moveSpeed: 0
+  poolSize: 20
+  unitOptions:
+  - UnitPrefab: {fileID: 1172380167416355656, guid: b480107d09117e54aa69b358a14bfd65, type: 3}
+    FoodCost: 10
+    GoldCost: 25
+  - UnitPrefab: {fileID: 7792955464928960019, guid: 6ede47862ad78e0479aa4fb7f2454836, type: 3}
+    FoodCost: 0
+    GoldCost: 10

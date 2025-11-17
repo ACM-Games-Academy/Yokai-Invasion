@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.UI;
 using UnityEngine.UIElements;
 
 public class BuildingSpawner : MonoBehaviour
@@ -56,6 +57,7 @@ public class BuildingSpawner : MonoBehaviour
         {
             Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.BuildingPrefab, settings.PoolSize);
         }
+
     }
 
     public void SpawnByIndex(int index)
@@ -121,16 +123,20 @@ public class BuildingSpawner : MonoBehaviour
 
     public void AttemptToPlaceBuilding()
     {
+
+        var uiCanvas = Overseer.Instance.GetManager<UiSpawner>().uiCanvas;
+        var buildModeInput = uiCanvas.GetComponent<BuildModeInput>();
+
         if (!ResourceCheck())
         {
             Debug.LogWarning("Not enough resources to place this building!");
-            StartCoroutine(Overseer.Instance.GetManager<BuildModeInput>().TriggerResourcesWarning());
+            StartCoroutine(buildModeInput.TriggerResourcesWarning());
         }
 
         if (BuildingCollisionChecks())
         {
             Debug.LogWarning("Cannot place this building here! There is something in the way.");
-            StartCoroutine(Overseer.Instance.GetManager<BuildModeInput>().TriggerPlacementWarning());
+            StartCoroutine(buildModeInput.TriggerPlacementWarning());
         }
 
         if (currentBuilding == null) return;

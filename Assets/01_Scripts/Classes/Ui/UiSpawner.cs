@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class UiSpawner : MonoBehaviour
 {
+    public GameObject uiCanvas;
     private void Awake()
     {
-        Instantiate(Overseer.Instance.Settings.UiCanvas);
+        uiCanvas = Instantiate(Overseer.Instance.Settings.UiCanvas);
     }
 }

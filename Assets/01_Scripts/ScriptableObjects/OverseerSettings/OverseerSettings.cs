@@ -14,6 +14,8 @@ public class OverseerSettings : ScriptableObject
     private NightCycleSettings nightCycleSettings;
     [SerializeField]
     private IndicatorSettings indicatorSettings;
+    [SerializeField]
+    private UnitSettings unitSettings;
 
     [Header("Prefabs")]
     [SerializeField]
@@ -27,5 +29,6 @@ public class OverseerSettings : ScriptableObject
     public GameObject SelectionCanvas => selectionCanvas;
     public NightCycleSettings NightCycleSettings => nightCycleSettings;
     public IndicatorSettings IndicatorSettings => indicatorSettings;
+    public UnitSettings UnitSettings => unitSettings;
     public GameObject UiCanvas => uiCanvas;
 }

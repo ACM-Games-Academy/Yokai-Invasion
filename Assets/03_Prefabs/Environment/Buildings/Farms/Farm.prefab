@@ -55,7 +55,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f731645469253944384442ae24bc7291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Farm
-  settings: {fileID: 0}
+  State: 0
+  settings: {fileID: 11400000, guid: 9b443f5c191834d4fa459c885e51fd47, type: 2}
 --- !u!65 &321214533746975308
 BoxCollider:
   m_ObjectHideFlags: 0
