@@ -3,22 +3,20 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class EmployableUnit : Unit
+public abstract class Soldier : SelectableUnit
 {
-    private float currentGenerationCooldown = 0f;
-
 #nullable enable
-    public CivilianBuilding? CurrentEmployer;
+    public MilitaryBuilding? CurrentEmployer;
 #nullable disable
     private EmploymentManager employmentManager;
 
     private void Start()
     {
         employmentManager = Overseer.Instance.GetManager<EmploymentManager>();
-        employmentManager.NewEmployableUnit(this);
+        employmentManager.NewUnassignedSoldier(this);
     }
 
-    public void OnEmploy(CivilianBuilding employer)
+    public void OnAssignment(MilitaryBuilding employer)
     {
         //Debug.Log($"{name} has been employed at {employer.name}.");
         CurrentEmployer = employer;
@@ -35,25 +33,15 @@ public abstract class EmployableUnit : Unit
     {
         if (CurrentEmployer != null) return;
 
-        employmentManager.FindEmployerForUnit(this);
+        employmentManager.FindEmployerForSoldier(this);
     }
 
-    private void Update()
+    protected void Update()
     {
         if (CurrentEmployer == null) return;
         if (!isAtWorkplace()) return;
 
-        if (currentGenerationCooldown > 0f)
-        {
-            currentGenerationCooldown -= Time.deltaTime;
-            return;
-        }
-
-        CurrentEmployer.GenerateResource(CurrentEmployer.GetProduction());
-        //Debug.Log($"{name} generated {CurrentEmployer.GetProduction()} resources at {CurrentEmployer?.name}.");
-
-        currentGenerationCooldown = CurrentEmployer.GenerationCooldown;
-
+        CurrentEmployer.Garrison(this);
     }
 
     private bool isAtWorkplace()

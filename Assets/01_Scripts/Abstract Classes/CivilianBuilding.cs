@@ -1,44 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
-public abstract class CivilianBuilding : Building, Employer, ResourceGenerator
+public abstract class CivilianBuilding : AssignableBuilding, ResourceGenerator
 {
-    public int MaxEmployees { get; } = 3;
-    public EmployableUnit[] Employees { get; set; }
-
     public float GenerationCooldown { get; protected set; } = 5f;
-    public float EmploymentRadius { get; protected set; } = 5f;
-
     private void Start()
     {
         base.Start();
         
-        Employees = new EmployableUnit[MaxEmployees];
+        Employees = new EmployableUnit[base.MaxEmployees];
         Overseer.Instance.GetManager<EmploymentManager>().NewEmployer(this);
 
         //Building.BuildingStartUp(); //fix this
-    }
-
-    public void NewEmployee(EmployableUnit unit)
-    {
-        for (int i = 0; i < Employees.Length; i++)
-        {
-            if (Employees[i] == null)
-            {
-                Employees[i] = unit;
-                return;
-            }
-        }
-    }
-
-    public int CurrentEmployeeCount()
-    {
-        int count = 0;
-        foreach (var employee in Employees)
-        {
-            if (employee != null) count++;
-        }
-        return count;
     }
 
     public virtual int GetProduction()
