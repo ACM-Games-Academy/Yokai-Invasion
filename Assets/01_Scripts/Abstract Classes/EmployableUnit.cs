@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class EmployableUnit : Unit
@@ -11,10 +12,20 @@ public abstract class EmployableUnit : Unit
 #nullable disable
     private EmploymentManager employmentManager;
 
+    public bool atWork;
+
     private void Start()
     {
         employmentManager = Overseer.Instance.GetManager<EmploymentManager>();
         employmentManager.NewEmployableUnit(this);
+    }
+
+    private void LateUpdate()
+    {
+        if (atWork)
+        {
+            Debug.Log(isAtWorkplace());
+        }
     }
 
     public void OnEmploy(CivilianBuilding employer)
