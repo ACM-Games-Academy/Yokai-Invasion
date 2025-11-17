@@ -30,14 +30,17 @@ public class UiManager : MonoBehaviour
     private void Start()
     {
         settings = Overseer.Instance.Settings.BuildingSettings;
-        //subscribing to events from resource manager
-        Overseer.Instance.GetManager<ResourceManager>().UpdateWood += DisplayWoodCount;
-        Overseer.Instance.GetManager<ResourceManager>().UpdateFood += DisplayFoodCount;
-        Overseer.Instance.GetManager<ResourceManager>().UpdateGold += DisplayGoldCount;
-        Overseer.Instance.GetManager<NightCycle>().DawnStarted += DisplayTimeDawn;
-        Overseer.Instance.GetManager<NightCycle>().DayStarted += DisplayTimeDay;
-        Overseer.Instance.GetManager<NightCycle>().DuskStarted += DisplayTimeDusk;
-        Overseer.Instance.GetManager<NightCycle>().NightStarted += DisplayTimeNight;
+
+        var resourceManager = Overseer.Instance.GetManager<ResourceManager>();
+        resourceManager.UpdateWood += DisplayWoodCount;
+        resourceManager.UpdateFood += DisplayFoodCount;
+        resourceManager.UpdateGold += DisplayGoldCount;
+
+        var nightCycle = Overseer.Instance.GetManager<NightCycle>();
+        nightCycle.DawnStarted += DisplayTimeDawn;
+        nightCycle.DayStarted += DisplayTimeDay;
+        nightCycle.DuskStarted += DisplayTimeDusk;
+        nightCycle.NightStarted += DisplayTimeNight;
 
         //checks resource cost - the most inefficient code ive written since we started
         towerGoldCost.text = $"{settings.BuildingOptions[0].GoldCost.ToString()} Gold";
