@@ -9,10 +9,12 @@ public class Unit : MonoBehaviour
     protected int currentWaypointIndex;
 
     protected Rigidbody rb;
+    protected CapsuleCollider unitCollider;
 
     protected void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        unitCollider = GetComponent<CapsuleCollider>();
     }
     public void SetDestination(Vector3 destination)
     {
