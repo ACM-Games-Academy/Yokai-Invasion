@@ -131,12 +131,14 @@ public class BuildingSpawner : MonoBehaviour
         {
             Debug.LogWarning("Not enough resources to place this building!");
             StartCoroutine(buildModeInput.TriggerResourcesWarning());
+            return;
         }
 
         if (BuildingCollisionChecks())
         {
             Debug.LogWarning("Cannot place this building here! There is something in the way.");
             StartCoroutine(buildModeInput.TriggerPlacementWarning());
+            return;
         }
 
         if (currentBuilding == null) return;

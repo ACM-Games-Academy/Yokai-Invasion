@@ -21,6 +21,8 @@ public class BuildModeInput : MonoBehaviour
         resourcesWarningPopup = GameObject.Find("Resources Warning Popup");
         placementWarningPopup = GameObject.Find("Placement Warning Popup");
         buildMenu.SetActive(false);
+        resourcesWarningPopup.SetActive(false);
+        placementWarningPopup.SetActive(false);
     }
 
     public IEnumerator TriggerResourcesWarning() //this really shouldnt be here but i couldnt be bothered to move it

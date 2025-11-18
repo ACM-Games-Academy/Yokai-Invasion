@@ -43,6 +43,11 @@ public class UnitSpawner : MonoBehaviour
         if (!ResourceCheck())
         {
             Debug.LogWarning("Not enough resources to hire this unit!");
+
+            var uiCanvas = Overseer.Instance.GetManager<UiSpawner>().uiCanvas;
+            var buildModeInput = uiCanvas.GetComponent<BuildModeInput>();
+            StartCoroutine(buildModeInput.TriggerResourcesWarning());
+
             return;
         }
 
