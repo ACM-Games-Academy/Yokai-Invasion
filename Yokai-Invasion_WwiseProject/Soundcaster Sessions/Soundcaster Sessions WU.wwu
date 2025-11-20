@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="Soundcaster Testing" ID="{4013DEC7-28BC-4F43-9DC2-6B6D92898E90}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Armour NPC Rand" ID="{46EEA7FA-D298-4A58-BD0A-5C3F2B11CE64}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+							<ObjectRef Name="Armour Walking Rand" ID="{46EEA7FA-D298-4A58-BD0A-5C3F2B11CE64}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>

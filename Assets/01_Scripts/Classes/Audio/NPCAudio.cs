@@ -24,4 +24,16 @@ public class NPCAudio : MonoBehaviour
         //  [2] Play_Footstep_Ashigaru - Plays footstep and occasionally armour noises, quieter than player's
         audioSettings.Events[2].Post(gameObject);
     }
+
+    public void PlayAttackAshigaruLight()
+    {
+        //  [9] Play_Attack_Ashigaru_Light - Plays whoosh and metal ringing
+        audioSettings.Events[9].Post(gameObject);
+    }
+
+    public void PlayAttackAshigaruHeavy()
+    {
+        //  [10] Play_Attack_Ashigaru_Heavy - Plays whoosh, metal ringing, and armour noises
+        audioSettings.Events[10].Post(gameObject);
+    }
 }

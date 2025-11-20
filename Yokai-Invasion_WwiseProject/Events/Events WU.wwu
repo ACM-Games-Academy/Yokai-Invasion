@@ -265,7 +265,7 @@
 						<Action Name="" ID="{0A02B390-D600-4F71-B436-16B2C9ACD717}" ShortID="529147818">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Armour NPC Rand" ID="{46EEA7FA-D298-4A58-BD0A-5C3F2B11CE64}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									<ObjectRef Name="Armour Walking Rand" ID="{46EEA7FA-D298-4A58-BD0A-5C3F2B11CE64}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -398,6 +398,69 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Buiding_Complete" ID="{D1B2D24E-ABFD-483E-B85A-61A98B138F86}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Attack_Ashigaru_Light" ID="{2B0A9010-F32E-49FA-935D-BE399FF83282}">
+					<ChildrenList>
+						<Action Name="" ID="{2BC8520B-0630-448D-AECC-8A25A62DAC4D}" ShortID="718816020">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Metal Ring Rand" ID="{EA800392-6327-4CEB-B050-03DF7F83B129}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{857E677F-18BD-4851-8F18-AA18DF6AC8D3}" ShortID="425396628">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whoosh Heavy Rand" ID="{491AFF58-E981-47B2-9C8E-64D1E892EB00}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Attack_Yokai" ID="{8A0C88AC-DBC6-4BDC-A146-9A597D30418D}">
+					<ChildrenList>
+						<Action Name="" ID="{BAE329D4-688E-49F6-9D92-502CD76F0B67}" ShortID="131958407">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whoosh Light Rand" ID="{B37B4570-FCD7-4D50-98FB-9FA88BB45B5C}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Attack_Ashigaru_Heavy" ID="{3EC06F74-FB8D-4C68-9AC5-4E1F27530138}">
+					<ChildrenList>
+						<Action Name="" ID="{987D1960-F6BF-48C9-BF70-BF92E7B22B72}" ShortID="254205116">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7B4256D4-A815-4569-9A11-65BA1742C44A}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Attack Armour Rand" ID="{AE28F86B-E33E-46F3-ABBF-701D2612597C}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D9E750F5-FCE9-493B-AED9-4C8C79144D36}" ShortID="511635549">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Metal Ring Rand" ID="{EA800392-6327-4CEB-B050-03DF7F83B129}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{15109DF6-DB90-4E53-B468-68ADE38AE3C4}" ShortID="166966463">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whoosh Heavy Rand" ID="{491AFF58-E981-47B2-9C8E-64D1E892EB00}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
