@@ -11,10 +11,53 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAY_AMBIENCE_DAY = 4201350233U;
+        static const AkUniqueID PLAY_AMBIENCE_NIGHT = 944950941U;
+        static const AkUniqueID PLAY_BUILDING_COMPLETE = 4001521644U;
+        static const AkUniqueID PLAY_DAMAGE_ASHIGARU = 3828475318U;
+        static const AkUniqueID PLAY_DAMAGE_YOKAI = 1263684625U;
+        static const AkUniqueID PLAY_DUSK_SHAMISENS = 2141916437U;
+        static const AkUniqueID PLAY_FOOTSTEP_ASHIGARU = 546028113U;
+        static const AkUniqueID PLAY_FOOTSTEP_FARMER = 978628930U;
+        static const AkUniqueID PLAY_FOOTSTEP_PLAYER = 4134779396U;
+        static const AkUniqueID PLAY_NIGHT_MUSIC = 3279835868U;
+        static const AkUniqueID PLAY_NIGHT_TRANSITION = 3265916758U;
+        static const AkUniqueID STOP_NIGHT_MUSIC = 1932246634U;
+    } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GRUNTSACTIVE
+        {
+            static const AkUniqueID GROUP = 2986509750U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ACTIVE = 58138747U;
+                static const AkUniqueID INACTIVE = 3163453698U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace GRUNTSACTIVE
+
+        namespace ONISACTIVE
+        {
+            static const AkUniqueID GROUP = 1773585304U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ACTIVE = 58138747U;
+                static const AkUniqueID INACTIVE = 3163453698U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace ONISACTIVE
+
+    } // namespace STATES
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID SHAMISENTRIGGERRATE = 3766713767U;
-        static const AkUniqueID SPARROWSVOLUME = 1650271508U;
         static const AkUniqueID WINDINTENSITY = 1042517418U;
     } // namespace GAME_PARAMETERS
 

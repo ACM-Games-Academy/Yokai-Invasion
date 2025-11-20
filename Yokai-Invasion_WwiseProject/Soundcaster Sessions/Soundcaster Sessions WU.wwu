@@ -14,12 +14,32 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_Dusk_Shamisens" ID="{B52F94A8-D0C3-48E3-A4F7-DFA161A6AF8E}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Night_Transition" ID="{D5116DDB-B2A8-426D-838D-EE8EC03D3176}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Footstep NPC Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Footstep_NPC" ID="{B3F939F4-8D78-4E1E-AE39-58754647B0BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<ObjectRef Name="Play_Footstep_Farmer" ID="{B3F939F4-8D78-4E1E-AE39-58754647B0BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
 							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Ambience_Day" ID="{DED17033-AE09-47DD-B225-0BC3CB7C284B}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Ambience_Night" ID="{D06068C3-9784-4964-992F-F501F30DDE94}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="2" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>

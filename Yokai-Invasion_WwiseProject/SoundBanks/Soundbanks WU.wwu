@@ -4,7 +4,20 @@
 		<WorkUnit Name="Soundbanks WU" ID="{526EFBA0-FBEC-4CFD-9219-4A069EA6D1EC}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{773C4EB2-BC9A-472E-A652-79C9F8BDED39}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Footstep_Ashigaru" ID="{CF125F2A-3009-41E6-8781-B635B9428508}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Night_Transition" ID="{D5116DDB-B2A8-426D-838D-EE8EC03D3176}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Night_Music" ID="{94F31A58-3CF2-4392-A2D0-3FA7E32C65FA}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_Day" ID="{DED17033-AE09-47DD-B225-0BC3CB7C284B}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Dusk_Shamisens" ID="{B52F94A8-D0C3-48E3-A4F7-DFA161A6AF8E}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footstep_Player" ID="{949DE1B1-C627-4932-878C-20F1C7ABE040}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_Night" ID="{D06068C3-9784-4964-992F-F501F30DDE94}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Damage_Ashigaru" ID="{A36CC021-BD7A-4999-A4DF-24E637311D12}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Night_Music" ID="{B24F755D-8558-4A60-BD90-614F928BE0D4}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Damage_Yokai" ID="{E98BD67E-2967-4C2F-8D96-6DE808A386BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footstep_Farmer" ID="{B3F939F4-8D78-4E1E-AE39-58754647B0BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

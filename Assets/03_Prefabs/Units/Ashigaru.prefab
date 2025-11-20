@@ -173,6 +173,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 59653b787aaf634438c23735c39cd191, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5478952133734465980}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 59653b787aaf634438c23735c39cd191, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5153858957760785181}
   m_SourcePrefab: {fileID: 100100000, guid: 59653b787aaf634438c23735c39cd191, type: 3}
 --- !u!4 &2615379997308257825 stripped
 Transform:
@@ -206,3 +209,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5153858957760785181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386815688596839579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d00f879f925c254c9ca85fc113aad7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAudio
+  Play_Footstep_Farmer:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5cf9e562563476f42b341d4b651e93dd, type: 2}
+  Play_Footstep_Ashigaru:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4849aca2ab34f904598560ec3a94a569, type: 2}
