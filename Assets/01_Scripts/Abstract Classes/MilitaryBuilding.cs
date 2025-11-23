@@ -5,7 +5,7 @@ public class MilitaryBuilding : AssignableBuilding
     public Soldier[] Soldiers { get; set; }
 
 
-    private void Start()
+    private new void Start()
     {
         base.Start();
 

@@ -9,7 +9,7 @@ public class Ashigaru : Soldier, AutoAttacker
     private float attackDelay = 0.5f;
     private int attackPower = 2;
 
-    private void Update()
+    private new void Update()
     {
         base.Update();
         targetsInRange = Boids.GetNearby(transform.position, attackRange, ~LayerMask.GetMask("Floor")).ToArray();

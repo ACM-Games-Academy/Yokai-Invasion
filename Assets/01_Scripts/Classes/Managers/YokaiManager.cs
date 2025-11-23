@@ -1,17 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class YokaiManager : MonoBehaviour
 {
     private YokaiSpawner yokaiSpawner;
-    private HordeSettings[] hordes;
+    private NightSettings[] nights;
+
+    private byte currentNightIndex = 0;
+    private byte currentHordeIndex = 0;
+    private float waveWaitTime;
 
     private void Start()
     {
-        hordes = Overseer.Instance.Settings.HordeSettings;
+        nights = Overseer.Instance.Settings.NightSettings;
 
         Overseer.Instance.GetManager<NightCycle>().NightStarted += BeginNight;
 
@@ -21,10 +26,38 @@ public class YokaiManager : MonoBehaviour
         yokaiSpawnerObject.transform.SetParent(transform);
 
         yokaiSpawner = yokaiSpawnerObject.AddComponent<YokaiSpawner>();
+
+        Overseer.Instance.GetManager<NightCycle>().NightStarted += BeginNight;
     }
 
     private void BeginNight()
     {
-        yokaiSpawner.SummonHorde(hordes[0]);
+        waveWaitTime = Overseer.Instance.Settings.NightCycleSettings.NightLengthSeconds / (nights[currentNightIndex].Hordes.Length + 1);
+        StartCoroutine(SpawnHorde(nights[currentNightIndex].Hordes[currentHordeIndex]));
+    }
+
+    private IEnumerator SpawnHorde(HordeSettings hordeSettings)
+    {
+        GameObject[] activeYokai = yokaiSpawner.SummonHorde(hordeSettings);
+        float timer = 0f;
+
+        while (activeYokai.Any(yokai => yokai.activeInHierarchy) && timer < waveWaitTime)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        currentHordeIndex++;
+        if (currentHordeIndex >= nights[currentNightIndex].Hordes.Length)
+        {
+            currentHordeIndex = 0;
+            currentNightIndex++;
+            if (currentNightIndex >= nights.Length)
+            {
+                currentNightIndex = 0;
+            }
+            yield break;
+        }
+        yield return StartCoroutine(SpawnHorde(nights[currentNightIndex].Hordes[currentHordeIndex]));
     }
 }

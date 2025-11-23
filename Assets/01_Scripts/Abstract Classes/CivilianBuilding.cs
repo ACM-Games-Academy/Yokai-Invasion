@@ -4,7 +4,7 @@ using UnityEngine;
 public abstract class CivilianBuilding : AssignableBuilding, ResourceGenerator
 {
     public float GenerationCooldown { get; protected set; } = 5f;
-    private void Start()
+    private new void Start()
     {
         base.Start();
         

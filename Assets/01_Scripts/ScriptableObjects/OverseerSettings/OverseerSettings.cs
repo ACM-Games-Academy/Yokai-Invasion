@@ -5,7 +5,7 @@ public class OverseerSettings : ScriptableObject
 {
     [Header("Settings")]
     [SerializeField]
-    private HordeSettings[] hordeSettings;
+    private NightSettings[] nightSettings;
     [SerializeField]
     private SpawnerSettings spawnerSettings;
     [SerializeField]
@@ -23,7 +23,7 @@ public class OverseerSettings : ScriptableObject
     [SerializeField]
     private GameObject uiCanvas;
 
-    public HordeSettings[] HordeSettings => hordeSettings;
+    public NightSettings[] NightSettings => nightSettings;
     public SpawnerSettings SpawnerSettings => spawnerSettings;
     public BuildingSettings BuildingSettings => buildingSettings;
     public GameObject SelectionCanvas => selectionCanvas;

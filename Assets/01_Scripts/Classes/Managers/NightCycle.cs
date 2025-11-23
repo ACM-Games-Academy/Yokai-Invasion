@@ -8,12 +8,11 @@ public class NightCycle : MonoBehaviour
     private uint currentCycle = 0;
 
     private NightCycleSettings settings;
-    public Action NightStarted;
-    public Action NightEnded;
 
-    public Action DayStarted;
     public Action DawnStarted;
+    public Action DayStarted;
     public Action DuskStarted;
+    public Action NightStarted;
 
     public enum TimeOfDay
     {
@@ -67,7 +66,6 @@ public class NightCycle : MonoBehaviour
         CurrentTimeOfDay = TimeOfDay.Night;
         NightStarted?.Invoke();
         yield return new WaitForSeconds(settings.NightLengthSeconds);
-        NightEnded?.Invoke();
         currentCycle++;
         StartCoroutine(StartDawn());
     }

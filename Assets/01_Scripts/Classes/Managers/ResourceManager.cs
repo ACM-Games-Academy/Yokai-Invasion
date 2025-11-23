@@ -9,9 +9,9 @@ public class ResourceManager : MonoBehaviour
     public Action UpdateFood;
     public Action UpdateGold;
     
-    private int food = 0;
+    private int food = 10;
     private int wood = 0;
-    private int gold = 0;
+    private int gold = 25;
 
     public int CurrentFood() => food;
     public int CurrentWood() => wood;
