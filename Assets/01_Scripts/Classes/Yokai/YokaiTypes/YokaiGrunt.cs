@@ -16,10 +16,15 @@ public class YokaiGrunt : MonoBehaviour, Yokai
     private Yokai.States state = Yokai.States.Idle;     // Exposing this to editor means it may fail to update
     Yokai.States Yokai.state => state;
 
-
     private void Awake()
     {
+        Overseer.Instance.GetManager<NightCycle>().DawnStarted += OnDawn;
+    }
+
+    private void OnEnable()
+    {
         currentHealth = yokaiSettings.MaxHealth;
+        state = Yokai.States.Idle;
     }
 
     public void TakeDamage(int damageAmount)
@@ -56,6 +61,11 @@ public class YokaiGrunt : MonoBehaviour, Yokai
         // Implement death logic here (e.g., play animation, drop loot)
 
         Overseer.Instance.GetManager<ResourceManager>().IncreaseGold(yokaiSettings.DropAmount);
+        Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
+    }
+
+    private void OnDawn()
+    {
         Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
     }
 }
