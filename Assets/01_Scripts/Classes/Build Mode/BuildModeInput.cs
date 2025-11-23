@@ -5,22 +5,24 @@ using System.Collections;
 public class BuildModeInput : MonoBehaviour
 {
     [Header("UI Children")]
-    //[SerializeField]
     public static GameObject buildMenu;
 
     private static BuildingSpawner buildingSpawner;
-    private static GameObject resourcesWarningPopup;
-    private static GameObject placementWarningPopup;
+    public static GameObject resourcesWarningPopup;
+    public static GameObject placementWarningPopup;
 
     private float warningWaitTime = 2.5f;
 
-    private const int BUILDMENU_SPAWN_HEIGHT = 140;
 
     private void Start()
     {
         buildingSpawner = Overseer.Instance.GetManager<BuildingSpawner>();
         buildMenu = GameObject.Find("Build Menu");
+        resourcesWarningPopup = GameObject.Find("Resources Warning Popup");
+        placementWarningPopup = GameObject.Find("Placement Warning Popup");
         buildMenu.SetActive(false);
+        resourcesWarningPopup.SetActive(false);
+        placementWarningPopup.SetActive(false);
     }
 
     public IEnumerator TriggerResourcesWarning() //this really shouldnt be here but i couldnt be bothered to move it

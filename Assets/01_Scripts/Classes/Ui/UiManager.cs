@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class UiManager : MonoBehaviour
 {
     private BuildingSettings settings;
+    private UnitSettings unitSettings;
 
     [Header("UI Counters")]
     public TextMeshProUGUI woodCounterUI;
@@ -23,6 +24,12 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI farmGoldCost;
     public TextMeshProUGUI farmWoodCost;
 
+    [Header("Unit Resource Costs")]
+    public TextMeshProUGUI soldierGoldCost;
+    public TextMeshProUGUI soldierFoodCost;
+    public TextMeshProUGUI villagerGoldCost;
+    public TextMeshProUGUI villagerFoodCost;
+
     private int wood;
     private int food;
     private int gold;
@@ -30,6 +37,7 @@ public class UiManager : MonoBehaviour
     private void Start()
     {
         settings = Overseer.Instance.Settings.BuildingSettings;
+        unitSettings = Overseer.Instance.Settings.UnitSettings;
 
         var resourceManager = Overseer.Instance.GetManager<ResourceManager>();
         resourceManager.UpdateWood += DisplayWoodCount;
@@ -49,6 +57,11 @@ public class UiManager : MonoBehaviour
         lumbermillWoodCost.text = $"{settings.BuildingOptions[1].WoodCost.ToString()} Wood";
         farmGoldCost.text = $"{settings.BuildingOptions[2].GoldCost.ToString()} Gold";
         farmWoodCost.text = $"{settings.BuildingOptions[2].WoodCost.ToString()} Wood";
+
+        soldierGoldCost.text = $"{unitSettings.UnitOptions[0].GoldCost.ToString()} Gold";
+        soldierFoodCost.text = $"{unitSettings.UnitOptions[0].FoodCost.ToString()} Food";
+        villagerGoldCost.text = $"{unitSettings.UnitOptions[1].GoldCost.ToString()} Gold";
+        villagerFoodCost.text = $"{unitSettings.UnitOptions[1].FoodCost.ToString()} Food";
     }
 
     //Resource Counters UI ---------------------
