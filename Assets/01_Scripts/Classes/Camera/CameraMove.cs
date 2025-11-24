@@ -14,7 +14,9 @@ public class CameraMove : MonoBehaviour
     [SerializeField]
     private float edgeSize = 100f;
     [SerializeField]
-    private float freeMoveSpeed = 0.5f;
+    private float freeMoveSpeed = 0.5f; 
+    [SerializeField]
+    private float lockedMoveSpeed = 0.5f;
 
     private Vector2 mousePos;
 
@@ -50,7 +52,7 @@ public class CameraMove : MonoBehaviour
         }
 
         newPosition = new Vector3(newPosition.x, 0, newPosition.z);
-        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, newPosition + offset, Time.deltaTime);
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, newPosition + offset, Time.deltaTime * lockedMoveSpeed);
     }
 
     private void FollowHero()
