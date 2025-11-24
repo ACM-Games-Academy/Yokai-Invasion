@@ -97,7 +97,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1208155249907026771
 MonoBehaviour:
@@ -121,6 +121,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1192519128507213627}
     m_Modifications:
+    - target: {fileID: 3572984824706321548, guid: d022a06c31d43414b9e5513ef81444cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.419
+      objectReference: {fileID: 0}
     - target: {fileID: 3627052005351874457, guid: d022a06c31d43414b9e5513ef81444cc, type: 3}
       propertyPath: m_Name
       value: Yokai Goblin
@@ -165,6 +169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4296458560398235531, guid: d022a06c31d43414b9e5513ef81444cc, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 476a76c0e524d23418ac45ed425f2f82, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

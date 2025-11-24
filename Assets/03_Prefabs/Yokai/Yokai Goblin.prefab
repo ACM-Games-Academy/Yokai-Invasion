@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yokai Goblin
       objectReference: {fileID: 0}
+    - target: {fileID: 1081219609503968836, guid: b2f259c0353fdd8499eca1748368dfca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5102395909350310581, guid: b2f259c0353fdd8499eca1748368dfca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -72,6 +76,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bc88ba4feb6f11b43b5d7fb80bf019c8, type: 2}
+    - target: {fileID: 6420746564042767276, guid: b2f259c0353fdd8499eca1748368dfca, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420746564042767276, guid: b2f259c0353fdd8499eca1748368dfca, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6420746564042767276, guid: b2f259c0353fdd8499eca1748368dfca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

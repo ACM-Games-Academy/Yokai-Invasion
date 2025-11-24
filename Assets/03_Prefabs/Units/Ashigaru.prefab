@@ -84,7 +84,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1558136029364074832
 MonoBehaviour:
@@ -275,10 +275,34 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7501744041986772047, guid: 59653b787aaf634438c23735c39cd191, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bc88ba4feb6f11b43b5d7fb80bf019c8, type: 2}
+    - target: {fileID: -150009337949190703, guid: 59653b787aaf634438c23735c39cd191, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 86d5cb7c4dae2134a93d90dfecb6f8f3, type: 2}
+    - target: {fileID: 740220410705241247, guid: 59653b787aaf634438c23735c39cd191, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c414e56445df83349b6ad3ab319332af, type: 2}
     - target: {fileID: 919132149155446097, guid: 59653b787aaf634438c23735c39cd191, type: 3}
       propertyPath: m_Name
       value: Ashigaru Model
       objectReference: {fileID: 0}
+    - target: {fileID: 3761879437582522314, guid: 59653b787aaf634438c23735c39cd191, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 86d5cb7c4dae2134a93d90dfecb6f8f3, type: 2}
+    - target: {fileID: 5102395909350310581, guid: 59653b787aaf634438c23735c39cd191, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a815e6ffb1339044adf3e455da0a9ff, type: 2}
+    - target: {fileID: 7174618512288155460, guid: 59653b787aaf634438c23735c39cd191, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bc88ba4feb6f11b43b5d7fb80bf019c8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -334,11 +358,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d00f879f925c254c9ca85fc113aad7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCAudio
-  Play_Footstep_Farmer:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 5cf9e562563476f42b341d4b651e93dd, type: 2}
-  Play_Footstep_Ashigaru:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4849aca2ab34f904598560ec3a94a569, type: 2}
