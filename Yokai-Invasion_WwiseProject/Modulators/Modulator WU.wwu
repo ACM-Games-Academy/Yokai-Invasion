@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{561814FF-B1A5-46A5-A710-994E4108B88A}" SchemaVersion="123">
+	<Modulators>
+		<WorkUnit Name="Modulator WU" ID="{561814FF-B1A5-46A5-A710-994E4108B88A}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorLfo Name="Wind Random LFO" ID="{39A12F41-2B5E-464D-B790-6BFD544DB0F5}" ShortID="200483079">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.016">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{31506605-4B5B-455B-BBDF-288D5B7B4534}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="0.033"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+				</ModulatorLfo>
+			</ChildrenList>
+		</WorkUnit>
+	</Modulators>
+</WwiseDocument>

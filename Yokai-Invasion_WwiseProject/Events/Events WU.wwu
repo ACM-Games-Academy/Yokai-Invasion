@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E4A582E4-62A5-4B89-B636-AF9304270075}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Events WU" ID="{E4A582E4-62A5-4B89-B636-AF9304270075}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Ambience_Night" ID="{D06068C3-9784-4964-992F-F501F30DDE94}">
+					<ChildrenList>
+						<Action Name="" ID="{3EC02DE2-FCBF-4F68-AC83-836A99793194}" ShortID="599771461">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cicadas_Ambient" ID="{1D0E26E9-CCEE-4A3D-A520-D242AB2B18FE}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1C188A4F-E2FC-46F2-AF9E-24406E70AF2A}" ShortID="680436252">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sparrows_Ambient" ID="{DE072F9A-84A8-48FE-A179-25F5EE000F32}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B208666F-9C5A-4AC6-BF30-CD7F4F0DC216}" ShortID="1005312949">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Low" ID="{345F84F4-CB62-41A2-96EC-1BBEF92537C8}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{96403FF1-D894-45B4-99E0-660E84669533}" ShortID="671126743">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Trees" ID="{8A1E64C5-9C60-4225-A455-6155A8DB01AC}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{296D87C8-3802-48A9-B1AA-D734CB0F2834}" ShortID="514253190">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+								<Property Name="FadeTime" Type="Real64" Value="10"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sparrow Chirp Rand" ID="{1C96524E-905A-48FA-8C65-E0BEB1DDA884}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E461A3D2-C153-4F4F-81F7-B92EC93CDC94}" ShortID="985146950">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crane Call Rand" ID="{409CD4E5-418C-4EF4-A5DD-D1D1D03B288C}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{75044D5B-824C-4B18-A30F-71314B55DBD6}" ShortID="709645106">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cicadas_Ambient" ID="{1D0E26E9-CCEE-4A3D-A520-D242AB2B18FE}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BAEEC28A-9FA5-4B90-9331-BFA447C3976C}" ShortID="475247092">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Low" ID="{345F84F4-CB62-41A2-96EC-1BBEF92537C8}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A706B835-F17C-4D1B-A144-48758F6D4914}" ShortID="678360423">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="24"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Night Music Playlist" ID="{3E8EC511-4D47-43F8-A52C-AF72395792E6}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience_Day" ID="{DED17033-AE09-47DD-B225-0BC3CB7C284B}">
+					<ChildrenList>
+						<Action Name="" ID="{2257ACEF-DB21-4B49-8314-CD445ED28BA4}" ShortID="693285460">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cicadas_Ambient" ID="{1D0E26E9-CCEE-4A3D-A520-D242AB2B18FE}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{611104F9-07CD-466E-B1D2-801A317CA548}" ShortID="299717364">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sparrows_Ambient" ID="{DE072F9A-84A8-48FE-A179-25F5EE000F32}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6CD7785A-CF61-4118-8EF7-F15C0E75E71C}" ShortID="139495407">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Low" ID="{345F84F4-CB62-41A2-96EC-1BBEF92537C8}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A9C23D22-E2F5-4B24-AED0-A3DD5E4E2202}" ShortID="609371858">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Trees" ID="{8A1E64C5-9C60-4225-A455-6155A8DB01AC}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E8C1BFA9-8435-4398-A9B6-D61842DCA132}" ShortID="499933332">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sparrow Chirp Rand" ID="{1C96524E-905A-48FA-8C65-E0BEB1DDA884}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3FBE2816-D2B1-48F2-82FB-16BEE08962D6}" ShortID="988605319">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crane Call Rand" ID="{409CD4E5-418C-4EF4-A5DD-D1D1D03B288C}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8BC7092C-676E-47C1-BA44-AC8F223934E6}" ShortID="50509295">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sparrows_Ambient" ID="{DE072F9A-84A8-48FE-A179-25F5EE000F32}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{86D0CAAB-EA9B-41E8-8D14-4377D37FA3EF}" ShortID="570231863">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Low" ID="{345F84F4-CB62-41A2-96EC-1BBEF92537C8}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{49FB0B93-0DC1-4D22-A072-FC4A840CBD9E}" ShortID="1044545747">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Trees" ID="{8A1E64C5-9C60-4225-A455-6155A8DB01AC}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FB9D8938-CFDE-4F1B-9EC4-9FF65B10C7C8}" ShortID="835077564">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sparrow Chirp Rand" ID="{1C96524E-905A-48FA-8C65-E0BEB1DDA884}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B82F5537-3FBD-4CE8-8919-96ABD454000F}" ShortID="369198747">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crane Call Rand" ID="{409CD4E5-418C-4EF4-A5DD-D1D1D03B288C}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footstep_Player" ID="{949DE1B1-C627-4932-878C-20F1C7ABE040}">
+					<ChildrenList>
+						<Action Name="" ID="{3AD5E56B-87D7-4077-9DF2-D841795EF0B3}" ShortID="421224440">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep Player Rand" ID="{1BF8D9FC-1343-4D97-9A5C-5A7D7C673754}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B9BB7E40-E76D-44E5-BC3E-D684A19A00F4}" ShortID="485202758">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Armour Player Rand" ID="{FAC7D1FD-6FF9-4FCA-979D-61A225DFE2C0}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Dusk_Shamisens" ID="{B52F94A8-D0C3-48E3-A4F7-DFA161A6AF8E}">
+					<ChildrenList>
+						<Action Name="" ID="{67E1C0ED-FF38-4A33-B99D-BF89FD60DDA1}" ShortID="1007923596">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shamisen Notes Rand" ID="{FB08E24A-FDF1-4D23-89CE-D256F04ADA36}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footstep_Farmer" ID="{B3F939F4-8D78-4E1E-AE39-58754647B0BD}">
+					<ChildrenList>
+						<Action Name="" ID="{8CB4E81B-F54A-45FA-BD3E-687CACED8D2C}" ShortID="516895413">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep NPC Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footstep_Ashigaru" ID="{CF125F2A-3009-41E6-8781-B635B9428508}">
+					<ChildrenList>
+						<Action Name="" ID="{93120618-D50D-4550-9B3D-202AC65BB8DC}" ShortID="486735254">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep NPC Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0A02B390-D600-4F71-B436-16B2C9ACD717}" ShortID="529147818">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Armour Walking Rand" ID="{46EEA7FA-D298-4A58-BD0A-5C3F2B11CE64}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Night_Transition" ID="{D5116DDB-B2A8-426D-838D-EE8EC03D3176}">
+					<ChildrenList>
+						<Action Name="" ID="{48FFD7E3-D252-4F7C-9BF4-FBFFB35EE11E}" ShortID="910119820">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Night Transition" ID="{3957580B-1F91-4EB5-856A-922561C7723A}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E6445783-A05F-44ED-B6DA-62A70CB65408}" ShortID="442137656">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+								<Property Name="Delay" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shamisen Notes Rand" ID="{FB08E24A-FDF1-4D23-89CE-D256F04ADA36}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Night_Music" ID="{B24F755D-8558-4A60-BD90-614F928BE0D4}">
+					<ChildrenList>
+						<Action Name="" ID="{28A4870C-37D6-4F60-97B6-40F1C51D91A8}" ShortID="234101605">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Night Music Playlist" ID="{3E8EC511-4D47-43F8-A52C-AF72395792E6}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Night_Music" ID="{94F31A58-3CF2-4392-A2D0-3FA7E32C65FA}">
+					<ChildrenList>
+						<Action Name="" ID="{A4D3D193-5855-4951-8B7A-EE3C3FFA8B63}" ShortID="800076225">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Night Music Playlist" ID="{3E8EC511-4D47-43F8-A52C-AF72395792E6}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Damage_Ashigaru" ID="{A36CC021-BD7A-4999-A4DF-24E637311D12}">
+					<ChildrenList>
+						<Action Name="" ID="{02E5223B-C398-4172-8AC9-2685F049A223}" ShortID="212691808">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage Crunch Rand" ID="{99F2A5DD-C0BC-43A2-BCEE-2FFEF4F6DF12}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D2A2D82C-8DC3-4B26-AFF4-3D3C72474678}" ShortID="707255395">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage Rip Rand" ID="{EC04FD18-A4A0-4F0A-9F9F-76D3649C23CC}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4BA2C35F-C2F9-42C4-BA2B-A40B8E824701}" ShortID="574040474">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage Scrape Rand" ID="{9F5ED93C-270E-4814-B2DC-04C8906F41B0}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Damage_Yokai" ID="{E98BD67E-2967-4C2F-8D96-6DE808A386BD}">
+					<ChildrenList>
+						<Action Name="" ID="{CEF41F96-E1FA-4870-A2ED-54DC4C58F1F8}" ShortID="176474180">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage Crunch Rand" ID="{99F2A5DD-C0BC-43A2-BCEE-2FFEF4F6DF12}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1FECB7E0-911B-4470-B783-772F3D24FFA6}" ShortID="853692382">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage Rip Rand" ID="{EC04FD18-A4A0-4F0A-9F9F-76D3649C23CC}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}">
+					<ChildrenList>
+						<Action Name="" ID="{408FA529-CD33-4465-8794-8C288C9445DF}" ShortID="393932740">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{281D7CD2-79D0-4340-8C4E-A9377B3C72BE}" ShortID="370951968">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wood Impacts Rand" ID="{6497D9BF-5A91-4FA8-96EB-01781FD8CF55}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B5DCDD0E-B7C2-4041-A963-B2328349990C}" ShortID="801539128">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wood Roll Rand" ID="{0EF6F80C-D738-4683-A355-F002B0170A20}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9F0821CD-9A64-45FC-B9DB-6E0933D65DE1}" ShortID="432530530">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Buiding_Complete" ID="{D1B2D24E-ABFD-483E-B85A-61A98B138F86}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Attack_Ashigaru_Light" ID="{2B0A9010-F32E-49FA-935D-BE399FF83282}">
+					<ChildrenList>
+						<Action Name="" ID="{2BC8520B-0630-448D-AECC-8A25A62DAC4D}" ShortID="718816020">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Metal Ring Rand" ID="{EA800392-6327-4CEB-B050-03DF7F83B129}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{857E677F-18BD-4851-8F18-AA18DF6AC8D3}" ShortID="425396628">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whoosh Heavy Rand" ID="{491AFF58-E981-47B2-9C8E-64D1E892EB00}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Attack_Yokai" ID="{8A0C88AC-DBC6-4BDC-A146-9A597D30418D}">
+					<ChildrenList>
+						<Action Name="" ID="{BAE329D4-688E-49F6-9D92-502CD76F0B67}" ShortID="131958407">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whoosh Light Rand" ID="{B37B4570-FCD7-4D50-98FB-9FA88BB45B5C}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Attack_Ashigaru_Heavy" ID="{3EC06F74-FB8D-4C68-9AC5-4E1F27530138}">
+					<ChildrenList>
+						<Action Name="" ID="{987D1960-F6BF-48C9-BF70-BF92E7B22B72}" ShortID="254205116">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7B4256D4-A815-4569-9A11-65BA1742C44A}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Attack Armour Rand" ID="{AE28F86B-E33E-46F3-ABBF-701D2612597C}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D9E750F5-FCE9-493B-AED9-4C8C79144D36}" ShortID="511635549">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Metal Ring Rand" ID="{EA800392-6327-4CEB-B050-03DF7F83B129}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{15109DF6-DB90-4E53-B468-68ADE38AE3C4}" ShortID="166966463">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whoosh Heavy Rand" ID="{491AFF58-E981-47B2-9C8E-64D1E892EB00}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Attack_Hero_Light" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}"/>
+				<Event Name="Play_Attack_Hero_Heavy" ID="{6810E0F5-FF07-4A89-B81B-9483156030DB}"/>
+				<Event Name="Play_Attack_Musket" ID="{D801B151-F301-4DC2-BAC7-3925C72943BD}">
+					<ChildrenList>
+						<Action Name="" ID="{97C30EFD-2586-4125-BCF8-D90B1019CD5B}" ShortID="268092166">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musket Rand" ID="{3868A7E6-C115-4791-9F0F-B753AA3DE577}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
