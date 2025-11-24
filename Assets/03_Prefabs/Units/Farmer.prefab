@@ -42,13 +42,13 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7792955464928960019}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ac6d73561e1a9334ca7becb66b28b183, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Farmer
   settings: {fileID: 11400000, guid: 5a6059ec35a61d14099052f014d14c36, type: 2}
   CurrentEmployer: {fileID: 0}
+  atWork: 0
 --- !u!1001 &2397568435955787183
 PrefabInstance:
   m_ObjectHideFlags: 0

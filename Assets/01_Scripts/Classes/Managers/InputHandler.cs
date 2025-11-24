@@ -37,9 +37,17 @@ public class InputHandler : MonoBehaviour
         PauseMenu.TogglePause(input);
     }
 
-    public void ReceiveBuildModeInput(InputAction.CallbackContext input)
+    public void ReceiveBuildMenuInput(InputAction.CallbackContext input)
     {
         BuildModeInput.ToggleBuildMenu(input);
+    }
+    public void ReceiveHiringMenuInput(InputAction.CallbackContext input)
+    {
+        HiringMenuInput.ToggleHiringMenu(input);
+    }
+    public void ReceiveDebugMenuInput(InputAction.CallbackContext input)
+    {
+        DebugMenuInput.ToggleDebugMenu(input);
     }
 
     public void ToggleCameraFollow(InputAction.CallbackContext input)

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class UiManager : MonoBehaviour
 {
     private BuildingSettings settings;
+    private UnitSettings unitSettings;
 
     [Header("UI Counters")]
     public TextMeshProUGUI woodCounterUI;
@@ -23,6 +24,12 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI farmGoldCost;
     public TextMeshProUGUI farmWoodCost;
 
+    [Header("Unit Resource Costs")]
+    public TextMeshProUGUI soldierGoldCost;
+    public TextMeshProUGUI soldierFoodCost;
+    public TextMeshProUGUI villagerGoldCost;
+    public TextMeshProUGUI villagerFoodCost;
+
     private int wood;
     private int food;
     private int gold;
@@ -30,14 +37,18 @@ public class UiManager : MonoBehaviour
     private void Start()
     {
         settings = Overseer.Instance.Settings.BuildingSettings;
-        //subscribing to events from resource manager
-        Overseer.Instance.GetManager<ResourceManager>().UpdateWood += DisplayWoodCount;
-        Overseer.Instance.GetManager<ResourceManager>().UpdateFood += DisplayFoodCount;
-        Overseer.Instance.GetManager<ResourceManager>().UpdateGold += DisplayGoldCount;
-        Overseer.Instance.GetManager<NightCycle>().DawnStarted += DisplayTimeDawn;
-        Overseer.Instance.GetManager<NightCycle>().DayStarted += DisplayTimeDay;
-        Overseer.Instance.GetManager<NightCycle>().DuskStarted += DisplayTimeDusk;
-        Overseer.Instance.GetManager<NightCycle>().NightStarted += DisplayTimeNight;
+        unitSettings = Overseer.Instance.Settings.UnitSettings;
+
+        var resourceManager = Overseer.Instance.GetManager<ResourceManager>();
+        resourceManager.UpdateWood += DisplayWoodCount;
+        resourceManager.UpdateFood += DisplayFoodCount;
+        resourceManager.UpdateGold += DisplayGoldCount;
+
+        var nightCycle = Overseer.Instance.GetManager<NightCycle>();
+        nightCycle.DawnStarted += DisplayTimeDawn;
+        nightCycle.DayStarted += DisplayTimeDay;
+        nightCycle.DuskStarted += DisplayTimeDusk;
+        nightCycle.NightStarted += DisplayTimeNight;
 
         //checks resource cost - the most inefficient code ive written since we started
         towerGoldCost.text = $"{settings.BuildingOptions[0].GoldCost.ToString()} Gold";
@@ -46,9 +57,14 @@ public class UiManager : MonoBehaviour
         lumbermillWoodCost.text = $"{settings.BuildingOptions[1].WoodCost.ToString()} Wood";
         farmGoldCost.text = $"{settings.BuildingOptions[2].GoldCost.ToString()} Gold";
         farmWoodCost.text = $"{settings.BuildingOptions[2].WoodCost.ToString()} Wood";
+
+        soldierGoldCost.text = $"{unitSettings.UnitOptions[0].GoldCost.ToString()} Gold";
+        soldierFoodCost.text = $"{unitSettings.UnitOptions[0].FoodCost.ToString()} Food";
+        villagerGoldCost.text = $"{unitSettings.UnitOptions[1].GoldCost.ToString()} Gold";
+        villagerFoodCost.text = $"{unitSettings.UnitOptions[1].FoodCost.ToString()} Food";
     }
 
-    //Resource Counters UI
+    //Resource Counters UI ---------------------
 
     private void DisplayWoodCount()
     {
@@ -66,8 +82,8 @@ public class UiManager : MonoBehaviour
         goldCounterUI.text = gold.ToString();
     }
 
-    //Time UI
 
+    //Time UI ---------------------------
     private void DisplayTimeDawn()
     {
         timeUI.text = "Dawn";
@@ -83,29 +99,5 @@ public class UiManager : MonoBehaviour
     private void DisplayTimeNight()
     {
         timeUI.text = "Night";
-    }
-
-    //Build Menu UI
-
-    public void SpawnTower()
-    {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
-        {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Tower"]);
-        }
-    }
-    public void SpawnLumbermill()
-    {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
-        {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Lumbermill"]);
-        }
-    }
-    public void SpawnFarm()
-    {
-        if (Overseer.Instance.GetManager<BuildingSpawner>().BuildModeState == BuildingSpawner.BuildMode.active)
-        {
-            Overseer.Instance.GetManager<BuildingSpawner>().SpawnByIndex(Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary["Farm"]);
-        }
     }
 }

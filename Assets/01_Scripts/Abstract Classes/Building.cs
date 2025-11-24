@@ -1,14 +1,21 @@
 using System;
+using System.Collections;
 using System.Xml.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.Android;
 
 public abstract class Building : MonoBehaviour, Damageable
 {
-    private BuildingState state;
+    public BuildingState State;
+
+    public Action MovingState;
+    public Action ConstructingState;
+    public Action FunctioningState;
+    public Action DestroyedState;
 
     public BuildingSettings settings;
-    private enum BuildingState : byte
+    public enum BuildingState : byte
     {
         moving,
         constructing,
@@ -17,6 +24,8 @@ public abstract class Building : MonoBehaviour, Damageable
     }
 
     private int currentHealth;
+    private int index;
+    private Vector3 fullSize;
 
     //physics.overlapcheckbox 
     //make a list of al l selectable units in space 
@@ -33,35 +42,75 @@ public abstract class Building : MonoBehaviour, Damageable
         settings = Overseer.Instance.Settings.BuildingSettings;
 
         string key = this.name;
-        int index = Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary[key];
+        index = Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary[key];
         currentHealth = settings.BuildingOptions[index].BuildingHealth;
-        Debug.Log($"PREFAB: {key}  Current Health = {currentHealth}");
-
     }
 
-    private void AlterStates ()
+    public void AlterState (BuildingState targetState)
     {
-        switch (state)
+        switch (targetState)
         {
             case BuildingState.moving:
-                this.GetComponent<BoxCollider>().enabled = false;
+                Moving();
                 break;
             case BuildingState.constructing:
-                this.GetComponent<BoxCollider>().enabled = true;
+                Constructing();
                 break;
             case BuildingState.functioning:
-                this.GetComponent<BoxCollider>().enabled = true;
+                Functioning();
                 break;
             case BuildingState.destroyed:
-                this.GetComponent<BoxCollider>().enabled = false;
+                Destroyed();
                 break;
         }
     }
 
+    public void Moving()
+    {
+        State = BuildingState.moving;
+        this.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    private void Constructing()
+    {
+        
+        var boxCollider = this.GetComponent<BoxCollider>();
+        boxCollider.enabled = true;
+        fullSize = boxCollider.size;
+        boxCollider.isTrigger = false;
+        boxCollider.size = new Vector3 (0f, fullSize.y, 0f);
+
+        StartCoroutine(BeingConstructed());
+        AlterState(BuildingState.functioning);
+    }
+
+    private IEnumerator BeingConstructed()
+    {
+        float counter = 0;
+        while (counter < settings.BuildingOptions[index].BuildTime)
+        {
+            counter += Time.deltaTime;
+            this.GetComponent<BoxCollider>().size = Vector3.Lerp(
+                                                                new Vector3 (0,fullSize.y,0), 
+                                                                fullSize, 
+                                                                counter / settings.BuildingOptions[index].BuildTime);
+            yield return null;
+        }
+    }
+
+    private void Functioning()
+    {
+
+    }
+
+    private void Destroyed ()
+    {
+
+    }
     public void TakeDamage (int damage)
     {
         currentHealth -= damage;
 
-        if (currentHealth <= 0) { state = BuildingState.destroyed; }
+        if (currentHealth <= 0) { AlterState(BuildingState.destroyed); }
     }
 }
