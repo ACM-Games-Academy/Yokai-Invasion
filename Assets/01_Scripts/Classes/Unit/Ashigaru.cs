@@ -37,7 +37,6 @@ public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-        Debug.Log ("Ashigaru Health: "+ currentHealth);
         if (currentHealth <= 0)
         {
             Die();
@@ -46,7 +45,6 @@ public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 
     private void Die()
     {
-        Debug.Log("ded");
         currentHealth = settings.TotalHealth;
         Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
     }
