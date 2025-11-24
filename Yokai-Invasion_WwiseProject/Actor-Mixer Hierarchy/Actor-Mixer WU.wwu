@@ -4586,6 +4586,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_1" ID="{FA05A68D-1470-4870-B0A3-2457F389776F}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.05"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_1.wav</AudioFile>
 													<MediaIDList>
@@ -4630,6 +4634,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_3" ID="{C87760F3-3832-47EA-9961-07450C5E418A}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.04"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_3.wav</AudioFile>
 													<MediaIDList>
@@ -4652,6 +4659,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_4" ID="{294AAE87-509C-495D-9E8B-AA9B77CFC31B}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.03"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_4.wav</AudioFile>
 													<MediaIDList>
@@ -4674,6 +4684,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_5" ID="{AE95F74C-155D-41EB-8C67-527CBB796E3E}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_5.wav</AudioFile>
 													<MediaIDList>
@@ -4696,6 +4709,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_6" ID="{1D301054-61CC-491A-B420-6AAB46C8B9F9}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.05"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_6.wav</AudioFile>
 													<MediaIDList>
@@ -4718,6 +4734,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_7" ID="{3262B4D1-10C9-4CBB-A508-DFEA7898A8CB}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.04"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_7.wav</AudioFile>
 													<MediaIDList>

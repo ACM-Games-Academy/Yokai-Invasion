@@ -15,6 +15,7 @@ public abstract class Building : MonoBehaviour, Damageable
     public Action DestroyedState;
 
     public BuildingSettings settings;
+    private AudioSettings audioSettings;
     public enum BuildingState : byte
     {
         moving,
@@ -40,6 +41,7 @@ public abstract class Building : MonoBehaviour, Damageable
     public void Start()
     {
         settings = Overseer.Instance.Settings.BuildingSettings;
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
 
         string key = this.name;
         index = Overseer.Instance.GetManager<BuildingSpawner>().IndexDictionary[key];
@@ -96,6 +98,9 @@ public abstract class Building : MonoBehaviour, Damageable
                                                                 counter / settings.BuildingOptions[index].BuildTime);
             yield return null;
         }
+
+        //  [12] Play_Building_Complete
+        audioSettings.Events[12].Post(gameObject);
     }
 
     private void Functioning()
