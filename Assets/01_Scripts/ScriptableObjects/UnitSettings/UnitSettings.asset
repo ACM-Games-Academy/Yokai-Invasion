@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UnitSettings
   waypointTolerance: 0
   moveSpeed: 0
-  poolSize: 20
+  poolSize: 30
+  totalHealth: 0
+  attackPower: 0
+  attackRange: 0
+  attackDelay: 0
   unitOptions:
   - UnitPrefab: {fileID: 1172380167416355656, guid: b480107d09117e54aa69b358a14bfd65, type: 3}
     FoodCost: 10

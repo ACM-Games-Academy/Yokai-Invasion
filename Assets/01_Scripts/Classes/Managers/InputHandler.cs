@@ -34,7 +34,7 @@ public class InputHandler : MonoBehaviour
 
     public void ReceivePauseInput(InputAction.CallbackContext input) 
     {
-        PauseMenu.TogglePause(input);
+        GameModeInput.TogglePauseMenu(input);
     }
 
     public void ReceiveBuildMenuInput(InputAction.CallbackContext input)

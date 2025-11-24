@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: NightCycleSettings
   m_EditorClassIdentifier: Assembly-CSharp::NightCycleSettings
   dawnLengthSeconds: 5
-  dayLengthSeconds: 2
-  duskLengthSeconds: 2
-  nightLengthSeconds: 20
+  dayLengthSeconds: 4
+  duskLengthSeconds: 4
+  nightLengthSeconds: 6

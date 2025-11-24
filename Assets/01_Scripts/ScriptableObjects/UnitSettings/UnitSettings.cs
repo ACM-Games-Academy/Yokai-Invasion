@@ -8,11 +8,29 @@ public class UnitSettings : ScriptableObject
     private float waypointTolerance;
     [SerializeField]
     private float moveSpeed;
+    [SerializeField] 
+    private int poolSize;
+
+    [Header ("Ashigaru Combat Settings")]
+    [SerializeField]
+    private int totalHealth;
+    [Range(0, 50)]
+    [SerializeField]
+    private int attackPower;
+    [Range(0, 25)]
+    [SerializeField]
+    private float attackRange;
+    [Range(0, 10)]
+    [SerializeField]
+    private float attackDelay;
 
     public float WaypointTolerance => waypointTolerance;
     public float MoveSpeed => moveSpeed;
+    public int TotalHealth => totalHealth;
+    public int AttackPower => attackPower;
+    public float AttackRange => attackRange;
+    public float AttackDelay => attackDelay;
 
-    [SerializeField] private int poolSize;
 
     [Tooltip("All available Unit Types in Hiring Menu.")]
     [SerializeField]

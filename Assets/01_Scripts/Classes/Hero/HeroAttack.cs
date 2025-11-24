@@ -1,12 +1,27 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroAttack : MonoBehaviour
+public class HeroAttack : MonoBehaviour, Damageable
 {
     private Collider[] yokaiInRange;
     private float lastAttackTime;
+    private int currentHealth;
+
+    public Action HeroTookDamage;
+    public Action HeroDead;
 
     [SerializeField] private HeroSettings heroSettings;
+
+    public int CurrentHealth => currentHealth;
+
+    private void Start()
+    {
+        currentHealth = heroSettings.MaxHealth;
+
+        var nightCycle = Overseer.Instance.GetManager<NightCycle>();
+        nightCycle.DawnStarted += ResetHealth;
+    }
 
     private void Update()
     {
@@ -30,5 +45,27 @@ public class HeroAttack : MonoBehaviour
             Debug.Log("Attacked a Yokai! They lost " + heroSettings.AttackPower + "health!");
         }
         lastAttackTime = Time.time;
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount;
+        HeroTookDamage?.Invoke();
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        HeroDead?.Invoke();
+        Debug.LogWarning("GAME OVER!");
+        Time.timeScale = 0;
+    }
+
+    private void ResetHealth()
+    {
+        currentHealth = heroSettings.MaxHealth;
     }
 }

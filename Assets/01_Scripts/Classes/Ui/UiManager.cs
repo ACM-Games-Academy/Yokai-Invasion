@@ -30,14 +30,28 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI villagerGoldCost;
     public TextMeshProUGUI villagerFoodCost;
 
+    [Header("Player Health")]
+    public TextMeshProUGUI healthCounter;
+
     private int wood;
     private int food;
     private int gold;
+
+    private GameObject hero;
+    private GameObject health;
+    private HeroAttack heroAttack;
 
     private void Start()
     {
         settings = Overseer.Instance.Settings.BuildingSettings;
         unitSettings = Overseer.Instance.Settings.UnitSettings;
+
+        hero = GameObject.Find("TempHero");
+        heroAttack = hero.GetComponent<HeroAttack>();
+        heroAttack.HeroTookDamage += DisplayHealthCount;
+        healthCounter.text = heroAttack.CurrentHealth.ToString();
+        health = GameObject.Find("Health");
+        health.SetActive(false);
 
         var resourceManager = Overseer.Instance.GetManager<ResourceManager>();
         resourceManager.UpdateWood += DisplayWoodCount;
@@ -64,6 +78,11 @@ public class UiManager : MonoBehaviour
         villagerFoodCost.text = $"{unitSettings.UnitOptions[1].FoodCost.ToString()} Food";
     }
 
+    private void DisplayHealthCount()
+    {
+        healthCounter.text = heroAttack.CurrentHealth.ToString();
+    }
+    
     //Resource Counters UI ---------------------
 
     private void DisplayWoodCount()
@@ -87,17 +106,21 @@ public class UiManager : MonoBehaviour
     private void DisplayTimeDawn()
     {
         timeUI.text = "Dawn";
+        health.SetActive(false);
     }
     private void DisplayTimeDay()
     {
         timeUI.text = "Day";
+        health.SetActive(false);
     }
     private void DisplayTimeDusk()
     {
         timeUI.text = "Dusk";
+        health.SetActive(false);
     }
     private void DisplayTimeNight()
     {
         timeUI.text = "Night";
+        health.SetActive(true);
     }
 }
