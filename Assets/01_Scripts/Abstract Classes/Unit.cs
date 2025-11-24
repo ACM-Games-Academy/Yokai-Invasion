@@ -11,6 +11,8 @@ public class Unit : MonoBehaviour
     protected Rigidbody rb;
     protected CapsuleCollider unitCollider;
 
+    protected bool isWalking;
+
     protected void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,6 +37,9 @@ public class Unit : MonoBehaviour
                 currentWaypointIndex++;
 
         }
+
+        if (pathDir != Vector3.zero) { isWalking = true; }
+        else { isWalking = false; }
 
         rb.MovePosition(
             rb.position

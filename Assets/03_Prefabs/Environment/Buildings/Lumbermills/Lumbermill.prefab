@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8358123990209789319}
   - component: {fileID: 5744588071955189727}
   - component: {fileID: 7455118559917988554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lumbermill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,10 +114,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Size: {x: 16.3, y: 1.5, z: 16.3}
+  m_Center: {x: 2.2, y: 0.75, z: -1}
 --- !u!1001 &951728979199286391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126,6 +126,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4220667395277790481}
     m_Modifications:
+    - target: {fileID: 1567362868051480080, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636572783139747670, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855605755522495431, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3068189729325884608, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094723104643387902, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4265161129755708943, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467071027476946954, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805582183147675133, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390676409482571198, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7420291885228388518, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1931
@@ -166,9 +202,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7812839725494976256, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7904376495587469852, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
       propertyPath: m_Name
       value: LumberHouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904376495587469852, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117157507908427599, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190779597717508602, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228973540773990405, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551018021065379752, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558276390739559745, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886557757961340993, guid: 43831224e5d90a34198efbcdad94edb1, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
