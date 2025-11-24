@@ -15,5 +15,6 @@ public class DebugMenuInput : MonoBehaviour
         if (!input.started) return;
 
         debugMenu.SetActive(!debugMenu.activeSelf);
+        Debug.Log("debug menu active state change");
     }
 }

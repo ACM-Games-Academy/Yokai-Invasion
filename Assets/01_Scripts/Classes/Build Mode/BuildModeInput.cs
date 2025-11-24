@@ -27,12 +27,14 @@ public class BuildModeInput : MonoBehaviour
 
     public IEnumerator TriggerResourcesWarning() //this really shouldnt be here but i couldnt be bothered to move it
     {
+        if (resourcesWarningPopup.activeSelf) { yield break; }
         resourcesWarningPopup.SetActive(true);
         yield return new WaitForSeconds(warningWaitTime);
         resourcesWarningPopup.SetActive(false);
     }
     public IEnumerator TriggerPlacementWarning() //this too
     {
+        if(placementWarningPopup.activeSelf) { yield break; }
         placementWarningPopup.SetActive(true);
         yield return new WaitForSeconds(warningWaitTime);
         placementWarningPopup.SetActive(false);

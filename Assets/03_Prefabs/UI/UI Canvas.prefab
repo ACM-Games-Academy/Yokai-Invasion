@@ -6292,6 +6292,8 @@ GameObject:
   - component: {fileID: 2363756017616059076}
   - component: {fileID: 1278951875844375562}
   - component: {fileID: 8455865267120149753}
+  - component: {fileID: 1668916379923864705}
+  - component: {fileID: 117980024279440354}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -6406,10 +6408,10 @@ MonoBehaviour:
   lumbermillWoodCost: {fileID: 2460029425237133147}
   farmGoldCost: {fileID: 1044846981564077726}
   farmWoodCost: {fileID: 694829062387302422}
-  soldierGoldCost: {fileID: 8777484800104535419}
-  soldierFoodCost: {fileID: 5251794213380964906}
-  villagerGoldCost: {fileID: 4110138431249308581}
-  villagerFoodCost: {fileID: 4209942866210072190}
+  soldierGoldCost: {fileID: 4110138431249308581}
+  soldierFoodCost: {fileID: 4209942866210072190}
+  villagerGoldCost: {fileID: 8777484800104535419}
+  villagerFoodCost: {fileID: 5251794213380964906}
 --- !u!114 &1278951875844375562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6436,6 +6438,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   PauseMenuCanvas: {fileID: 6502775671874874877}
   CameraController: {fileID: 0}
+--- !u!114 &1668916379923864705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8119270779255876503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8adddbc8224f5314c895b7290f48a6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebugMenuInput
+--- !u!114 &117980024279440354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8119270779255876503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c10fae7f704f4848b7e8c5d4975a391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HiringMenuInput
 --- !u!1 &8165241778741772065
 GameObject:
   m_ObjectHideFlags: 0
