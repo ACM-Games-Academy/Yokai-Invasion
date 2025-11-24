@@ -7,7 +7,7 @@ public class YokaiPathing : MonoBehaviour
     private Rigidbody rb;
     private Yokai yokai;
 
-    private Vector3 templeLocation = new Vector3(7, 1, 0);
+    private Vector3 targetLocation;
     private Transform heroTransform;
 
     private float floorHeight = 0.66f;
@@ -27,6 +27,8 @@ public class YokaiPathing : MonoBehaviour
 
     private void FixedUpdate()
     {
+        targetLocation = this.transform.GetComponent<Yokai>().DetermineTarget();
+
         Yokai.States currentYokaiState = yokai.state;
 
         Vector3 pathDir = InitializeAStar();
@@ -85,7 +87,7 @@ public class YokaiPathing : MonoBehaviour
     {
         if (currentPath == null || ReachedEnd())
         {
-            currentPath = AStar.Path(transform.position, templeLocation);
+            currentPath = AStar.Path(transform.position, targetLocation);
             currentWaypointIndex = 0;
         }
 

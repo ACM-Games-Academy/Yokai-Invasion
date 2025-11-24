@@ -3,7 +3,7 @@ using UnityEngine;
 public interface Yokai : Damageable, AutoAttacker
 {
     YokaiSettings yokaiSettings { get; }
-    public void DetermineTarget();
+    public Vector3 DetermineTarget();
 
     public States state { get; }
     public enum States

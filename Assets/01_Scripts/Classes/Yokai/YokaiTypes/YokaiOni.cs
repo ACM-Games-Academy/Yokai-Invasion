@@ -1,7 +1,7 @@
-using System.Linq;
+using NUnit.Framework;
 using UnityEngine;
 
-public class YokaiGrunt : MonoBehaviour, Yokai
+public class YokaiOni : MonoBehaviour, Yokai
 {
     [Header("Yokai Settings")]
     [Tooltip("Settings for the Yokai Grunt")]
@@ -38,7 +38,7 @@ public class YokaiGrunt : MonoBehaviour, Yokai
         }
         else
         {
-            state = Yokai.States.Fleeing;
+            // state = Yokai.States.Fleeing;
         }
     }
 
@@ -52,10 +52,10 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
     public Vector3 DetermineTarget()
     {
-        var militaryTargets = Overseer.Instance.GetManager<EmploymentManager>().AssignedSoldiers.Keys.ToArray();
-        var civilianTargets = Overseer.Instance.GetManager<EmploymentManager>().EmployedUnits.Keys.ToArray();
+        //Debug.Log($"{yokaiSettings.YokaiName} is determining its target.");
+        // Implement target determination logic here
 
-
+        
 
         return Vector3.zero;
     }
