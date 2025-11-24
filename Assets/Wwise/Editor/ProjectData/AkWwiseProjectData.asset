@@ -107,8 +107,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d2c284f299a8bc45b4d48c06c4379994
     GuidInternal: 
-    m_lastTime: -8584382199282261624
-    List: []
+    m_lastTime: -8584376949008948056
+    List:
+    - name: Play_Attack_Musket
+      guid: 51b101d801f3c24dbac73925c72943bd
+      id: 1182632674
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d2c284f299a8bc45b4d48c06c4379994
+      - ElementName: Play_Attack_Musket
+        ObjectType: 3
+        guid: 51b101d801f3c24dbac73925c72943bd
+      Path: Events\Default Work Unit\Play_Attack_Musket
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Events WU.wwu
     PathAndIcons:
     - ElementName: Events
@@ -120,7 +137,7 @@ MonoBehaviour:
     ParentPath: Events\Events WU
     guid: e482a5e4a562894bb636af9304270075
     GuidInternal: 
-    m_lastTime: -8584379511448677226
+    m_lastTime: -8584376945720486922
     List:
     - name: Play_Ambience_Day
       guid: 3370d1de09aedd47b2250bc3cb7c284b
@@ -190,6 +207,40 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: 1.350926
       minDuration: 0.8908311
+    - name: Play_Attack_Hero_Heavy
+      guid: f5e0106807ff894ab81b9483156030db
+      id: 1063845529
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Attack_Hero_Heavy
+        ObjectType: 3
+        guid: f5e0106807ff894ab81b9483156030db
+      Path: Events\Events WU\Play_Attack_Hero_Heavy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Attack_Hero_Light
+      guid: fa11e0810aaa754c8d104f77bafc38b4
+      id: 1679060216
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Attack_Hero_Light
+        ObjectType: 3
+        guid: fa11e0810aaa754c8d104f77bafc38b4
+      Path: Events\Events WU\Play_Attack_Hero_Light
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Attack_Yokai
       guid: ac880c8ac6dbdc4ba1469a597d30418d
       id: 261420542

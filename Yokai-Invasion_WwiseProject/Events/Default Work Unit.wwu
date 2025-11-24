@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F284C2D2-A899-45BC-B4D4-8C06C4379994}" SchemaVersion="123">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{F284C2D2-A899-45BC-B4D4-8C06C4379994}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F284C2D2-A899-45BC-B4D4-8C06C4379994}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Attack_Musket" ID="{D801B151-F301-4DC2-BAC7-3925C72943BD}">
+					<ChildrenList>
+						<Action Name="" ID="{97C30EFD-2586-4125-BCF8-D90B1019CD5B}" ShortID="268092166">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musket Rand" ID="{3868A7E6-C115-4791-9F0F-B753AA3DE577}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

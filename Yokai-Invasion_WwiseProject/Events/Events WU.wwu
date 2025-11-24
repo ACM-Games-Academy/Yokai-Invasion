@@ -376,7 +376,7 @@
 						</Action>
 						<Action Name="" ID="{281D7CD2-79D0-4340-8C4E-A9377B3C72BE}" ShortID="370951968">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.25"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -386,7 +386,7 @@
 						</Action>
 						<Action Name="" ID="{B5DCDD0E-B7C2-4041-A963-B2328349990C}" ShortID="801539128">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="Delay" Type="Real64" Value="0.25"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -466,6 +466,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Attack_Hero_Light" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}"/>
+				<Event Name="Play_Attack_Hero_Heavy" ID="{6810E0F5-FF07-4A89-B81B-9483156030DB}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
