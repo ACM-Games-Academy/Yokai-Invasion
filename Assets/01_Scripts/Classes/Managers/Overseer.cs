@@ -27,10 +27,7 @@ public class Overseer : MonoBehaviour
         typeof(BuildingSpawner),
         typeof(NightCycle),
         typeof(IndicatorSpawner),
-        typeof(UiSpawner),
-        typeof(UnitSpawner),
-        typeof(HiringMenuInput),
-        typeof(DebugMenuInput)
+        typeof(AmbientAudio)
     };
 
     private void Awake()
