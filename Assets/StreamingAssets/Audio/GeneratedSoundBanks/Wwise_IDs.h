@@ -17,6 +17,9 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCE_NIGHT = 944950941U;
         static const AkUniqueID PLAY_ATTACK_ASHIGARU_HEAVY = 2824991575U;
         static const AkUniqueID PLAY_ATTACK_ASHIGARU_LIGHT = 1211607766U;
+        static const AkUniqueID PLAY_ATTACK_HERO_HEAVY = 1063845529U;
+        static const AkUniqueID PLAY_ATTACK_HERO_LIGHT = 1679060216U;
+        static const AkUniqueID PLAY_ATTACK_MUSKET = 1182632674U;
         static const AkUniqueID PLAY_ATTACK_YOKAI = 261420542U;
         static const AkUniqueID PLAY_BUILDING_COMPLETE = 4001521644U;
         static const AkUniqueID PLAY_DAMAGE_ASHIGARU = 3828475318U;
