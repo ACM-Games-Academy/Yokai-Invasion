@@ -3435,6 +3435,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<ActorMixer Name="Damage" ID="{9BD45B14-225D-4443-9CC3-5D95FD0F4B44}" ShortID="742493671">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>

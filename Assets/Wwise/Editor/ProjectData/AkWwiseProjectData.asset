@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 09d75da43d8cd64bb822696fdd6685c4
     GuidInternal: 
-    m_lastTime: -8584382212713734987
+    m_lastTime: -8584376159290499649
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: bbda90bc37e3ca4c8e36d1039a599472
     GuidInternal: 
-    m_lastTime: -8584382212712132480
+    m_lastTime: -8584376159350797158
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 77f2db7ba315334c97c933fe0ccc4261
     GuidInternal: 
-    m_lastTime: -8584382212711271446
+    m_lastTime: -8584376159290607274
     List: []
   - PhysicalPath: SoundBanks\Soundbanks WU.wwu
     PathAndIcons:
@@ -79,7 +79,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Soundbanks WU
     guid: a0fb6e52ecfbfd4c92194a069ea6d1ec
     GuidInternal: 
-    m_lastTime: -8584376166600551220
+    m_lastTime: -8584376159290595697
     List:
     - name: Main
       guid: b24e3c779abc2e47a65279c9f8bded39
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d2c284f299a8bc45b4d48c06c4379994
     GuidInternal: 
-    m_lastTime: -8584376166600339739
+    m_lastTime: -8584376159351039395
     List: []
   - PhysicalPath: Events\Events WU.wwu
     PathAndIcons:
@@ -120,7 +120,7 @@ MonoBehaviour:
     ParentPath: Events\Events WU
     guid: e482a5e4a562894bb636af9304270075
     GuidInternal: 
-    m_lastTime: -8584376166600183783
+    m_lastTime: -8584376117421823315
     List:
     - name: Play_Ambience_Day
       guid: 3370d1de09aedd47b2250bc3cb7c284b
@@ -238,9 +238,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 51b101d801f3c24dbac73925c72943bd
       Path: Events\Events WU\Play_Attack_Musket
-      maxAttenuation: 100
-      maxDuration: 1.979297
-      minDuration: 1.979297
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Attack_Yokai
       guid: ac880c8ac6dbdc4ba1469a597d30418d
       id: 261420542
@@ -440,7 +440,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5d5ff8972f949a43a273f1d50ad5494f
     GuidInternal: 
-    m_lastTime: -8584382212713014923
+    m_lastTime: -8584376159351014110
     List: []
   - PhysicalPath: Game Parameters\Game Parameters WU.wwu
     PathAndIcons:
@@ -453,7 +453,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters WU
     guid: 9adcdd7ad155594ca4ad69ba2ad892c4
     GuidInternal: 
-    m_lastTime: -8584380356321502399
+    m_lastTime: -8584376159351014110
     List:
     - name: ShamisenTriggerRate
       guid: 7f00769fc813df4a84acfc406e6bc668
@@ -495,7 +495,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 70d49ec350886449b8b03ef4b6871180
     GuidInternal: 
-    m_lastTime: -8584382145506553029
+    m_lastTime: -8584376159290560581
     List: []
   - PhysicalPath: States\States WU.wwu
     PathAndIcons:
@@ -508,7 +508,7 @@ MonoBehaviour:
     ParentPath: States\States WU
     guid: 75c8e9ef35e94544b60087aa1a7e6267
     GuidInternal: 
-    m_lastTime: -8584382144958058346
+    m_lastTime: -8584376159290550491
     List:
     - name: GruntsActive
       guid: b39853ff1c3e92488f1ea53531a97ad5
@@ -654,7 +654,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 655ab534e802c6419c1236c5c81b2250
     GuidInternal: 
-    m_lastTime: -8584382212712303164
+    m_lastTime: -8584376159290540485
     List: []
   - PhysicalPath: Switches\Switches WU.wwu
     PathAndIcons:
@@ -667,7 +667,7 @@ MonoBehaviour:
     ParentPath: Switches\Switches WU
     guid: 70e0113414d53040bfba8808343ef3a7
     GuidInternal: 
-    m_lastTime: -8584382198526848662
+    m_lastTime: -8584376159290529905
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -681,10 +681,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 7d1f979a14a73545a4c18bdf5741a88a
     GuidInternal: 
-    m_lastTime: -8584382212714650324
+    m_lastTime: -8584376159290514840
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000080000000a000000160000001e00000020000000
+  ExpandedWaapiItemIds: 050000000600000007000000080000000a000000160000001e00000020000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

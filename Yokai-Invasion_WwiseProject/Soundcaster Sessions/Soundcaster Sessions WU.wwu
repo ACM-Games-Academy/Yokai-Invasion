@@ -41,6 +41,10 @@
 							<ObjectRef Name="Play_Ambience_Night" ID="{D06068C3-9784-4964-992F-F501F30DDE94}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
 							<Position X="2" Y="1"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_Damage_Yokai" ID="{E98BD67E-2967-4C2F-8D96-6DE808A386BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="2" Y="2"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>

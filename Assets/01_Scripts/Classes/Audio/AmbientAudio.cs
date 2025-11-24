@@ -50,8 +50,10 @@ public class AmbientAudio : MonoBehaviour
 
     public void PlayNightMusic()
     {
-        //  [7] Play_Night_Music - Plays the night music track
+        //  [7] Play_Night_Music - Plays the night music track and stops shamisens if still playing
         audioSettings.Events[7].Post(gameObject);
+        nightMusicIsPlaying = true;
+        Debug.Log("Playing night music");
     }
 
     public void StopNightMusic()
