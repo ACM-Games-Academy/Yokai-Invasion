@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class YokaiGrunt : MonoBehaviour, Yokai
 {
@@ -12,16 +12,22 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
     [Header("Grunt Stats")]
     [Tooltip("The current health of the Yokai Grunt")]
-    [SerializeField]
     private int currentHealth;
 
     private Yokai.States state = Yokai.States.Idle;     // Exposing this to editor means it may fail to update
     Yokai.States Yokai.state => state;
 
+    private Collider[] targetsInRange;
+    private float lastAttackTime;
 
-    private void Awake()
+
+    private void OnEnable()
     {
         currentHealth = yokaiSettings.MaxHealth;
+    }
+    private void Update()
+    {
+        DetermineTarget();
     }
 
     private void Start()
@@ -50,14 +56,29 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
     public void AutoAttack()
     {
-        //Debug.Log($"{yokaiSettings.YokaiName} dealt {yokaiSettings.AttackPower} damage.");
-        // Implement damage dealing logic here
+        foreach (var targetCollider in targetsInRange)
+        {
+            var target = targetCollider.gameObject.GetComponent<Damageable>();
+
+            if (target == null) continue;
+
+            if(target == targetCollider.gameObject.GetComponent<Yokai>()) { return; }
+
+            target.TakeDamage(yokaiSettings.AttackPower);
+            //Debug.Log("An Ashigaru attacked a Yokai! They lost " + attackPower + "health!");
+        }
+        lastAttackTime = Time.time;
     }
 
     public void DetermineTarget()
     {
         //Debug.Log($"{yokaiSettings.YokaiName} is determining its target.");
-        // Implement target determination logic here
+        targetsInRange = Boids.GetNearby(transform.position, yokaiSettings.AttackRange, ~LayerMask.GetMask("Floor")).ToArray();
+
+        if (targetsInRange.Length > 0 && Time.time >= lastAttackTime + yokaiSettings.AttackDelay)
+        {
+            AutoAttack();
+        }
     }
 
     private void Die()

@@ -32,7 +32,7 @@ public class SelectionManager : MonoBehaviour
     {
         Unit.OnSelect();
         SelectedUnits.Add(Unit);
-        Debug.Log($"Selected {Unit.name}. Total selected units: {SelectedUnits.Count}");
+        //Debug.Log($"Selected {Unit.name}. Total selected units: {SelectedUnits.Count}");
     }
 
     public void Deselect(SelectableUnit Unit)
