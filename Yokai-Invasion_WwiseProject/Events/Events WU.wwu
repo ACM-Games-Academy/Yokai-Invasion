@@ -493,6 +493,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Scroll_Open" ID="{5C38CEB6-0139-40D3-BE6F-18BAE3A5825F}">
+					<ChildrenList>
+						<Action Name="" ID="{4DE920E6-9502-49EF-9C80-425A81A980EB}" ShortID="1020911524">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scroll Open Rand" ID="{3F8142EA-AF36-42C8-B2F1-282605E977CF}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

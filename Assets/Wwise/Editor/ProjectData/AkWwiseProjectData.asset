@@ -120,7 +120,7 @@ MonoBehaviour:
     ParentPath: Events\Events WU
     guid: e482a5e4a562894bb636af9304270075
     GuidInternal: 
-    m_lastTime: -8584370967240086013
+    m_lastTime: -8584370949056283129
     List:
     - name: Play_Ambience_Day
       guid: 3370d1de09aedd47b2250bc3cb7c284b
@@ -428,6 +428,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 11
       minDuration: 11
+    - name: Play_Scroll_Open
+      guid: b6ce385c3901d340be6f18bae3a5825f
+      id: 151111856
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Scroll_Open
+        ObjectType: 3
+        guid: b6ce385c3901d340be6f18bae3a5825f
+      Path: Events\Events WU\Play_Scroll_Open
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Night_Music
       guid: 581af394f23c9243a2d03fa7e32c65fa
       id: 1932246634

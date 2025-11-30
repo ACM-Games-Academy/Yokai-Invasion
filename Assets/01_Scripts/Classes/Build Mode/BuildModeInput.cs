@@ -11,6 +11,8 @@ public class BuildModeInput : MonoBehaviour
     public static GameObject resourcesWarningPopup;
     public static GameObject placementWarningPopup;
 
+    private static AudioSettings audioSettings;
+
     private float warningWaitTime = 2.5f;
 
 
@@ -20,6 +22,7 @@ public class BuildModeInput : MonoBehaviour
         buildMenu = GameObject.Find("Build Menu");
         resourcesWarningPopup = GameObject.Find("Resources Warning Popup");
         placementWarningPopup = GameObject.Find("Placement Warning Popup");
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
         buildMenu.SetActive(false);
         resourcesWarningPopup.SetActive(false);
         placementWarningPopup.SetActive(false);
@@ -47,6 +50,8 @@ public class BuildModeInput : MonoBehaviour
     {
         if (!input.started) return;
 
+        
+
         switch (buildingSpawner.BuildModeState)
         {
             case BuildingSpawner.BuildMode.active:
@@ -62,6 +67,9 @@ public class BuildModeInput : MonoBehaviour
                 buildMenu.SetActive(false);
                 break;
         }
+
+        //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
+        audioSettings.Events[14].Post(buildMenu);
     }
 
     public static void PlaceBuilding(InputAction.CallbackContext input)

@@ -30,6 +30,7 @@ namespace AK
         static const AkUniqueID PLAY_FOOTSTEP_PLAYER = 4134779396U;
         static const AkUniqueID PLAY_NIGHT_MUSIC = 3279835868U;
         static const AkUniqueID PLAY_NIGHT_TRANSITION = 3265916758U;
+        static const AkUniqueID PLAY_SCROLL_OPEN = 151111856U;
         static const AkUniqueID STOP_NIGHT_MUSIC = 1932246634U;
     } // namespace EVENTS
 

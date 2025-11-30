@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuCanvas;
 
+    private AudioSettings audioSettings;
+
     // Drag your camera/player controller script here in the inspector
     public MonoBehaviour CameraController;
 
@@ -20,6 +22,11 @@ public class PauseMenu : MonoBehaviour
     }
 
     public static PauseState CurrentPauseState;
+
+    private void Start()
+    {
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
+    }
 
     private void Update()
     {
@@ -41,6 +48,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         CameraController.enabled = false;
 
+        //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
+        audioSettings.Events[14].Post(PauseMenuCanvas);
+
         CurrentPauseState = PauseState.PAUSED;
     }
 
@@ -50,6 +60,9 @@ public class PauseMenu : MonoBehaviour
         PauseMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
         CameraController.enabled = true;
+        
+        //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
+        audioSettings.Events[14].Post(PauseMenuCanvas);
 
         CurrentPauseState = PauseState.UNPAUSED;
     }
