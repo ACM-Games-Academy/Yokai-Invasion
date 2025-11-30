@@ -18,6 +18,8 @@ public class YokaiPathing : MonoBehaviour
     [SerializeField]
     private YokaiSettings settings;
 
+    public Animator animator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();

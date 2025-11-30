@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class LightManager : MonoBehaviour
 {
-    [SerializeField] private GameObject dawnLight;
-    [SerializeField] private GameObject dayLight;
-    [SerializeField] private GameObject duskLight;
-    [SerializeField] private GameObject nightLight;
+    [SerializeField] private GameObject m_Light;
+
+    public Animator dayNNite;
 
     void Start()
     {
@@ -18,30 +17,18 @@ public class LightManager : MonoBehaviour
 
     private void ActivateDawnLighting()
     {
-        BecomeLightless();
-        dawnLight.SetActive(true);
+        dayNNite.SetTrigger("Night-Dawn");
     }
     private void ActivateDayLighting()
     {
-        BecomeLightless();
-        dayLight.SetActive(true);
+        dayNNite.SetTrigger("Dawn-Day");
     }
     private void ActivateDuskLighting()
     {
-        BecomeLightless();
-        duskLight.SetActive(true);
+        dayNNite.SetTrigger("Day-Dusk");
     }
     private void ActivateNightLighting()
     {
-        BecomeLightless();
-        nightLight.SetActive(true);
-    }
-
-    private void BecomeLightless()
-    {
-        dawnLight.SetActive(false);
-        dayLight.SetActive(false);
-        duskLight.SetActive(false);
-        nightLight.SetActive(false);
+        dayNNite.SetTrigger("Dusk-Night");
     }
 }

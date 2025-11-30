@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YokaiPathing
   settings: {fileID: 11400000, guid: 0eb873eb1e770574cb3f2370d97c2a91, type: 2}
+  animator: {fileID: 2573766489110200357}
 --- !u!54 &5393894268602648587
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YokaiGrunt
   yokaiSettings: {fileID: 11400000, guid: 0eb873eb1e770574cb3f2370d97c2a91, type: 2}
-  currentHealth: 0
+  animator: {fileID: 2573766489110200357}
 --- !u!1001 &1736081238911801262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,5 +182,10 @@ PrefabInstance:
 --- !u!4 &2380711539773756045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4115780128190858531, guid: d022a06c31d43414b9e5513ef81444cc, type: 3}
+  m_PrefabInstance: {fileID: 1736081238911801262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2573766489110200357 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4296458560398235531, guid: d022a06c31d43414b9e5513ef81444cc, type: 3}
   m_PrefabInstance: {fileID: 1736081238911801262}
   m_PrefabAsset: {fileID: 0}

@@ -12,6 +12,7 @@ public class HeroMovement : MonoBehaviour
     {
         Vector3 newMovementInput = new Vector3(movementInput.x, 0, movementInput.y);
         transform.position += newMovementInput * Time.deltaTime * heroSettings.MovementSpeed;
+
     }
 
     public static void SyncMovementInput(InputAction.CallbackContext input) 

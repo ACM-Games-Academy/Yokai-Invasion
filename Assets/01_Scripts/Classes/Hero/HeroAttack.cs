@@ -9,7 +9,6 @@ public class HeroAttack : MonoBehaviour, Damageable
     private int currentHealth;
 
     public Action HeroTookDamage;
-    public Action HeroDead;
 
     public Animator animator;
 
@@ -60,16 +59,7 @@ public class HeroAttack : MonoBehaviour, Damageable
         if (currentHealth <= 0)
         {
             animator.SetBool("Dead", true);
-            Die();
         }
-    }
-
-    public void Die()
-    {
-        
-        HeroDead?.Invoke();
-        Debug.LogWarning("GAME OVER!");
-        Time.timeScale = 0;
     }
 
     private void ResetHealth()
