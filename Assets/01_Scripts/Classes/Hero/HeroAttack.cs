@@ -11,6 +11,8 @@ public class HeroAttack : MonoBehaviour, Damageable
     public Action HeroTookDamage;
     public Action HeroDead;
 
+    public Animator animator;
+
     [SerializeField] private HeroSettings heroSettings;
 
     public int CurrentHealth => currentHealth;
@@ -42,6 +44,8 @@ public class HeroAttack : MonoBehaviour, Damageable
             if (yokai == null) continue;
 
             yokai.TakeDamage(heroSettings.AttackPower);
+            animator.SetTrigger("Attack");
+
             Debug.Log("Attacked a Yokai! They lost " + heroSettings.AttackPower + "health!");
         }
         lastAttackTime = Time.time;
@@ -51,14 +55,18 @@ public class HeroAttack : MonoBehaviour, Damageable
     {
         currentHealth -= damageAmount;
         HeroTookDamage?.Invoke();
+        animator.SetTrigger("Hit");
+
         if (currentHealth <= 0)
         {
+            animator.SetBool("Dead", true);
             Die();
         }
     }
 
     public void Die()
     {
+        
         HeroDead?.Invoke();
         Debug.LogWarning("GAME OVER!");
         Time.timeScale = 0;
