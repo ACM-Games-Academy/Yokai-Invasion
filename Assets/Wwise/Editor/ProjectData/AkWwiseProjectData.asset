@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 09d75da43d8cd64bb822696fdd6685c4
     GuidInternal: 
-    m_lastTime: -8584376159290499649
+    m_lastTime: -8584374728013228370
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: bbda90bc37e3ca4c8e36d1039a599472
     GuidInternal: 
-    m_lastTime: -8584376159350797158
+    m_lastTime: -8584374728031308296
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 77f2db7ba315334c97c933fe0ccc4261
     GuidInternal: 
-    m_lastTime: -8584376159290607274
+    m_lastTime: -8584374728013273607
     List: []
   - PhysicalPath: SoundBanks\Soundbanks WU.wwu
     PathAndIcons:
@@ -79,7 +79,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Soundbanks WU
     guid: a0fb6e52ecfbfd4c92194a069ea6d1ec
     GuidInternal: 
-    m_lastTime: -8584370962175606957
+    m_lastTime: -8584370707866827502
     List:
     - name: Main
       guid: b24e3c779abc2e47a65279c9f8bded39
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d2c284f299a8bc45b4d48c06c4379994
     GuidInternal: 
-    m_lastTime: -8584376159351039395
+    m_lastTime: -8584374728031415769
     List: []
   - PhysicalPath: Events\Events WU.wwu
     PathAndIcons:
@@ -120,7 +120,7 @@ MonoBehaviour:
     ParentPath: Events\Events WU
     guid: e482a5e4a562894bb636af9304270075
     GuidInternal: 
-    m_lastTime: -8584370949056283129
+    m_lastTime: -8584370707869180945
     List:
     - name: Play_Ambience_Day
       guid: 3370d1de09aedd47b2250bc3cb7c284b
@@ -137,8 +137,8 @@ MonoBehaviour:
         guid: 3370d1de09aedd47b2250bc3cb7c284b
       Path: Events\Events WU\Play_Ambience_Day
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Ambience_Night
       guid: c36860d084976449992ff501f30dde94
       id: 944950941
@@ -154,8 +154,8 @@ MonoBehaviour:
         guid: c36860d084976449992ff501f30dde94
       Path: Events\Events WU\Play_Ambience_Night
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Attack_Ashigaru_Heavy
       guid: 746fc03e8dfb684c9ac54e1f27530138
       id: 2824991575
@@ -170,9 +170,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 746fc03e8dfb684c9ac54e1f27530138
       Path: Events\Events WU\Play_Attack_Ashigaru_Heavy
-      maxAttenuation: 50
-      maxDuration: 1.350926
-      minDuration: 0.8908311
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Attack_Ashigaru_Light
       guid: 10900a2b2ef3fa49935dbe399ff83282
       id: 1211607766
@@ -187,9 +187,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 10900a2b2ef3fa49935dbe399ff83282
       Path: Events\Events WU\Play_Attack_Ashigaru_Light
-      maxAttenuation: 50
-      maxDuration: 1.350926
-      minDuration: 0.8908311
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Attack_Hero_Heavy
       guid: f5e0106807ff894ab81b9483156030db
       id: 1063845529
@@ -205,8 +205,8 @@ MonoBehaviour:
         guid: f5e0106807ff894ab81b9483156030db
       Path: Events\Events WU\Play_Attack_Hero_Heavy
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Attack_Hero_Light
       guid: fa11e0810aaa754c8d104f77bafc38b4
       id: 1679060216
@@ -222,8 +222,8 @@ MonoBehaviour:
         guid: fa11e0810aaa754c8d104f77bafc38b4
       Path: Events\Events WU\Play_Attack_Hero_Light
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Attack_Musket
       guid: 51b101d801f3c24dbac73925c72943bd
       id: 1182632674
@@ -255,9 +255,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: ac880c8ac6dbdc4ba1469a597d30418d
       Path: Events\Events WU\Play_Attack_Yokai
-      maxAttenuation: 50
-      maxDuration: 0.32746282
-      minDuration: 0.25106576
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Building_Complete
       guid: 24abfc6f647be043a75f495695ac4ab3
       id: 4001521644
@@ -272,9 +272,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 24abfc6f647be043a75f495695ac4ab3
       Path: Events\Events WU\Play_Building_Complete
-      maxAttenuation: 100
-      maxDuration: 1.7335836
-      minDuration: 1.3676314
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Building_In_Progress
       guid: cb409e4b297f3d48b716fbd7bdbd5f92
       id: 2224434550
@@ -289,9 +289,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: cb409e4b297f3d48b716fbd7bdbd5f92
       Path: Events\Events WU\Play_Building_In_Progress
-      maxAttenuation: 50
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Damage_Ashigaru
       guid: 21c06ca37abd9949a4df24e637311d12
       id: 3828475318
@@ -306,9 +306,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 21c06ca37abd9949a4df24e637311d12
       Path: Events\Events WU\Play_Damage_Ashigaru
-      maxAttenuation: 50
-      maxDuration: 0.631913
-      minDuration: 0.30429947
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Damage_Yokai
       guid: 7ed68be967292f4c8d966de808a386bd
       id: 1263684625
@@ -323,9 +323,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7ed68be967292f4c8d966de808a386bd
       Path: Events\Events WU\Play_Damage_Yokai
-      maxAttenuation: 50
-      maxDuration: 0.52770054
-      minDuration: 0.2385941
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Dusk_Shamisens
       guid: a8942fb5c3d0e348a4f7dfa161a6af8e
       id: 2141916437
@@ -340,9 +340,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: a8942fb5c3d0e348a4f7dfa161a6af8e
       Path: Events\Events WU\Play_Dusk_Shamisens
-      maxAttenuation: 100
-      maxDuration: 5.5172877
-      minDuration: 5.453916
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Footstep_Ashigaru
       guid: 2a5f12cf0930e6418781b635b9428508
       id: 546028113
@@ -357,9 +357,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2a5f12cf0930e6418781b635b9428508
       Path: Events\Events WU\Play_Footstep_Ashigaru
-      maxAttenuation: 50
-      maxDuration: 2.058693
-      minDuration: 0.6899948
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Footstep_Farmer
       guid: f439f9b3788d1e4eae3958754647b0bd
       id: 978628930
@@ -374,9 +374,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: f439f9b3788d1e4eae3958754647b0bd
       Path: Events\Events WU\Play_Footstep_Farmer
-      maxAttenuation: 50
-      maxDuration: 0.9161479
-      minDuration: 0.24403158
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Footstep_Player
       guid: b1e19d9427c63249878c20f1c7abe040
       id: 4134779396
@@ -392,8 +392,8 @@ MonoBehaviour:
         guid: b1e19d9427c63249878c20f1c7abe040
       Path: Events\Events WU\Play_Footstep_Player
       maxAttenuation: 0
-      maxDuration: 2.058693
-      minDuration: 0.6899948
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Night_Music
       guid: 5d754fb25885604abd90614f928be0d4
       id: 3279835868
@@ -409,8 +409,8 @@ MonoBehaviour:
         guid: 5d754fb25885604abd90614f928be0d4
       Path: Events\Events WU\Play_Night_Music
       maxAttenuation: 0
-      maxDuration: 127
-      minDuration: 127
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Night_Transition
       guid: db6d11d5a8b26d42838dee8ec03d3176
       id: 3265916758
@@ -426,8 +426,8 @@ MonoBehaviour:
         guid: db6d11d5a8b26d42838dee8ec03d3176
       Path: Events\Events WU\Play_Night_Transition
       maxAttenuation: 0
-      maxDuration: 11
-      minDuration: 11
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Scroll_Open
       guid: b6ce385c3901d340be6f18bae3a5825f
       id: 151111856
@@ -460,8 +460,8 @@ MonoBehaviour:
         guid: 581af394f23c9243a2d03fa7e32c65fa
       Path: Events\Events WU\Stop_Night_Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -474,7 +474,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5d5ff8972f949a43a273f1d50ad5494f
     GuidInternal: 
-    m_lastTime: -8584376159351014110
+    m_lastTime: -8584374728031405763
     List: []
   - PhysicalPath: Game Parameters\Game Parameters WU.wwu
     PathAndIcons:
@@ -487,7 +487,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters WU
     guid: 9adcdd7ad155594ca4ad69ba2ad892c4
     GuidInternal: 
-    m_lastTime: -8584376159351014110
+    m_lastTime: -8584374728031405763
     List:
     - name: ShamisenTriggerRate
       guid: 7f00769fc813df4a84acfc406e6bc668
@@ -529,7 +529,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 70d49ec350886449b8b03ef4b6871180
     GuidInternal: 
-    m_lastTime: -8584376159290560581
+    m_lastTime: -8584374728013249217
     List: []
   - PhysicalPath: States\States WU.wwu
     PathAndIcons:
@@ -542,7 +542,7 @@ MonoBehaviour:
     ParentPath: States\States WU
     guid: 75c8e9ef35e94544b60087aa1a7e6267
     GuidInternal: 
-    m_lastTime: -8584376159290550491
+    m_lastTime: -8584374728013249217
     List:
     - name: GruntsActive
       guid: b39853ff1c3e92488f1ea53531a97ad5
@@ -688,7 +688,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 655ab534e802c6419c1236c5c81b2250
     GuidInternal: 
-    m_lastTime: -8584376159290540485
+    m_lastTime: -8584374728013239194
     List: []
   - PhysicalPath: Switches\Switches WU.wwu
     PathAndIcons:
@@ -701,7 +701,7 @@ MonoBehaviour:
     ParentPath: Switches\Switches WU
     guid: 70e0113414d53040bfba8808343ef3a7
     GuidInternal: 
-    m_lastTime: -8584376159290529905
+    m_lastTime: -8584374728013239194
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -715,7 +715,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 7d1f979a14a73545a4c18bdf5741a88a
     GuidInternal: 
-    m_lastTime: -8584376159290514840
+    m_lastTime: -8584374728013239194
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

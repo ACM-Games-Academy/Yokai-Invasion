@@ -17,7 +17,7 @@ public class GameModeInput : MonoBehaviour
 
         hero = GameObject.Find("TempHero");
         heroAttack = hero.GetComponent<HeroAttack>();
-        heroAttack.HeroDead += GameOver;
+        // CallDeath.HeroDead += GameOver;
     }
     public static void TogglePauseMenu(InputAction.CallbackContext input)
     {

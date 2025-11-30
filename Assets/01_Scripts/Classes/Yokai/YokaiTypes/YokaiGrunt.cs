@@ -1,4 +1,5 @@
- using UnityEngine;
+using System.Collections;
+using UnityEngine;
 
 public class YokaiGrunt : MonoBehaviour, Yokai
 {
@@ -19,6 +20,8 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
     private Collider[] targetsInRange;
     private float lastAttackTime;
+
+    public Animator animator;
 
 
     private void OnEnable()
@@ -42,9 +45,11 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
         //Debug.Log($"{yokaiSettings.YokaiName} took {damageAmount} damage.");
         currentHealth -= damageAmount;
+        animator.SetTrigger("Hit");
+
         if (currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
         else
         {
@@ -81,10 +86,13 @@ public class YokaiGrunt : MonoBehaviour, Yokai
         }
     }
 
-    private void Die()
+    private IEnumerator Die()
     {
+        animator.SetBool("Dead", true);
+
+        yield return new WaitForSeconds(3);
+
         // Debug.Log($"{yokaiSettings.YokaiName} has died.");
-        // Implement death logic here (e.g., play animation, drop loot)
 
         Overseer.Instance.GetManager<ResourceManager>().IncreaseGold(yokaiSettings.DropAmount);
         Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
