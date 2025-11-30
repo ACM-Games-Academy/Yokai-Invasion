@@ -5,11 +5,14 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{773C4EB2-BC9A-472E-A652-79C9F8BDED39}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_Scroll_Open" ID="{5C38CEB6-0139-40D3-BE6F-18BAE3A5825F}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Ashigaru" ID="{CF125F2A-3009-41E6-8781-B635B9428508}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Night_Transition" ID="{D5116DDB-B2A8-426D-838D-EE8EC03D3176}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Scroll Open Rand" ID="{3F8142EA-AF36-42C8-B2F1-282605E977CF}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Night_Music" ID="{94F31A58-3CF2-4392-A2D0-3FA7E32C65FA}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience_Day" ID="{DED17033-AE09-47DD-B225-0BC3CB7C284B}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Building_In_Progress" ID="{4B9E40CB-7F29-483D-B716-FBD7BDBD5F92}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Dusk_Shamisens" ID="{B52F94A8-D0C3-48E3-A4F7-DFA161A6AF8E}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Player" ID="{949DE1B1-C627-4932-878C-20F1C7ABE040}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience_Night" ID="{D06068C3-9784-4964-992F-F501F30DDE94}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>

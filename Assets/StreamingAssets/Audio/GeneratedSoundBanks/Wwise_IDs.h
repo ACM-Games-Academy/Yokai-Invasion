@@ -19,9 +19,9 @@ namespace AK
         static const AkUniqueID PLAY_ATTACK_ASHIGARU_LIGHT = 1211607766U;
         static const AkUniqueID PLAY_ATTACK_HERO_HEAVY = 1063845529U;
         static const AkUniqueID PLAY_ATTACK_HERO_LIGHT = 1679060216U;
-        static const AkUniqueID PLAY_ATTACK_MUSKET = 1182632674U;
         static const AkUniqueID PLAY_ATTACK_YOKAI = 261420542U;
         static const AkUniqueID PLAY_BUILDING_COMPLETE = 4001521644U;
+        static const AkUniqueID PLAY_BUILDING_IN_PROGRESS = 2224434550U;
         static const AkUniqueID PLAY_DAMAGE_ASHIGARU = 3828475318U;
         static const AkUniqueID PLAY_DAMAGE_YOKAI = 1263684625U;
         static const AkUniqueID PLAY_DUSK_SHAMISENS = 2141916437U;
@@ -30,6 +30,7 @@ namespace AK
         static const AkUniqueID PLAY_FOOTSTEP_PLAYER = 4134779396U;
         static const AkUniqueID PLAY_NIGHT_MUSIC = 3279835868U;
         static const AkUniqueID PLAY_NIGHT_TRANSITION = 3265916758U;
+        static const AkUniqueID PLAY_SCROLL_OPEN = 151111856U;
         static const AkUniqueID STOP_NIGHT_MUSIC = 1932246634U;
     } // namespace EVENTS
 

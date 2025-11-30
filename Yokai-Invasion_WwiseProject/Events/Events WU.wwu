@@ -86,16 +86,6 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{A706B835-F17C-4D1B-A144-48758F6D4914}" ShortID="678360423">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="24"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Night Music Playlist" ID="{3E8EC511-4D47-43F8-A52C-AF72395792E6}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_Ambience_Day" ID="{DED17033-AE09-47DD-B225-0BC3CB7C284B}">
@@ -295,6 +285,16 @@
 				</Event>
 				<Event Name="Play_Night_Music" ID="{B24F755D-8558-4A60-BD90-614F928BE0D4}">
 					<ChildrenList>
+						<Action Name="" ID="{1FA4A54D-9C0A-4AFA-98DD-150B5F742F90}" ShortID="264807977">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shamisen Notes Rand" ID="{FB08E24A-FDF1-4D23-89CE-D256F04ADA36}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{28A4870C-37D6-4F60-97B6-40F1C51D91A8}" ShortID="234101605">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="2"/>
@@ -367,10 +367,13 @@
 				</Event>
 				<Event Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}">
 					<ChildrenList>
-						<Action Name="" ID="{408FA529-CD33-4465-8794-8C288C9445DF}" ShortID="393932740">
+						<Action Name="" ID="{1B6FE9AC-379B-46A8-A45E-B3C763DE23E4}" ShortID="230828248">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									<ObjectRef Name="Hammer Seq" ID="{E4B70F81-C20B-4515-B0C4-BAB00D1E59B1}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -474,6 +477,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Musket Rand" ID="{3868A7E6-C115-4791-9F0F-B753AA3DE577}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Building_In_Progress" ID="{4B9E40CB-7F29-483D-B716-FBD7BDBD5F92}">
+					<ChildrenList>
+						<Action Name="" ID="{AABD47FD-44BC-471C-B56A-8A96C082187D}" ShortID="967159841">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hammer Seq" ID="{E4B70F81-C20B-4515-B0C4-BAB00D1E59B1}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Scroll_Open" ID="{5C38CEB6-0139-40D3-BE6F-18BAE3A5825F}">
+					<ChildrenList>
+						<Action Name="" ID="{4DE920E6-9502-49EF-9C80-425A81A980EB}" ShortID="1020911524">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scroll Open Rand" ID="{3F8142EA-AF36-42C8-B2F1-282605E977CF}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -30,8 +30,12 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<ObjectRef Name="Play_Building_In_Progress" ID="{4B9E40CB-7F29-483D-B716-FBD7BDBD5F92}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
 							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_Ambience_Day" ID="{DED17033-AE09-47DD-B225-0BC3CB7C284B}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
@@ -40,6 +44,10 @@
 						<Module>
 							<ObjectRef Name="Play_Ambience_Night" ID="{D06068C3-9784-4964-992F-F501F30DDE94}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
 							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Damage_Yokai" ID="{E98BD67E-2967-4C2F-8D96-6DE808A386BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="2" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>

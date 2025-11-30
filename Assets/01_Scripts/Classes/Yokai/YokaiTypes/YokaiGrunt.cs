@@ -8,6 +8,8 @@ public class YokaiGrunt : MonoBehaviour, Yokai
     private YokaiSettings yokaiSettings;
     YokaiSettings Yokai.yokaiSettings => yokaiSettings;
 
+    private AudioSettings audioSettings;
+
     [Header("Grunt Stats")]
     [Tooltip("The current health of the Yokai Grunt")]
     private int currentHealth;
@@ -28,8 +30,16 @@ public class YokaiGrunt : MonoBehaviour, Yokai
         DetermineTarget();
     }
 
+    private void Start()
+    {
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
+    }
+
     public void TakeDamage(int damageAmount)
     {
+        //  [11] Play_Damage_Yokai - Plays damage sound without armour scrape
+        audioSettings.Events[11].Post(gameObject);
+
         //Debug.Log($"{yokaiSettings.YokaiName} took {damageAmount} damage.");
         currentHealth -= damageAmount;
         if (currentHealth <= 0)

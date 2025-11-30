@@ -24,7 +24,7 @@ MonoBehaviour:
     WoodCost: 10
     GoldCost: 0
     BuildingHealth: 100
-    BuildTime: 30
+    BuildTime: 5
   - BuildingPrefab: {fileID: 5714601427503410668, guid: 223022ca455615642ab505f8385ca568, type: 3}
     WoodCost: 25
     GoldCost: 15

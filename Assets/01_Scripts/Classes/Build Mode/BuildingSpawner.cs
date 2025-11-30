@@ -57,7 +57,6 @@ public class BuildingSpawner : MonoBehaviour
         {
             Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.BuildingPrefab, settings.PoolSize);
         }
-
     }
 
     public void SpawnByIndex(int index)
@@ -70,6 +69,8 @@ public class BuildingSpawner : MonoBehaviour
         SpawnedBuildings.Add(currentBuilding);
 
         BuildModeState = BuildMode.buildingSpawned;
+
+        
 
         goldCost = settings.BuildingOptions[index].GoldCost;
         woodCost = settings.BuildingOptions[index].WoodCost;

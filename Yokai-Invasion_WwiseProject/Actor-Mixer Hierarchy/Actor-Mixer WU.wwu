@@ -3435,6 +3435,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<ActorMixer Name="Damage" ID="{9BD45B14-225D-4443-9CC3-5D95FD0F4B44}" ShortID="742493671">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
@@ -4579,6 +4586,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_1" ID="{FA05A68D-1470-4870-B0A3-2457F389776F}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.05"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_1.wav</AudioFile>
 													<MediaIDList>
@@ -4623,6 +4634,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_3" ID="{C87760F3-3832-47EA-9961-07450C5E418A}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.04"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_3.wav</AudioFile>
 													<MediaIDList>
@@ -4645,6 +4659,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_4" ID="{294AAE87-509C-495D-9E8B-AA9B77CFC31B}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.03"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_4.wav</AudioFile>
 													<MediaIDList>
@@ -4667,6 +4684,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_5" ID="{AE95F74C-155D-41EB-8C67-527CBB796E3E}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_5.wav</AudioFile>
 													<MediaIDList>
@@ -4689,6 +4709,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_6" ID="{1D301054-61CC-491A-B420-6AAB46C8B9F9}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.05"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_6.wav</AudioFile>
 													<MediaIDList>
@@ -4711,6 +4734,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Musket_Fire_7" ID="{3262B4D1-10C9-4CBB-A508-DFEA7898A8CB}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.04"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Musket_Fire_7.wav</AudioFile>
 													<MediaIDList>
@@ -5850,6 +5876,9 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Building" ID="{1475DDEF-F13A-4993-87B7-8314E638BB9D}" ShortID="494674744">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
 							<ObjectRef Name="Buildings Default Attenuation" ID="{984C165D-3F35-4BC1-ABAB-73134724A48D}" WorkUnitID="{B04FC380-1169-49D1-9F13-F61CA66555D5}"/>
@@ -5862,198 +5891,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" ShortID="289415618">
-							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{450ADEA7-0BB8-4AD0-ABBE-FD06D68CA854}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="100"/>
-													<Property Name="Min" Type="Real64" Value="-100"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
-								<Property Name="PlayMechanismLoopCount" Type="int32" Value="1">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{9B3CF106-FFDA-4B14-A529-D6AA2DF8D591}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.45">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{27F87BF7-901A-4EF5-8A54-25B21D1E855D}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="0.05"/>
-													<Property Name="Min" Type="Real64" Value="-0.05"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-6</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Wood_Hammer_001" ID="{83540A0F-3DB4-4806-8112-205CB1BB062D}" ShortID="443491276">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_001" ID="{7ED04893-B92F-46C3-9F5D-1589A874A19D}">
-											<PropertyList>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0349995682511148"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="329826202"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_001" ID="{7ED04893-B92F-46C3-9F5D-1589A874A19D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Wood_Hammer_002" ID="{B7F546DB-F7F9-4AB2-9438-3EC6FEAD1C9A}" ShortID="807366594">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_002" ID="{CE922813-779E-47E3-A1E4-804ABD7E7582}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0729168463608384"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0729168463608384"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_002.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="72894977"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_002" ID="{CE922813-779E-47E3-A1E4-804ABD7E7582}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Wood_Hammer_003" ID="{9726AF39-1086-429A-A7C2-EA10FFF415BF}" ShortID="1004679712">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_003" ID="{9CCB2C2F-12FF-43A4-86B8-5B0D529DDAED}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0239550509030306"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0239550509030306"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_003.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="949041738"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_003" ID="{9CCB2C2F-12FF-43A4-86B8-5B0D529DDAED}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Wood_Hammer_004" ID="{7A65D8A0-61A7-4D1D-A631-F8928B10CFE7}" ShortID="547654425">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_004" ID="{446934E1-9888-409D-9812-DBA839051D39}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.038697652990305"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.038697652990305"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_004.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="224695136"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_004" ID="{446934E1-9888-409D-9812-DBA839051D39}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Wood_Hammer_005" ID="{D6492058-C18C-49FD-85BA-FA299A4DE63A}" ShortID="454368287">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_005" ID="{E3DC9A63-1DB6-4A2E-8585-E2C7F7110A2F}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0161494063174171"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0161494063174171"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_005.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="568051533"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_005" ID="{E3DC9A63-1DB6-4A2E-8585-E2C7F7110A2F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<Sound Name="Buiding_Complete" ID="{D1B2D24E-ABFD-483E-B85A-61A98B138F86}" ShortID="926453616">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
@@ -6745,6 +6582,585 @@
 									</ChildrenList>
 								</Position>
 							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Hammer Seq" ID="{E4B70F81-C20B-4515-B0C4-BAB00D1E59B1}" ShortID="744680612">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" ShortID="289415618">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{450ADEA7-0BB8-4AD0-ABBE-FD06D68CA854}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
+										<Property Name="PlayMechanismLoopCount" Type="int32" Value="1">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9B3CF106-FFDA-4B14-A529-D6AA2DF8D591}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.45">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{27F87BF7-901A-4EF5-8A54-25B21D1E855D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.05"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Buildings Default Attenuation" ID="{984C165D-3F35-4BC1-ABAB-73134724A48D}" WorkUnitID="{B04FC380-1169-49D1-9F13-F61CA66555D5}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Wood_Hammer_001" ID="{83540A0F-3DB4-4806-8112-205CB1BB062D}" ShortID="443491276">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_001" ID="{7ED04893-B92F-46C3-9F5D-1589A874A19D}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0349995682511148"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="329826202"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_001" ID="{7ED04893-B92F-46C3-9F5D-1589A874A19D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Wood_Hammer_002" ID="{B7F546DB-F7F9-4AB2-9438-3EC6FEAD1C9A}" ShortID="807366594">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_002" ID="{CE922813-779E-47E3-A1E4-804ABD7E7582}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0729168463608384"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0729168463608384"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="72894977"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_002" ID="{CE922813-779E-47E3-A1E4-804ABD7E7582}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Wood_Hammer_003" ID="{9726AF39-1086-429A-A7C2-EA10FFF415BF}" ShortID="1004679712">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_003" ID="{9CCB2C2F-12FF-43A4-86B8-5B0D529DDAED}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0239550509030306"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0239550509030306"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="949041738"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_003" ID="{9CCB2C2F-12FF-43A4-86B8-5B0D529DDAED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Wood_Hammer_004" ID="{7A65D8A0-61A7-4D1D-A631-F8928B10CFE7}" ShortID="547654425">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_004" ID="{446934E1-9888-409D-9812-DBA839051D39}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.038697652990305"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.038697652990305"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="224695136"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_004" ID="{446934E1-9888-409D-9812-DBA839051D39}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Wood_Hammer_005" ID="{D6492058-C18C-49FD-85BA-FA299A4DE63A}" ShortID="454368287">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_005" ID="{E3DC9A63-1DB6-4A2E-8585-E2C7F7110A2F}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0161494063174171"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0161494063174171"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="568051533"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_005" ID="{E3DC9A63-1DB6-4A2E-8585-E2C7F7110A2F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="Hammer Silence" ID="{49469B5E-02A9-40C9-A959-98C49640F7CE}" ShortID="230465113">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{8969F529-7E4A-441F-9FA1-C205DB53BD07}" ShortID="393654333" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="2"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{8969F529-7E4A-441F-9FA1-C205DB53BD07}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Hammer Silence" ID="{49469B5E-02A9-40C9-A959-98C49640F7CE}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Interface" ID="{AB3DA5C3-5B4F-4A83-9B58-DD435B1FA786}" ShortID="277691345">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Scroll Open Rand" ID="{3F8142EA-AF36-42C8-B2F1-282605E977CF}" ShortID="684035179">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI_Scroll_Open_1" ID="{3E32AAAE-070C-430B-98CC-DD63FC4D8901}" ShortID="841984836">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_1" ID="{6149FBBB-9AAC-4A6C-9DDD-1D1FD87DAEA8}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.207231259798702"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.251928198186657"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.404304124509232"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.44452381885241"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="467948526"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_1" ID="{6149FBBB-9AAC-4A6C-9DDD-1D1FD87DAEA8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Scroll_Open_2" ID="{FB4B2788-1FC0-4FA3-AC82-F89BB6258F99}" ShortID="514951040">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_2" ID="{2F01721E-4780-4728-BA7A-F19EA3DFD557}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.345812153212632"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.583269831751972"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.677791820296758"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.10253796304756"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="978184560"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_2" ID="{2F01721E-4780-4728-BA7A-F19EA3DFD557}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Scroll_Open_3" ID="{A03C7F29-0E1A-4C66-9D18-DEABADFFE2E8}" ShortID="454191455">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>18</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_3" ID="{43949BAC-C756-404F-8B70-027D4CFD3EDF}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.665944787017404"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="936319828"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_3" ID="{43949BAC-C756-404F-8B70-027D4CFD3EDF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Scroll_Open_4" ID="{81BC357A-A4B6-458F-8D75-084DBA984095}" ShortID="885281717">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>22</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_4" ID="{CFCA82DE-8B41-4FB9-A0A8-0113BF7B9646}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0927365882487236"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.707889290298591"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.19474683532232"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.52397126870388"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="932440234"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_4" ID="{CFCA82DE-8B41-4FB9-A0A8-0113BF7B9646}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Scroll_Open_6" ID="{D19E444E-CCEA-4521-AFDC-717E2FE33C8D}" ShortID="346486054">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_6" ID="{6FD74E82-18D4-4919-BE4D-B663771B2465}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.185940810145205"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.841804758657383"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="523647780"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_6" ID="{6FD74E82-18D4-4919-BE4D-B663771B2465}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Scroll_Open_7" ID="{DBF206B8-F0F3-490B-A691-96234372B289}" ShortID="382686344">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_7" ID="{F024E606-CEED-49FB-8AD6-57EF97DAAA8B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.192498247834701"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.718083351473265"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="435067406"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_7" ID="{F024E606-CEED-49FB-8AD6-57EF97DAAA8B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Scroll_Open_8" ID="{9324DAC3-637E-4A81-9294-33D5D0F29BA2}" ShortID="684610617">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_8" ID="{E6577994-44B4-46FB-9AB3-316EF400A969}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.140917725200894"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.64914558658117"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.270284817188601"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.69563289847555"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="392479400"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_8" ID="{E6577994-44B4-46FB-9AB3-316EF400A969}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Scroll_Open_6_Copy" ID="{83E44995-9FF9-45D8-8C8E-8D9699BB3D17}" ShortID="538285705">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_6" ID="{5075CD27-615D-4145-918C-1353ABD4E32D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.116635599091083"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.481755735376213"/>
+												<Property Name="FadeOutShape" Type="int16" Value="4"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0811378080633622"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.0040803208615"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="175990080"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_6" ID="{5075CD27-615D-4145-918C-1353ABD4E32D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Scroll_Open_4_Copy" ID="{BF12A539-E8CD-4DB3-A34B-DE32AFCA3DA5}" ShortID="863440139">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Scroll_Open_4" ID="{8F52BF7D-FF8A-4974-96D5-C8F5DF29B851}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0927365882487236"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.707889290298591"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.26430881979093"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Scroll Opening\UI_Scroll_Open_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="197151963"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Scroll_Open_4" ID="{8F52BF7D-FF8A-4974-96D5-C8F5DF29B851}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
