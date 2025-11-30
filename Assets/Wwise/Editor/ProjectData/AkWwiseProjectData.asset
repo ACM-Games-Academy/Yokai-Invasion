@@ -79,7 +79,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Soundbanks WU
     guid: a0fb6e52ecfbfd4c92194a069ea6d1ec
     GuidInternal: 
-    m_lastTime: -8584370962175606957
+    m_lastTime: -8584370732574247617
     List:
     - name: Main
       guid: b24e3c779abc2e47a65279c9f8bded39
@@ -120,7 +120,7 @@ MonoBehaviour:
     ParentPath: Events\Events WU
     guid: e482a5e4a562894bb636af9304270075
     GuidInternal: 
-    m_lastTime: -8584370949056283129
+    m_lastTime: -8584370727939350819
     List:
     - name: Play_Ambience_Day
       guid: 3370d1de09aedd47b2250bc3cb7c284b
@@ -292,6 +292,40 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: 0
       minDuration: 0
+    - name: Play_Coins_Collect
+      guid: 259414dba9df254898367bcf01c4b478
+      id: 2547541695
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Coins_Collect
+        ObjectType: 3
+        guid: 259414dba9df254898367bcf01c4b478
+      Path: Events\Events WU\Play_Coins_Collect
+      maxAttenuation: 50
+      maxDuration: 0.90620935
+      minDuration: 0.47240084
+    - name: Play_Coins_Spend
+      guid: ddc12ccb364a4643b0aca46f8acd5496
+      id: 1006601637
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Coins_Spend
+        ObjectType: 3
+        guid: ddc12ccb364a4643b0aca46f8acd5496
+      Path: Events\Events WU\Play_Coins_Spend
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Damage_Ashigaru
       guid: 21c06ca37abd9949a4df24e637311d12
       id: 3828475318
@@ -394,6 +428,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.058693
       minDuration: 0.6899948
+    - name: Play_Footstep_Yokai
+      guid: e0726bb0bff4ee4fac88c941d1d47e21
+      id: 2266542104
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Footstep_Yokai
+        ObjectType: 3
+        guid: e0726bb0bff4ee4fac88c941d1d47e21
+      Path: Events\Events WU\Play_Footstep_Yokai
+      maxAttenuation: 50
+      maxDuration: 0.9161479
+      minDuration: 0.24403158
     - name: Play_Night_Music
       guid: 5d754fb25885604abd90614f928be0d4
       id: 3279835868
@@ -443,8 +494,8 @@ MonoBehaviour:
         guid: b6ce385c3901d340be6f18bae3a5825f
       Path: Events\Events WU\Play_Scroll_Open
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.6661674
+      minDuration: 0.7606669
     - name: Stop_Night_Music
       guid: 581af394f23c9243a2d03fa7e32c65fa
       id: 1932246634

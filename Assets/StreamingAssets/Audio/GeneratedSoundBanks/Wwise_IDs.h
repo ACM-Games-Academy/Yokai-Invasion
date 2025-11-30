@@ -22,12 +22,15 @@ namespace AK
         static const AkUniqueID PLAY_ATTACK_YOKAI = 261420542U;
         static const AkUniqueID PLAY_BUILDING_COMPLETE = 4001521644U;
         static const AkUniqueID PLAY_BUILDING_IN_PROGRESS = 2224434550U;
+        static const AkUniqueID PLAY_COINS_COLLECT = 2547541695U;
+        static const AkUniqueID PLAY_COINS_SPEND = 1006601637U;
         static const AkUniqueID PLAY_DAMAGE_ASHIGARU = 3828475318U;
         static const AkUniqueID PLAY_DAMAGE_YOKAI = 1263684625U;
         static const AkUniqueID PLAY_DUSK_SHAMISENS = 2141916437U;
         static const AkUniqueID PLAY_FOOTSTEP_ASHIGARU = 546028113U;
         static const AkUniqueID PLAY_FOOTSTEP_FARMER = 978628930U;
         static const AkUniqueID PLAY_FOOTSTEP_PLAYER = 4134779396U;
+        static const AkUniqueID PLAY_FOOTSTEP_YOKAI = 2266542104U;
         static const AkUniqueID PLAY_NIGHT_MUSIC = 3279835868U;
         static const AkUniqueID PLAY_NIGHT_TRANSITION = 3265916758U;
         static const AkUniqueID PLAY_SCROLL_OPEN = 151111856U;
