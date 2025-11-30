@@ -89,6 +89,8 @@ public abstract class Building : MonoBehaviour, Damageable
     {
         //  [12] Play_Building_In_Progress - Plays hammer sounds on loop
         audioSettings.Events[12].Post(gameObject);
+        //  [19] Play_Coins_Spend - Plays coin bag + rattling noises
+        audioSettings.Events[19].Post(gameObject);
 
         float counter = 0;
         while (counter < settings.BuildingOptions[index].BuildTime)

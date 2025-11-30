@@ -58,6 +58,21 @@ MonoBehaviour:
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ce9e98c539be55d41b3d4398160eeaaa, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fb1c6f9e8276e364c9b13203e6fc9cd2, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1d65f175f8497cf4f992a74dae836179, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0c4bc799d06c41040a3f56b235c57040, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 49ac7c6f29d3e204d8638032283f9140, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9ee2972f40140d940805d397eb12aa95, type: 2}
   rtpcs:
   - idInternal: 0
     valueGuidInternal: 

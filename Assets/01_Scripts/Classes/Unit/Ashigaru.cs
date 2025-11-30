@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 {
+    private AudioSettings audioSettings;
+    
     private Collider[] targetsInRange;
     private float lastAttackTime;
     private int currentHealth;
 
     private void Start()
     {
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
+
         currentHealth = settings.TotalHealth;
     }
     private void Update()
@@ -36,6 +40,9 @@ public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 
     public void TakeDamage(int damageAmount)
     {
+        //  [17] Play_Damage_Ashigaru - Plays base damage sound and armour scraping
+        audioSettings.Events[17].Post(gameObject);
+
         currentHealth -= damageAmount;
         if (currentHealth <= 0)
         {

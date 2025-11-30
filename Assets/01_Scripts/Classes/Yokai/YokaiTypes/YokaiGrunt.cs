@@ -86,6 +86,9 @@ public class YokaiGrunt : MonoBehaviour, Yokai
         // Debug.Log($"{yokaiSettings.YokaiName} has died.");
         // Implement death logic here (e.g., play animation, drop loot)
 
+        //  [18] Play_Coin_Collect - Plays small coin sound
+        audioSettings.Events[18].Post(gameObject);
+
         Overseer.Instance.GetManager<ResourceManager>().IncreaseGold(yokaiSettings.DropAmount);
         Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
     }

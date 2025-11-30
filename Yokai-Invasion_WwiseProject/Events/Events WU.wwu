@@ -237,7 +237,7 @@
 						<Action Name="" ID="{8CB4E81B-F54A-45FA-BD3E-687CACED8D2C}" ShortID="516895413">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Footstep NPC Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									<ObjectRef Name="Footstep Human Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -248,7 +248,7 @@
 						<Action Name="" ID="{93120618-D50D-4550-9B3D-202AC65BB8DC}" ShortID="486735254">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Footstep NPC Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									<ObjectRef Name="Footstep Human Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -499,6 +499,80 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Scroll Open Rand" ID="{3F8142EA-AF36-42C8-B2F1-282605E977CF}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footstep_Yokai" ID="{B06B72E0-F4BF-4FEE-AC88-C941D1D47E21}">
+					<ChildrenList>
+						<Action Name="" ID="{0A211A5A-04EE-4518-A44D-B15073846CAF}" ShortID="234307763">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep Human Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Coins_Spend" ID="{CB2CC1DD-4A36-4346-B0AC-A46F8ACD5496}">
+					<ChildrenList>
+						<Action Name="" ID="{5FCB8FA6-7B38-4563-8D78-D1703AC2FF37}" ShortID="669360019">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Coin Shake Rand" ID="{5DF82B97-F1D8-498D-8CAA-7C9B6A8E1863}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4BA3FAB8-0DD5-4ABA-B624-47110AC6D261}" ShortID="1072568340">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.25">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C91B5242-DEAE-47F6-B954-5AA0FFE81215}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Coin Rattle Rand" ID="{10942919-8C06-446E-BCB0-9C8C93EE4A18}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7A7D36C4-4E3B-4BC1-9761-148A5DD7DECA}" ShortID="768769219">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+								<Property Name="Delay" Type="Real64" Value="0.75">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{BD45E0E2-44DE-4958-BED4-09400B5DE9A3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.5"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Coin Rattle Rand" ID="{10942919-8C06-446E-BCB0-9C8C93EE4A18}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Coins_Collect" ID="{DB149425-DFA9-4825-9836-7BCF01C4B478}">
+					<ChildrenList>
+						<Action Name="" ID="{CD3297BA-2AED-41FA-9586-88189634C075}" ShortID="553091284">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Coin Clink Rand" ID="{61E38713-62F2-4962-BCDB-ED6318B583FC}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

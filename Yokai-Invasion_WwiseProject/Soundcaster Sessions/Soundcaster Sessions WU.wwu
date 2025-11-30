@@ -22,7 +22,7 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Footstep NPC Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+							<ObjectRef Name="Footstep Human Rand" ID="{F001FD51-DD17-4F75-BF62-8D9E506E0257}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
