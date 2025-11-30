@@ -3205,6 +3205,7 @@
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="4.61088615127757"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="23.8820238755623"/>
+										<Property Name="FadeOutShape" Type="int16" Value="4"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimEnd" Type="Real64" Value="40.6703785802141"/>
 									</PropertyList>
@@ -7438,7 +7439,7 @@
 									<ChildrenList>
 										<SourcePlugin Name="Silence" ID="{8969F529-7E4A-441F-9FA1-C205DB53BD07}" ShortID="393654333" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="2"/>
+												<Property Name="LengthMax" Type="Real32" Value="1"/>
 											</PropertyList>
 											<Language>SFX</Language>
 										</SourcePlugin>
@@ -7458,6 +7459,109 @@
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Building Damage Rand" ID="{5318937D-4234-409A-8FCE-2ACC3A1BEF3F}" ShortID="837801305">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Building_Damage_1" ID="{38B4A9E8-7E1B-4C87-B21B-1561AD48D0E7}" ShortID="275275628">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Building_Damage_1" ID="{B3262812-AC6E-41C6-A648-C4C8181F7FA4}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Damage\Building_Damage_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="487352375"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Building_Damage_1" ID="{B3262812-AC6E-41C6-A648-C4C8181F7FA4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Building_Damage_2" ID="{DB05F10C-393C-4B65-BD4E-035F2C55DD88}" ShortID="177809734">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Building_Damage_2" ID="{EC7A4973-9A95-43AB-A480-C87EBBE2B02D}">
+											<Language>SFX</Language>
+											<AudioFile>Damage\Building_Damage_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="827034017"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Building_Damage_2" ID="{EC7A4973-9A95-43AB-A480-C87EBBE2B02D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Building_Damage_3" ID="{C4CA5124-C01E-477F-97CC-CB5772BB2B2F}" ShortID="1058851097">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Building_Damage_3" ID="{15988D70-45E3-4512-AB6A-92B7082EE746}">
+											<Language>SFX</Language>
+											<AudioFile>Damage\Building_Damage_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="341895372"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Building_Damage_3" ID="{15988D70-45E3-4512-AB6A-92B7082EE746}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Building_Damage_4" ID="{921474F2-CA8F-4F33-8DA4-7422DC60B355}" ShortID="181868726">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Building_Damage_4" ID="{2F354B29-2C88-4A3B-9B22-2C3B622E15A8}">
+											<Language>SFX</Language>
+											<AudioFile>Damage\Building_Damage_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="997812089"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Building_Damage_4" ID="{2F354B29-2C88-4A3B-9B22-2C3B622E15A8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>

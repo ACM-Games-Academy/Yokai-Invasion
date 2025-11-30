@@ -578,6 +578,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Damage_Building" ID="{169A7149-AF7B-4094-A604-2DC3472BFE11}">
+					<ChildrenList>
+						<Action Name="" ID="{9E0BB0DC-A07E-4B36-AE5C-D5F91BD117D6}" ShortID="233024200">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Building Damage Rand" ID="{5318937D-4234-409A-8FCE-2ACC3A1BEF3F}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

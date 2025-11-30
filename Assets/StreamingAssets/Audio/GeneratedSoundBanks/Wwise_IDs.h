@@ -25,6 +25,7 @@ namespace AK
         static const AkUniqueID PLAY_COINS_COLLECT = 2547541695U;
         static const AkUniqueID PLAY_COINS_SPEND = 1006601637U;
         static const AkUniqueID PLAY_DAMAGE_ASHIGARU = 3828475318U;
+        static const AkUniqueID PLAY_DAMAGE_BUILDING = 3362139180U;
         static const AkUniqueID PLAY_DAMAGE_YOKAI = 1263684625U;
         static const AkUniqueID PLAY_DUSK_SHAMISENS = 2141916437U;
         static const AkUniqueID PLAY_FOOTSTEP_ASHIGARU = 546028113U;
