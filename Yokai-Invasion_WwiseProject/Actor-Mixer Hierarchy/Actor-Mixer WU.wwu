@@ -5876,6 +5876,9 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Building" ID="{1475DDEF-F13A-4993-87B7-8314E638BB9D}" ShortID="494674744">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
 							<ObjectRef Name="Buildings Default Attenuation" ID="{984C165D-3F35-4BC1-ABAB-73134724A48D}" WorkUnitID="{B04FC380-1169-49D1-9F13-F61CA66555D5}"/>

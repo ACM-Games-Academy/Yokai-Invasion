@@ -13,6 +13,7 @@ using UnityEngine.UIElements;
 public class BuildingSpawner : MonoBehaviour
 {
     private BuildingSettings settings;
+    private AudioSettings audioSettings;
 
     public Dictionary<string, int> IndexDictionary;
     public List<GameObject> SpawnedBuildings = new List<GameObject>();
@@ -53,11 +54,12 @@ public class BuildingSpawner : MonoBehaviour
 
     private void Start()
     {
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
+
         foreach (var building in settings.BuildingOptions)
         {
             Overseer.Instance.GetManager<ObjectPooler>().InitializePool(building.BuildingPrefab, settings.PoolSize);
         }
-
     }
 
     public void SpawnByIndex(int index)
@@ -70,6 +72,10 @@ public class BuildingSpawner : MonoBehaviour
         SpawnedBuildings.Add(currentBuilding);
 
         BuildModeState = BuildMode.buildingSpawned;
+
+        Debug.Log("Building Placed");
+        //  [12] Play_Building_Complete - Plays building placement sounds
+        audioSettings.Events[12].Post(gameObject);
 
         goldCost = settings.BuildingOptions[index].GoldCost;
         woodCost = settings.BuildingOptions[index].WoodCost;

@@ -99,8 +99,7 @@ public abstract class Building : MonoBehaviour, Damageable
             yield return null;
         }
 
-        //  [12] Play_Building_Complete
-        audioSettings.Events[12].Post(gameObject);
+        
     }
 
     private void Functioning()
