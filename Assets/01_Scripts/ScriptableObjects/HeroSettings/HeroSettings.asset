@@ -16,4 +16,4 @@ MonoBehaviour:
   maxHealth: 100
   attackPower: 1
   attackDelay: 2
-  attackRange: 3
+  attackRange: 5

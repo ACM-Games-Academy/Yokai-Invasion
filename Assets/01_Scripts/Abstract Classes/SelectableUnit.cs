@@ -3,7 +3,10 @@ using UnityEngine;
 
 public abstract class SelectableUnit : Unit
 {
-    private void Start()
+    [SerializeField]
+    private GameObject selectionIndicator;
+
+    protected void Start()
     {
         Overseer.Instance.GetManager<SelectionManager>().AvailableUnits.Add(this);
     }
@@ -17,10 +20,12 @@ public abstract class SelectableUnit : Unit
     public void OnSelect()
     {
         // Add visual indication of selection
+        selectionIndicator.SetActive(true);
     }
 
     public void OnDeselect()
     {
         // Remove visual indication of selection
+        selectionIndicator.SetActive(false);
     }
 }
