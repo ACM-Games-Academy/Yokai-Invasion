@@ -5891,198 +5891,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" ShortID="289415618">
-							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{450ADEA7-0BB8-4AD0-ABBE-FD06D68CA854}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="100"/>
-													<Property Name="Min" Type="Real64" Value="-100"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
-								<Property Name="PlayMechanismLoopCount" Type="int32" Value="1">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{9B3CF106-FFDA-4B14-A529-D6AA2DF8D591}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.45">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{27F87BF7-901A-4EF5-8A54-25B21D1E855D}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="0.05"/>
-													<Property Name="Min" Type="Real64" Value="-0.05"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-6</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Wood_Hammer_001" ID="{83540A0F-3DB4-4806-8112-205CB1BB062D}" ShortID="443491276">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_001" ID="{7ED04893-B92F-46C3-9F5D-1589A874A19D}">
-											<PropertyList>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0349995682511148"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="329826202"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_001" ID="{7ED04893-B92F-46C3-9F5D-1589A874A19D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Wood_Hammer_002" ID="{B7F546DB-F7F9-4AB2-9438-3EC6FEAD1C9A}" ShortID="807366594">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_002" ID="{CE922813-779E-47E3-A1E4-804ABD7E7582}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0729168463608384"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0729168463608384"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_002.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="72894977"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_002" ID="{CE922813-779E-47E3-A1E4-804ABD7E7582}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Wood_Hammer_003" ID="{9726AF39-1086-429A-A7C2-EA10FFF415BF}" ShortID="1004679712">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_003" ID="{9CCB2C2F-12FF-43A4-86B8-5B0D529DDAED}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0239550509030306"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0239550509030306"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_003.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="949041738"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_003" ID="{9CCB2C2F-12FF-43A4-86B8-5B0D529DDAED}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Wood_Hammer_004" ID="{7A65D8A0-61A7-4D1D-A631-F8928B10CFE7}" ShortID="547654425">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_004" ID="{446934E1-9888-409D-9812-DBA839051D39}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.038697652990305"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.038697652990305"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_004.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="224695136"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_004" ID="{446934E1-9888-409D-9812-DBA839051D39}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Wood_Hammer_005" ID="{D6492058-C18C-49FD-85BA-FA299A4DE63A}" ShortID="454368287">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wood_Hammer_005" ID="{E3DC9A63-1DB6-4A2E-8585-E2C7F7110A2F}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0161494063174171"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0161494063174171"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Hammering\Wood_Hammer_005.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="568051533"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wood_Hammer_005" ID="{E3DC9A63-1DB6-4A2E-8585-E2C7F7110A2F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<Sound Name="Buiding_Complete" ID="{D1B2D24E-ABFD-483E-B85A-61A98B138F86}" ShortID="926453616">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
@@ -6774,6 +6582,249 @@
 									</ChildrenList>
 								</Position>
 							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Hammer Seq" ID="{E4B70F81-C20B-4515-B0C4-BAB00D1E59B1}" ShortID="744680612">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" ShortID="289415618">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{450ADEA7-0BB8-4AD0-ABBE-FD06D68CA854}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
+										<Property Name="PlayMechanismLoopCount" Type="int32" Value="1">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9B3CF106-FFDA-4B14-A529-D6AA2DF8D591}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.45">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{27F87BF7-901A-4EF5-8A54-25B21D1E855D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.05"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Buildings Default Attenuation" ID="{984C165D-3F35-4BC1-ABAB-73134724A48D}" WorkUnitID="{B04FC380-1169-49D1-9F13-F61CA66555D5}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Wood_Hammer_001" ID="{83540A0F-3DB4-4806-8112-205CB1BB062D}" ShortID="443491276">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_001" ID="{7ED04893-B92F-46C3-9F5D-1589A874A19D}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0349995682511148"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="329826202"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_001" ID="{7ED04893-B92F-46C3-9F5D-1589A874A19D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Wood_Hammer_002" ID="{B7F546DB-F7F9-4AB2-9438-3EC6FEAD1C9A}" ShortID="807366594">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_002" ID="{CE922813-779E-47E3-A1E4-804ABD7E7582}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0729168463608384"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0729168463608384"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="72894977"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_002" ID="{CE922813-779E-47E3-A1E4-804ABD7E7582}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Wood_Hammer_003" ID="{9726AF39-1086-429A-A7C2-EA10FFF415BF}" ShortID="1004679712">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_003" ID="{9CCB2C2F-12FF-43A4-86B8-5B0D529DDAED}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0239550509030306"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0239550509030306"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="949041738"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_003" ID="{9CCB2C2F-12FF-43A4-86B8-5B0D529DDAED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Wood_Hammer_004" ID="{7A65D8A0-61A7-4D1D-A631-F8928B10CFE7}" ShortID="547654425">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_004" ID="{446934E1-9888-409D-9812-DBA839051D39}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.038697652990305"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.038697652990305"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="224695136"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_004" ID="{446934E1-9888-409D-9812-DBA839051D39}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Wood_Hammer_005" ID="{D6492058-C18C-49FD-85BA-FA299A4DE63A}" ShortID="454368287">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wood_Hammer_005" ID="{E3DC9A63-1DB6-4A2E-8585-E2C7F7110A2F}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0161494063174171"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0161494063174171"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hammering\Wood_Hammer_005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="568051533"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wood_Hammer_005" ID="{E3DC9A63-1DB6-4A2E-8585-E2C7F7110A2F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="Hammer Silence" ID="{49469B5E-02A9-40C9-A959-98C49640F7CE}" ShortID="230465113">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{8969F529-7E4A-441F-9FA1-C205DB53BD07}" ShortID="393654333" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="2"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{8969F529-7E4A-441F-9FA1-C205DB53BD07}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Hammer Silence" ID="{49469B5E-02A9-40C9-A959-98C49640F7CE}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>

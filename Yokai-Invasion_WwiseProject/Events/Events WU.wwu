@@ -367,10 +367,13 @@
 				</Event>
 				<Event Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}">
 					<ChildrenList>
-						<Action Name="" ID="{408FA529-CD33-4465-8794-8C288C9445DF}" ShortID="393932740">
+						<Action Name="" ID="{1B6FE9AC-379B-46A8-A45E-B3C763DE23E4}" ShortID="230828248">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Hammer Rand" ID="{25B616C6-2096-4534-808B-B875F73997F3}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+									<ObjectRef Name="Hammer Seq" ID="{E4B70F81-C20B-4515-B0C4-BAB00D1E59B1}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -474,6 +477,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Musket Rand" ID="{3868A7E6-C115-4791-9F0F-B753AA3DE577}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Building_In_Progress" ID="{4B9E40CB-7F29-483D-B716-FBD7BDBD5F92}">
+					<ChildrenList>
+						<Action Name="" ID="{AABD47FD-44BC-471C-B56A-8A96C082187D}" ShortID="967159841">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hammer Seq" ID="{E4B70F81-C20B-4515-B0C4-BAB00D1E59B1}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

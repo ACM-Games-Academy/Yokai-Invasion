@@ -10,6 +10,7 @@
 						<ObjectRef Name="Stop_Night_Music" ID="{94F31A58-3CF2-4392-A2D0-3FA7E32C65FA}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience_Day" ID="{DED17033-AE09-47DD-B225-0BC3CB7C284B}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Building_In_Progress" ID="{4B9E40CB-7F29-483D-B716-FBD7BDBD5F92}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Dusk_Shamisens" ID="{B52F94A8-D0C3-48E3-A4F7-DFA161A6AF8E}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Player" ID="{949DE1B1-C627-4932-878C-20F1C7ABE040}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience_Night" ID="{D06068C3-9784-4964-992F-F501F30DDE94}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>

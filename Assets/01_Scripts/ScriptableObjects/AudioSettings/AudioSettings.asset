@@ -51,6 +51,9 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: f69fe72201fa52e4cbb8ef94bf331632, type: 2}
   - idInternal: 0
     valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d9256d121a8a0fa43a92c56fd45a5157, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 14e53eb22c104b64c87f7e7983616b72, type: 2}
   rtpcs:
   - idInternal: 0

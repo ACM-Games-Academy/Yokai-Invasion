@@ -79,7 +79,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Soundbanks WU
     guid: a0fb6e52ecfbfd4c92194a069ea6d1ec
     GuidInternal: 
-    m_lastTime: -8584376159290595697
+    m_lastTime: -8584370962175606957
     List:
     - name: Main
       guid: b24e3c779abc2e47a65279c9f8bded39
@@ -120,7 +120,7 @@ MonoBehaviour:
     ParentPath: Events\Events WU
     guid: e482a5e4a562894bb636af9304270075
     GuidInternal: 
-    m_lastTime: -8584376087401662396
+    m_lastTime: -8584370967240086013
     List:
     - name: Play_Ambience_Day
       guid: 3370d1de09aedd47b2250bc3cb7c284b
@@ -273,8 +273,25 @@ MonoBehaviour:
         guid: 24abfc6f647be043a75f495695ac4ab3
       Path: Events\Events WU\Play_Building_Complete
       maxAttenuation: 100
-      maxDuration: 3.0094554
-      minDuration: 1.8070703
+      maxDuration: 1.7335836
+      minDuration: 1.3676314
+    - name: Play_Building_In_Progress
+      guid: cb409e4b297f3d48b716fbd7bdbd5f92
+      id: 2224434550
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Building_In_Progress
+        ObjectType: 3
+        guid: cb409e4b297f3d48b716fbd7bdbd5f92
+      Path: Events\Events WU\Play_Building_In_Progress
+      maxAttenuation: 50
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Damage_Ashigaru
       guid: 21c06ca37abd9949a4df24e637311d12
       id: 3828475318

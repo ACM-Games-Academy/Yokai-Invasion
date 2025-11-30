@@ -75,7 +75,6 @@ public abstract class Building : MonoBehaviour, Damageable
 
     private void Constructing()
     {
-        
         var boxCollider = this.GetComponent<BoxCollider>();
         boxCollider.enabled = true;
         fullSize = boxCollider.size;
@@ -88,6 +87,9 @@ public abstract class Building : MonoBehaviour, Damageable
 
     private IEnumerator BeingConstructed()
     {
+        //  [12] Play_Building_In_Progress - Plays hammer sounds on loop
+        audioSettings.Events[12].Post(gameObject);
+
         float counter = 0;
         while (counter < settings.BuildingOptions[index].BuildTime)
         {
@@ -99,7 +101,8 @@ public abstract class Building : MonoBehaviour, Damageable
             yield return null;
         }
 
-        
+        //  [13] Play_Building_Complete - Plays building placement sounds and stops hammer sounds
+        audioSettings.Events[13].Post(gameObject);
     }
 
     private void Functioning()

@@ -104,6 +104,9 @@
 					</CurveUsageInfoList>
 				</Attenuation>
 				<Attenuation Name="Buildings Default Attenuation" ID="{984C165D-3F35-4BC1-ABAB-73134724A48D}" ShortID="662026034">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="50"/>
+					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -114,11 +117,11 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>0</YPos>
+											<YPos>-2.47176</YPos>
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>50</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -144,11 +147,11 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>0</YPos>
+											<YPos>22</YPos>
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>50</XPos>
 											<YPos>75</YPos>
 											<Flags>37</Flags>
 										</Point>
