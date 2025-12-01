@@ -10,9 +10,6 @@ public class PauseMenu : MonoBehaviour
 
     private AudioSettings audioSettings;
 
-    // Drag your camera/player controller script here in the inspector
-    public MonoBehaviour CameraController;
-
     public enum PauseState
     {
         UNPAUSED,
@@ -44,9 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         Debug.Log("Game Paused");
-        PauseMenuCanvas.SetActive(true);
         Time.timeScale = 0f;
-        CameraController.enabled = false;
 
         //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
         audioSettings.Events[14].Post(PauseMenuCanvas);
@@ -57,9 +52,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         Debug.Log("Game Resumed");
-        PauseMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
-        CameraController.enabled = true;
         
         //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
         audioSettings.Events[14].Post(PauseMenuCanvas);

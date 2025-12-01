@@ -14,6 +14,7 @@ public class YokaiManager : MonoBehaviour
         hordes = Overseer.Instance.Settings.HordeSettings;
 
         Overseer.Instance.GetManager<NightCycle>().NightStarted += BeginNight;
+        Overseer.Instance.GetManager<NightCycle>().NightEnded += EndNight;
 
         var yokaiSpawnerType = typeof(YokaiSpawner);
 
@@ -26,5 +27,9 @@ public class YokaiManager : MonoBehaviour
     private void BeginNight()
     {
         yokaiSpawner.SummonHorde(hordes[0]);
+    }
+    private void EndNight()
+    {
+        yokaiSpawner.DespawnHorde();
     }
 }

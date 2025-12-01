@@ -9,7 +9,8 @@ public class UnitSpawner : MonoBehaviour
     private int goldCost;
     private int foodCost;
 
-    private Vector3 templeSpawn = new Vector3 (1.19f,0.5f,-2.92f); //i just set manually based on an approximate point in front of temple
+    private GameObject unitSpawnEmpty;
+    private Vector3 templeSpawn;
 
     public Dictionary<string, int> IndexDictionary;
     public List<GameObject> SpawnedUnits = new List<GameObject>();
@@ -17,6 +18,9 @@ public class UnitSpawner : MonoBehaviour
     private void Awake()
     {
         settings = Overseer.Instance.Settings.UnitSettings;
+
+        unitSpawnEmpty = GameObject.Find("Unit Spawn");
+        templeSpawn = unitSpawnEmpty.transform.position;
 
         IndexDictionary = new Dictionary<string, int>();
         var prefabs = settings.UnitOptions;

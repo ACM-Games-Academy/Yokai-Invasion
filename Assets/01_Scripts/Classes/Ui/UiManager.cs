@@ -30,16 +30,21 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI villagerGoldCost;
     public TextMeshProUGUI villagerFoodCost;
 
-    [Header("Player Health")]
-    public TextMeshProUGUI healthCounter;
+    [Header("Health Counters")]
+    public TextMeshProUGUI playerHealthCounter;
+    public TextMeshProUGUI templeHealthCounter;
 
     private int wood;
     private int food;
     private int gold;
 
     private GameObject hero;
-    private GameObject health;
+    private GameObject playerHealth;
     private HeroAttack heroAttack;
+
+    private GameObject temple;
+    private GameObject templeHealth;
+    private TempleHealth templeHealthScript;
 
     private void Start()
     {
@@ -48,10 +53,18 @@ public class UiManager : MonoBehaviour
 
         hero = GameObject.Find("TempHero");
         heroAttack = hero.GetComponent<HeroAttack>();
-        heroAttack.HeroTookDamage += DisplayHealthCount;
-        healthCounter.text = heroAttack.CurrentHealth.ToString();
-        health = GameObject.Find("Health");
-        health.SetActive(false);
+        heroAttack.HeroTookDamage += DisplayPlayerHealthCount;
+        playerHealthCounter.text = heroAttack.CurrentHealth.ToString();
+        playerHealth = GameObject.Find("Player Health");
+        playerHealth.SetActive(false);
+
+        temple = GameObject.Find("Temple");
+        templeHealthScript = temple.GetComponent<TempleHealth>();
+        templeHealthScript.TempleTookDamage += DisplayTempleHealthCount;
+        templeHealthCounter.text = templeHealthScript.CurrentHealth.ToString();
+        templeHealth = GameObject.Find("Temple Health");
+        templeHealth.SetActive(false);
+
 
         var resourceManager = Overseer.Instance.GetManager<ResourceManager>();
         resourceManager.UpdateWood += DisplayWoodCount;
@@ -78,11 +91,15 @@ public class UiManager : MonoBehaviour
         villagerFoodCost.text = $"{unitSettings.UnitOptions[1].FoodCost.ToString()} Food";
     }
 
-    private void DisplayHealthCount()
+    private void DisplayPlayerHealthCount()
     {
-        healthCounter.text = heroAttack.CurrentHealth.ToString();
+        playerHealthCounter.text = heroAttack.CurrentHealth.ToString();
     }
-    
+    private void DisplayTempleHealthCount()
+    {
+        templeHealthCounter.text = templeHealthScript.CurrentHealth.ToString();
+    }
+
     //Resource Counters UI ---------------------
 
     private void DisplayWoodCount()
@@ -106,21 +123,25 @@ public class UiManager : MonoBehaviour
     private void DisplayTimeDawn()
     {
         timeUI.text = "Dawn";
-        health.SetActive(false);
+        playerHealth.SetActive(false);
+        templeHealth.SetActive(false);
     }
     private void DisplayTimeDay()
     {
         timeUI.text = "Day";
-        health.SetActive(false);
+        playerHealth.SetActive(false);
+        templeHealth.SetActive(false);
     }
     private void DisplayTimeDusk()
     {
         timeUI.text = "Dusk";
-        health.SetActive(false);
+        playerHealth.SetActive(false);
+        templeHealth.SetActive(false);
     }
     private void DisplayTimeNight()
     {
         timeUI.text = "Night";
-        health.SetActive(true);
+        playerHealth.SetActive(true);
+        templeHealth.SetActive(true);
     }
 }
