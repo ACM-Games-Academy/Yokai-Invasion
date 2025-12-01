@@ -48,4 +48,22 @@ public class NPCAudio : MonoBehaviour
         //  [16] Play_Footstep_Yokai - Plays footsteps with higher and wider range random pitch
         audioSettings.Events[16].Post(gameObject);
     }
+
+    public void PlayFootstepPlayer()
+    {
+        //  [4] Play_Footstep_Player - Plays footsteps and armour noise, slighty louder than NPCs
+        audioSettings.Events[4].Post(gameObject);
+    }
+
+    public void PlayAttackPlayer()
+    {
+        //  [20] Play_Attack_Player - Plays whoosh, metal ring and armour noise, slightly louder than NPCs
+        audioSettings.Events[20].Post(gameObject);
+    }
+
+    public void PlayWeaponSpin()
+    {
+        //  [21] Play_Weapon_Spin - Plays spinning sound
+        audioSettings.Events[21].Post(gameObject);
+    }
 }

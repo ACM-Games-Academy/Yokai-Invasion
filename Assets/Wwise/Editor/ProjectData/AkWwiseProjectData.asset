@@ -79,7 +79,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Soundbanks WU
     guid: a0fb6e52ecfbfd4c92194a069ea6d1ec
     GuidInternal: 
-    m_lastTime: -8584370658549372910
+    m_lastTime: -8584370568451016625
     List:
     - name: Main
       guid: b24e3c779abc2e47a65279c9f8bded39
@@ -120,7 +120,7 @@ MonoBehaviour:
     ParentPath: Events\Events WU
     guid: e482a5e4a562894bb636af9304270075
     GuidInternal: 
-    m_lastTime: -8584370659027339983
+    m_lastTime: -8584370568451338445
     List:
     - name: Play_Ambience_Day
       guid: 3370d1de09aedd47b2250bc3cb7c284b
@@ -190,40 +190,6 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: 1.350926
       minDuration: 0.8908311
-    - name: Play_Attack_Hero_Heavy
-      guid: f5e0106807ff894ab81b9483156030db
-      id: 1063845529
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Events WU
-        ObjectType: 12
-        guid: e482a5e4a562894bb636af9304270075
-      - ElementName: Play_Attack_Hero_Heavy
-        ObjectType: 3
-        guid: f5e0106807ff894ab81b9483156030db
-      Path: Events\Events WU\Play_Attack_Hero_Heavy
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Attack_Hero_Light
-      guid: fa11e0810aaa754c8d104f77bafc38b4
-      id: 1679060216
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Events WU
-        ObjectType: 12
-        guid: e482a5e4a562894bb636af9304270075
-      - ElementName: Play_Attack_Hero_Light
-        ObjectType: 3
-        guid: fa11e0810aaa754c8d104f77bafc38b4
-      Path: Events\Events WU\Play_Attack_Hero_Light
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Play_Attack_Musket
       guid: 51b101d801f3c24dbac73925c72943bd
       id: 1182632674
@@ -241,6 +207,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Attack_Player
+      guid: fa11e0810aaa754c8d104f77bafc38b4
+      id: 3428542466
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Attack_Player
+        ObjectType: 3
+        guid: fa11e0810aaa754c8d104f77bafc38b4
+      Path: Events\Events WU\Play_Attack_Player
+      maxAttenuation: 100
+      maxDuration: 1.350926
+      minDuration: 0.8908311
     - name: Play_Attack_Yokai
       guid: ac880c8ac6dbdc4ba1469a597d30418d
       id: 261420542
@@ -273,7 +256,7 @@ MonoBehaviour:
         guid: 24abfc6f647be043a75f495695ac4ab3
       Path: Events\Events WU\Play_Building_Complete
       maxAttenuation: 100
-      maxDuration: 1.7335836
+      maxDuration: 1.6026723
       minDuration: 1.3676314
     - name: Play_Building_In_Progress
       guid: cb409e4b297f3d48b716fbd7bdbd5f92
@@ -426,8 +409,8 @@ MonoBehaviour:
         guid: f439f9b3788d1e4eae3958754647b0bd
       Path: Events\Events WU\Play_Footstep_Farmer
       maxAttenuation: 50
-      maxDuration: 0.9161479
-      minDuration: 0.24403158
+      maxDuration: 0.7772722
+      minDuration: 0.2526503
     - name: Play_Footstep_Player
       guid: b1e19d9427c63249878c20f1c7abe040
       id: 4134779396
@@ -442,7 +425,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: b1e19d9427c63249878c20f1c7abe040
       Path: Events\Events WU\Play_Footstep_Player
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 2.058693
       minDuration: 0.6899948
     - name: Play_Footstep_Yokai
@@ -460,8 +443,8 @@ MonoBehaviour:
         guid: e0726bb0bff4ee4fac88c941d1d47e21
       Path: Events\Events WU\Play_Footstep_Yokai
       maxAttenuation: 50
-      maxDuration: 0.9161479
-      minDuration: 0.24403158
+      maxDuration: 0.7772722
+      minDuration: 0.2526503
     - name: Play_Night_Music
       guid: 5d754fb25885604abd90614f928be0d4
       id: 3279835868
@@ -513,6 +496,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.6661674
       minDuration: 0.7606669
+    - name: Play_Weapon_Spin
+      guid: f5e0106807ff894ab81b9483156030db
+      id: 3787597485
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Weapon_Spin
+        ObjectType: 3
+        guid: f5e0106807ff894ab81b9483156030db
+      Path: Events\Events WU\Play_Weapon_Spin
+      maxAttenuation: 100
+      maxDuration: 1.661882
+      minDuration: 1.1637415
     - name: Stop_Night_Music
       guid: 581af394f23c9243a2d03fa7e32c65fa
       id: 1932246634

@@ -40,9 +40,6 @@ public class YokaiGrunt : MonoBehaviour, Yokai
 
     public void TakeDamage(int damageAmount)
     {
-        //  [11] Play_Damage_Yokai - Plays damage sound without armour scrape
-        audioSettings.Events[11].Post(gameObject);
-
         //Debug.Log($"{yokaiSettings.YokaiName} took {damageAmount} damage.");
         currentHealth -= damageAmount;
         animator.SetTrigger("Hit");
@@ -53,6 +50,9 @@ public class YokaiGrunt : MonoBehaviour, Yokai
         }
         else
         {
+            //  [11] Play_Damage_Yokai - Plays damage sound without armour scrape
+            audioSettings.Events[11].Post(gameObject);
+
             state = Yokai.States.Fleeing;
         }
     }

@@ -22,11 +22,11 @@
 						<ObjectRef Name="Play_Damage_Ashigaru" ID="{A36CC021-BD7A-4999-A4DF-24E637311D12}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Attack_Ashigaru_Light" ID="{2B0A9010-F32E-49FA-935D-BE399FF83282}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Night_Music" ID="{B24F755D-8558-4A60-BD90-614F928BE0D4}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Attack_Hero_Heavy" ID="{6810E0F5-FF07-4A89-B81B-9483156030DB}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Weapon_Spin" ID="{6810E0F5-FF07-4A89-B81B-9483156030DB}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Attack_Yokai" ID="{8A0C88AC-DBC6-4BDC-A146-9A597D30418D}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Damage_Yokai" ID="{E98BD67E-2967-4C2F-8D96-6DE808A386BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Attack_Ashigaru_Heavy" ID="{3EC06F74-FB8D-4C68-9AC5-4E1F27530138}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Attack_Hero_Light" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Attack_Player" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Farmer" ID="{B3F939F4-8D78-4E1E-AE39-58754647B0BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Yokai" ID="{B06B72E0-F4BF-4FEE-AC88-C941D1D47E21}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

@@ -469,8 +469,42 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Attack_Hero_Light" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}"/>
-				<Event Name="Play_Attack_Hero_Heavy" ID="{6810E0F5-FF07-4A89-B81B-9483156030DB}"/>
+				<Event Name="Play_Attack_Player" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}">
+					<ChildrenList>
+						<Action Name="" ID="{197B1B35-80D6-46AD-A945-1151A08FB4BC}" ShortID="345142237">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whoosh Heavy Rand" ID="{E193BB61-FBD6-48B4-848A-B353196A5E45}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5135BF4C-5546-428B-8189-913C7FEC5D84}" ShortID="901029229">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Metal Ring Rand" ID="{B2C12C71-94DA-4723-A103-AE14A01E8AE9}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C01ABD75-D193-4AB9-AE51-B33CCF28DEE2}" ShortID="38445944">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Attack Armour Rand" ID="{856A0DAA-D906-428D-B7E8-AD6D528E3E8E}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Weapon_Spin" ID="{6810E0F5-FF07-4A89-B81B-9483156030DB}">
+					<ChildrenList>
+						<Action Name="" ID="{ECFC7C9E-A3F9-4960-80F6-FDE1DFB8803C}" ShortID="443847954">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Weapon Spin Rand" ID="{9FCF36E3-A001-4F20-A961-F7F6400CA44F}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Play_Attack_Musket" ID="{D801B151-F301-4DC2-BAC7-3925C72943BD}">
 					<ChildrenList>
 						<Action Name="" ID="{97C30EFD-2586-4125-BCF8-D90B1019CD5B}" ShortID="268092166">
