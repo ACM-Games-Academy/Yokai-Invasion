@@ -17,6 +17,13 @@
 						<State Name="Inactive" ID="{B1F4AEE9-57F2-48FE-B214-4D0682436851}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Paused" ID="{0A95FBB2-DCF4-43E3-A6E8-D39FAD831252}">
+					<ChildrenList>
+						<State Name="None" ID="{E884BC1E-560E-4065-B049-6F3BA0756A44}"/>
+						<State Name="Paused" ID="{B75D138C-5F0E-440C-9117-C1395F9E6693}"/>
+						<State Name="Unpaused" ID="{66F9A99C-B22C-4788-B7F7-A07535237E00}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

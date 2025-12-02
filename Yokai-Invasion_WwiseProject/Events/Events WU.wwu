@@ -301,7 +301,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Night Music Playlist" ID="{3E8EC511-4D47-43F8-A52C-AF72395792E6}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
+									<ObjectRef Name="Night Music Playlist" ID="{F8909895-0762-463B-8DB5-77E1E7A3C1DC}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -316,7 +316,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Night Music Playlist" ID="{3E8EC511-4D47-43F8-A52C-AF72395792E6}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
+									<ObjectRef Name="Night Music Playlist" ID="{F8909895-0762-463B-8DB5-77E1E7A3C1DC}" WorkUnitID="{F31A9D90-1C92-4C4D-A4E1-E580DBD5B409}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
