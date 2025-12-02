@@ -1,19 +1,20 @@
 using UnityEngine;
 
-public class Ashigaru : SelectableUnit, AutoAttacker
+public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 {
     private Collider[] targetsInRange;
     private float lastAttackTime;
 
-    private float attackRange = 5f;
-    private float attackDelay = 0.5f;
-    private int attackPower = 2;
+    private int currentHealth;
 
     public Animator anim;
 
     private void Start()
     {
         base.Start();
+
+        currentHealth = settings.TotalHealth;
+
         var nightCycle = Overseer.Instance.GetManager<NightCycle>();
 
         nightCycle.NightStarted += SetToNight;
@@ -35,9 +36,9 @@ public class Ashigaru : SelectableUnit, AutoAttacker
 
     private void Update()
     {
-        targetsInRange = Boids.GetNearby(transform.position, attackRange, ~LayerMask.GetMask("Floor")).ToArray();
+        targetsInRange = Boids.GetNearby(transform.position, settings.AttackRange, ~LayerMask.GetMask("Floor")).ToArray();
 
-        if (targetsInRange.Length > 0 && Time.time >= lastAttackTime + attackDelay)
+        if (targetsInRange.Length > 0 && Time.time >= lastAttackTime + settings.AttackDelay)
         {
 
             AutoAttack();
@@ -57,9 +58,25 @@ public class Ashigaru : SelectableUnit, AutoAttacker
 
             if (target == null) continue;
 
-            target.TakeDamage(attackPower);
+            target.TakeDamage(settings.AttackPower);
             //Debug.Log("An Ashigaru attacked a Yokai! They lost " + attackPower + "health!");
         }
         lastAttackTime = Time.time;
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount;
+        //Debug.Log("Ashigaru Health: " + currentHealth);
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        currentHealth = settings.TotalHealth;
+        Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
     }
 }

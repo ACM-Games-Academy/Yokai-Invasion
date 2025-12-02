@@ -18,6 +18,11 @@ public class Unit : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         unitCollider = GetComponent<CapsuleCollider>();
     }
+    private void OnEnable() //this is so that they dont stack on each other at the spawn point
+    {
+        var temporaryLocation = new Vector3 (transform.position.x + Random.Range(-7,7), 0, transform.position.z + Random.Range(1,7));
+        SetDestination(temporaryLocation);
+    }
     public void SetDestination(Vector3 destination)
     {
         currentPath = AStar.Path(transform.position, destination);

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,8 +21,18 @@ public class HeroAttack : MonoBehaviour, Damageable
     {
         currentHealth = heroSettings.MaxHealth;
 
+        StartCoroutine(GiveStartingResources());
+
         var nightCycle = Overseer.Instance.GetManager<NightCycle>();
         nightCycle.DawnStarted += ResetHealth;
+    }
+
+    private IEnumerator GiveStartingResources()
+    {
+        yield return new WaitForSeconds(1);
+        Overseer.Instance.GetManager<ResourceManager>().IncreaseGold(heroSettings.StartingGold);
+        Overseer.Instance.GetManager<ResourceManager>().IncreaseWood(heroSettings.StartingWood);
+        Overseer.Instance.GetManager<ResourceManager>().IncreaseFood(heroSettings.StartingFood);
     }
 
     private void Update()
@@ -59,6 +70,7 @@ public class HeroAttack : MonoBehaviour, Damageable
         if (currentHealth <= 0)
         {
             animator.SetBool("Dead", true);
+            currentHealth = 0;
         }
     }
 

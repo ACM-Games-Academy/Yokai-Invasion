@@ -18,6 +18,8 @@ public class OverseerSettings : ScriptableObject
     private UnitSettings unitSettings;
     [SerializeField]
     private AudioSettings audioSettings;
+    [SerializeField]
+    private TempleSettings templeSettings;
 
     [Header("Prefabs")]
     [SerializeField]
@@ -34,4 +36,5 @@ public class OverseerSettings : ScriptableObject
     public UnitSettings UnitSettings => unitSettings;
     public GameObject UiCanvas => uiCanvas;
     public AudioSettings AudioSettings => audioSettings;
+    public TempleSettings TempleSettings => templeSettings;
 }

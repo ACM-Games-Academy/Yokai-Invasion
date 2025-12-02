@@ -70,7 +70,6 @@ public class YokaiGrunt : MonoBehaviour, Yokai
             if(target == targetCollider.gameObject.GetComponent<Yokai>()) { return; }
 
             target.TakeDamage(yokaiSettings.AttackPower);
-            //Debug.Log("An Ashigaru attacked a Yokai! They lost " + attackPower + "health!");
         }
         lastAttackTime = Time.time;
     }

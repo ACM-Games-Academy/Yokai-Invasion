@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class YokaiSpawner : MonoBehaviour
 {
@@ -119,5 +120,13 @@ public class YokaiSpawner : MonoBehaviour
             }
         }
         return points;
+    }
+
+    public void DespawnHorde()
+    {
+        foreach (GameObject yokai in spawnedYokai)
+        {
+            Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(yokai);
+        }
     }
 }

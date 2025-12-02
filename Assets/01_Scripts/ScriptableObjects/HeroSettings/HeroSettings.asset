@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: HeroSettings
   m_EditorClassIdentifier: Assembly-CSharp::HeroSettings
   movementSpeed: 15
-  maxHealth: 0
+  maxHealth: 100
   attackPower: 1
   attackDelay: 2
   attackRange: 5
+  startingGold: 10
+  startingWood: 0
+  startingFood: 0
