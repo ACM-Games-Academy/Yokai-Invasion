@@ -70,8 +70,9 @@ public class YokaiGrunt : MonoBehaviour, Yokai
             if(target == targetCollider.gameObject.GetComponent<Yokai>()) { return; }
 
             target.TakeDamage(yokaiSettings.AttackPower);
+            lastAttackTime = Time.time;
+            break;
         }
-        lastAttackTime = Time.time;
     }
 
     public void DetermineTarget()

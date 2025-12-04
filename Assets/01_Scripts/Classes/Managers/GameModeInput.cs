@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Windows;
 
 public class GameModeInput : MonoBehaviour
 {
@@ -39,7 +40,20 @@ public class GameModeInput : MonoBehaviour
         if (!input.started) return;
 
         pauseMenu.SetActive(!pauseMenu.activeSelf);
-        pauseMenuScript.Pause();
+        if (!pauseMenu.activeSelf)
+        {
+            pauseMenuScript.Resume();
+        }
+        else
+        {
+            pauseMenuScript.Pause();
+        }
+    }
+
+    public void ResumeButton()
+    {
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
+        pauseMenuScript.Resume();   
     }
 
     private void GameOver()

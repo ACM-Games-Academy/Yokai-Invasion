@@ -12,13 +12,11 @@ public class HeroMovement : MonoBehaviour
     [SerializeField] private float smoothTime;
 
     private GameObject hero;
-    private CallDeath callDeath;
-    private bool gameOver;
+    private static bool gameOver;
     private void Start()
     {
         hero = GameObject.Find("Coloured Hero");
-        callDeath = hero.GetComponent<CallDeath>();
-        callDeath.HeroDead += GameOver;
+        gameOver = false;
     }
 
     private void Update()
@@ -47,7 +45,7 @@ public class HeroMovement : MonoBehaviour
         movementInput = Quaternion.Euler(0, 0, rotationDegree) * input.ReadValue<Vector2>();
     }
 
-    private void GameOver()
+    public static void GameOver()
     {
         gameOver = true;
     }

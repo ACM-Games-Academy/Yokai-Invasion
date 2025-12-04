@@ -22,8 +22,11 @@ public class NightCycle : MonoBehaviour
         Dusk,
         Night
     }
-    public TimeOfDay CurrentTimeOfDay = TimeOfDay.Day;
+    public TimeOfDay CurrentTimeOfDay;
+    private void Awake()
+    {
 
+    }
     void Start()
     {
         settings = Overseer.Instance.Settings.NightCycleSettings;

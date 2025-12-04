@@ -5,6 +5,10 @@ using UnityEngine;
 public class CallDeath : MonoBehaviour
 {
     public Action HeroDead;
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
 
     public void Die()
     {
