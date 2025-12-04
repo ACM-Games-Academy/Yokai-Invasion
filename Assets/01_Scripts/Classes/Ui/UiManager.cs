@@ -89,6 +89,8 @@ public class UiManager : MonoBehaviour
         soldierFoodCost.text = $"{unitSettings.UnitOptions[0].FoodCost.ToString()} Food";
         villagerGoldCost.text = $"{unitSettings.UnitOptions[1].GoldCost.ToString()} Gold";
         villagerFoodCost.text = $"{unitSettings.UnitOptions[1].FoodCost.ToString()} Food";
+
+        DisplayTimeDawn();
     }
 
     private void DisplayPlayerHealthCount()
@@ -143,5 +145,7 @@ public class UiManager : MonoBehaviour
         timeUI.text = "Night";
         playerHealth.SetActive(true);
         templeHealth.SetActive(true);
+        DisplayTempleHealthCount();
+        DisplayPlayerHealthCount();
     }
 }

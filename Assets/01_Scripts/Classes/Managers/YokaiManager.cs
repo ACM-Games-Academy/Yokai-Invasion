@@ -9,8 +9,11 @@ public class YokaiManager : MonoBehaviour
     private YokaiSpawner yokaiSpawner;
     private HordeSettings[] hordes;
 
+    private int nightCount;
+
     private void Start()
     {
+        nightCount = 0;
         hordes = Overseer.Instance.Settings.HordeSettings;
 
         Overseer.Instance.GetManager<NightCycle>().NightStarted += BeginNight;
@@ -26,7 +29,12 @@ public class YokaiManager : MonoBehaviour
 
     private void BeginNight()
     {
-        yokaiSpawner.SummonHorde(hordes[0]);
+        if (nightCount >= hordes.Length)
+        {
+            nightCount = hordes.Length - 1;
+        }
+        yokaiSpawner.SummonHorde(hordes[nightCount]);
+        nightCount++;
     }
     private void EndNight()
     {

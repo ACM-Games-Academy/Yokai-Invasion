@@ -15,10 +15,10 @@ MonoBehaviour:
   yokaiName: Grunt
   moveSpeed: 10
   maxHealth: 30
-  attackPower: 1
+  attackPower: 5
   attackRange: 1
-  attackDelay: 0.5
-  dropAmount: 2
+  attackDelay: 0.25
+  dropAmount: 5
   allyReliance: 0.25
   waypointTolerance: 0.3
   detectionRadius: 5
