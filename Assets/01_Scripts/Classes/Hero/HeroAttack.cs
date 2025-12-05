@@ -13,12 +13,16 @@ public class HeroAttack : MonoBehaviour, Damageable
 
     public Animator animator;
 
+    private AudioSettings audioSettings;
+
     [SerializeField] private HeroSettings heroSettings;
 
     public int CurrentHealth => currentHealth;
 
     private void Start()
     {
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
+        
         currentHealth = heroSettings.MaxHealth;
 
         StartCoroutine(GiveStartingResources());
@@ -66,6 +70,9 @@ public class HeroAttack : MonoBehaviour, Damageable
         currentHealth -= damageAmount;
         HeroTookDamage?.Invoke();
         animator.SetTrigger("Hit");
+
+        //  [17] Play_Damage_Ashigaru - Plays base damage sound plus armour scraping
+        audioSettings.Events[17].Post(gameObject);
 
         if (currentHealth <= 0)
         {

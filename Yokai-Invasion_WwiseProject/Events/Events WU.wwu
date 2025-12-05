@@ -210,6 +210,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{B9BB7E40-E76D-44E5-BC3E-D684A19A00F4}" ShortID="485202758">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="30"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Armour Player Rand" ID="{FAC7D1FD-6FF9-4FCA-979D-61A225DFE2C0}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
@@ -253,6 +256,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{0A02B390-D600-4F71-B436-16B2C9ACD717}" ShortID="529147818">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="30"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Armour Walking Rand" ID="{46EEA7FA-D298-4A58-BD0A-5C3F2B11CE64}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
@@ -345,6 +351,28 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{6849F293-0E24-4038-891F-412CA9282D4F}" ShortID="901078586">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0953AEB5-B3BE-45AC-8AA5-39983A7CFF69}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.15"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="60"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage" ID="{98EF430D-EC1A-4E7B-943F-6DDC5BF8BFB3}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_Damage_Yokai" ID="{E98BD67E-2967-4C2F-8D96-6DE808A386BD}">
@@ -360,6 +388,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Damage Rip Rand" ID="{EC04FD18-A4A0-4F0A-9F9F-76D3649C23CC}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5E2071CE-948F-45C5-BEA7-82378998D2F5}" ShortID="212382344">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{415D55C2-5C50-41C9-BDB8-575F4BC4447F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.15"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="60"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage" ID="{8F5194BA-23D0-43DA-8447-BDC6D79C11CF}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -409,6 +459,20 @@
 				<Event Name="Play_Attack_Ashigaru_Light" ID="{2B0A9010-F32E-49FA-935D-BE399FF83282}">
 					<ChildrenList>
 						<Action Name="" ID="{2BC8520B-0630-448D-AECC-8A25A62DAC4D}" ShortID="718816020">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E829865B-2B74-4E42-8FBB-BB5179FE770E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Metal Ring Rand" ID="{EA800392-6327-4CEB-B050-03DF7F83B129}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
@@ -422,6 +486,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{08B7FE12-3DA9-4D24-82F7-9CD541E8B7FF}" ShortID="933795573">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="40"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Attack" ID="{3A58A776-62FF-4FB0-90A3-2611265A73DE}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_Attack_Yokai" ID="{8A0C88AC-DBC6-4BDC-A146-9A597D30418D}">
@@ -430,6 +504,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Whoosh Light Rand" ID="{B37B4570-FCD7-4D50-98FB-9FA88BB45B5C}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6ACA28E5-7837-432C-8888-02FDF4031B41}" ShortID="568436802">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C931A51F-E100-45B4-97C7-0978C8E55FE1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Attack" ID="{73B23A1A-BE52-4A6A-807D-EE5AA7676084}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -467,6 +563,28 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{8A00B924-159D-4A59-88A1-DF59E3B21B4D}" ShortID="623299152">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{962294AA-2D4A-49B7-BDC2-1E3BB80DB13B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Attack" ID="{3A58A776-62FF-4FB0-90A3-2611265A73DE}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_Attack_Player" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}">
@@ -489,6 +607,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Attack Armour Rand" ID="{856A0DAA-D906-428D-B7E8-AD6D528E3E8E}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DFFE004D-83FD-41B7-A183-4DB2EBA267CE}" ShortID="75873895">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{2513B5D5-6333-4689-A60E-C9785884672C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="60"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Attack" ID="{3A58A776-62FF-4FB0-90A3-2611265A73DE}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -618,6 +758,104 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Building Damage Rand" ID="{5318937D-4234-409A-8FCE-2ACC3A1BEF3F}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_Music" ID="{06CAB5B3-F905-4D40-BDA9-EC0825BF254D}">
+					<ChildrenList>
+						<Action Name="" ID="{36A45942-0DBB-4BBF-9710-1211D1596F03}" ShortID="349330999">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music Bus" ID="{CCE106FA-A355-4CD9-8C7A-F8E221BC7E05}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume_Music" ID="{0AD45CB9-4DD9-4AC8-B24D-0A19C074728C}">
+					<ChildrenList>
+						<Action Name="" ID="{D84E6C0A-DF58-426E-B774-2B44438AA33C}" ShortID="1054233253">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="MasterResume" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music Bus" ID="{CCE106FA-A355-4CD9-8C7A-F8E221BC7E05}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Select_Unit" ID="{C0659F92-11BA-471A-9B17-DC772254EBFA}">
+					<ChildrenList>
+						<Action Name="" ID="{22DD22DC-B79C-4A1A-9F0B-3D5E23F6B68C}" ShortID="256937018">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Selection" ID="{B5C3B407-90C5-4B63-898D-0D1E978FB31E}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Death_Yokai" ID="{1D0B8F16-4442-4048-AA86-6ECC65D75416}">
+					<ChildrenList>
+						<Action Name="" ID="{5EA2C128-3E9C-4397-8F65-AF63839DA4B2}" ShortID="571949175">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="75"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death" ID="{42182707-2676-472A-8ECA-F8119B5BCC49}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Death_Ashigaru" ID="{1D028656-C555-41E4-9D5A-B97B865CA71E}">
+					<ChildrenList>
+						<Action Name="" ID="{2DE9186F-33BB-4568-81F2-07C172B742BA}" ShortID="406342660">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="75"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death" ID="{8CC890A4-233C-435E-AB3B-51B1DC0385AC}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Command_Ashigaru" ID="{D92514D8-E31B-46B7-BBA9-3B8EBBAA6EBB}">
+					<ChildrenList>
+						<Action Name="" ID="{37ABDCB0-CC72-458B-9BD9-4F4AB69215E9}" ShortID="791181776">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3A0D10AE-4A54-45FC-AB8E-389D790E668E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Command" ID="{17E0C582-094B-4B1E-AF42-2EFC7B356543}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

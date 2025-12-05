@@ -51,8 +51,13 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
+											<XPos>23.81657</XPos>
+											<YPos>53</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
 											<XPos>50</XPos>
-											<YPos>78</YPos>
+											<YPos>64</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>
@@ -204,6 +209,9 @@
 					</CurveUsageInfoList>
 				</Attenuation>
 				<Attenuation Name="Player Default Attenuation" ID="{2BD3A3D9-F09E-4D02-95B6-73429E032234}" ShortID="156697607">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="75"/>
+					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -218,7 +226,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>75</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -248,7 +256,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>75</XPos>
 											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>

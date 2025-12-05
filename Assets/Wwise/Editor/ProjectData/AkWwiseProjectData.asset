@@ -113,7 +113,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Soundbanks WU
     guid: a0fb6e52ecfbfd4c92194a069ea6d1ec
     GuidInternal: 
-    m_lastTime: -8584370557325246200
+    m_lastTime: -8584366587872585047
     List:
     - name: Main
       guid: b24e3c779abc2e47a65279c9f8bded39
@@ -141,7 +141,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d2c284f299a8bc45b4d48c06c4379994
     GuidInternal: 
-    m_lastTime: -8584376159351039395
+    m_lastTime: -8584366638949906503
     List: []
   - PhysicalPath: Events\Events WU.wwu
     PathAndIcons:
@@ -154,8 +154,25 @@ MonoBehaviour:
     ParentPath: Events\Events WU
     guid: e482a5e4a562894bb636af9304270075
     GuidInternal: 
-    m_lastTime: -8584370064083328987
+    m_lastTime: -8584366588156300682
     List:
+    - name: Pause_Music
+      guid: b3b5ca0605f9404dbda9ec0825bf254d
+      id: 2735935537
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Pause_Music
+        ObjectType: 3
+        guid: b3b5ca0605f9404dbda9ec0825bf254d
+      Path: Events\Events WU\Pause_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Ambience_Day
       guid: 3370d1de09aedd47b2250bc3cb7c284b
       id: 4201350233
@@ -222,7 +239,7 @@ MonoBehaviour:
         guid: 10900a2b2ef3fa49935dbe399ff83282
       Path: Events\Events WU\Play_Attack_Ashigaru_Light
       maxAttenuation: 50
-      maxDuration: 1.350926
+      maxDuration: 1.4509261
       minDuration: 0.8908311
     - name: Play_Attack_Musket
       guid: 51b101d801f3c24dbac73925c72943bd
@@ -255,7 +272,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: fa11e0810aaa754c8d104f77bafc38b4
       Path: Events\Events WU\Play_Attack_Player
-      maxAttenuation: 100
+      maxAttenuation: 75
       maxDuration: 1.350926
       minDuration: 0.8908311
     - name: Play_Attack_Yokai
@@ -273,8 +290,8 @@ MonoBehaviour:
         guid: ac880c8ac6dbdc4ba1469a597d30418d
       Path: Events\Events WU\Play_Attack_Yokai
       maxAttenuation: 50
-      maxDuration: 0.32746282
-      minDuration: 0.25106576
+      maxDuration: 1.0454564
+      minDuration: 0.5053687
     - name: Play_Building_Complete
       guid: 24abfc6f647be043a75f495695ac4ab3
       id: 4001521644
@@ -343,6 +360,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Command_Ashigaru
+      guid: d81425d91be3b746bba93b8ebbaa6ebb
+      id: 2640662738
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Command_Ashigaru
+        ObjectType: 3
+        guid: d81425d91be3b746bba93b8ebbaa6ebb
+      Path: Events\Events WU\Play_Command_Ashigaru
+      maxAttenuation: 50
+      maxDuration: 2.2770977
+      minDuration: 0
     - name: Play_Damage_Ashigaru
       guid: 21c06ca37abd9949a4df24e637311d12
       id: 3828475318
@@ -358,8 +392,8 @@ MonoBehaviour:
         guid: 21c06ca37abd9949a4df24e637311d12
       Path: Events\Events WU\Play_Damage_Ashigaru
       maxAttenuation: 50
-      maxDuration: 0.631913
-      minDuration: 0.30429947
+      maxDuration: 0.84275913
+      minDuration: 0.31539527
     - name: Play_Damage_Building
       guid: 49719a167baf9440a6042dc3472bfe11
       id: 3362139180
@@ -392,8 +426,42 @@ MonoBehaviour:
         guid: 7ed68be967292f4c8d966de808a386bd
       Path: Events\Events WU\Play_Damage_Yokai
       maxAttenuation: 50
-      maxDuration: 0.52770054
+      maxDuration: 1.0785317
       minDuration: 0.2385941
+    - name: Play_Death_Ashigaru
+      guid: 5686021d55c5e4419d5ab97b865ca71e
+      id: 3888899281
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Death_Ashigaru
+        ObjectType: 3
+        guid: 5686021d55c5e4419d5ab97b865ca71e
+      Path: Events\Events WU\Play_Death_Ashigaru
+      maxAttenuation: 50
+      maxDuration: 1.7178341
+      minDuration: 0
+    - name: Play_Death_Yokai
+      guid: 168f0b1d42444840aa866ecc65d75416
+      id: 1760829336
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Death_Yokai
+        ObjectType: 3
+        guid: 168f0b1d42444840aa866ecc65d75416
+      Path: Events\Events WU\Play_Death_Yokai
+      maxAttenuation: 50
+      maxDuration: 1.7385526
+      minDuration: 0
     - name: Play_Dusk_Shamisens
       guid: a8942fb5c3d0e348a4f7dfa161a6af8e
       id: 2141916437
@@ -459,7 +527,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: b1e19d9427c63249878c20f1c7abe040
       Path: Events\Events WU\Play_Footstep_Player
-      maxAttenuation: 100
+      maxAttenuation: 75
       maxDuration: 2.058693
       minDuration: 0.6899948
     - name: Play_Footstep_Yokai
@@ -530,6 +598,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.6661674
       minDuration: 0.7606669
+    - name: Play_Select_Unit
+      guid: 929f65c0ba111a479b17dc772254ebfa
+      id: 304693731
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Play_Select_Unit
+        ObjectType: 3
+        guid: 929f65c0ba111a479b17dc772254ebfa
+      Path: Events\Events WU\Play_Select_Unit
+      maxAttenuation: 50
+      maxDuration: 0.7358694
+      minDuration: 0.35732427
     - name: Play_Weapon_Spin
       guid: f5e0106807ff894ab81b9483156030db
       id: 3787597485
@@ -544,9 +629,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: f5e0106807ff894ab81b9483156030db
       Path: Events\Events WU\Play_Weapon_Spin
-      maxAttenuation: 100
-      maxDuration: 1.661882
+      maxAttenuation: 75
+      maxDuration: 1.5541675
       minDuration: 1.1637415
+    - name: Resume_Music
+      guid: b95cd40ad94dc84ab24d0a19c074728c
+      id: 2940177080
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Events WU
+        ObjectType: 12
+        guid: e482a5e4a562894bb636af9304270075
+      - ElementName: Resume_Music
+        ObjectType: 3
+        guid: b95cd40ad94dc84ab24d0a19c074728c
+      Path: Events\Events WU\Resume_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Night_Music
       guid: 581af394f23c9243a2d03fa7e32c65fa
       id: 1932246634

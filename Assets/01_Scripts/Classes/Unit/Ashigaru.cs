@@ -9,9 +9,13 @@ public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 
     public Animator anim;
 
+    private AudioSettings audioSettings;
+
     private void Start()
     {
         base.Start();
+
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
 
         currentHealth = settings.TotalHealth;
 
@@ -66,6 +70,9 @@ public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 
     public void TakeDamage(int damageAmount)
     {
+        //  [17] Play_Damage_Ashigaru - Plays base damage sound plus armour scraping
+        audioSettings.Events[17].Post(gameObject);
+
         currentHealth -= damageAmount;
         //Debug.Log("Ashigaru Health: " + currentHealth);
         if (currentHealth <= 0)
@@ -76,6 +83,9 @@ public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 
     private void Die()
     {
+        //  [26] Play_Death_Ashigaru - Plays human death voice
+        audioSettings.Events[26].Post(gameObject);
+
         currentHealth = settings.TotalHealth;
         Overseer.Instance.GetManager<ObjectPooler>().ReturnPooledObject(gameObject);
     }

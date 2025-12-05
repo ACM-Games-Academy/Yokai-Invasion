@@ -19,12 +19,16 @@ public class AmbientAudio : MonoBehaviour
         nightCycleSettings = Overseer.Instance.Settings.NightCycleSettings;
 
         duskLengthSeconds = nightCycleSettings.DuskLengthSeconds;
+        audioSettings.States[0].SetValue();
+        audioSettings.States[2].SetValue();
 
-        Overseer.Instance.GetManager<NightCycle>().DawnStarted += PlayAmbienceDay;
-        Overseer.Instance.GetManager<NightCycle>().DawnStarted += StopNightMusic;
-        Overseer.Instance.GetManager<NightCycle>().DuskStarted += PlayNightTransition;
-        Overseer.Instance.GetManager<NightCycle>().NightStarted += PlayAmbienceNight;
-        Overseer.Instance.GetManager<NightCycle>().NightStarted += PlayNightMusic;
+        var nightCycle = Overseer.Instance.GetManager<NightCycle>();
+
+        nightCycle.DawnStarted += PlayAmbienceDay;
+        nightCycle.DawnStarted += StopNightMusic;
+        nightCycle.DuskStarted += PlayNightTransition;
+        nightCycle.NightStarted += PlayAmbienceNight;
+        nightCycle.NightStarted += PlayNightMusic;
 
 
         //  Initial DawnStarted action is called before this Start()

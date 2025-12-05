@@ -139,6 +139,7 @@ public class SelectionInput : MonoBehaviour
 
         if (!isModifying)
         {
+            //Debug.Log("!isModifying - Selection cleared");
             Overseer.Instance.GetManager<SelectionManager>().ClearSelection();
         }
 

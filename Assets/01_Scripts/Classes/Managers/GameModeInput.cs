@@ -59,16 +59,25 @@ public class GameModeInput : MonoBehaviour
     private void GameOver()
     {
         gameOverMenu.SetActive(true);
+
+        //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
+        audioSettings.Events[14].Post(gameOverMenu);
     }
 
     public void RestartScene()
     {
+        //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
+        audioSettings.Events[14].Post(gameOverMenu);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void TutorialScreen()
     {
         tutorialScreen.SetActive(!tutorialScreen.activeSelf);
+
+        //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
+        audioSettings.Events[14].Post(tutorialScreen);
     }
 
     public void QuitGame()

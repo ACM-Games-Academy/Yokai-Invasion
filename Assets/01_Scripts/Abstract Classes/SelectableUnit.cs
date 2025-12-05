@@ -6,9 +6,13 @@ public abstract class SelectableUnit : Unit
     [SerializeField]
     private GameObject selectionIndicator;
 
+    private AudioSettings audioSettings;
+
     protected void Start()
     {
         Overseer.Instance.GetManager<SelectionManager>().AvailableUnits.Add(this);
+
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
     }
 
     private void OnDisable()
@@ -21,6 +25,9 @@ public abstract class SelectableUnit : Unit
     {
         // Add visual indication of selection
         selectionIndicator.SetActive(true);
+
+        //  [25]  Play_Select_Unit - Plays pencil scratching noise
+        audioSettings.Events[25].Post(gameObject);
     }
 
     public void OnDeselect()

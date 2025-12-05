@@ -45,6 +45,8 @@ public class PauseMenu : MonoBehaviour
 
         //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
         audioSettings.Events[14].Post(PauseMenuCanvas);
+        //  [22] Pause_Music - Fades out + pauses music
+        audioSettings.Events[22].Post(PauseMenuCanvas);
 
         CurrentPauseState = PauseState.PAUSED;
     }
@@ -56,6 +58,8 @@ public class PauseMenu : MonoBehaviour
         
         //  [14] Play_Scroll_Open - Plays scroll opening/closing sound
         audioSettings.Events[14].Post(PauseMenuCanvas);
+        //  [23] Resume_Music - Resumes + fades in music
+        audioSettings.Events[23].Post(PauseMenuCanvas);
 
         CurrentPauseState = PauseState.UNPAUSED;
     }

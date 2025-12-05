@@ -66,4 +66,10 @@ public class NPCAudio : MonoBehaviour
         //  [21] Play_Weapon_Spin - Plays spinning sound
         audioSettings.Events[21].Post(gameObject);
     }
+
+    public void PlayDeathAshigaru()
+    {
+        //  [26] Play_Death_Ashigaru - Plays human death voice
+        audioSettings.Events[26].Post(gameObject);
+    }
 }

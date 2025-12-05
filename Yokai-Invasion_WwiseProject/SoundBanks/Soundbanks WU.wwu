@@ -5,14 +5,18 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{773C4EB2-BC9A-472E-A652-79C9F8BDED39}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_Death_Yokai" ID="{1D0B8F16-4442-4048-AA86-6ECC65D75416}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Damage_Building" ID="{169A7149-AF7B-4094-A604-2DC3472BFE11}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Scroll_Open" ID="{5C38CEB6-0139-40D3-BE6F-18BAE3A5825F}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Death_Ashigaru" ID="{1D028656-C555-41E4-9D5A-B97B865CA71E}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Ashigaru" ID="{CF125F2A-3009-41E6-8781-B635B9428508}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Night_Transition" ID="{D5116DDB-B2A8-426D-838D-EE8EC03D3176}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Scroll Open Rand" ID="{3F8142EA-AF36-42C8-B2F1-282605E977CF}" WorkUnitID="{7BE9BA3E-2350-4C2A-8383-E894E2E564A6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Coins_Spend" ID="{CB2CC1DD-4A36-4346-B0AC-A46F8ACD5496}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Night_Music" ID="{94F31A58-3CF2-4392-A2D0-3FA7E32C65FA}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Building_Complete" ID="{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Command_Ashigaru" ID="{D92514D8-E31B-46B7-BBA9-3B8EBBAA6EBB}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Select_Unit" ID="{C0659F92-11BA-471A-9B17-DC772254EBFA}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience_Day" ID="{DED17033-AE09-47DD-B225-0BC3CB7C284B}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Coins_Collect" ID="{DB149425-DFA9-4825-9836-7BCF01C4B478}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Building_In_Progress" ID="{4B9E40CB-7F29-483D-B716-FBD7BDBD5F92}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
@@ -23,10 +27,12 @@
 						<ObjectRef Name="Play_Attack_Ashigaru_Light" ID="{2B0A9010-F32E-49FA-935D-BE399FF83282}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Night_Music" ID="{B24F755D-8558-4A60-BD90-614F928BE0D4}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Weapon_Spin" ID="{6810E0F5-FF07-4A89-B81B-9483156030DB}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Resume_Music" ID="{0AD45CB9-4DD9-4AC8-B24D-0A19C074728C}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Attack_Yokai" ID="{8A0C88AC-DBC6-4BDC-A146-9A597D30418D}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Damage_Yokai" ID="{E98BD67E-2967-4C2F-8D96-6DE808A386BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Attack_Ashigaru_Heavy" ID="{3EC06F74-FB8D-4C68-9AC5-4E1F27530138}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Attack_Player" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pause_Music" ID="{06CAB5B3-F905-4D40-BDA9-EC0825BF254D}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Farmer" ID="{B3F939F4-8D78-4E1E-AE39-58754647B0BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Yokai" ID="{B06B72E0-F4BF-4FEE-AC88-C941D1D47E21}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

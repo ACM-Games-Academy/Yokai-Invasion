@@ -101,7 +101,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
+							<ObjectRef Name="Music Bus" ID="{CCE106FA-A355-4CD9-8C7A-F8E221BC7E05}" WorkUnitID="{BC90DABB-E337-4CCA-8E36-D1039A599472}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>
@@ -139,6 +139,7 @@
 										</MusicPlaylistItem>
 										<MusicPlaylistItem Name="" ID="{F1F191F7-306B-4FE2-B550-10F06F32A836}" ShortID="770891710">
 											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="2"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>

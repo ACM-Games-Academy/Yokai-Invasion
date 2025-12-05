@@ -118,6 +118,9 @@ public abstract class Building : MonoBehaviour, Damageable
     }
     public void TakeDamage (int damage)
     {
+        //  [24] Play_Damage_Building - Low impact and scratch sound
+        audioSettings.Events[24].Post(gameObject);
+        
         currentHealth -= damage;
 
         if (currentHealth <= 0) { AlterState(BuildingState.destroyed); }

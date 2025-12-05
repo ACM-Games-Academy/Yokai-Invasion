@@ -49,6 +49,14 @@
 							<ObjectRef Name="Play_Damage_Yokai" ID="{E98BD67E-2967-4C2F-8D96-6DE808A386BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
 							<Position X="2" Y="2"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Pause_Music" ID="{06CAB5B3-F905-4D40-BDA9-EC0825BF254D}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Resume_Music" ID="{0AD45CB9-4DD9-4AC8-B24D-0A19C074728C}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}"/>
+							<Position X="3" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>

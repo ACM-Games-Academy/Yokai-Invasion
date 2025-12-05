@@ -90,6 +90,9 @@ public class YokaiGrunt : MonoBehaviour, Yokai
     {
         animator.SetBool("Dead", true);
 
+        //  [27] Play_Death_Yokai - Plays yokai death voiceline
+        audioSettings.Events[27].Post(gameObject);
+
         yield return new WaitForSeconds(3);
 
         // Debug.Log($"{yokaiSettings.YokaiName} has died.");
