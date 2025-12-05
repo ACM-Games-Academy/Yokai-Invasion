@@ -18,5 +18,5 @@ MonoBehaviour:
   attackDelay: 2
   attackRange: 5
   startingGold: 10
-  startingWood: 0
+  startingWood: 10
   startingFood: 0

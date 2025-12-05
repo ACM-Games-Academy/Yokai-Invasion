@@ -16,5 +16,5 @@ MonoBehaviour:
   - {fileID: 4999250472620126497, guid: f564cb61b4ba55f4ba4e56eebf777e61, type: 3}
   spawnAreaCenter: {x: -50, y: -50}
   spawnAreaSize: {x: 20, y: 20}
-  spawnHeight: 0.66
+  spawnHeight: 0
   poolSize: 100

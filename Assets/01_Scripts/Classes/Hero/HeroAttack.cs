@@ -69,6 +69,7 @@ public class HeroAttack : MonoBehaviour, Damageable
 
         if (currentHealth <= 0)
         {
+            HeroMovement.GameOver();
             animator.SetBool("Dead", true);
             currentHealth = 0;
         }

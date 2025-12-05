@@ -22,7 +22,7 @@ MonoBehaviour:
   unitOptions:
   - UnitPrefab: {fileID: 1172380167416355656, guid: b480107d09117e54aa69b358a14bfd65, type: 3}
     FoodCost: 10
-    GoldCost: 25
+    GoldCost: 20
   - UnitPrefab: {fileID: 7792955464928960019, guid: 6ede47862ad78e0479aa4fb7f2454836, type: 3}
     FoodCost: 0
     GoldCost: 10

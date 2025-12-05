@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OverseerSettings
   hordeSettings:
   - {fileID: 11400000, guid: adeef27d98273aa46a2841cde78e0ee9, type: 2}
+  - {fileID: 11400000, guid: abe60b1e9d6266647ae9201958615afb, type: 2}
+  - {fileID: 11400000, guid: 7e0e10aae3c74094dae0a68e6ce80856, type: 2}
+  - {fileID: 11400000, guid: ad797bc9d1f4b2b4a8e48e61e70f8ef7, type: 2}
   spawnerSettings: {fileID: 11400000, guid: 6897aece8da2f9043a0ad441f68085c5, type: 2}
   buildingSettings: {fileID: 11400000, guid: 9b443f5c191834d4fa459c885e51fd47, type: 2}
   nightCycleSettings: {fileID: 11400000, guid: 60c0acc4311791f40b8fce1e2dd5dd08, type: 2}
