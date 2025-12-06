@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HeroSettings
   movementSpeed: 15
   maxHealth: 100
-  attackPower: 1
+  attackPower: 15
   attackDelay: 2
   attackRange: 5
   startingGold: 10

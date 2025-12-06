@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow;
 
 public class YokaiPathing : MonoBehaviour
 {

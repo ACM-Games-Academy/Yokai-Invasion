@@ -18,8 +18,6 @@ public class GameModeInput : MonoBehaviour
 
     private void Start()
     {
-        audioSettings = Overseer.Instance.Settings.AudioSettings;
-
         tutorialScreen = GameObject.Find("Tutorial Screen");
         tutorialScreen.SetActive(false);
 
@@ -34,6 +32,8 @@ public class GameModeInput : MonoBehaviour
         hero = GameObject.Find("Coloured Hero");
         callDeath = hero.GetComponent<CallDeath>();
         callDeath.HeroDead += GameOver;
+
+        audioSettings = Overseer.Instance.Settings.AudioSettings;
     }
     public static void TogglePauseMenu(InputAction.CallbackContext input)
     {
