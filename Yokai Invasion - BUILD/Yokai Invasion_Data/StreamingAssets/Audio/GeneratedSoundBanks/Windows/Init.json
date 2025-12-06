@@ -1,0 +1,155 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{9419D1EF-2CA6-1D60-0FCB-11D39F098922}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{ACE9368C-6CA2-4BED-8EF3-34E0AA3C1252}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{024C2B2A-3E34-435E-A423-62E79CE6C954}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "3032847908",
+      "Name": "Main Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Main Bus",
+      "GUID": "{9110D777-0F05-4C48-83D0-1D29C8E8CE30}"
+     },
+     {
+      "Id": "3127962312",
+      "Name": "Music Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Bus",
+      "GUID": "{CCE106FA-A355-4CD9-8C7A-F8E221BC7E05}"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1042517418",
+      "Name": "WindIntensity",
+      "ObjectPath": "\\Game Parameters\\Game Parameters WU\\WindIntensity",
+      "GUID": "{084C365E-B927-45C8-99E8-1DABD867215C}"
+     },
+     {
+      "Id": "3766713767",
+      "Name": "ShamisenTriggerRate",
+      "ObjectPath": "\\Game Parameters\\Game Parameters WU\\ShamisenTriggerRate",
+      "GUID": "{9F76007F-13C8-4ADF-84AC-FC406E6BC668}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "319258907",
+      "Name": "Paused",
+      "ObjectPath": "\\States\\States WU\\Paused",
+      "GUID": "{0A95FBB2-DCF4-43E3-A6E8-D39FAD831252}",
+      "States": [
+       {
+        "Id": "319258907",
+        "Name": "Paused",
+        "ObjectPath": "\\States\\States WU\\Paused\\Paused",
+        "GUID": "{B75D138C-5F0E-440C-9117-C1395F9E6693}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\States WU\\Paused\\None",
+        "GUID": "{E884BC1E-560E-4065-B049-6F3BA0756A44}"
+       },
+       {
+        "Id": "1365518790",
+        "Name": "Unpaused",
+        "ObjectPath": "\\States\\States WU\\Paused\\Unpaused",
+        "GUID": "{66F9A99C-B22C-4788-B7F7-A07535237E00}"
+       }
+      ]
+     },
+     {
+      "Id": "1773585304",
+      "Name": "OnisActive",
+      "ObjectPath": "\\States\\States WU\\OnisActive",
+      "GUID": "{34336FB5-FE44-41D4-A22A-3BC525032A2D}",
+      "States": [
+       {
+        "Id": "58138747",
+        "Name": "Active",
+        "ObjectPath": "\\States\\States WU\\OnisActive\\Active",
+        "GUID": "{2A59CBE6-0421-48A7-B0C0-A6851E9704B2}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\States WU\\OnisActive\\None",
+        "GUID": "{0C8C4426-6115-41FD-A44A-5DF3F02E251D}"
+       },
+       {
+        "Id": "3163453698",
+        "Name": "Inactive",
+        "ObjectPath": "\\States\\States WU\\OnisActive\\Inactive",
+        "GUID": "{B1F4AEE9-57F2-48FE-B214-4D0682436851}"
+       }
+      ]
+     },
+     {
+      "Id": "2986509750",
+      "Name": "GruntsActive",
+      "ObjectPath": "\\States\\States WU\\GruntsActive",
+      "GUID": "{FF5398B3-3E1C-4892-8F1E-A53531A97AD5}",
+      "States": [
+       {
+        "Id": "58138747",
+        "Name": "Active",
+        "ObjectPath": "\\States\\States WU\\GruntsActive\\Active",
+        "GUID": "{B2965D6F-E584-4A4A-A4C1-2143D268D482}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\States WU\\GruntsActive\\None",
+        "GUID": "{E2A96201-FC52-417B-986F-B6A0E42D4B06}"
+       },
+       {
+        "Id": "3163453698",
+        "Name": "Inactive",
+        "ObjectPath": "\\States\\States WU\\GruntsActive\\Inactive",
+        "GUID": "{99465244-1B5E-4803-8EF8-5DABD0B53EB9}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7768EAC1-D61D-767F-6640-30266132855C}"
+ }
+}

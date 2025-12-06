@@ -1,0 +1,2860 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{773C4EB2-BC9A-472E-A652-79C9F8BDED39}",
+    "Language": "SFX",
+    "Hash": "{607DC311-31C3-C4BC-CC0C-93F7FCFF7D95}",
+    "ObjectPath": "\\SoundBanks\\Soundbanks WU\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "18513705",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_A#3.wav",
+      "CachePath": "E5/{E57CB8F3-6ED7-EBFA-F36A-956BDC037C39}.wem"
+     },
+     {
+      "Id": "21741682",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrows_Ambient.wav",
+      "CachePath": "A3/{A36C117C-6F74-10A4-620B-E1425D892BAA}.wem"
+     },
+     {
+      "Id": "25011560",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_A5.wav",
+      "CachePath": "38/{38D2CF86-806B-17D2-A5A4-4183FF0108FB}.wem"
+     },
+     {
+      "Id": "28426582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_001.wav",
+      "CachePath": "E2/{E296C752-1641-074C-74AA-B62C5C317401}.wem"
+     },
+     {
+      "Id": "28931695",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Heavy\\Armour_Noise_Heavy_003.wav",
+      "CachePath": "E3/{E37F1F19-A30E-80AB-3F07-01A83DFACF7D}.wem"
+     },
+     {
+      "Id": "33826757",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shake\\Coin_Shake_001.wav",
+      "CachePath": "CD/{CD65EFC5-162A-87F2-02CA-9B016B115DD1}.wem"
+     },
+     {
+      "Id": "46075314",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_06.wav",
+      "CachePath": "16/{16BBAFA3-86C2-D964-C5F8-70DDBB751310}.wem"
+     },
+     {
+      "Id": "58450686",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_26.wav",
+      "CachePath": "6E/{6E2B07F0-019C-9C6C-C3DF-AA2FED536CD0}.wem"
+     },
+     {
+      "Id": "70454340",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_002.wav",
+      "CachePath": "BE/{BE2E4A38-E826-81F3-0B5F-C39C8945CB66}.wem"
+     },
+     {
+      "Id": "71958840",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Damage_002.wav",
+      "CachePath": "34/{34734B43-EFA6-AC7A-E8D1-2CFE52D37146}.wem"
+     },
+     {
+      "Id": "72894977",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hammering\\Wood_Hammer_002.wav",
+      "CachePath": "B6/{B6004F31-1CDF-576C-ECFD-CAFC7D72EBBE}.wem"
+     },
+     {
+      "Id": "90433486",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_27.wav",
+      "CachePath": "47/{47F4B449-04D3-F984-F405-A965BBF40C91}.wem"
+     },
+     {
+      "Id": "93149621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Whoosh_Small_001.wav",
+      "CachePath": "97/{970DCF75-B965-45B1-D7F4-6DE7DEFEC4BB}.wem"
+     },
+     {
+      "Id": "94569659",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shake\\Coin_Shake_003.wav",
+      "CachePath": "BA/{BAC9D779-60E6-CDFF-4628-C37177525542}.wem"
+     },
+     {
+      "Id": "102109074",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Metal_Ringing_004.wav",
+      "CachePath": "C2/{C2639C90-EAB5-B6A1-EC32-5F53DDE9CC77}.wem"
+     },
+     {
+      "Id": "105081942",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Selection\\Pencil_Scratch_005.wav",
+      "CachePath": "FA/{FAE3D4EB-6E9C-6796-9468-FFC9CA947257}.wem"
+     },
+     {
+      "Id": "105276285",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_E5.wav",
+      "CachePath": "C4/{C450C8CE-F0B2-DE9E-02A0-E6CC5A9364B8}.wem"
+     },
+     {
+      "Id": "108537850",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_03.wav",
+      "CachePath": "33/{33F791E6-9D5D-4B1E-8C29-08C8BD51DDF2}.wem"
+     },
+     {
+      "Id": "114892316",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_A#5.wav",
+      "CachePath": "E9/{E9AB8B76-52AD-CDE3-1933-931A3051A620}.wem"
+     },
+     {
+      "Id": "115130143",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_F5.wav",
+      "CachePath": "2E/{2EBD7580-E845-C5A3-2EB1-9BE9AD25F799}.wem"
+     },
+     {
+      "Id": "119750623",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clink\\Coin_Clink_Single_001.wav",
+      "CachePath": "D8/{D8194BC7-10EA-4941-8C05-AD7BFE8A7188}.wem"
+     },
+     {
+      "Id": "120720138",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_007.wav",
+      "CachePath": "02/{02B85527-D04B-B652-AD4F-EC02253C2E00}.wem"
+     },
+     {
+      "Id": "142203575",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Heavy\\Armour_Noise_Heavy_006.wav",
+      "CachePath": "3D/{3DC8631D-6B1A-65F3-CB79-B11FA42EFEA2}.wem"
+     },
+     {
+      "Id": "147076825",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood_Impact_Roll_003.wav",
+      "CachePath": "F8/{F80CD793-A2C3-3D40-DF6D-89658D364D2D}.wem"
+     },
+     {
+      "Id": "148009785",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Rattle\\Coin_Rattle_002.wav",
+      "CachePath": "32/{3258A117-A50E-E8E0-B574-C8A2053A5808}.wem"
+     },
+     {
+      "Id": "156333174",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_13.wav",
+      "CachePath": "8A/{8A973879-227B-C517-4A64-981600237230}.wem"
+     },
+     {
+      "Id": "158533301",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Yokai_Death_002.wav",
+      "CachePath": "45/{4567D3CD-83E2-C6AB-2A8F-6E34E6D7CF11}.wem"
+     },
+     {
+      "Id": "161780449",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood Impacts\\Wood_Impact_007.wav",
+      "CachePath": "C1/{C1D768AB-C760-EC2C-0698-F5DFE4E0A739}.wem"
+     },
+     {
+      "Id": "163495867",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_B3.wav",
+      "CachePath": "32/{32A1A19B-3937-17A5-2781-93C3460BFD35}.wem"
+     },
+     {
+      "Id": "170766446",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 2-Shamisen.wav",
+      "CachePath": "BF/{BFC5059E-09B8-7F42-4665-5A2FC37BCE24}.wem"
+     },
+     {
+      "Id": "175990080",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Scroll Opening\\UI_Scroll_Open_6.wav",
+      "CachePath": "81/{8165BD02-3387-EB98-E255-684EFA82E45D}.wem"
+     },
+     {
+      "Id": "197151963",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Scroll Opening\\UI_Scroll_Open_4.wav",
+      "CachePath": "FC/{FCBC9B8A-8876-D452-EBE4-ABAB129477C0}.wem"
+     },
+     {
+      "Id": "201887452",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Metal_Ringing_002.wav",
+      "CachePath": "9E/{9E4E7C46-9BE9-E30E-C25D-6ED77FB58461}.wem"
+     },
+     {
+      "Id": "216731760",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Scrape_002.wav",
+      "CachePath": "64/{6407AAE1-8572-C45D-CB2E-1FE4E6DE9455}.wem"
+     },
+     {
+      "Id": "220596666",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Selection\\Pencil_Scratch_003.wav",
+      "CachePath": "03/{03F713AD-922A-4F6B-2013-57F0A99E247A}.wem"
+     },
+     {
+      "Id": "224695136",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hammering\\Wood_Hammer_004.wav",
+      "CachePath": "CF/{CFEAB3E7-39F9-4FE1-7510-37197B887C4E}.wem"
+     },
+     {
+      "Id": "224914393",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Main Loop-Shamisen.wav",
+      "CachePath": "27/{2712D3FD-50FD-9829-3E1B-F23558629C19}.wem"
+     },
+     {
+      "Id": "233902817",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_17.wav",
+      "CachePath": "D6/{D6E3A0C8-E498-8C83-F768-5501FCF1F680}.wem"
+     },
+     {
+      "Id": "238954535",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_B5.wav",
+      "CachePath": "0D/{0DEAEF36-3B79-A011-4D62-8E3404EEC2D0}.wem"
+     },
+     {
+      "Id": "241269386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Rattle\\Coin_Rattle_013.wav",
+      "CachePath": "B0/{B0523DEA-3957-53E6-09CE-8D7A28F25AEF}.wem"
+     },
+     {
+      "Id": "245751951",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 1-Shamisen.wav",
+      "CachePath": "4D/{4D82BE37-C31F-F95F-E3E7-F82374242670}.wem"
+     },
+     {
+      "Id": "249615492",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_05.wav",
+      "CachePath": "AD/{ADD1DC94-327B-2BF3-346B-01E37FD7431C}.wem"
+     },
+     {
+      "Id": "257352596",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shake\\Coin_Shake_004.wav",
+      "CachePath": "AA/{AA549A2C-73BB-BC17-A873-41EE5FA2B377}.wem"
+     },
+     {
+      "Id": "257774405",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_05.wav",
+      "CachePath": "D1/{D1062D32-0471-2CC8-1762-A4997610C4C3}.wem"
+     },
+     {
+      "Id": "266204014",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Whoosh_Small_002.wav",
+      "CachePath": "59/{593984DA-776A-ACC6-3100-FB7BBF0BB4CB}.wem"
+     },
+     {
+      "Id": "272752494",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Buiding_Complete.wav",
+      "CachePath": "EB/{EB790D29-3216-5179-2071-8461D624F07C}.wem"
+     },
+     {
+      "Id": "274549623",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_003.wav",
+      "CachePath": "C4/{C4E5D9E3-575D-F08C-B13D-0AB8A76DEF5D}.wem"
+     },
+     {
+      "Id": "276259303",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Scrape_006.wav",
+      "CachePath": "8F/{8FCC39AE-2AD5-4057-801C-AB76ADEBAE07}.wem"
+     },
+     {
+      "Id": "295973348",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Rattle\\Coin_Rattle_005.wav",
+      "CachePath": "50/{505F7E33-4E31-1C14-635F-A982E3C46DD3}.wem"
+     },
+     {
+      "Id": "296024601",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage_Rip_005.wav",
+      "CachePath": "20/{20D8E57A-1843-0DBE-55BF-774BDD3A8603}.wem"
+     },
+     {
+      "Id": "298315981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_009.wav",
+      "CachePath": "37/{372811E1-8622-5C2D-AF0E-7B0DDF54867F}.wem"
+     },
+     {
+      "Id": "302617513",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_09.wav",
+      "CachePath": "DD/{DDFE82F8-3DBF-5D13-638C-94325FD65981}.wem"
+     },
+     {
+      "Id": "303637022",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_005.wav",
+      "CachePath": "60/{601C9263-1826-2A09-A6F7-176AB55EDAC3}.wem"
+     },
+     {
+      "Id": "310438836",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Weapon_Spin_001.wav",
+      "CachePath": "BE/{BEA7987B-3354-FB2D-058F-9DE4D0125D4C}.wem"
+     },
+     {
+      "Id": "318366259",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Weapon_Spin_003.wav",
+      "CachePath": "66/{6694A96F-A5B9-8F42-467B-79CE1B79FE56}.wem"
+     },
+     {
+      "Id": "329826202",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hammering\\Wood_Hammer_001.wav",
+      "CachePath": "55/{554845CD-0805-F303-5D58-711A54B9602C}.wem"
+     },
+     {
+      "Id": "341441824",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Attack_004.wav",
+      "CachePath": "F1/{F12C1D90-973B-2E69-7D1D-D95AA1C80774}.wem"
+     },
+     {
+      "Id": "341895372",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage\\Building_Damage_3.wav",
+      "CachePath": "8C/{8C83899D-7C1C-7486-E101-B243D498DE0D}.wem"
+     },
+     {
+      "Id": "346509706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_D#4.wav",
+      "CachePath": "6F/{6F1A5BC5-577A-7D7F-44E3-738734503634}.wem"
+     },
+     {
+      "Id": "349815642",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_04.wav",
+      "CachePath": "DA/{DAA5AD09-FB9F-A984-EAF0-7898E259CE5D}.wem"
+     },
+     {
+      "Id": "349919027",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_D3.wav",
+      "CachePath": "9D/{9DF0181C-4840-3077-1295-E932C037D99B}.wem"
+     },
+     {
+      "Id": "356504585",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Yokai_Damage_002.wav",
+      "CachePath": "94/{94F8A0E0-C6BD-5B84-4FDD-D1EEC43027BD}.wem"
+     },
+     {
+      "Id": "358074599",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_F3.wav",
+      "CachePath": "A7/{A7D4C13D-00B9-6D53-46F4-3058A3E208B9}.wem"
+     },
+     {
+      "Id": "359573181",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Main Loop-Wood_Blocks.wav",
+      "CachePath": "FF/{FFC47C35-398F-742A-B4F2-1C4F26E3C1D1}.wem"
+     },
+     {
+      "Id": "369130456",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_B4.wav",
+      "CachePath": "21/{21916D7D-57C2-8A25-AC6C-B5B55249049C}.wem"
+     },
+     {
+      "Id": "369882539",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clink\\Coin_Clink_Bag_001.wav",
+      "CachePath": "E2/{E2938F1C-5496-100B-7388-867127E9E567}.wem"
+     },
+     {
+      "Id": "394195621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_02.wav",
+      "CachePath": "0D/{0D27E74A-0421-B3DE-92DF-C682312F70F3}.wem"
+     },
+     {
+      "Id": "403807277",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ending-Taiko.wav",
+      "CachePath": "D8/{D8CBDD5D-52CC-4323-BF74-63E0FF15C58E}.wem"
+     },
+     {
+      "Id": "405891057",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage_Rip_004.wav",
+      "CachePath": "5B/{5B41238A-AFCC-24B3-D36F-97CC2A8D64ED}.wem"
+     },
+     {
+      "Id": "407966340",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage_Crunch_002.wav",
+      "CachePath": "52/{527F2146-32AC-711B-CA22-73010E9168E7}.wem"
+     },
+     {
+      "Id": "423222207",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_G4.wav",
+      "CachePath": "4B/{4B47D19C-36F8-2DB9-8153-0D061E8F2DA0}.wem"
+     },
+     {
+      "Id": "444231083",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Attack_003.wav",
+      "CachePath": "E5/{E5CE1A2D-E59E-F265-3559-D370A2655A86}.wem"
+     },
+     {
+      "Id": "452513033",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Command_003.wav",
+      "CachePath": "64/{645D03F2-3040-291D-6A83-DA454130BBAE}.wem"
+     },
+     {
+      "Id": "452783299",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Whoosh_Big_003.wav",
+      "CachePath": "D8/{D85AAEA9-CF61-994A-1742-0C6578604885}.wem"
+     },
+     {
+      "Id": "454715900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Weapon_Spin_002.wav",
+      "CachePath": "F5/{F5629D8B-B375-2C75-1687-240D1F2EC827}.wem"
+     },
+     {
+      "Id": "455384343",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_D5.wav",
+      "CachePath": "ED/{ED529916-03D9-93E1-458D-BA51F16B44F0}.wem"
+     },
+     {
+      "Id": "456786201",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Rattle\\Coin_Rattle_011.wav",
+      "CachePath": "63/{631BFDFD-865B-EF86-DF82-E38AC7690A78}.wem"
+     },
+     {
+      "Id": "472131274",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_D4.wav",
+      "CachePath": "90/{90B15144-7CF4-1EC6-A1B7-6D9808EB7EC2}.wem"
+     },
+     {
+      "Id": "477481603",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_G#3.wav",
+      "CachePath": "0D/{0DF8AD52-AE2A-69D9-09E4-156870C76B4F}.wem"
+     },
+     {
+      "Id": "481160407",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Noise_Light_03.wav",
+      "CachePath": "6C/{6C974CC9-4E12-126D-3F43-5A4CE6FF280E}.wem"
+     },
+     {
+      "Id": "483590958",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Selection\\Pencil_Scratch_004.wav",
+      "CachePath": "57/{5781EF2A-F304-85A4-6C5D-CAA33123306E}.wem"
+     },
+     {
+      "Id": "485012738",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_006.wav",
+      "CachePath": "30/{30B82062-DD46-0386-A61F-07CB0ECE1188}.wem"
+     },
+     {
+      "Id": "487352375",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage\\Building_Damage_1.wav",
+      "CachePath": "12/{126760CF-D60B-760F-75DA-0DD934C88828}.wem"
+     },
+     {
+      "Id": "511170794",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Command_002.wav",
+      "CachePath": "02/{02A8B805-FA7E-D884-F827-134CBD391C70}.wem"
+     },
+     {
+      "Id": "512174272",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_E4.wav",
+      "CachePath": "4C/{4C289198-5C1C-B510-F282-FB4BD173E2D0}.wem"
+     },
+     {
+      "Id": "514311731",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_07.wav",
+      "CachePath": "09/{09D32BB1-0850-FBBC-55B1-4C85952DE726}.wem"
+     },
+     {
+      "Id": "519657130",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Outro-Taiko.wav",
+      "CachePath": "88/{88D22EA1-2468-809C-E734-94B223C38DBB}.wem"
+     },
+     {
+      "Id": "523647780",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Scroll Opening\\UI_Scroll_Open_6.wav",
+      "CachePath": "AE/{AEE426A8-2841-8BCA-AA5B-F903C1366F86}.wem"
+     },
+     {
+      "Id": "527524294",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 2-Taiko.wav",
+      "CachePath": "33/{33F88834-E4E7-119A-C768-F55C811333E8}.wem"
+     },
+     {
+      "Id": "528995466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_G3.wav",
+      "CachePath": "61/{610AAAEC-579E-9832-71C1-1328D3CCEC79}.wem"
+     },
+     {
+      "Id": "535040048",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wind_Low.wav",
+      "CachePath": "03/{0382F63B-96C8-3392-6807-522532A7CAD6}.wem"
+     },
+     {
+      "Id": "536726818",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wind_Trees.wav",
+      "CachePath": "A0/{A0A55F57-4B40-7159-4536-029FF2620D15}.wem"
+     },
+     {
+      "Id": "536874561",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_07.wav",
+      "CachePath": "B1/{B18A913A-740C-068B-0FAD-0E2F412681D4}.wem"
+     },
+     {
+      "Id": "538319148",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Damage_001.wav",
+      "CachePath": "86/{8681ECEB-7484-BF2D-DC6A-6EEADE768D46}.wem"
+     },
+     {
+      "Id": "540873743",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_A#4.wav",
+      "CachePath": "78/{780F5BE7-366E-D69E-C974-EFC66F86F11F}.wem"
+     },
+     {
+      "Id": "543972063",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Main Loop-Piccolo.wav",
+      "CachePath": "B7/{B70B03E8-8E78-DB6C-23E1-EB46E1EC9060}.wem"
+     },
+     {
+      "Id": "545873891",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Main Loop-Taiko.wav",
+      "CachePath": "A0/{A073896A-0CC3-4226-8DF0-66F9042B0BFC}.wem"
+     },
+     {
+      "Id": "547757916",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Scrape_003.wav",
+      "CachePath": "40/{40FDC706-7F78-C208-4F6E-48C496C4EA53}.wem"
+     },
+     {
+      "Id": "551152869",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Damage_004.wav",
+      "CachePath": "33/{33EDFC2C-AD29-6263-6030-5AE353AED10C}.wem"
+     },
+     {
+      "Id": "558223616",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Noise_Light_08.wav",
+      "CachePath": "36/{36DB2137-36A0-8AA3-8FCE-98070460D746}.wem"
+     },
+     {
+      "Id": "568051533",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hammering\\Wood_Hammer_005.wav",
+      "CachePath": "24/{24492CB2-5B1E-F64E-A0FB-62534141AF54}.wem"
+     },
+     {
+      "Id": "576745860",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_D#3.wav",
+      "CachePath": "85/{85C19354-858D-7DD6-28D2-09408AFDD33C}.wem"
+     },
+     {
+      "Id": "577344343",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Main Loop-Contrabasses.wav",
+      "CachePath": "9E/{9E206AEF-5F40-B5AB-14FC-1B6BAD2C4E81}.wem"
+     },
+     {
+      "Id": "583991132",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Heavy\\Armour_Noise_Heavy_002.wav",
+      "CachePath": "DE/{DEB0B96E-A698-1A51-E37A-FA575B969E35}.wem"
+     },
+     {
+      "Id": "595236045",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood Impacts\\Wood_Impact_001.wav",
+      "CachePath": "35/{35EDED84-7FEB-4CD4-C8E1-2D5D2A8D8E92}.wem"
+     },
+     {
+      "Id": "597180375",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_01.wav",
+      "CachePath": "18/{18A92522-1490-9871-5AEC-62CA064174ED}.wem"
+     },
+     {
+      "Id": "604888011",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Command_001.wav",
+      "CachePath": "A2/{A28EC38A-8673-F089-DC36-212E02B96D4C}.wem"
+     },
+     {
+      "Id": "617229446",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_D#5.wav",
+      "CachePath": "B3/{B333AFDE-50B8-B013-FF9E-353EE883EF32}.wem"
+     },
+     {
+      "Id": "621186934",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Noise_Light_04.wav",
+      "CachePath": "CF/{CFB49B64-F03E-0001-0A72-EE41148D0299}.wem"
+     },
+     {
+      "Id": "623497659",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Attack_002.wav",
+      "CachePath": "FB/{FB827E24-4CEA-4D3C-D99E-CC1421EBC7A5}.wem"
+     },
+     {
+      "Id": "629807400",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_C5.wav",
+      "CachePath": "7E/{7E57F7B3-DCCA-EB64-FD0B-54F7DA097CA8}.wem"
+     },
+     {
+      "Id": "648429791",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Yokai_Attack_002.wav",
+      "CachePath": "AE/{AE756FAC-B801-A94C-5872-8DAC33994486}.wem"
+     },
+     {
+      "Id": "653627699",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_08.wav",
+      "CachePath": "E2/{E23490FB-6FE0-913E-DE85-E7B8E8E4F3CA}.wem"
+     },
+     {
+      "Id": "654895334",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Yokai_Attack_003.wav",
+      "CachePath": "E1/{E1C5E7A2-3EC8-57F7-1EC4-E705AF5A72F1}.wem"
+     },
+     {
+      "Id": "655299917",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Noise_Light_05.wav",
+      "CachePath": "6A/{6A5323B3-5F69-8B36-E592-655CA6408BEA}.wem"
+     },
+     {
+      "Id": "655321126",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage_Crunch_004.wav",
+      "CachePath": "75/{75067293-B40A-AA4A-D075-01DFA0684C05}.wem"
+     },
+     {
+      "Id": "657950386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_F4.wav",
+      "CachePath": "9F/{9FE96933-37A9-F194-2695-140448E3F288}.wem"
+     },
+     {
+      "Id": "658586474",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Metal_Ringing_003.wav",
+      "CachePath": "CC/{CC313B6E-E145-6F02-EDC5-503D73913A48}.wem"
+     },
+     {
+      "Id": "658649915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_02.wav",
+      "CachePath": "EF/{EFF922F9-75C1-1E77-816C-30D8C633AC96}.wem"
+     },
+     {
+      "Id": "659775640",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shake\\Coin_Shake_002.wav",
+      "CachePath": "65/{654D4187-C30B-9233-5C17-00AD4B7C1146}.wem"
+     },
+     {
+      "Id": "661573843",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Yokai_Death_001.wav",
+      "CachePath": "7C/{7C82BBFF-7568-5496-C9AB-6619023E0730}.wem"
+     },
+     {
+      "Id": "661593363",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_G#5.wav",
+      "CachePath": "CC/{CCD7FA89-2997-AB65-9DBD-B5983944CAD7}.wem"
+     },
+     {
+      "Id": "676676547",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Yokai_Damage_001.wav",
+      "CachePath": "12/{1266ECFE-01C2-84E6-FA6F-B014953F88DE}.wem"
+     },
+     {
+      "Id": "681836013",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Scrape_001.wav",
+      "CachePath": "16/{165BFD64-1FB1-1075-4C47-D7F1CDD92D30}.wem"
+     },
+     {
+      "Id": "687115683",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 1-Wood_Blocks.wav",
+      "CachePath": "25/{258F53B5-5A63-BD2A-C2DD-3260DDA36B4C}.wem"
+     },
+     {
+      "Id": "695724340",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage_Rip_002.wav",
+      "CachePath": "81/{8192B12C-CFC1-65F7-6782-466945C365E4}.wem"
+     },
+     {
+      "Id": "699026060",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Whoosh_Big_001.wav",
+      "CachePath": "66/{664F3CF3-9DC3-01B5-C057-78DB453A3C3F}.wem"
+     },
+     {
+      "Id": "700100527",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 2-Wood_Blocks.wav",
+      "CachePath": "07/{07D4A230-27CA-FCAE-D30F-DD3196C40EFC}.wem"
+     },
+     {
+      "Id": "713284088",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Rattle\\Coin_Rattle_007.wav",
+      "CachePath": "CD/{CD57DECA-74F7-F1C7-9603-99D70F8EBF81}.wem"
+     },
+     {
+      "Id": "723653828",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Weapon_Spin_004.wav",
+      "CachePath": "8A/{8A64D310-AE40-B7F2-1134-C1D95865D882}.wem"
+     },
+     {
+      "Id": "723781363",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_10.wav",
+      "CachePath": "9F/{9FF594E3-E986-AA82-C0FE-C372FE3F8FFE}.wem"
+     },
+     {
+      "Id": "724680810",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Scrape_005.wav",
+      "CachePath": "53/{539C4088-3FB0-A377-76F5-D8D628F8835B}.wem"
+     },
+     {
+      "Id": "732510693",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_G#4.wav",
+      "CachePath": "4C/{4CD8B290-32DB-1173-26A6-64A10662C1D1}.wem"
+     },
+     {
+      "Id": "735672864",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clink\\Coin_Clink_Single_002.wav",
+      "CachePath": "6D/{6D6F64D1-157E-B2E8-42D4-0ACA0EBE40C5}.wem"
+     },
+     {
+      "Id": "762452129",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage_Rip_003.wav",
+      "CachePath": "C8/{C8473923-8E62-E821-1232-F7738E290948}.wem"
+     },
+     {
+      "Id": "763971518",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 2-Contrabasses.wav",
+      "CachePath": "A3/{A38ECE23-678C-714D-8935-8A7FE5EE2064}.wem"
+     },
+     {
+      "Id": "766120755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Noise_Light_02.wav",
+      "CachePath": "9B/{9B91D250-6BD0-CB75-322C-DF192689CE5C}.wem"
+     },
+     {
+      "Id": "770009257",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_06.wav",
+      "CachePath": "6F/{6F94BBBE-7942-77F5-9D54-5B164748F255}.wem"
+     },
+     {
+      "Id": "772091933",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood Impacts\\Wood_Impact_006.wav",
+      "CachePath": "12/{125CE2F7-6AAB-084E-304D-778C23058819}.wem"
+     },
+     {
+      "Id": "773674892",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage_Crunch_006.wav",
+      "CachePath": "46/{4657A9E3-746D-E2E2-1929-7A65216ABE0A}.wem"
+     },
+     {
+      "Id": "782701495",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Noise_Light_10.wav",
+      "CachePath": "A2/{A242DD48-637A-7595-8545-61AC25B2D40E}.wem"
+     },
+     {
+      "Id": "785383357",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage_Crunch_001.wav",
+      "CachePath": "CE/{CEEE32D6-2E9F-D7D3-8F66-F28378FB0D19}.wem"
+     },
+     {
+      "Id": "786879546",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_A3.wav",
+      "CachePath": "22/{22F697F5-657A-94E5-DABA-0B8BB0280D3E}.wem"
+     },
+     {
+      "Id": "795677428",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 1-Piccolo.wav",
+      "CachePath": "CA/{CA0FC00B-CBA4-87F4-6239-02E64B62C38A}.wem"
+     },
+     {
+      "Id": "803094924",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_14.wav",
+      "CachePath": "EA/{EAB38D08-117E-6C9C-81C2-2C21CED1CFAD}.wem"
+     },
+     {
+      "Id": "803486190",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Command_004.wav",
+      "CachePath": "BE/{BE1D7E51-55CA-9623-C92D-CE52186B1A04}.wem"
+     },
+     {
+      "Id": "810239020",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 1-Contrabasses.wav",
+      "CachePath": "C9/{C921DD6C-AA0D-D3E3-A225-A3628A59661E}.wem"
+     },
+     {
+      "Id": "812035483",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Metal_Ringing_001.wav",
+      "CachePath": "EA/{EAD2492D-D1A6-B31A-1346-BBEA084A462B}.wem"
+     },
+     {
+      "Id": "814191194",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Night Transition.wav",
+      "CachePath": "34/{34412DC9-6C6A-ADA5-56F2-5CD3A1292C64}.wem"
+     },
+     {
+      "Id": "823491915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_F#4.wav",
+      "CachePath": "9B/{9B82344F-3B7E-9604-C4AD-3EC0250C7606}.wem"
+     },
+     {
+      "Id": "827034017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage\\Building_Damage_2.wav",
+      "CachePath": "E5/{E5F7BA74-38BC-2971-3CA2-FEE4E3E5E829}.wem"
+     },
+     {
+      "Id": "830996151",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Heavy\\Armour_Noise_Heavy_001.wav",
+      "CachePath": "B6/{B66F8FEB-84C9-9F2B-1997-D6383E0EF37E}.wem"
+     },
+     {
+      "Id": "833643255",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood Impacts\\Wood_Impact_003.wav",
+      "CachePath": "13/{1353B25C-3D3E-519C-34E1-59AD49059EA8}.wem"
+     },
+     {
+      "Id": "835624341",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_C4.wav",
+      "CachePath": "FB/{FB05B029-83D2-ED38-F59F-95D7D22BC30F}.wem"
+     },
+     {
+      "Id": "838134224",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Selection\\Pencil_Scratch_001.wav",
+      "CachePath": "B3/{B3B219CA-8D63-EAD2-758B-F976F69DAC5B}.wem"
+     },
+     {
+      "Id": "840974048",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cicadas_Ambient.wav",
+      "CachePath": "11/{110C7DF7-E904-8858-F96E-11D8B14392E3}.wem"
+     },
+     {
+      "Id": "850180009",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_G5.wav",
+      "CachePath": "59/{5975174C-EBE2-E770-AF63-AA94826FFB6F}.wem"
+     },
+     {
+      "Id": "850399160",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Whoosh_Small_003.wav",
+      "CachePath": "07/{07D8CDF1-C107-566F-4FA9-A44405CF2F12}.wem"
+     },
+     {
+      "Id": "854756383",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Noise_Light_06.wav",
+      "CachePath": "00/{00F4EB90-73C7-D040-F38E-D19B87A6A1E4}.wem"
+     },
+     {
+      "Id": "868002393",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_01.wav",
+      "CachePath": "77/{77DD48CE-DA1D-0AAA-D7C3-C026E0F3FE78}.wem"
+     },
+     {
+      "Id": "871327602",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_E3.wav",
+      "CachePath": "2F/{2F374902-AF8B-AA8D-0E3C-693C0E58FAFB}.wem"
+     },
+     {
+      "Id": "878399290",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_16.wav",
+      "CachePath": "3C/{3C4352DF-582F-91DA-2894-CFDEC96F5C17}.wem"
+     },
+     {
+      "Id": "893435331",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood_Impact_Roll_002.wav",
+      "CachePath": "97/{9753CA94-5844-F9EC-C388-9209400BFAFE}.wem"
+     },
+     {
+      "Id": "894311687",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_09.wav",
+      "CachePath": "4D/{4D481A31-4815-7D3B-8F4F-06735CA08C8B}.wem"
+     },
+     {
+      "Id": "900257349",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_A4.wav",
+      "CachePath": "C9/{C9CAE75F-739C-1DDF-E5AE-314B1B2E41A5}.wem"
+     },
+     {
+      "Id": "903496942",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood Impacts\\Wood_Impact_004.wav",
+      "CachePath": "F8/{F8116194-433A-C3C0-B7C9-C7AB3E89BA78}.wem"
+     },
+     {
+      "Id": "908755700",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clink\\Coin_Clink_Bag_002.wav",
+      "CachePath": "64/{64777B16-606A-43D2-A5DA-2950B5B6ADAF}.wem"
+     },
+     {
+      "Id": "911892483",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood_Impact_Roll_005.wav",
+      "CachePath": "73/{7363BA7A-EB14-E805-253A-09DD4039A75F}.wem"
+     },
+     {
+      "Id": "920191786",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Heavy\\Armour_Noise_Heavy_005.wav",
+      "CachePath": "55/{55121635-F003-4E60-3BBE-7D37D94BE3A3}.wem"
+     },
+     {
+      "Id": "926277373",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_C#5.wav",
+      "CachePath": "BE/{BE97779D-5776-648B-E40A-9DDE88AB0731}.wem"
+     },
+     {
+      "Id": "929135983",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_18.wav",
+      "CachePath": "47/{47D1416E-4ADA-B9EF-F027-6A7AED447AB6}.wem"
+     },
+     {
+      "Id": "929759548",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Death_001.wav",
+      "CachePath": "EF/{EF8C6891-2A7D-DBC7-6D4A-AE5AB4DE3F8A}.wem"
+     },
+     {
+      "Id": "932366270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Damage_003.wav",
+      "CachePath": "E4/{E489DAF1-7CF0-5DD5-9001-7A1CDBA37156}.wem"
+     },
+     {
+      "Id": "936319828",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Scroll Opening\\UI_Scroll_Open_3.wav",
+      "CachePath": "1B/{1B5A74E2-6955-819C-0361-924FEDBA69C1}.wem"
+     },
+     {
+      "Id": "937588121",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_008.wav",
+      "CachePath": "7C/{7C7DB492-2A21-E28D-FD7B-79A3122D56D3}.wem"
+     },
+     {
+      "Id": "941545726",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Whoosh_Big_002.wav",
+      "CachePath": "67/{67244E64-7CC0-9998-A16B-4B80EA3336A5}.wem"
+     },
+     {
+      "Id": "942069570",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Death_002.wav",
+      "CachePath": "91/{91C74E51-2CB9-C0B0-454A-CAB7490C7AE0}.wem"
+     },
+     {
+      "Id": "949041738",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hammering\\Wood_Hammer_003.wav",
+      "CachePath": "10/{10C5DF8E-973D-830D-F3A0-CC4AB8FDB168}.wem"
+     },
+     {
+      "Id": "950603011",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Whoosh_Small_005.wav",
+      "CachePath": "97/{97781862-AB9C-0562-2173-EE4CD0B8AC31}.wem"
+     },
+     {
+      "Id": "955279697",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Crane_Call_11.wav",
+      "CachePath": "AF/{AF7FD644-EC75-7983-7A40-06A6C14B830A}.wem"
+     },
+     {
+      "Id": "957214579",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 2-Piccolo.wav",
+      "CachePath": "4E/{4E17EEB3-3E00-77C4-CB20-DE35C14B611D}.wem"
+     },
+     {
+      "Id": "958710031",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Intro 1-Taiko.wav",
+      "CachePath": "7A/{7A325F17-4109-89D9-B6A0-EA8D633F43A7}.wem"
+     },
+     {
+      "Id": "968020048",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Armour_Noise_Light_01.wav",
+      "CachePath": "1F/{1F5464B4-57D9-C3B4-815B-5E6DD81C474B}.wem"
+     },
+     {
+      "Id": "970399102",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood_Impact_Roll_001.wav",
+      "CachePath": "EB/{EB1937E9-A4E9-D298-2EC4-5796E52CBEBA}.wem"
+     },
+     {
+      "Id": "977103018",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood Impacts\\Wood_Impact_008.wav",
+      "CachePath": "B0/{B0F10C48-6F5D-C1C3-9F58-A3C23D45A62E}.wem"
+     },
+     {
+      "Id": "978184560",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Scroll Opening\\UI_Scroll_Open_2.wav",
+      "CachePath": "0C/{0C5EEF7F-F9C9-48F8-EA47-32E47C3A58E8}.wem"
+     },
+     {
+      "Id": "992258005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Selection\\Pencil_Scratch_002.wav",
+      "CachePath": "B0/{B0C163C0-ED4B-A583-3822-48EBE9B8192E}.wem"
+     },
+     {
+      "Id": "992894847",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Yokai_Damage_003.wav",
+      "CachePath": "89/{89044F44-90B6-2161-50ED-0F593F759D8B}.wem"
+     },
+     {
+      "Id": "997620920",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_F#3.wav",
+      "CachePath": "03/{031D81B6-479D-3416-07FD-595335D6CD2B}.wem"
+     },
+     {
+      "Id": "997812089",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Damage\\Building_Damage_4.wav",
+      "CachePath": "0A/{0A615B58-AFA3-C26C-13E5-1EE1E7E80194}.wem"
+     },
+     {
+      "Id": "1010114638",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wood_Impact_Roll_006.wav",
+      "CachePath": "32/{320DD61F-9AD2-B0F7-251E-EEFFEF485C47}.wem"
+     },
+     {
+      "Id": "1019220874",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Rattle\\Coin_Rattle_004.wav",
+      "CachePath": "4B/{4B1D29B7-64B7-21D1-5B84-20999F8114A0}.wem"
+     },
+     {
+      "Id": "1021020119",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Yokai_Attack_001.wav",
+      "CachePath": "EF/{EFD6E104-8901-7D3A-C414-5E4197F42A89}.wem"
+     },
+     {
+      "Id": "1022284683",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sparrow_Chirp_004.wav",
+      "CachePath": "C9/{C9FA9846-F264-A443-3F55-F28D63EB37A6}.wem"
+     },
+     {
+      "Id": "1032748123",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_C#4.wav",
+      "CachePath": "94/{94D2AE14-5321-1481-A149-9B0A8E80C37E}.wem"
+     },
+     {
+      "Id": "1041974734",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_C#3.wav",
+      "CachePath": "AA/{AA7914FB-07CB-8E2D-C9F7-0653CCE3DF3C}.wem"
+     },
+     {
+      "Id": "1042599355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shamisen_F#5.wav",
+      "CachePath": "28/{28001BEA-4851-87A5-C83E-8AF85E03705C}.wem"
+     },
+     {
+      "Id": "1051331244",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_21.wav",
+      "CachePath": "8E/{8EF0851F-8078-B018-84DE-E40F08AB5A81}.wem"
+     },
+     {
+      "Id": "1063644981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Voice_Human_Attack_001.wav",
+      "CachePath": "0D/{0D45AB6B-F213-C142-18CF-D6A6FABE037F}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "393654333",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Actor-Mixer WU\\Building\\Hammer Seq\\Hammer Silence\\Silence",
+       "GUID": "{8969F529-7E4A-441F-9FA1-C205DB53BD07}",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      },
+      {
+       "Id": "852647959",
+       "Name": "Have_U_Ever_Been_Outside (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Actor-Mixer WU\\Ambience\\Individual Bird Calls\\Crane Call Rand\\[Effect Slot [0]: (RoomVerb)]\\Have_U_Ever_Been_Outside (Custom)",
+       "GUID": "{1BD3B7C5-4297-4ED5-8936-F795F966947E}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2735935537",
+      "Name": "Pause_Music",
+      "ObjectPath": "\\Events\\Events WU\\Pause_Music",
+      "GUID": "{06CAB5B3-F905-4D40-BDA9-EC0825BF254D}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "4201350233",
+      "Name": "Play_Ambience_Day",
+      "ObjectPath": "\\Events\\Events WU\\Play_Ambience_Day",
+      "GUID": "{DED17033-AE09-47DD-B225-0BC3CB7C284B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "21741682"
+       },
+       {
+        "Id": "28426582"
+       },
+       {
+        "Id": "46075314"
+       },
+       {
+        "Id": "70454340"
+       },
+       {
+        "Id": "108537850"
+       },
+       {
+        "Id": "120720138"
+       },
+       {
+        "Id": "257774405"
+       },
+       {
+        "Id": "274549623"
+       },
+       {
+        "Id": "298315981"
+       },
+       {
+        "Id": "303637022"
+       },
+       {
+        "Id": "349815642"
+       },
+       {
+        "Id": "485012738"
+       },
+       {
+        "Id": "535040048"
+       },
+       {
+        "Id": "536726818"
+       },
+       {
+        "Id": "536874561"
+       },
+       {
+        "Id": "653627699"
+       },
+       {
+        "Id": "658649915"
+       },
+       {
+        "Id": "723781363"
+       },
+       {
+        "Id": "868002393"
+       },
+       {
+        "Id": "894311687"
+       },
+       {
+        "Id": "937588121"
+       },
+       {
+        "Id": "955279697"
+       },
+       {
+        "Id": "1022284683"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "852647959"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "944950941",
+      "Name": "Play_Ambience_Night",
+      "ObjectPath": "\\Events\\Events WU\\Play_Ambience_Night",
+      "GUID": "{D06068C3-9784-4964-992F-F501F30DDE94}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "535040048"
+       },
+       {
+        "Id": "840974048"
+       }
+      ]
+     },
+     {
+      "Id": "2824991575",
+      "Name": "Play_Attack_Ashigaru_Heavy",
+      "ObjectPath": "\\Events\\Events WU\\Play_Attack_Ashigaru_Heavy",
+      "GUID": "{3EC06F74-FB8D-4C68-9AC5-4E1F27530138}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8908311",
+      "DurationMax": "1.350926",
+      "MediaRefs": [
+       {
+        "Id": "28931695"
+       },
+       {
+        "Id": "102109074"
+       },
+       {
+        "Id": "201887452"
+       },
+       {
+        "Id": "341441824"
+       },
+       {
+        "Id": "444231083"
+       },
+       {
+        "Id": "583991132"
+       },
+       {
+        "Id": "623497659"
+       },
+       {
+        "Id": "658586474"
+       },
+       {
+        "Id": "699026060"
+       },
+       {
+        "Id": "812035483"
+       },
+       {
+        "Id": "830996151"
+       },
+       {
+        "Id": "941545726"
+       },
+       {
+        "Id": "1063644981"
+       }
+      ]
+     },
+     {
+      "Id": "1211607766",
+      "Name": "Play_Attack_Ashigaru_Light",
+      "ObjectPath": "\\Events\\Events WU\\Play_Attack_Ashigaru_Light",
+      "GUID": "{2B0A9010-F32E-49FA-935D-BE399FF83282}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8908311",
+      "DurationMax": "1.4509261",
+      "MediaRefs": [
+       {
+        "Id": "102109074"
+       },
+       {
+        "Id": "201887452"
+       },
+       {
+        "Id": "341441824"
+       },
+       {
+        "Id": "444231083"
+       },
+       {
+        "Id": "623497659"
+       },
+       {
+        "Id": "658586474"
+       },
+       {
+        "Id": "699026060"
+       },
+       {
+        "Id": "812035483"
+       },
+       {
+        "Id": "941545726"
+       },
+       {
+        "Id": "1063644981"
+       }
+      ]
+     },
+     {
+      "Id": "3428542466",
+      "Name": "Play_Attack_Player",
+      "ObjectPath": "\\Events\\Events WU\\Play_Attack_Player",
+      "GUID": "{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}",
+      "MaxAttenuation": "75",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8908311",
+      "DurationMax": "1.350926",
+      "MediaRefs": [
+       {
+        "Id": "28931695"
+       },
+       {
+        "Id": "102109074"
+       },
+       {
+        "Id": "142203575"
+       },
+       {
+        "Id": "201887452"
+       },
+       {
+        "Id": "341441824"
+       },
+       {
+        "Id": "444231083"
+       },
+       {
+        "Id": "452783299"
+       },
+       {
+        "Id": "583991132"
+       },
+       {
+        "Id": "623497659"
+       },
+       {
+        "Id": "658586474"
+       },
+       {
+        "Id": "699026060"
+       },
+       {
+        "Id": "812035483"
+       },
+       {
+        "Id": "830996151"
+       },
+       {
+        "Id": "920191786"
+       },
+       {
+        "Id": "941545726"
+       },
+       {
+        "Id": "1063644981"
+       }
+      ]
+     },
+     {
+      "Id": "261420542",
+      "Name": "Play_Attack_Yokai",
+      "ObjectPath": "\\Events\\Events WU\\Play_Attack_Yokai",
+      "GUID": "{8A0C88AC-DBC6-4BDC-A146-9A597D30418D}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5053687",
+      "DurationMax": "1.0454564",
+      "MediaRefs": [
+       {
+        "Id": "93149621"
+       },
+       {
+        "Id": "266204014"
+       },
+       {
+        "Id": "648429791"
+       },
+       {
+        "Id": "654895334"
+       },
+       {
+        "Id": "850399160"
+       },
+       {
+        "Id": "950603011"
+       },
+       {
+        "Id": "1021020119"
+       }
+      ]
+     },
+     {
+      "Id": "4001521644",
+      "Name": "Play_Building_Complete",
+      "ObjectPath": "\\Events\\Events WU\\Play_Building_Complete",
+      "GUID": "{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3676314",
+      "DurationMax": "1.6026723",
+      "MediaRefs": [
+       {
+        "Id": "147076825"
+       },
+       {
+        "Id": "161780449"
+       },
+       {
+        "Id": "272752494"
+       },
+       {
+        "Id": "595236045"
+       },
+       {
+        "Id": "772091933"
+       },
+       {
+        "Id": "833643255"
+       },
+       {
+        "Id": "893435331"
+       },
+       {
+        "Id": "903496942"
+       },
+       {
+        "Id": "911892483"
+       },
+       {
+        "Id": "970399102"
+       },
+       {
+        "Id": "977103018"
+       },
+       {
+        "Id": "1010114638"
+       }
+      ]
+     },
+     {
+      "Id": "2224434550",
+      "Name": "Play_Building_In_Progress",
+      "ObjectPath": "\\Events\\Events WU\\Play_Building_In_Progress",
+      "GUID": "{4B9E40CB-7F29-483D-B716-FBD7BDBD5F92}",
+      "MaxAttenuation": "50",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "72894977"
+       },
+       {
+        "Id": "224695136"
+       },
+       {
+        "Id": "329826202"
+       },
+       {
+        "Id": "568051533"
+       },
+       {
+        "Id": "949041738"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "393654333"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2547541695",
+      "Name": "Play_Coins_Collect",
+      "ObjectPath": "\\Events\\Events WU\\Play_Coins_Collect",
+      "GUID": "{DB149425-DFA9-4825-9836-7BCF01C4B478}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.47240084",
+      "DurationMax": "0.90620935",
+      "MediaRefs": [
+       {
+        "Id": "119750623"
+       },
+       {
+        "Id": "369882539"
+       },
+       {
+        "Id": "735672864"
+       },
+       {
+        "Id": "908755700"
+       }
+      ]
+     },
+     {
+      "Id": "1006601637",
+      "Name": "Play_Coins_Spend",
+      "ObjectPath": "\\Events\\Events WU\\Play_Coins_Spend",
+      "GUID": "{CB2CC1DD-4A36-4346-B0AC-A46F8ACD5496}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "33826757"
+       },
+       {
+        "Id": "94569659"
+       },
+       {
+        "Id": "148009785"
+       },
+       {
+        "Id": "241269386"
+       },
+       {
+        "Id": "257352596"
+       },
+       {
+        "Id": "295973348"
+       },
+       {
+        "Id": "456786201"
+       },
+       {
+        "Id": "659775640"
+       },
+       {
+        "Id": "713284088"
+       },
+       {
+        "Id": "1019220874"
+       }
+      ]
+     },
+     {
+      "Id": "2640662738",
+      "Name": "Play_Command_Ashigaru",
+      "ObjectPath": "\\Events\\Events WU\\Play_Command_Ashigaru",
+      "GUID": "{D92514D8-E31B-46B7-BBA9-3B8EBBAA6EBB}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "2.2770977",
+      "MediaRefs": [
+       {
+        "Id": "452513033"
+       },
+       {
+        "Id": "511170794"
+       },
+       {
+        "Id": "604888011"
+       },
+       {
+        "Id": "803486190"
+       }
+      ]
+     },
+     {
+      "Id": "3828475318",
+      "Name": "Play_Damage_Ashigaru",
+      "ObjectPath": "\\Events\\Events WU\\Play_Damage_Ashigaru",
+      "GUID": "{A36CC021-BD7A-4999-A4DF-24E637311D12}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.31539527",
+      "DurationMax": "0.84275913",
+      "MediaRefs": [
+       {
+        "Id": "71958840"
+       },
+       {
+        "Id": "216731760"
+       },
+       {
+        "Id": "276259303"
+       },
+       {
+        "Id": "296024601"
+       },
+       {
+        "Id": "405891057"
+       },
+       {
+        "Id": "407966340"
+       },
+       {
+        "Id": "538319148"
+       },
+       {
+        "Id": "547757916"
+       },
+       {
+        "Id": "551152869"
+       },
+       {
+        "Id": "655321126"
+       },
+       {
+        "Id": "681836013"
+       },
+       {
+        "Id": "695724340"
+       },
+       {
+        "Id": "724680810"
+       },
+       {
+        "Id": "762452129"
+       },
+       {
+        "Id": "773674892"
+       },
+       {
+        "Id": "785383357"
+       },
+       {
+        "Id": "932366270"
+       }
+      ]
+     },
+     {
+      "Id": "3362139180",
+      "Name": "Play_Damage_Building",
+      "ObjectPath": "\\Events\\Events WU\\Play_Damage_Building",
+      "GUID": "{169A7149-AF7B-4094-A604-2DC3472BFE11}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.70004535",
+      "DurationMax": "1.0224036",
+      "MediaRefs": [
+       {
+        "Id": "341895372"
+       },
+       {
+        "Id": "487352375"
+       },
+       {
+        "Id": "827034017"
+       },
+       {
+        "Id": "997812089"
+       }
+      ]
+     },
+     {
+      "Id": "1263684625",
+      "Name": "Play_Damage_Yokai",
+      "ObjectPath": "\\Events\\Events WU\\Play_Damage_Yokai",
+      "GUID": "{E98BD67E-2967-4C2F-8D96-6DE808A386BD}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2385941",
+      "DurationMax": "1.0785317",
+      "MediaRefs": [
+       {
+        "Id": "296024601"
+       },
+       {
+        "Id": "356504585"
+       },
+       {
+        "Id": "405891057"
+       },
+       {
+        "Id": "407966340"
+       },
+       {
+        "Id": "655321126"
+       },
+       {
+        "Id": "676676547"
+       },
+       {
+        "Id": "695724340"
+       },
+       {
+        "Id": "762452129"
+       },
+       {
+        "Id": "773674892"
+       },
+       {
+        "Id": "785383357"
+       },
+       {
+        "Id": "992894847"
+       }
+      ]
+     },
+     {
+      "Id": "3888899281",
+      "Name": "Play_Death_Ashigaru",
+      "ObjectPath": "\\Events\\Events WU\\Play_Death_Ashigaru",
+      "GUID": "{1D028656-C555-41E4-9D5A-B97B865CA71E}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "1.7178341",
+      "MediaRefs": [
+       {
+        "Id": "929759548"
+       },
+       {
+        "Id": "942069570"
+       }
+      ]
+     },
+     {
+      "Id": "1760829336",
+      "Name": "Play_Death_Yokai",
+      "ObjectPath": "\\Events\\Events WU\\Play_Death_Yokai",
+      "GUID": "{1D0B8F16-4442-4048-AA86-6ECC65D75416}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "1.7385526",
+      "MediaRefs": [
+       {
+        "Id": "158533301"
+       },
+       {
+        "Id": "661573843"
+       }
+      ]
+     },
+     {
+      "Id": "2141916437",
+      "Name": "Play_Dusk_Shamisens",
+      "ObjectPath": "\\Events\\Events WU\\Play_Dusk_Shamisens",
+      "GUID": "{B52F94A8-D0C3-48E3-A4F7-DFA161A6AF8E}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "5.453916",
+      "DurationMax": "5.5172877",
+      "MediaRefs": [
+       {
+        "Id": "18513705"
+       },
+       {
+        "Id": "25011560"
+       },
+       {
+        "Id": "105276285"
+       },
+       {
+        "Id": "114892316"
+       },
+       {
+        "Id": "115130143"
+       },
+       {
+        "Id": "163495867"
+       },
+       {
+        "Id": "238954535"
+       },
+       {
+        "Id": "346509706"
+       },
+       {
+        "Id": "349919027"
+       },
+       {
+        "Id": "358074599"
+       },
+       {
+        "Id": "369130456"
+       },
+       {
+        "Id": "423222207"
+       },
+       {
+        "Id": "455384343"
+       },
+       {
+        "Id": "472131274"
+       },
+       {
+        "Id": "477481603"
+       },
+       {
+        "Id": "512174272"
+       },
+       {
+        "Id": "528995466"
+       },
+       {
+        "Id": "540873743"
+       },
+       {
+        "Id": "576745860"
+       },
+       {
+        "Id": "617229446"
+       },
+       {
+        "Id": "629807400"
+       },
+       {
+        "Id": "657950386"
+       },
+       {
+        "Id": "661593363"
+       },
+       {
+        "Id": "732510693"
+       },
+       {
+        "Id": "786879546"
+       },
+       {
+        "Id": "823491915"
+       },
+       {
+        "Id": "835624341"
+       },
+       {
+        "Id": "850180009"
+       },
+       {
+        "Id": "871327602"
+       },
+       {
+        "Id": "900257349"
+       },
+       {
+        "Id": "926277373"
+       },
+       {
+        "Id": "997620920"
+       },
+       {
+        "Id": "1032748123"
+       },
+       {
+        "Id": "1041974734"
+       },
+       {
+        "Id": "1042599355"
+       }
+      ]
+     },
+     {
+      "Id": "546028113",
+      "Name": "Play_Footstep_Ashigaru",
+      "ObjectPath": "\\Events\\Events WU\\Play_Footstep_Ashigaru",
+      "GUID": "{CF125F2A-3009-41E6-8781-B635B9428508}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6899948",
+      "DurationMax": "2.058693",
+      "MediaRefs": [
+       {
+        "Id": "58450686"
+       },
+       {
+        "Id": "90433486"
+       },
+       {
+        "Id": "156333174"
+       },
+       {
+        "Id": "233902817"
+       },
+       {
+        "Id": "249615492"
+       },
+       {
+        "Id": "302617513"
+       },
+       {
+        "Id": "481160407"
+       },
+       {
+        "Id": "514311731"
+       },
+       {
+        "Id": "558223616"
+       },
+       {
+        "Id": "597180375"
+       },
+       {
+        "Id": "621186934"
+       },
+       {
+        "Id": "655299917"
+       },
+       {
+        "Id": "766120755"
+       },
+       {
+        "Id": "770009257"
+       },
+       {
+        "Id": "782701495"
+       },
+       {
+        "Id": "854756383"
+       },
+       {
+        "Id": "878399290"
+       },
+       {
+        "Id": "929135983"
+       },
+       {
+        "Id": "968020048"
+       },
+       {
+        "Id": "1051331244"
+       }
+      ]
+     },
+     {
+      "Id": "978628930",
+      "Name": "Play_Footstep_Farmer",
+      "ObjectPath": "\\Events\\Events WU\\Play_Footstep_Farmer",
+      "GUID": "{B3F939F4-8D78-4E1E-AE39-58754647B0BD}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2526503",
+      "DurationMax": "0.7772722",
+      "MediaRefs": [
+       {
+        "Id": "58450686"
+       },
+       {
+        "Id": "90433486"
+       },
+       {
+        "Id": "156333174"
+       },
+       {
+        "Id": "233902817"
+       },
+       {
+        "Id": "249615492"
+       },
+       {
+        "Id": "302617513"
+       },
+       {
+        "Id": "514311731"
+       },
+       {
+        "Id": "597180375"
+       },
+       {
+        "Id": "770009257"
+       },
+       {
+        "Id": "878399290"
+       },
+       {
+        "Id": "929135983"
+       },
+       {
+        "Id": "1051331244"
+       }
+      ]
+     },
+     {
+      "Id": "4134779396",
+      "Name": "Play_Footstep_Player",
+      "ObjectPath": "\\Events\\Events WU\\Play_Footstep_Player",
+      "GUID": "{949DE1B1-C627-4932-878C-20F1C7ABE040}",
+      "MaxAttenuation": "75",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6899948",
+      "DurationMax": "2.058693",
+      "MediaRefs": [
+       {
+        "Id": "58450686"
+       },
+       {
+        "Id": "90433486"
+       },
+       {
+        "Id": "156333174"
+       },
+       {
+        "Id": "233902817"
+       },
+       {
+        "Id": "302617513"
+       },
+       {
+        "Id": "394195621"
+       },
+       {
+        "Id": "481160407"
+       },
+       {
+        "Id": "514311731"
+       },
+       {
+        "Id": "558223616"
+       },
+       {
+        "Id": "597180375"
+       },
+       {
+        "Id": "621186934"
+       },
+       {
+        "Id": "655299917"
+       },
+       {
+        "Id": "766120755"
+       },
+       {
+        "Id": "770009257"
+       },
+       {
+        "Id": "782701495"
+       },
+       {
+        "Id": "803094924"
+       },
+       {
+        "Id": "854756383"
+       },
+       {
+        "Id": "929135983"
+       },
+       {
+        "Id": "968020048"
+       },
+       {
+        "Id": "1051331244"
+       }
+      ]
+     },
+     {
+      "Id": "2266542104",
+      "Name": "Play_Footstep_Yokai",
+      "ObjectPath": "\\Events\\Events WU\\Play_Footstep_Yokai",
+      "GUID": "{B06B72E0-F4BF-4FEE-AC88-C941D1D47E21}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2526503",
+      "DurationMax": "0.7772722",
+      "MediaRefs": [
+       {
+        "Id": "58450686"
+       },
+       {
+        "Id": "90433486"
+       },
+       {
+        "Id": "156333174"
+       },
+       {
+        "Id": "233902817"
+       },
+       {
+        "Id": "249615492"
+       },
+       {
+        "Id": "302617513"
+       },
+       {
+        "Id": "514311731"
+       },
+       {
+        "Id": "597180375"
+       },
+       {
+        "Id": "770009257"
+       },
+       {
+        "Id": "878399290"
+       },
+       {
+        "Id": "929135983"
+       },
+       {
+        "Id": "1051331244"
+       }
+      ]
+     },
+     {
+      "Id": "3279835868",
+      "Name": "Play_Night_Music",
+      "ObjectPath": "\\Events\\Events WU\\Play_Night_Music",
+      "GUID": "{B24F755D-8558-4A60-BD90-614F928BE0D4}",
+      "DurationType": "OneShot",
+      "DurationMin": "127",
+      "DurationMax": "127",
+      "MediaRefs": [
+       {
+        "Id": "170766446"
+       },
+       {
+        "Id": "224914393"
+       },
+       {
+        "Id": "245751951"
+       },
+       {
+        "Id": "359573181"
+       },
+       {
+        "Id": "403807277"
+       },
+       {
+        "Id": "519657130"
+       },
+       {
+        "Id": "527524294"
+       },
+       {
+        "Id": "543972063"
+       },
+       {
+        "Id": "545873891"
+       },
+       {
+        "Id": "577344343"
+       },
+       {
+        "Id": "687115683"
+       },
+       {
+        "Id": "700100527"
+       },
+       {
+        "Id": "763971518"
+       },
+       {
+        "Id": "795677428"
+       },
+       {
+        "Id": "810239020"
+       },
+       {
+        "Id": "957214579"
+       },
+       {
+        "Id": "958710031"
+       }
+      ]
+     },
+     {
+      "Id": "3265916758",
+      "Name": "Play_Night_Transition",
+      "ObjectPath": "\\Events\\Events WU\\Play_Night_Transition",
+      "GUID": "{D5116DDB-B2A8-426D-838D-EE8EC03D3176}",
+      "DurationType": "OneShot",
+      "DurationMin": "11",
+      "DurationMax": "11",
+      "MediaRefs": [
+       {
+        "Id": "814191194"
+       }
+      ]
+     },
+     {
+      "Id": "151111856",
+      "Name": "Play_Scroll_Open",
+      "ObjectPath": "\\Events\\Events WU\\Play_Scroll_Open",
+      "GUID": "{5C38CEB6-0139-40D3-BE6F-18BAE3A5825F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7606669",
+      "DurationMax": "1.6661674",
+      "MediaRefs": [
+       {
+        "Id": "175990080"
+       },
+       {
+        "Id": "197151963"
+       },
+       {
+        "Id": "523647780"
+       },
+       {
+        "Id": "936319828"
+       },
+       {
+        "Id": "978184560"
+       }
+      ]
+     },
+     {
+      "Id": "304693731",
+      "Name": "Play_Select_Unit",
+      "ObjectPath": "\\Events\\Events WU\\Play_Select_Unit",
+      "GUID": "{C0659F92-11BA-471A-9B17-DC772254EBFA}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.35732427",
+      "DurationMax": "0.7358694",
+      "MediaRefs": [
+       {
+        "Id": "105081942"
+       },
+       {
+        "Id": "220596666"
+       },
+       {
+        "Id": "483590958"
+       },
+       {
+        "Id": "838134224"
+       },
+       {
+        "Id": "992258005"
+       }
+      ]
+     },
+     {
+      "Id": "3787597485",
+      "Name": "Play_Weapon_Spin",
+      "ObjectPath": "\\Events\\Events WU\\Play_Weapon_Spin",
+      "GUID": "{6810E0F5-FF07-4A89-B81B-9483156030DB}",
+      "MaxAttenuation": "75",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1637415",
+      "DurationMax": "1.5541675",
+      "MediaRefs": [
+       {
+        "Id": "310438836"
+       },
+       {
+        "Id": "318366259"
+       },
+       {
+        "Id": "454715900"
+       },
+       {
+        "Id": "723653828"
+       }
+      ]
+     },
+     {
+      "Id": "2940177080",
+      "Name": "Resume_Music",
+      "ObjectPath": "\\Events\\Events WU\\Resume_Music",
+      "GUID": "{0AD45CB9-4DD9-4AC8-B24D-0A19C074728C}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1932246634",
+      "Name": "Stop_Night_Music",
+      "ObjectPath": "\\Events\\Events WU\\Stop_Night_Music",
+      "GUID": "{94F31A58-3CF2-4392-A2D0-3FA7E32C65FA}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3766713767",
+      "Name": "ShamisenTriggerRate",
+      "ObjectPath": "\\Game Parameters\\Game Parameters WU\\ShamisenTriggerRate",
+      "GUID": "{9F76007F-13C8-4ADF-84AC-FC406E6BC668}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1773585304",
+      "Name": "OnisActive",
+      "ObjectPath": "\\States\\States WU\\OnisActive",
+      "GUID": "{34336FB5-FE44-41D4-A22A-3BC525032A2D}",
+      "States": [
+       {
+        "Id": "58138747",
+        "Name": "Active",
+        "ObjectPath": "\\States\\States WU\\OnisActive\\Active",
+        "GUID": "{2A59CBE6-0421-48A7-B0C0-A6851E9704B2}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\States WU\\OnisActive\\None",
+        "GUID": "{0C8C4426-6115-41FD-A44A-5DF3F02E251D}"
+       },
+       {
+        "Id": "3163453698",
+        "Name": "Inactive",
+        "ObjectPath": "\\States\\States WU\\OnisActive\\Inactive",
+        "GUID": "{B1F4AEE9-57F2-48FE-B214-4D0682436851}"
+       }
+      ]
+     },
+     {
+      "Id": "2986509750",
+      "Name": "GruntsActive",
+      "ObjectPath": "\\States\\States WU\\GruntsActive",
+      "GUID": "{FF5398B3-3E1C-4892-8F1E-A53531A97AD5}",
+      "States": [
+       {
+        "Id": "58138747",
+        "Name": "Active",
+        "ObjectPath": "\\States\\States WU\\GruntsActive\\Active",
+        "GUID": "{B2965D6F-E584-4A4A-A4C1-2143D268D482}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\States WU\\GruntsActive\\None",
+        "GUID": "{E2A96201-FC52-417B-986F-B6A0E42D4B06}"
+       },
+       {
+        "Id": "3163453698",
+        "Name": "Inactive",
+        "ObjectPath": "\\States\\States WU\\GruntsActive\\Inactive",
+        "GUID": "{99465244-1B5E-4803-8EF8-5DABD0B53EB9}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E1DAF14E-3266-08F5-A014-4BB381CCC721}"
+ }
+}

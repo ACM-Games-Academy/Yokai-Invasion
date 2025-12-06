@@ -9,13 +9,11 @@ public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 
     public Animator anim;
 
-    private AudioSettings audioSettings;
-
     private void Start()
     {
         base.Start();
 
-        audioSettings = Overseer.Instance.Settings.AudioSettings;
+        base.audioSettings = Overseer.Instance.Settings.AudioSettings;
 
         currentHealth = settings.TotalHealth;
 

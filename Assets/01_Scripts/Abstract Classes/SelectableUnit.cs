@@ -6,7 +6,7 @@ public abstract class SelectableUnit : Unit
     [SerializeField]
     private GameObject selectionIndicator;
 
-    private AudioSettings audioSettings;
+    private protected AudioSettings audioSettings;
 
     protected void Start()
     {
