@@ -1,0 +1,25 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	319258907	Paused			\States WU\Paused	
+	1773585304	OnisActive			\States WU\OnisActive	
+	2986509750	GruntsActive			\States WU\GruntsActive	
+
+State	ID	Name	State Group			Notes
+	319258907	Paused	Paused			
+	748895195	None	Paused			
+	1365518790	Unpaused	Paused			
+	58138747	Active	OnisActive			
+	748895195	None	OnisActive			
+	3163453698	Inactive	OnisActive			
+	58138747	Active	GruntsActive			
+	748895195	None	GruntsActive			
+	3163453698	Inactive	GruntsActive			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3032847908	Main Bus			\Default Work Unit\Master Audio Bus\Main Bus	
+	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
