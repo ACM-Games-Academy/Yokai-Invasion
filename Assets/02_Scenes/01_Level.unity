@@ -205,7 +205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 208514932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Temple Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,6 +390,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7418617606662576500, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6160627492126741824, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -3584497630037689987, guid: 1acc55184f212b24b898581913a1df75, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -398,9 +406,29 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c414e56445df83349b6ad3ab319332af, type: 2}
+    - target: {fileID: -1760714182489039777, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1acc55184f212b24b898581913a1df75, type: 3}
       propertyPath: m_Name
       value: Temple (Beta)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078210541694900024, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550463727306718371, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594243245622329198, guid: 1acc55184f212b24b898581913a1df75, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4370951913967234905, guid: 1acc55184f212b24b898581913a1df75, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -432,7 +460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489313532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Unit Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +731,7 @@ GameObject:
   - component: {fileID: 1209070210}
   - component: {fileID: 1209070209}
   - component: {fileID: 1209070213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Temple
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
+public class Ashigaru : Soldier, AutoAttacker, Damageable
 {
     private Collider[] targetsInRange;
     private float lastAttackTime;
@@ -38,6 +38,8 @@ public class Ashigaru : SelectableUnit, AutoAttacker, Damageable
 
     private void Update()
     {
+        base.Update();
+
         targetsInRange = Boids.GetNearby(transform.position, settings.AttackRange, ~LayerMask.GetMask("Floor")).ToArray();
 
         if (targetsInRange.Length > 0 && Time.time >= lastAttackTime + settings.AttackDelay)

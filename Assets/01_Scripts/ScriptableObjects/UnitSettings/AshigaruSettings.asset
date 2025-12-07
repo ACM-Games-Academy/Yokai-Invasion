@@ -16,7 +16,7 @@ MonoBehaviour:
   moveSpeed: 5
   poolSize: 0
   totalHealth: 10
-  attackPower: 2
+  attackPower: 10
   attackRange: 5
   attackDelay: 0.8
   unitOptions:

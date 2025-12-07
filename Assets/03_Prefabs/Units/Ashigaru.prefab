@@ -103,7 +103,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ashigaru
   settings: {fileID: 11400000, guid: 0cd07ed3f6879664f9f08d39bd439c58, type: 2}
   selectionIndicator: {fileID: 6882370279532039684}
+  CurrentEmployer: {fileID: 0}
   anim: {fileID: 2921283830629431123}
 --- !u!1 &6882370279532039684
 GameObject:
