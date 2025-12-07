@@ -33,6 +33,7 @@
 						<ObjectRef Name="Play_Attack_Ashigaru_Heavy" ID="{3EC06F74-FB8D-4C68-9AC5-4E1F27530138}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Attack_Player" ID="{81E011FA-AA0A-4C75-8D10-4F77BAFC38B4}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Pause_Music" ID="{06CAB5B3-F905-4D40-BDA9-EC0825BF254D}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Attack_Musket" ID="{D801B151-F301-4DC2-BAC7-3925C72943BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Farmer" ID="{B3F939F4-8D78-4E1E-AE39-58754647B0BD}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep_Yokai" ID="{B06B72E0-F4BF-4FEE-AC88-C941D1D47E21}" WorkUnitID="{E4A582E4-62A5-4B89-B636-AF9304270075}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

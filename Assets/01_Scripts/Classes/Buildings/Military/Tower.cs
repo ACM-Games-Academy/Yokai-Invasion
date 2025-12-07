@@ -55,7 +55,9 @@ public class Tower : MilitaryBuilding, AutoAttacker
         {
             var yokai = yokaiInRange[0];
             yokai.TakeDamage(damage);
-            // Sound nice and shit
+
+            //  [29] Play_Attack_Musket - Musket firing sound
+            Overseer.Instance.Settings.AudioSettings.Events[29].Post(gameObject);
         }
 
         lastAttackTime = Time.time;

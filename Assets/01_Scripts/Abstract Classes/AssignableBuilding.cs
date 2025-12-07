@@ -1,6 +1,6 @@
 public abstract class AssignableBuilding : Building, Employer
 {
-    public int MaxEmployees { get; } = 3;
+    public int MaxEmployees { get; } = 1;
     public EmployableUnit[] Employees { get; set; }
 
     public float EmploymentRadius { get; protected set; } = 5f;

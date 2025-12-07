@@ -2543,6 +2543,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Armour_Noise_Heavy_005" ID="{3C56AD50-3A88-4FD9-8A12-5885500DB951}" ShortID="150574967">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
@@ -4538,6 +4545,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Armour_Scrape_003" ID="{32058891-568B-47DA-9BFF-E3C6C7F7831E}" ShortID="990136031">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
@@ -5202,13 +5216,35 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Musket Rand" ID="{3868A7E6-C115-4791-9F0F-B753AA3DE577}" ShortID="6602908">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="1"/>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{7E20F8EC-0120-49E8-A3BF-EB8327B09BE0}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
 											<Custom>
 												<Attenuation Name="Attenuation (Custom)" ID="{BFBB3F27-2675-4513-8576-491DABA91040}" ShortID="816614475">
+													<PropertyList>
+														<Property Name="RadiusMax" Type="Real64" Value="40"/>
+													</PropertyList>
 													<CurveUsageInfoList>
 														<VolumeDryUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -5223,12 +5259,12 @@
 																			<Flags>5</Flags>
 																		</Point>
 																		<Point>
-																			<XPos>91.92308</XPos>
+																			<XPos>36.769232</XPos>
 																			<YPos>-9.71014</YPos>
 																			<Flags>0</Flags>
 																		</Point>
 																		<Point>
-																			<XPos>100</XPos>
+																			<XPos>40</XPos>
 																			<YPos>-200</YPos>
 																			<Flags>37</Flags>
 																		</Point>
@@ -5258,7 +5294,7 @@
 																			<Flags>5</Flags>
 																		</Point>
 																		<Point>
-																			<XPos>100</XPos>
+																			<XPos>40</XPos>
 																			<YPos>45</YPos>
 																			<Flags>37</Flags>
 																		</Point>
@@ -5394,6 +5430,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Musket_Fire_4" ID="{EB2F1FE7-D250-483B-8187-ADED36099230}" ShortID="939113719">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
@@ -5501,6 +5544,55 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{9A4C7D47-ACC9-4CF8-A84C-2E2CC94CAE51}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Musket Rand_Path" ID="{FAEFE70C-D476-4927-A9C8-E52ED145AC7F}">
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>4</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Musket Rand_Path_01" ID="{AE2C149F-CD9F-4145-9BFE-3208C4F55F45}">
+													<PointList>
+														<Point>
+															<XPos>4</XPos>
+															<YPos>0</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Musket Rand_Path_02" ID="{C2BFCA51-9C3F-4512-8380-C6E8B6BDEFDB}">
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>-4</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Musket Rand_Path_03" ID="{6F51AF3F-96FD-4D00-AB17-8D3C5C8546C6}">
+													<PointList>
+														<Point>
+															<XPos>-4</XPos>
+															<YPos>0</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
@@ -5536,7 +5628,7 @@
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-5</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -5563,6 +5655,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Armour_Noise_Light_01" ID="{F286D4C3-067C-4BA9-A612-591D42802D15}" ShortID="969051438">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
@@ -5651,6 +5750,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Armour_Noise_Light_05" ID="{3F52CB1F-B143-4065-A632-8C04E83EA430}" ShortID="943442950">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
@@ -7393,6 +7499,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Pencil_Scratch_005" ID="{31AA5CBD-F31B-4763-AC08-6A4B7B80A7AE}" ShortID="124729010">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
@@ -7430,7 +7543,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7865,7 +7978,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -8786,6 +8899,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Wood_Impact_Roll_003" ID="{0452D7B8-91E1-45AA-AFFD-07B7193FBAB2}" ShortID="497686718">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>
@@ -8830,6 +8950,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Wood_Impact_Roll_006" ID="{27B0AFCA-B5AA-4A48-90CA-4A9AD7AD1E3E}" ShortID="528681009">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09ECDBF1-6A62-4856-BD94-147C1578ADF4}"/>

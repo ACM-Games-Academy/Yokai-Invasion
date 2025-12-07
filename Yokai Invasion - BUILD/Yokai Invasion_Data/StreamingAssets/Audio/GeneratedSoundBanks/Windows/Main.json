@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{773C4EB2-BC9A-472E-A652-79C9F8BDED39}",
     "Language": "SFX",
-    "Hash": "{607DC311-31C3-C4BC-CC0C-93F7FCFF7D95}",
+    "Hash": "{B4F47448-F047-CF63-A535-C7C6A58A7276}",
     "ObjectPath": "\\SoundBanks\\Soundbanks WU\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -136,14 +136,6 @@
       "CachePath": "C2/{C2639C90-EAB5-B6A1-EC32-5F53DDE9CC77}.wem"
      },
      {
-      "Id": "105081942",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Selection\\Pencil_Scratch_005.wav",
-      "CachePath": "FA/{FAE3D4EB-6E9C-6796-9468-FFC9CA947257}.wem"
-     },
-     {
       "Id": "105276285",
       "Language": "SFX",
       "Streaming": "false",
@@ -198,14 +190,6 @@
       "Location": "Memory",
       "ShortName": "Heavy\\Armour_Noise_Heavy_006.wav",
       "CachePath": "3D/{3DC8631D-6B1A-65F3-CB79-B11FA42EFEA2}.wem"
-     },
-     {
-      "Id": "147076825",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Wood_Impact_Roll_003.wav",
-      "CachePath": "F8/{F80CD793-A2C3-3D40-DF6D-89658D364D2D}.wem"
      },
      {
       "Id": "148009785",
@@ -296,6 +280,14 @@
       "CachePath": "03/{03F713AD-922A-4F6B-2013-57F0A99E247A}.wem"
      },
      {
+      "Id": "223791988",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Musket_Fire_2.wav",
+      "CachePath": "3B/{3BEC87BE-9FE2-DFAB-0F4B-6619A98CB241}.wem"
+     },
+     {
       "Id": "224695136",
       "Language": "SFX",
       "Streaming": "false",
@@ -384,6 +376,14 @@
       "CachePath": "EB/{EB790D29-3216-5179-2071-8461D624F07C}.wem"
      },
      {
+      "Id": "273185945",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Musket_Fire_6.wav",
+      "CachePath": "E8/{E83E57DC-50F2-A323-6A61-0EDD9C39CB2A}.wem"
+     },
+     {
       "Id": "274549623",
       "Language": "SFX",
       "Streaming": "false",
@@ -413,7 +413,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Damage_Rip_005.wav",
-      "CachePath": "20/{20D8E57A-1843-0DBE-55BF-774BDD3A8603}.wem"
+      "CachePath": "5E/{5EF11248-EA8D-1A0B-8173-5CE9F84FDEFE}.wem"
      },
      {
       "Id": "298315981",
@@ -445,7 +445,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Weapon_Spin_001.wav",
-      "CachePath": "BE/{BEA7987B-3354-FB2D-058F-9DE4D0125D4C}.wem"
+      "CachePath": "8B/{8BFD37F7-7987-41EA-8D3E-3790BA1EEF66}.wem"
      },
      {
       "Id": "318366259",
@@ -509,7 +509,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Voice_Yokai_Damage_002.wav",
-      "CachePath": "94/{94F8A0E0-C6BD-5B84-4FDD-D1EEC43027BD}.wem"
+      "CachePath": "44/{44137ED0-DCEB-D54F-2FFD-2D15E474DD1E}.wem"
      },
      {
       "Id": "358074599",
@@ -680,6 +680,14 @@
       "CachePath": "12/{126760CF-D60B-760F-75DA-0DD934C88828}.wem"
      },
      {
+      "Id": "492800280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Musket_Fire_1.wav",
+      "CachePath": "39/{39A724BF-4104-2239-6C91-72CD79D5C57D}.wem"
+     },
+     {
       "Id": "511170794",
       "Language": "SFX",
       "Streaming": "false",
@@ -790,14 +798,6 @@
       "Location": "Memory",
       "ShortName": "Main Loop-Taiko.wav",
       "CachePath": "A0/{A073896A-0CC3-4226-8DF0-66F9042B0BFC}.wem"
-     },
-     {
-      "Id": "547757916",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Armour_Scrape_003.wav",
-      "CachePath": "40/{40FDC706-7F78-C208-4F6E-48C496C4EA53}.wem"
      },
      {
       "Id": "551152869",
@@ -1360,14 +1360,6 @@
       "CachePath": "73/{7363BA7A-EB14-E805-253A-09DD4039A75F}.wem"
      },
      {
-      "Id": "920191786",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Heavy\\Armour_Noise_Heavy_005.wav",
-      "CachePath": "55/{55121635-F003-4E60-3BBE-7D37D94BE3A3}.wem"
-     },
-     {
       "Id": "926277373",
       "Language": "SFX",
       "Streaming": "false",
@@ -1448,6 +1440,14 @@
       "CachePath": "97/{97781862-AB9C-0562-2173-EE4CD0B8AC31}.wem"
      },
      {
+      "Id": "954608804",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Musket_Fire_5.wav",
+      "CachePath": "C9/{C9F4BB5B-283E-EF2A-D4E0-F03142C265A5}.wem"
+     },
+     {
       "Id": "955279697",
       "Language": "SFX",
       "Streaming": "false",
@@ -1504,6 +1504,14 @@
       "CachePath": "0C/{0C5EEF7F-F9C9-48F8-EA47-32E47C3A58E8}.wem"
      },
      {
+      "Id": "978465549",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Musket_Fire_3.wav",
+      "CachePath": "53/{53D41861-D49A-B535-1960-A6F42CE48575}.wem"
+     },
+     {
       "Id": "992258005",
       "Language": "SFX",
       "Streaming": "false",
@@ -1534,14 +1542,6 @@
       "Location": "Memory",
       "ShortName": "Damage\\Building_Damage_4.wav",
       "CachePath": "0A/{0A615B58-AFA3-C26C-13E5-1EE1E7E80194}.wem"
-     },
-     {
-      "Id": "1010114638",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Wood_Impact_Roll_006.wav",
-      "CachePath": "32/{320DD61F-9AD2-B0F7-251E-EEFFEF485C47}.wem"
      },
      {
       "Id": "1019220874",
@@ -1833,6 +1833,33 @@
       ]
      },
      {
+      "Id": "1182632674",
+      "Name": "Play_Attack_Musket",
+      "ObjectPath": "\\Events\\Events WU\\Play_Attack_Musket",
+      "GUID": "{D801B151-F301-4DC2-BAC7-3925C72943BD}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3563114",
+      "DurationMax": "1.488427",
+      "MediaRefs": [
+       {
+        "Id": "223791988"
+       },
+       {
+        "Id": "273185945"
+       },
+       {
+        "Id": "492800280"
+       },
+       {
+        "Id": "954608804"
+       },
+       {
+        "Id": "978465549"
+       }
+      ]
+     },
+     {
       "Id": "3428542466",
       "Name": "Play_Attack_Player",
       "ObjectPath": "\\Events\\Events WU\\Play_Attack_Player",
@@ -1882,9 +1909,6 @@
         "Id": "830996151"
        },
        {
-        "Id": "920191786"
-       },
-       {
         "Id": "941545726"
        },
        {
@@ -1932,12 +1956,9 @@
       "GUID": "{6FFCAB24-7B64-43E0-A75F-495695AC4AB3}",
       "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "1.3676314",
-      "DurationMax": "1.6026723",
+      "DurationMin": "0.97483146",
+      "DurationMax": "1.4050106",
       "MediaRefs": [
-       {
-        "Id": "147076825"
-       },
        {
         "Id": "161780449"
        },
@@ -1967,9 +1988,6 @@
        },
        {
         "Id": "977103018"
-       },
-       {
-        "Id": "1010114638"
        }
       ]
      },
@@ -2099,7 +2117,7 @@
       "GUID": "{A36CC021-BD7A-4999-A4DF-24E637311D12}",
       "MaxAttenuation": "50",
       "DurationType": "OneShot",
-      "DurationMin": "0.31539527",
+      "DurationMin": "0.389753",
       "DurationMax": "0.84275913",
       "MediaRefs": [
        {
@@ -2122,9 +2140,6 @@
        },
        {
         "Id": "538319148"
-       },
-       {
-        "Id": "547757916"
        },
        {
         "Id": "551152869"
@@ -2421,9 +2436,6 @@
         "Id": "621186934"
        },
        {
-        "Id": "655299917"
-       },
-       {
         "Id": "766120755"
        },
        {
@@ -2440,9 +2452,6 @@
        },
        {
         "Id": "929135983"
-       },
-       {
-        "Id": "968020048"
        },
        {
         "Id": "1051331244"
@@ -2730,9 +2739,6 @@
       "DurationMax": "0.7358694",
       "MediaRefs": [
        {
-        "Id": "105081942"
-       },
-       {
         "Id": "220596666"
        },
        {
@@ -2855,6 +2861,6 @@
     ]
    }
   ],
-  "FileHash": "{E1DAF14E-3266-08F5-A014-4BB381CCC721}"
+  "FileHash": "{8B22DE49-871A-96D1-B65D-BD941DB641CA}"
  }
 }

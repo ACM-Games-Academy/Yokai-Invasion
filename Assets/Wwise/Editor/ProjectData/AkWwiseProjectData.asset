@@ -113,7 +113,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Soundbanks WU
     guid: a0fb6e52ecfbfd4c92194a069ea6d1ec
     GuidInternal: 
-    m_lastTime: -8584365404752012753
+    m_lastTime: -8584365344173218289
     List:
     - name: Main
       guid: b24e3c779abc2e47a65279c9f8bded39
@@ -255,9 +255,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 51b101d801f3c24dbac73925c72943bd
       Path: Events\Events WU\Play_Attack_Musket
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 40
+      maxDuration: 1.488427
+      minDuration: 1.3563114
     - name: Play_Attack_Player
       guid: fa11e0810aaa754c8d104f77bafc38b4
       id: 3428542466
@@ -307,8 +307,8 @@ MonoBehaviour:
         guid: 24abfc6f647be043a75f495695ac4ab3
       Path: Events\Events WU\Play_Building_Complete
       maxAttenuation: 100
-      maxDuration: 1.6026723
-      minDuration: 1.3676314
+      maxDuration: 1.4050106
+      minDuration: 0.97483146
     - name: Play_Building_In_Progress
       guid: cb409e4b297f3d48b716fbd7bdbd5f92
       id: 2224434550
@@ -393,7 +393,7 @@ MonoBehaviour:
       Path: Events\Events WU\Play_Damage_Ashigaru
       maxAttenuation: 50
       maxDuration: 0.84275913
-      minDuration: 0.31539527
+      minDuration: 0.389753
     - name: Play_Damage_Building
       guid: 49719a167baf9440a6042dc3472bfe11
       id: 3362139180
