@@ -19,21 +19,6 @@ public class YokaiSettings : ScriptableObject
     [SerializeField]
     private int maxHealth;
 
-    [Tooltip("The attack power of the Yokai.")]
-    [Range(0, 50)]
-    [SerializeField]
-    private int attackPower;
-
-    [Tooltip("The attacking range of the Yokai.")]
-    [Range(0, 25)]
-    [SerializeField]
-    private float attackRange;
-
-    [Tooltip("The delay between attacks of the Yokai.")]
-    [Range(0, 10)]
-    [SerializeField]
-    private float attackDelay;
-
 
     [Tooltip("The amount of gold dropped by the Yokai.")]
     [Range(0, 10)]
@@ -84,9 +69,6 @@ public class YokaiSettings : ScriptableObject
     public string YokaiName => yokaiName;
     public float MoveSpeed => moveSpeed;
     public int MaxHealth => maxHealth;
-    public int AttackPower => attackPower;
-    public float AttackRange => attackRange;
-    public float AttackDelay => attackDelay;
 
     public float AllyReliance => allyReliance;
     public float WaypointTolerance => waypointTolerance;

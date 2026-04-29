@@ -4,7 +4,7 @@ using System.Collections;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-public class Tower : MilitaryBuilding, AutoAttacker
+public class Tower : MilitaryBuilding
 {
     private int garrisonedUnits = 0;
     private float attackRecovery = 1f;

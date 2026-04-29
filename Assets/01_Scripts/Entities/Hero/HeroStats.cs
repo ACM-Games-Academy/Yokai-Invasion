@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroAttack : MonoBehaviour, Damageable
+public class HeroStats : MonoBehaviour, Damageable
 {
     private Collider[] yokaiInRange;
     private float lastAttackTime;
@@ -37,32 +37,6 @@ public class HeroAttack : MonoBehaviour, Damageable
         Overseer.Instance.GetManager<ResourceManager>().IncreaseGold(heroSettings.StartingGold);
         Overseer.Instance.GetManager<ResourceManager>().IncreaseWood(heroSettings.StartingWood);
         Overseer.Instance.GetManager<ResourceManager>().IncreaseFood(heroSettings.StartingFood);
-    }
-
-    private void Update()
-    {
-        yokaiInRange = Boids.GetNearby(transform.position, heroSettings.AttackRange, ~LayerMask.GetMask("Floor")).ToArray();
-
-        if (yokaiInRange.Length > 0 && Time.time >= lastAttackTime + heroSettings.AttackDelay)
-        {
-            Attack();
-        }
-    }
-
-    public void Attack()
-    {
-        foreach (var yokaiCollider in yokaiInRange)
-        {
-            var yokai = yokaiCollider.gameObject.GetComponent<Yokai>();
-
-            if (yokai == null) continue;
-
-            yokai.TakeDamage(heroSettings.AttackPower);
-            animator.SetTrigger("Attack");
-
-            Debug.Log("Attacked a Yokai! They lost " + heroSettings.AttackPower + "health!");
-        }
-        lastAttackTime = Time.time;
     }
 
     public void TakeDamage(int damageAmount)

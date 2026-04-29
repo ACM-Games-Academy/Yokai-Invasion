@@ -28,10 +28,6 @@ public class YokaiGrunt : MonoBehaviour, Yokai
     {
         currentHealth = yokaiSettings.MaxHealth;
     }
-    private void Update()
-    {
-        DetermineTarget();
-    }
 
     private void Start()
     {
@@ -58,33 +54,6 @@ public class YokaiGrunt : MonoBehaviour, Yokai
     }
 
     public void SetState(Yokai.States newState) => state = newState;
-
-    public void AutoAttack()
-    {
-        foreach (var targetCollider in targetsInRange)
-        {
-            var target = targetCollider.gameObject.GetComponent<Damageable>();
-
-            if (target == null) continue;
-
-            if(target == targetCollider.gameObject.GetComponent<Yokai>()) { return; }
-
-            target.TakeDamage(yokaiSettings.AttackPower);
-            lastAttackTime = Time.time;
-            break;
-        }
-    }
-
-    public void DetermineTarget()
-    {
-        //Debug.Log($"{yokaiSettings.YokaiName} is determining its target.");
-        targetsInRange = Boids.GetNearby(transform.position, yokaiSettings.AttackRange, ~LayerMask.GetMask("Floor")).ToArray();
-
-        if (targetsInRange.Length > 0 && Time.time >= lastAttackTime + yokaiSettings.AttackDelay)
-        {
-            AutoAttack();
-        }
-    }
 
     private IEnumerator Die()
     {

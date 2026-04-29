@@ -12,18 +12,6 @@ public class HeroSettings : ScriptableObject
     [SerializeField]
     private int maxHealth;
 
-    [Tooltip("The attack power of the hero")]
-    [SerializeField]
-    private int attackPower;
-
-    [Tooltip("The attack delay of the hero in seconds")]
-    [SerializeField]
-    private float attackDelay;
-
-    [Tooltip("The attack range of the hero")]
-    [SerializeField]
-    private float attackRange;
-
     [Header("Starting Resources")]
 
     [Tooltip("The starting gold amount for the hero")]
@@ -40,9 +28,6 @@ public class HeroSettings : ScriptableObject
 
     public float MovementSpeed => movementSpeed;
     public int MaxHealth => maxHealth;
-    public int AttackPower => attackPower;
-    public float AttackDelay => attackDelay;
-    public float AttackRange => attackRange;
     public int StartingGold => startingGold;
     public int StartingWood => startingWood;
     public int StartingFood => startingFood;

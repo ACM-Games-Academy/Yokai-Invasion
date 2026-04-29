@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 3554377297696786449}
   - component: {fileID: 5393894268602648587}
   - component: {fileID: 1208155249907026771}
-  m_Layer: 0
+  - component: {fileID: 8510287899253171141}
+  m_Layer: 10
   m_Name: Grunt
   m_TagString: Yokai
   m_Icon: {fileID: 0}
@@ -114,6 +115,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YokaiGrunt
   yokaiSettings: {fileID: 11400000, guid: 0eb873eb1e770574cb3f2370d97c2a91, type: 2}
   animator: {fileID: 2573766489110200357}
+--- !u!114 &8510287899253171141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999250472620126497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1989e088aa85347b676dbb450bc847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoAttacker
+  settings: {fileID: 11400000, guid: a7db827fb94367d4a855e10e87b6c3b5, type: 2}
 --- !u!1001 &1736081238911801262
 PrefabInstance:
   m_ObjectHideFlags: 0

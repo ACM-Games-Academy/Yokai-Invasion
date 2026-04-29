@@ -40,7 +40,7 @@ public class UiManager : MonoBehaviour
 
     private GameObject hero;
     private GameObject playerHealth;
-    private HeroAttack heroAttack;
+    private HeroStats heroStats;
 
     private GameObject temple;
     private GameObject templeHealth;
@@ -52,9 +52,9 @@ public class UiManager : MonoBehaviour
         unitSettings = Overseer.Instance.Settings.UnitSettings;
 
         hero = GameObject.Find("TempHero");
-        heroAttack = hero.GetComponent<HeroAttack>();
-        heroAttack.HeroTookDamage += DisplayPlayerHealthCount;
-        playerHealthCounter.text = heroAttack.CurrentHealth.ToString();
+        heroStats = hero.GetComponent<HeroStats>();
+        heroStats.HeroTookDamage += DisplayPlayerHealthCount;
+        playerHealthCounter.text = heroStats.CurrentHealth.ToString();
         playerHealth = GameObject.Find("Player Health");
         playerHealth.SetActive(false);
 
@@ -95,7 +95,7 @@ public class UiManager : MonoBehaviour
 
     private void DisplayPlayerHealthCount()
     {
-        playerHealthCounter.text = heroAttack.CurrentHealth.ToString();
+        playerHealthCounter.text = heroStats.CurrentHealth.ToString();
     }
     private void DisplayTempleHealthCount()
     {
