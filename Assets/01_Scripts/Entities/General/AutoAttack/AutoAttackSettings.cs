@@ -7,7 +7,8 @@ public class AutoAttackSettings : ScriptableObject
     public float AttackRange;
     public float AttackDelay;
     public LayerMask LayerMask;
-    
-    [Header("Attack Effects")]
+
+    [Header("Attack Effects")] 
+    public string AttackSound;
     public int AttackPower;
 }

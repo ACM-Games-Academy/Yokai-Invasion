@@ -7,6 +7,8 @@ using System.Collections.Generic;
 public class Tower : MilitaryBuilding
 {
     private int garrisonedUnits = 0;
+    public GameObject[] musketeers;
+    
     private float attackRecovery = 1f;
     private float lastAttackTime;
     private float attackRange = 20f;
@@ -24,6 +26,7 @@ public class Tower : MilitaryBuilding
         Debug.Log($"{soldier} garrisoned {this.name}");
         soldier.gameObject.SetActive(false);
 
+        musketeers[garrisonedUnits].SetActive(true);
         garrisonedUnits++;
     }
 

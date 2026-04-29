@@ -15,11 +15,5 @@ MonoBehaviour:
   waypointTolerance: 0.3
   moveSpeed: 5
   poolSize: 0
-  totalHealth: 50
-  attackPower: 10
-  attackRange: 5
-  attackDelay: 0.8
-  unitOptions:
-  - UnitPrefab: {fileID: 0}
-    FoodCost: 0
-    GoldCost: 0
+  totalHealth: 48
+  unitOptions: []

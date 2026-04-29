@@ -21,6 +21,8 @@ public class AutoAttacker : MonoBehaviour
     
     public void AutoAttack()
     {
+        AkUnitySoundEngine.PostEvent(settings.AttackSound, gameObject);
+        
         var targetCollider = targetsInRange[0];
         var target = targetCollider.gameObject.GetComponent<Damageable>();
 
